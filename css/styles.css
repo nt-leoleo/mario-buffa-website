@@ -1,0 +1,211 @@
+:root {
+    /* --nombre-de-la-variable: valor; */
+    --width-pad: 6em;
+    --border: 0.2rem solid rgba(255, 166, 0, 0.473);
+    --border-color: rgba(255, 166, 0, 0.473);
+    --secondary-text: rgb(206, 135, 4);
+    --secondary-bg: #309dc1;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    background-image: url(../assets/images/backcontainer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+header {
+    /* outline: auto; */
+    display: flex;
+    padding: 1.5em var(--width-pad);
+    justify-content: space-between;
+    background-color: whitesmoke;
+    border-bottom: var(--border);
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
+}
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    margin: 0 0.5em;
+    transition: all 0.3s ease;
+    opacity: 60%;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+    padding: 1em 3em;
+    border: 0.15em solid black;
+    border-radius: 0.5em ;
+    font-weight: bold;
+
+    background-color: white;
+    box-shadow: 1em 0.5em 1em rgba(0, 0, 0, 0.233);
+}
+li:hover{
+    transform: translateY(2em);
+    transform: translateY(-0.3em);
+    opacity: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+.head{
+    height: 6em;
+}
+.hero {
+    background: url(../assets/images/BannerMarioBuffa.jpg) no-repeat;
+    /* background-size: cover; */
+    height: 60%;
+}
+.services {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+    border-bottom: var(--border);
+
+    background-image: url(../assets/images/bg-pattern3.png);
+}
+.service {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+
+    align-items: center;
+    filter: opacity(50%);
+
+    transition: all 0.2s;
+}
+.service svg { width: 4em; }
+.service:hover { filter: opacity(100%); }
+
+.contact-actioncall {
+    padding: 5em 2em;
+    justify-content: center;
+    color: white;
+    text-shadow: 0.4em 0.3rem 0.3rem rgb(0, 0, 0);
+    background: linear-gradient(
+        to top, #0e2c368e   , 
+        rgba(0, 0, 0, 0.479)
+    );
+
+}
+.contact-actioncall div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-actioncall b {
+    cursor: pointer;
+    font-size: 5em;
+    border: 0.4rem solid;
+    border-radius: 0.1em;
+    border-color: var(--border-color);
+    padding: 0.3em 0.5em;
+
+    transition: all 0.5s ease;
+}
+.contact-actioncall b:hover {
+    transform: scale(1.01);
+    text-shadow: 0.2em 0.5rem 1rem rgb(0, 0, 0);
+    box-shadow: 0.2em 0.5rem 2rem rgba(0, 0, 0, 0.363);
+    border-color: rgb(255, 166, 0);
+}
+.contact-actioncall h3 {
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 0.5em;
+}
+.contact-actioncall h4 {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+.contact-actioncall button {
+    padding: 1.4em 3.7em;
+    margin: 8em 0 1em 0;
+    font-weight: 700;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 0.5em;
+    border: 0.2em solid whitesmoke;
+    transition: all 0.2s;
+    color: rgba(0, 0, 0, 0.815);
+    cursor: pointer;
+}
+.contact-actioncall button:hover {
+    background-color: transparent;
+    color: whitesmoke;
+    font-weight: 700;
+    transform: scale(1.04);
+    text-shadow: 0.2em 0.5rem 1rem rgb(0, 0, 0);
+    box-shadow: 0.2em 0.5rem 2rem rgba(0, 0, 0, 0.363);
+}
+
+.stats {
+    color: whitesmoke;
+    background: linear-gradient(
+        to right, var(--secondary-bg) ,
+        rgba(0, 0, 0, 0.808)
+    );
+    padding: 5em 2em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--border);
+}
+.card-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #102f3a;
+    padding: 2em 7em;
+    box-shadow: 0.6em 0.4em 1em rgba(0, 0, 0, 0.479);
+    border-radius: 0.6em;
+}
+.card-stat b {
+    color: var(--secondary-text);
+    font-size: 3em;
+}
+
+.festo-info {
+    background: 
+    linear-gradient(
+        to top,
+        transparent,
+        white 50%
+    ),
+    url(../assets/images/bg-pattern3.png);
+    padding: 3em 5em;
+    display: flex;
+}
+.festo-info div {
+    background-color: white;
+    max-width: fit-content;
+    padding: 4em 5em;
+    white-space: pre-line;
+    text-align: justify;
+    hyphens: auto;
+}
+.festo-info p {
+    margin-left: 1.78em;
+}
