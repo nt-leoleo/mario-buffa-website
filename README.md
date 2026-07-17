@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Réplica estática aproximada del sitio https://mariobuffa.com.ar/
 
 Archivos creados:
@@ -47,3 +48,7 @@ Después de ejecutar el script, coloca (o renombra) las imágenes relevantes a:
 - `assets/images/project3.jpg`
 
 La plantilla ya intenta usar estas rutas locales automáticamente.
+=======
+# mario-buffa-website
+Sitio web de Mario Buffa distribuidor de neumática e hidráulica.
+>>>>>>> bc83b2912ed2a30a1cb071866f78f052709d571d
