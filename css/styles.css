@@ -47,8 +47,14 @@ header {
     background-color: whitesmoke;
     border-bottom: var(--border);
     position: fixed;
+    top: 0;
     width: 100vw;
     z-index: 99;
+    transition: all 0.4s ease-in, height 0.4s ease;
+}
+
+header.scrolled {
+    transform: translateY(-90%);
 }
 
 header nav {
@@ -100,19 +106,39 @@ header nav {
 }
 
 .head {
-    height: 7.5em;
+    height: 10em;
+    margin-top: 8em;
 }
 
 .hero {
     background: url(../assets/images/BannerMarioBuffa.jpg) no-repeat;
     /* background-size: cover; */
-    height: 60%;
+    height: 65%;
+    transition: all 200ms;
+    margin-bottom: 0;
+}
+
+.dir-hero {
+    text-shadow: 0.1em 0.1em 0.3em black;
+    color: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2em 4em;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.dir-hero:hover {
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .services {
     display: flex;
     justify-content: space-around;
-    padding: 1.2em 0;
+    padding: 4em 0;
     border-bottom: var(--border);
 
     background-image: url(../assets/images/bg-pattern3.png);
@@ -122,7 +148,7 @@ header nav {
 .service {
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: 2em;
 
     align-items: center;
     filter: opacity(50%);
@@ -135,7 +161,7 @@ header nav {
 }
 
 .contact-actioncall {
-    padding: 5em 2em;
+    padding: 9em 4em;
     justify-content: center;
     color: white;
     text-shadow: 0.4em 0.3rem 0.3rem rgb(0, 0, 0);
@@ -171,18 +197,18 @@ header nav {
 .contact-actioncall h3 {
     font-size: 2em;
     font-weight: 100;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .contact-actioncall h4 {
     font-size: 1.4em;
     font-weight: 400;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .contact-actioncall button {
-    padding: 1.4em 3.7em;
-    margin: 8em 0 1em 0;
+    padding: 1.6em 4.2em;
+    margin: 10em 0 1.5em 0;
     font-weight: 700;
     background-color: whitesmoke;
     border: none;
@@ -206,10 +232,11 @@ header nav {
     color: whitesmoke;
     background: linear-gradient(to right, var(--secondary-bg),
             rgba(0, 0, 0, 0.808));
-    padding: 5em 2em;
+    padding: 9em 4em;
     display: flex;
     justify-content: space-between;
     border-bottom: var(--border);
+    gap: 3em;
 }
 
 .card-stat {
@@ -217,7 +244,7 @@ header nav {
     flex-direction: column;
     align-items: center;
     background-color: #102f3a;
-    padding: 2em 10em;
+    padding: 4em 14em;
     box-shadow: 0.6em 0.4em 1em rgba(0, 0, 0, 0.479);
     border-radius: 0.6em;
 }
@@ -233,15 +260,16 @@ header nav {
             transparent,
             white 50%),
         url(../assets/images/bg-pattern3.png);
-    padding: 3em 5em;
-    padding-top: 7em;
+    padding: 5em 7em;
+    padding-top: 10em;
     display: flex;
     justify-content: space-between;
+    gap: 4em;
 }
 
 .festo-info div {
     background-color: white;
-    padding: 3rem 3.5rem;
+    padding: 5rem 5.5rem;
     box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.08);
 }
 
@@ -329,40 +357,190 @@ header nav {
 
 .services2 {
     background: url(../assets/images/bg-pattern3.png);
-    padding: 1em 2em;
-    padding-top: 5em;
+    padding: 3em 4em;
+    padding-top: 7em;
 }
-.services2 .title {
+
+.title {
     font-size: 5em;
     color: var(--secondary-bg);
     border-bottom: 0.05em solid var(--secondary-bg);
-    width: 100% ;
-    padding: 0.5em 0.5em;
+    width: 100%;
+    padding: 0.8em 0.8em;
     font-weight: 600;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
+
 .service-card {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
 }
+
 .services2 .card {
     background-color: var(--ter-color);
     color: whitesmoke;
-    padding: 2.3em 2em;
-    min-width: 33em;
-    max-width: 33em;
+    padding: 2.5em 2em;
+    width: 90%;
+    max-width: 100%;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 3em;
 }
-.card a { color: whitesmoke; }
+
+.card a {
+    color: whitesmoke;
+}
+
 .card div {
     display: flex;
-    gap: 2em;
-    padding: 2em 3em;
+    gap: 3em;
+    padding: 3em 4em;
     border: 0.1em solid grey;
     border-radius: 0.5rem;
+}
+.products-header {
+    background: linear-gradient(-45deg,
+            var(--ter-color) 60%,
+            var(--secondary-bg));
+    padding: 4em 25em;
+    padding-bottom: 5em;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+.section-header {
+    background: linear-gradient(-45deg,
+            var(--ter-color) 60%,
+            var(--secondary-bg));
+    padding: 4em 25em;
+    padding-bottom: 5em;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+.title {
+    font-size: 5em;
+    color: whitesmoke;
+    border-bottom: 0.04em solid whitesmoke;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.products {
+    background: url(../assets/images/bg-pattern3.png);
+}
+.products .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 8em;
+    margin-top: 11em;
+    margin-bottom: 6em;
+    justify-content: center;
+    gap: 3em;
+}
+.cards-container .card {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    background-color: white;
+    color: black;
+    width: 18em;
+    padding: 2em 2em 3em 2em;
+    flex-shrink: 0;
+}
+.card label {
+    background-color: var(--ter-color);
+    color: whitesmoke;
+    padding: 0.2em;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+    border-radius: 5em;
+    cursor: pointer;
+}
+.products .card img {
+    min-width: 10em;
+    min-height: 20em;
+}
+.products {
+    padding-bottom: 5em;
+}
+#all-products {
+    background-color: var(--ter-color);
+    color: whitesmoke;
+    padding: 2em 1em;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    max-width: 50em;
+    max-height: 30em;
+}
+#search-products, #arrow-products, #all-products-text { transition: all 0.4s ease-in; }
+#all-products:hover {
+    #search-products { transform: scale(120%); }
+    #arrow-products { transform: translateX(50%); }
+    #all-products-text { align-self: flex-end; }
+}
+.all-products-label {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.1em solid whitesmoke;
+    padding: 2em 1em;
+    border-radius: 0.7em;
+    font-weight: 800;
+    font-size: 2em;
+}
+.all-products-label svg {
+    max-width: 4em;
+}
+
+/* Logo desaparece al hacer scroll */
+.logo {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform-origin: center;
+}
+
+.logo.hidden {
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+#reviews {
+    color: whitesmoke;
+
+}
+.clients-reviews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3em;
+}
+#reviews h2 {
+    padding-bottom: 0.1em;
+}
+#reviews b {
+    color: var(--secondary-text);
+    font-size: 4em;
+    max-width: 30%;
+}
+#reviews aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3em;   
+    width: 100%;
+}
+#reviews .card {
+    border: 0.1em solid whitesmoke;
+    max-width: 30%;
+    padding: 3em 1em;
+    background-color: transparent;
+}
+#reviews svg {
+    max-width: 2em;
 }

@@ -47,3 +47,27 @@ if (gallery) {
         });
     }
 }
+
+// Header se achica al hacer scroll
+var header = document.querySelector('header');
+if (header) {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 190) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
+
+// Logo desaparece al hacer scroll
+var logo = document.querySelector('.logo');
+if (logo) {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+            logo.classList.add('hidden');
+        } else {
+            logo.classList.remove('hidden');
+        }
+    });
+}

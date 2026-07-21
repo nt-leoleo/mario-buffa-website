@@ -1,0 +1,623 @@
+/* RESPONSIVE DESIGN - Mobile First Approach */
+
+/* ==================== MOBILE (hasta 768px) ==================== */
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 1em 1em;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    header nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    li {
+        margin: 0em;
+    }
+
+    li a {
+        padding: 0.7em 5em;
+        min-width: 10em;
+        font-size: 0.8em;
+    }
+
+    .logo img {
+        width: 60px !important;
+    }
+
+    /* Hero */
+    .hero {
+        height: 40%;
+    }
+
+    .dir-hero {
+        font-size: 1.2em;
+        padding: 1em 1em;
+    }
+
+    /* Services */
+    .services {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .service {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Contact Action Call */
+    .contact-actioncall {
+        padding: 2em 1em;
+    }
+
+    .contact-actioncall b {
+        font-size: 3em;
+    }
+
+    .contact-actioncall h3 {
+        font-size: 1.5em;
+    }
+
+    .contact-actioncall h4 {
+        font-size: 1.1em;
+    }
+
+    .contact-actioncall button {
+        padding: 1em 2em;
+        margin: 3em 0 1em 0;
+        font-size: 0.9em;
+    }
+
+    /* Stats */
+    .stats {
+        flex-direction: column;
+        gap: 1em;
+        padding: 2em 1em;
+    }
+
+    .card-stat {
+        padding: 1.5em 3em;
+        width: 100%;
+    }
+
+    .card-stat b {
+        font-size: 2em;
+    }
+
+    /* Festo Info */
+    .festo-info {
+        flex-direction: column;
+        padding: 2em 1em;
+    }
+
+    .festo-info div {
+        padding: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .festo-info p {
+        padding-left: 0;
+        font-size: 0.9em;
+    }
+
+    #gallery {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* Products Header */
+    .products-header {
+        padding: 1em 1em;
+        padding-bottom: 1.5em;
+    }
+
+    .products-header .title {
+        font-size: 2.5em;
+        margin-bottom: 0;
+    }
+
+    /* Products Container */
+    .products .cards-container {
+        flex-direction: column;
+        padding: 0 1em;
+        margin-top: 2em;
+        gap: 1em;
+    }
+
+    .cards-container .card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .card label {
+        font-size: 1.2em;
+    }
+
+    /* All Products */
+    #all-products {
+        padding: 1em 0.5em;
+    }
+
+    .all-products-label {
+        padding: 1.5em 0.5em;
+        font-size: 1.2em;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .all-products-label svg {
+        max-width: 3em;
+    }
+
+    /* General Titles */
+    .title {
+        font-size: 2.5em;
+        padding: 0.3em 0.3em;
+        margin-bottom: 1em;
+    }
+
+    /* Services 2 Cards */
+    .services2 .card {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 1.5em 1em;
+    }
+
+    .service-card {
+        flex-direction: column;
+    }
+
+    /* Head spacing */
+    .head {
+        height: 5em;
+    }
+}
+
+/* ==================== TABLET (768px a 1024px) ==================== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Header */
+    header {
+        padding: 1.2em 3em;
+    }
+
+    li a {
+        padding: 0.8em 2em;
+        font-size: 0.9em;
+    }
+
+    .logo img {
+        width: 80px !important;
+    }
+
+    /* Hero */
+    .hero {
+        height: 50%;
+    }
+
+    .dir-hero {
+        font-size: 1.5em;
+        padding: 1em 2em;
+    }
+
+    /* Services */
+    .services {
+        flex-wrap: wrap;
+        padding: 1.5em;
+    }
+
+    /* Contact Action Call */
+    .contact-actioncall {
+        padding: 3em 1.5em;
+    }
+
+    .contact-actioncall b {
+        font-size: 3.5em;
+    }
+
+    .contact-actioncall button {
+        padding: 1.2em 2.5em;
+        margin: 4em 0 1em 0;
+    }
+
+    /* Stats */
+    .stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em;
+        padding: 3em 1.5em;
+    }
+
+    .card-stat {
+        padding: 1.5em 5em;
+    }
+
+    /* Festo Info */
+    .festo-info {
+        flex-direction: column;
+        padding: 2.5em 2em;
+    }
+
+    .festo-info div {
+        padding: 2em;
+        margin-bottom: 1em;
+    }
+
+    #gallery {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+
+    /* Products Header */
+    .products-header {
+        padding: 1.5em 10em;
+        padding-bottom: 2em;
+    }
+
+    .products-header .title {
+        font-size: 3.5em;
+    }
+
+    /* Products Container */
+    .products .cards-container {
+        padding: 0 5em;
+        margin-top: 4em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards-container .card {
+        max-width: 18em;
+    }
+
+    /* All Products */
+    .all-products-label {
+        padding: 1.5em 0.8em;
+        font-size: 1.5em;
+    }
+
+    /* Titles */
+    .title {
+        font-size: 3.5em;
+    }
+
+    /* Services 2 Cards */
+    .services2 .card {
+        min-width: 28em;
+        max-width: 28em;
+    }
+
+    .service-card {
+        flex-wrap: wrap;
+    }
+}
+
+/* ==================== DESKTOP GRANDE (más de 1400px) ==================== */
+@media screen and (min-width: 1400px) {
+    /* Products Header - versión ampliada */
+    .products-header {
+        padding: 2em 35em;
+    }
+
+    /* Products Container - más espacio */
+    .products .cards-container {
+        padding: 0 30em;
+    }
+
+    /* All Products - más grande */
+    .all-products-label {
+        font-size: 2.2em;
+    }
+
+    .all-products-label svg {
+        max-width: 5em;
+    }
+}
+
+/* ==================== ULTRA ANCHO (1650 x 930px - 16:9) ==================== */
+@media screen and (min-width: 1650px) and (min-height: 900px) {
+    /* Header */
+    header {
+        padding: 1.8em var(--width-pad);
+    }
+
+    li a {
+        padding: 1.2em 3.5em;
+    }
+
+    /* Hero */
+    .dir-hero {
+        font-size: 2.5em;
+        padding: 2em 4em;
+    }
+
+    /* Contact Action Call */
+    .contact-actioncall {
+        padding: 6em 3em;
+    }
+
+    .contact-actioncall b {
+        font-size: 6em;
+    }
+
+    .contact-actioncall h3 {
+        font-size: 2.5em;
+    }
+
+    .contact-actioncall h4 {
+        font-size: 1.8em;
+    }
+
+    .contact-actioncall button {
+        padding: 1.6em 4.2em;
+        margin: 10em 0 1.5em 0;
+        font-size: 1.1em;
+    }
+
+    /* Stats */
+    .stats {
+        padding: 6em 3em;
+    }
+
+    .card-stat {
+        padding: 2.5em 12em;
+    }
+
+    .card-stat b {
+        font-size: 4em;
+    }
+
+    /* Festo Info */
+    .festo-info {
+        padding: 4em 6em;
+        padding-top: 8em;
+    }
+
+    .festo-info div {
+        padding: 3.5em 4em;
+    }
+
+    #gallery {
+        flex: 1 1 38.75rem;
+        max-width: 45rem;
+    }
+
+    /* Products Header */
+    .products-header {
+        padding: 2.5em 28em;
+        padding-bottom: 4em;
+    }
+
+    .products-header .title {
+        font-size: 5.5em;
+    }
+
+    /* Products Container */
+    .products .cards-container {
+        padding: 0 26em;
+        margin-top: 8em;
+        gap: 2em;
+    }
+
+    .cards-container .card {
+        max-width: 20em;
+        padding: 1.2em 1.2em 2.5em 1.2em;
+    }
+
+    .card label {
+        font-size: 2.2em;
+    }
+
+    /* All Products */
+    #all-products {
+        padding: 2.5em 1.2em;
+    }
+
+    .all-products-label {
+        padding: 2.5em 1.2em;
+        font-size: 2.5em;
+        border-radius: 1em;
+    }
+
+    .all-products-label svg {
+        max-width: 6em;
+    }
+
+    /* Titles */
+    .title {
+        font-size: 5.5em;
+        padding: 0.6em 0.6em;
+        margin-bottom: 2.5em;
+    }
+
+    /* Services 2 Cards */
+    .services2 {
+        padding: 2em 3em;
+        padding-top: 6em;
+    }
+
+    .services2 .card {
+        min-width: 35em;
+        max-width: 35em;
+        padding: 2.5em 2.5em;
+        gap: 3.5em;
+    }
+
+    /* Services */
+    .services {
+        padding: 1.5em 0;
+        gap: 2em;
+    }
+
+    .service {
+        gap: 1.5em;
+    }
+}
+
+/* ==================== PANTALLAS PEQUEÑAS (menos de 480px) ==================== */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.8em 0.5em;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    li a {
+        padding: 0.6em 1em;
+        font-size: 0.7em;
+    }
+
+    .logo img {
+        width: 50px !important;
+    }
+
+    .dir-hero {
+        font-size: 1em;
+        padding: 0.8em 0.5em;
+    }
+
+    .services {
+        padding: 0.8em 0.5em;
+    }
+
+    .contact-actioncall {
+        padding: 1.5em 0.5em;
+    }
+
+    .contact-actioncall b {
+        font-size: 2.5em;
+        padding: 0.2em 0.4em;
+    }
+
+    .contact-actioncall h3 {
+        font-size: 1.2em;
+    }
+
+    .contact-actioncall button {
+        padding: 0.8em 1.5em;
+        margin: 2em 0 0.8em 0;
+        font-size: 0.8em;
+    }
+
+    .stats {
+        padding: 1.5em 0.5em;
+    }
+
+    .card-stat {
+        padding: 1em 2em;
+    }
+
+    .card-stat b {
+        font-size: 1.8em;
+    }
+
+    .festo-info {
+        padding: 1em 0.5em;
+    }
+
+    .festo-info div {
+        padding: 1em;
+    }
+
+    .festo-info p {
+        font-size: 0.85em;
+    }
+
+    .products-header {
+        padding: 0.8em 1em;
+        padding-bottom: 1em;
+    }
+
+    .products-header .title {
+        font-size: 2em;
+    }
+
+    .products .cards-container {
+        padding: 0 0.5em;
+        margin-top: 1.5em;
+    }
+
+    .title {
+        font-size: 2em;
+        padding: 0.3em 0.2em;
+        margin-bottom: 0.8em;
+    }
+
+    .services2 .card {
+        min-width: 90%;
+        max-width: 90%;
+        padding: 1em 0.8em;
+    }
+
+    #all-products {
+        padding: 1em 0.3em;
+    }
+
+    .all-products-label {
+        padding: 1em 0.3em;
+        font-size: 1em;
+        min-height: 150px;
+    }
+
+    .all-products-label svg {
+        max-width: 2.5em;
+    }
+}
+
+/* ==================== ORIENTACIÓN ==================== */
+@media (orientation: landscape) and (max-height: 600px) {
+    .head {
+        height: 3em;
+    }
+
+    .hero {
+        height: 30%;
+    }
+
+    header {
+        padding: 0.8em 2em;
+    }
+
+    .services {
+        padding: 0.8em;
+    }
+
+    .contact-actioncall {
+        padding: 1.5em 1em;
+    }
+
+    .contact-actioncall button {
+        margin: 1em 0 0.5em 0;
+    }
+}
+
+/* ==================== IMPRESIÓN ==================== */
+@media print {
+    header,
+    .services,
+    .contact-actioncall button,
+    #all-products {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .products-header,
+    .products .cards-container {
+        page-break-inside: avoid;
+    }
+}
