@@ -42,7 +42,7 @@ header {
     /* outline: auto; */
     align-items: center;
     display: flex;
-    padding: 1.5em var(--width-pad);
+    padding: 1.5rem var(--width-pad);
     justify-content: space-between;
     background-color: whitesmoke;
     border-bottom: var(--border);
@@ -72,7 +72,7 @@ ul {
 
 li {
     list-style: none;
-    margin: 0 0.5em;
+    margin: 0 0.5rem;
     transition: all 0.3s ease;
     opacity: 60%;
 }
@@ -83,18 +83,18 @@ li a {
     justify-content: center;
     text-decoration: none;
     color: black;
-    padding: 1em 3em;
-    border: 0.15em solid black;
-    border-radius: 0.5em;
+    padding: 1rem 3rem;
+    border: 0.15rem solid black;
+    border-radius: 0.5rem;
     font-weight: bold;
 
     background-color: white;
-    box-shadow: 1em 0.5em 1em rgba(0, 0, 0, 0.233);
+    box-shadow: 1rem 0.5rem 1rem rgba(0, 0, 0, 0.233);
 }
 
 li:hover {
-    transform: translateY(2em);
-    transform: translateY(-0.3em);
+    transform: translateY(2rem);
+    transform: translateY(-0.3rem);
     opacity: 100%;
 }
 
@@ -106,8 +106,8 @@ header nav {
 }
 
 .head {
-    height: 10em;
-    margin-top: 8em;
+    height: 10rem;
+    margin-top: 8rem;
 }
 
 .hero {
@@ -119,14 +119,14 @@ header nav {
 }
 
 .dir-hero {
-    text-shadow: 0.1em 0.1em 0.3em black;
+    text-shadow: 0.1rem 0.1rem 0.3rem black;
     color: whitesmoke;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding: 2em 4em;
-    font-size: 2em;
+    padding: 2rem 4rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -138,7 +138,7 @@ header nav {
 .services {
     display: flex;
     justify-content: space-around;
-    padding: 4em 0;
+    padding: 4rem 0;
     border-bottom: var(--border);
 
     background-image: url(../assets/images/bg-pattern3.png);
@@ -148,7 +148,7 @@ header nav {
 .service {
     display: flex;
     flex-direction: row;
-    gap: 2em;
+    gap: 2rem;
 
     align-items: center;
     filter: opacity(50%);
@@ -161,10 +161,10 @@ header nav {
 }
 
 .contact-actioncall {
-    padding: 9em 4em;
+    padding: 9rem 4rem;
     justify-content: center;
     color: white;
-    text-shadow: 0.4em 0.3rem 0.3rem rgb(0, 0, 0);
+    text-shadow: 0.4rem 0.3rrem 0.3rrem rgb(0, 0, 0);
     background: linear-gradient(to top, #0e2c368e,
             rgba(0, 0, 0, 0.479));
 
@@ -178,42 +178,42 @@ header nav {
 
 .contact-actioncall b {
     cursor: pointer;
-    font-size: 5em;
-    border: 0.4rem solid;
-    border-radius: 0.1em;
+    font-size: 5rem;
+    border: 0.4rrem solid;
+    border-radius: 0.1rem;
     border-color: var(--border-color);
-    padding: 0.3em 0.5em;
+    padding: 0.3rem 0.5rem;
 
     transition: all 0.5s ease;
 }
 
 .contact-actioncall b:hover {
     transform: scale(1.01);
-    text-shadow: 0.2em 0.5rem 1rem rgb(0, 0, 0);
-    box-shadow: 0.2em 0.5rem 2rem rgba(0, 0, 0, 0.363);
+    text-shadow: 0.2rem 0.5rrem 1rrem rgb(0, 0, 0);
+    box-shadow: 0.2rem 0.5rrem 2rrem rgba(0, 0, 0, 0.363);
     border-color: rgb(255, 166, 0);
 }
 
 .contact-actioncall h3 {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 100;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 .contact-actioncall h4 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: 400;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 .contact-actioncall button {
-    padding: 1.6em 4.2em;
-    margin: 10em 0 1.5em 0;
+    padding: 1.6rem 4.2rem;
+    margin: 10rem 0 1.5rem 0;
     font-weight: 700;
     background-color: whitesmoke;
     border: none;
-    border-radius: 0.5em;
-    border: 0.2em solid whitesmoke;
+    border-radius: 0.5rem;
+    border: 0.2rem solid whitesmoke;
     transition: all 0.2s;
     color: rgba(0, 0, 0, 0.815);
     cursor: pointer;
@@ -224,19 +224,19 @@ header nav {
     color: whitesmoke;
     font-weight: 700;
     transform: scale(1.04);
-    text-shadow: 0.2em 0.5rem 1rem rgb(0, 0, 0);
-    box-shadow: 0.2em 0.5rem 2rem rgba(0, 0, 0, 0.363);
+    text-shadow: 0.2rem 0.5rrem 1rrem rgb(0, 0, 0);
+    box-shadow: 0.2rem 0.5rrem 2rrem rgba(0, 0, 0, 0.363);
 }
 
 .stats {
     color: whitesmoke;
     background: linear-gradient(to right, var(--secondary-bg),
             rgba(0, 0, 0, 0.808));
-    padding: 9em 4em;
+    padding: 9rem 4rem;
     display: flex;
     justify-content: space-between;
     border-bottom: var(--border);
-    gap: 3em;
+    gap: 3rem;
 }
 
 .card-stat {
@@ -244,14 +244,14 @@ header nav {
     flex-direction: column;
     align-items: center;
     background-color: #102f3a;
-    padding: 4em 14em;
-    box-shadow: 0.6em 0.4em 1em rgba(0, 0, 0, 0.479);
-    border-radius: 0.6em;
+    padding: rem 1rem;
+    box-shadow: 0.rem 0.rem rem rgba(0, 0, 0, 0.479);
+    border-radius: 0.rem;
 }
 
 .card-stat b {
     color: var(--secondary-text);
-    font-size: 3em;
+    font-size: rem;
 }
 
 .festo-info {
@@ -260,11 +260,11 @@ header nav {
             transparent,
             white 50%),
         url(../assets/images/bg-pattern3.png);
-    padding: 5em 7em;
-    padding-top: 10em;
+    padding: rem rem;
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
-    gap: 4em;
+    gap: rem;
 }
 
 .festo-info div {
@@ -285,7 +285,7 @@ header nav {
     width: 100%;
     max-width: 55rem;
     line-height: 1.8;
-    padding-left: 2.3em;
+    padding-left: 2.rem;
 }
 
 #gallery {
@@ -357,18 +357,18 @@ header nav {
 
 .services2 {
     background: url(../assets/images/bg-pattern3.png);
-    padding: 3em 4em;
-    padding-top: 7em;
+    padding: 3rem 4rem;
+    padding-top: 7rem;
 }
 
 .title {
-    font-size: 5em;
+    font-size: 5rem;
     color: var(--secondary-bg);
-    border-bottom: 0.05em solid var(--secondary-bg);
+    border-bottom: 0.05rem solid var(--secondary-bg);
     width: 100%;
-    padding: 0.8em 0.8em;
+    padding: 0.8rem 0.8rem;
     font-weight: 600;
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
 }
 
 .service-card {
@@ -388,7 +388,7 @@ header nav {
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 3rem;
 }
 
 .card a {
@@ -397,17 +397,17 @@ header nav {
 
 .card div {
     display: flex;
-    gap: 3em;
-    padding: 3em 4em;
-    border: 0.1em solid grey;
+    gap: 3rem;
+    padding: 3rem 4rem;
+    border: 0.1rem solid grey;
     border-radius: 0.5rem;
 }
 .products-header {
     background: linear-gradient(-45deg,
             var(--ter-color) 60%,
             var(--secondary-bg));
-    padding: 4em 25em;
-    padding-bottom: 5em;
+    padding: 4rem 25rem;
+    padding-bottom: 5rem;
     border-top: var(--border);
     border-bottom: var(--border);
 }
@@ -415,15 +415,15 @@ header nav {
     background: linear-gradient(-45deg,
             var(--ter-color) 60%,
             var(--secondary-bg));
-    padding: 4em 25em;
-    padding-bottom: 5em;
+    padding: 4rem 25rem;
+    padding-bottom: 5rem;
     border-top: var(--border);
     border-bottom: var(--border);
 }
 .title {
-    font-size: 5em;
+    font-size: 5rem;
     color: whitesmoke;
-    border-bottom: 0.04em solid whitesmoke;
+    border-bottom: 0.04rem solid whitesmoke;
     font-weight: 600;
     margin-bottom: 0;
 }
@@ -434,47 +434,47 @@ header nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 8em;
-    margin-top: 11em;
-    margin-bottom: 6em;
+    padding: 0 8rem;
+    margin-top: 11rem;
+    margin-bottom: 6rem;
     justify-content: center;
-    gap: 3em;
+    gap: 3rem;
 }
 .cards-container .card {
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 3rem;
     background-color: white;
     color: black;
-    width: 18em;
-    padding: 2em 2em 3em 2em;
+    width: 18rem;
+    padding: 2rem 2rem 3rem 2rem;
     flex-shrink: 0;
 }
 .card label {
     background-color: var(--ter-color);
     color: whitesmoke;
-    padding: 0.2em;
+    padding: 0.2rem;
     text-align: center;
     font-weight: 700;
-    font-size: 2em;
-    border-radius: 5em;
+    font-size: 2rem;
+    border-radius: 5rem;
     cursor: pointer;
 }
 .products .card img {
-    min-width: 10em;
-    min-height: 20em;
+    min-width: 10rem;
+    min-height: 20rem;
 }
 .products {
-    padding-bottom: 5em;
+    padding-bottom: 5rem;
 }
 #all-products {
     background-color: var(--ter-color);
     color: whitesmoke;
-    padding: 2em 1em;
+    padding: 2rem 1rem;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    max-width: 50em;
-    max-height: 30em;
+    max-width: 50rem;
+    max-height: 30rem;
 }
 #search-products, #arrow-products, #all-products-text { transition: all 0.4s ease-in; }
 #all-products:hover {
@@ -488,14 +488,14 @@ header nav {
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    border: 0.1em solid whitesmoke;
-    padding: 2em 1em;
-    border-radius: 0.7em;
+    border: 0.1rem solid whitesmoke;
+    padding: 2rem 1rem;
+    border-radius: 0.7rem;
     font-weight: 800;
-    font-size: 2em;
+    font-size: 2rem;
 }
 .all-products-label svg {
-    max-width: 4em;
+    max-width: 4rem;
 }
 
 /* Logo desaparece al hacer scroll */
@@ -518,29 +518,29 @@ header nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 3em;
+    gap: 3rem;
 }
 #reviews h2 {
-    padding-bottom: 0.1em;
+    padding-bottom: 0.1rem;
 }
 #reviews b {
     color: var(--secondary-text);
-    font-size: 4em;
+    font-size: 4rem;
     max-width: 30%;
 }
 #reviews aside {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3em;   
+    gap: 3rem;   
     width: 100%;
 }
 #reviews .card {
-    border: 0.1em solid whitesmoke;
+    border: 0.1rem solid whitesmoke;
     max-width: 30%;
-    padding: 3em 1em;
+    padding: 3rem 1rem;
     background-color: transparent;
 }
 #reviews svg {
-    max-width: 2em;
+    max-width: 2rem;
 }

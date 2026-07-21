@@ -35,7 +35,8 @@
 
     /* Hero */
     .hero {
-        height: 40%;
+        height: 60%;
+        margin-top: 16%;
     }
 
     .dir-hero {
@@ -48,6 +49,7 @@
         flex-direction: column;
         gap: 1em;
         padding: 1em;
+        margin-top: 0;
     }
 
     .service {
