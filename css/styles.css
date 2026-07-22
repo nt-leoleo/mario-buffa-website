@@ -50,7 +50,7 @@ header {
     top: 0;
     width: 100vw;
     z-index: 99;
-    transition: all 0.4s ease-in, height 0.4s ease;
+    transition: all 0.4s ease-out, height 0.4s ease;
 }
 
 header.scrolled {
@@ -106,8 +106,8 @@ header nav {
 }
 
 .head {
-    height: 10rem;
-    margin-top: 8rem;
+    /* height: 10rem; */
+    margin-top: 7rem;
 }
 
 .hero {
@@ -164,7 +164,7 @@ header nav {
     padding: 9rem 4rem;
     justify-content: center;
     color: white;
-    text-shadow: 0.4rem 0.3rrem 0.3rrem rgb(0, 0, 0);
+    text-shadow: 0.4rem 0.3rem 0.3rem rgb(0, 0, 0);
     background: linear-gradient(to top, #0e2c368e,
             rgba(0, 0, 0, 0.479));
 
@@ -179,18 +179,19 @@ header nav {
 .contact-actioncall b {
     cursor: pointer;
     font-size: 5rem;
-    border: 0.4rrem solid;
-    border-radius: 0.1rem;
+    border: 0.3rem solid;
+    border-radius: 0.2rem;
     border-color: var(--border-color);
-    padding: 0.3rem 0.5rem;
+    padding: 1rem 4rem;
+    margin-bottom: 0.5rem;
 
     transition: all 0.5s ease;
 }
 
 .contact-actioncall b:hover {
     transform: scale(1.01);
-    text-shadow: 0.2rem 0.5rrem 1rrem rgb(0, 0, 0);
-    box-shadow: 0.2rem 0.5rrem 2rrem rgba(0, 0, 0, 0.363);
+    text-shadow: 0.2rem 0.3rem 3rem rgb(0, 0, 0);
+    box-shadow: 0.2rem 0.3rem 3rem rgba(0, 0, 0, 0.363);
     border-color: rgb(255, 166, 0);
 }
 
@@ -224,10 +225,11 @@ header nav {
     color: whitesmoke;
     font-weight: 700;
     transform: scale(1.04);
-    text-shadow: 0.2rem 0.5rrem 1rrem rgb(0, 0, 0);
-    box-shadow: 0.2rem 0.5rrem 2rrem rgba(0, 0, 0, 0.363);
+    text-shadow: 0.2rem 0.3rem 3rem rgb(0, 0, 0);
+    box-shadow: 0.2rem 0.3rem 3rem rgba(0, 0, 0, 0.363);
 }
 
+/* ---------- stats section ----------  */
 .stats {
     color: whitesmoke;
     background: linear-gradient(to right, var(--secondary-bg),
@@ -240,18 +242,24 @@ header nav {
 }
 
 .card-stat {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #102f3a;
-    padding: rem 1rem;
-    box-shadow: 0.rem 0.rem rem rgba(0, 0, 0, 0.479);
-    border-radius: 0.rem;
+    padding: 1rem 1rem;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.479);
+    border-radius: 1rem;
+    width: 100%;
 }
 
 .card-stat b {
     color: var(--secondary-text);
-    font-size: rem;
+    font-size: 2rem;
+}
+.card-stat label {
+    text-align: center;
+    /* outline: auto; */
 }
 
 .festo-info {
@@ -261,16 +269,19 @@ header nav {
             white 50%),
         url(../assets/images/bg-pattern3.png);
     padding: rem rem;
-    padding-top: 1rem;
+    padding-top: 5rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
     display: flex;
+    gap: 3rem;
     justify-content: space-between;
-    gap: rem;
 }
 
 .festo-info div {
     background-color: white;
     padding: 5rem 5.5rem;
     box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.08);
+    flex: 50;
 }
 
 .festo-info div img {
@@ -289,10 +300,8 @@ header nav {
 }
 
 #gallery {
-    flex: 1 1 32.5rem;
-    min-width: 20rem;
-    max-width: 38.75rem;
-    width: 100%;
+    flex: 45;
+    /* width: 100%; */
     margin: 0;
     position: relative;
     overflow: hidden;
@@ -300,6 +309,7 @@ header nav {
     border: var(--border);
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+    align-self: center;
 }
 
 .carousel-container {

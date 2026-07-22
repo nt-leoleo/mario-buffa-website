@@ -303,165 +303,39 @@
     }
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1399px) {
+    .festo-info {
+        gap: 0;
+    }
+    .festo-info div {
+        flex: 40;
+    }
+    #gallery {
+        flex: 50;
+    }
+}
 /* ==================== DESKTOP GRANDE (más de 1400px) ==================== */
 @media screen and (min-width: 1400px) {
-    /* Products Header - versión ampliada */
+    /* .festo-info div {
+        max-width: 50rem;
+    } */
+    /* /* Products Header - versión ampliada */
     .products-header {
         padding: 2em 35em;
     }
 
-    /* Products Container - más espacio */
+    /* /* Products Container - más espacio */
     .products .cards-container {
         padding: 0 30em;
     }
 
-    /* All Products - más grande */
+    /* /* All Products - más grande */
     .all-products-label {
         font-size: 2.2em;
     }
 
     .all-products-label svg {
         max-width: 5em;
-    }
-}
-
-/* ==================== ULTRA ANCHO (1650 x 930px - 16:9) ==================== */
-@media screen and (min-width: 1650px) and (min-height: 900px) {
-    /* Header */
-    header {
-        padding: 1.8em var(--width-pad);
-    }
-
-    li a {
-        padding: 1.2em 3.5em;
-    }
-
-    /* Hero */
-    .dir-hero {
-        font-size: 2.5em;
-        padding: 2em 4em;
-    }
-
-    /* Contact Action Call */
-    .contact-actioncall {
-        padding: 6em 3em;
-    }
-
-    .contact-actioncall b {
-        font-size: 6em;
-    }
-
-    .contact-actioncall h3 {
-        font-size: 2.5em;
-    }
-
-    .contact-actioncall h4 {
-        font-size: 1.8em;
-    }
-
-    .contact-actioncall button {
-        padding: 1.6em 4.2em;
-        margin: 10em 0 1.5em 0;
-        font-size: 1.1em;
-    }
-
-    /* Stats */
-    .stats {
-        padding: 6em 3em;
-    }
-
-    .card-stat {
-        padding: 2.5em 12em;
-    }
-
-    .card-stat b {
-        font-size: 4em;
-    }
-
-    /* Festo Info */
-    .festo-info {
-        padding: 4em 6em;
-        padding-top: 8em;
-    }
-
-    .festo-info div {
-        padding: 3.5em 4em;
-    }
-
-    #gallery {
-        flex: 1 1 38.75rem;
-        max-width: 45rem;
-    }
-
-    /* Products Header */
-    .products-header {
-        padding: 2.5em 28em;
-        padding-bottom: 4em;
-    }
-
-    .products-header .title {
-        font-size: 5.5em;
-    }
-
-    /* Products Container */
-    .products .cards-container {
-        padding: 0 26em;
-        margin-top: 8em;
-        gap: 2em;
-    }
-
-    .cards-container .card {
-        max-width: 20em;
-        padding: 1.2em 1.2em 2.5em 1.2em;
-    }
-
-    .card label {
-        font-size: 2.2em;
-    }
-
-    /* All Products */
-    #all-products {
-        padding: 2.5em 1.2em;
-    }
-
-    .all-products-label {
-        padding: 2.5em 1.2em;
-        font-size: 2.5em;
-        border-radius: 1em;
-    }
-
-    .all-products-label svg {
-        max-width: 6em;
-    }
-
-    /* Titles */
-    .title {
-        font-size: 5.5em;
-        padding: 0.6em 0.6em;
-        margin-bottom: 2.5em;
-    }
-
-    /* Services 2 Cards */
-    .services2 {
-        padding: 2em 3em;
-        padding-top: 6em;
-    }
-
-    .services2 .card {
-        min-width: 35em;
-        max-width: 35em;
-        padding: 2.5em 2.5em;
-        gap: 3.5em;
-    }
-
-    /* Services */
-    .services {
-        padding: 1.5em 0;
-        gap: 2em;
-    }
-
-    .service {
-        gap: 1.5em;
     }
 }
 

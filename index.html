@@ -8,255 +8,323 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <!-- <link rel="stylesheet" href="./css/responsive.css"> -->
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="icon" href="/assets/images/MARIO-BUFFA-LOGO.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="button"><a href="#index"> INICIO </a></li>
-                <li class="button"><a href=""> NOSOTROS </a></li>
-                <li class="button"><a href=""> CONTACTO </a></li>
-                <li class="button"><a href=""> SERVICIOS </a></li>
-                <li class="button"><a href=""> PRODUCTOS </a></li>
-            </ul>
-        </nav>
-        <div class="logo">
-            <a href="">
-                <img src="assets/images/logo.png" alt="Mario Buffa" data-="logo" width="100em">
+    <div class="header-wrapper">
+        <header>
+            <button onclick="openMenu()">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#077dc8" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </button>
+            <nav>
+                <ul>
+                    <li class="button"><a href="#index"> INICIO </a></li>
+                    <li class="button"><a href=""> NOSOTROS </a></li>
+                    <li class="button"><a href=""> CONTACTO </a></li>
+                    <li class="button"><a href=""> SERVICIOS </a></li>
+                    <li class="button"><a href=""> PRODUCTOS </a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="">
+                    <img src="assets/images/logo.png" alt="Mario Buffa" data-="logo" width="100em">
+                </a>
+            </div>
+        </header>
+    </div>
+    <main>
+        <section class="hero">
+            <a href="#contacto" class="hero-content">
+                Pje. Alfio Vito Batti 130 <br> San Luis, Argentina
             </a>
+        </section>
+        <div class="services">
+            <div class="service">
+                <div class="elementor-icon-box-icon">
+                    <img src="assets/images/fast-service.svg" alt="" width="40em" style="transform: translateY(0.2em);">
+                </div>
+                <div class="inf">
+                    <h3>Servicio Rápido</h3>
+                    <span>Fabricamos tus sellos de forma rápida y confiable en sólo 72 hs.</span>
+                </div>
+            </div>
+            <div class="service">
+                <div class="elementor-icon-box-icon">
+                    <img src="assets/images/envios.svg" alt="" width="60em" style="transform: translateY(-0.1em);">
+                </div>
+                <div>
+                    <h3>Envíos</h3>
+                    <span>Realizamos el envío dentro de las 72hs. </span>
+                </div>
+            </div>
+            <div class="service">
+                <div class="elementor-icon-box-icon">
+                    <img src="assets/images/asesoramiento.svg" alt="" width="60em">
+                </div>
+                <div>
+                    <h3>Asesoramiento</h3>
+                    <span>Brindamos atención personalizada.</span>
+                </div>
+            </div>
         </div>
-    </header>
-    <div class="head"></div>
-    <div class="hero">
-        <a href="#festo" class="dir-hero">
-            <span>Pje. Alfio Vito Batti 130</span>
-            <span>San Luis, Argentina</span>
-        </a>
-    </div>
-    <div class="services">
-        <div class="service">
-            <div class="elementor-icon-box-icon">
-                <img src="assets/images/fast-service.svg" alt="" width="40em" style="transform: translateY(0.2em);">
-            </div>
-            <div class="inf">
-                <h3>Servicio Rápido</h3>
-                <span>Fabricamos tus sellos de forma rápida y confiable en sólo 72 hs.</span>
-            </div>
-        </div>
-        <div class="service">
-            <div class="elementor-icon-box-icon">
-                <img src="assets/images/envios.svg" alt="" width="60em" style="transform: translateY(-0.1em);">
-            </div>
+        <section class="contact-actioncall">
             <div>
-                <h3>Envíos</h3>
-                <span>Realizamos el envío dentro de las 72hs. </span>
+                <h4>Nos comunicamos con vos</h3>
+                <b>ASESORAMIENTO</b>
+                <h5>Completa el formulario con tus datos y nos pondremos en contacto.</h4>
+                <button>CONTACTO</button>
             </div>
-        </div>
-        <div class="service">
-            <div class="elementor-icon-box-icon">
-                <img src="assets/images/asesoramiento.svg" alt="" width="60em">
+        </section>
+
+        <section class="stats">
+            <div class="card-stat">
+                <b id="years-experience" data-duration="2000" data-to-value="24" data-from-value="0"
+                    data-delimiter=",">+24</b>
+                <label for="years-experience">Años de experiencia</label>
             </div>
+            <div class="card-stat">
+                <b id="good-garant" data-duration="2000" data-to-value="100" data-from-value="0"
+                    data-delimiter=",">100%</b>
+                <label for="good-garant">Satisfacción garantizada</label>
+            </div>
+            <div class="card-stat">
+                <b id="maked-instalations" data-duration="2000" data-to-value="24" data-from-value="0"
+                    data-delimiter=",">+50,000</b>
+                <label for="maked-instalations">Instalaciones realizadas</label>
+            </div>
+        </section>
+
+        <section class="festo-info">
             <div>
-                <h3>Asesoramiento</h3>
-                <span>Brindamos atención personalizada.</span>
+                <img src="assets/images/festo-distribuidor.png" alt="FESTO distribuidor autorizado">
+                <p>
+                    Somos el proveedor líder mundial de técnica de automatización y el líder del mercado en formación
+                    técnica.
+                    Combinamos una competencia didáctica versátil con una profunda experiencia en la fabricación.
+                    Nuestras
+                    soluciones
+                    de formación y consultoría reúnen lo mejor de ambos mundos y nos convierten en un proveedor de
+                    cursos
+                    con «ADN
+                    industrial». Nuestros objetivos: Le permitimos maximizar su productividad y competitividad al ayudar
+                    a
+                    sus empleados a aportar lo mejor en sus correspondientes trabajos. Nuestros cursos van desde cursos
+                    básicos técnicos hasta el
+                    desarrollo de habilidades para la transformación digital.
+                </p>
             </div>
-        </div>
-    </div>
-    <section class="contact-actioncall">
-        <div>
-            <h3>Nos comunicamos con vos</h3>
-            <b>ASESORAMIENTO</b>
-            <h4>Completa el formulario con tus datos y nos pondremos en contacto.</h4>
-            <button>CONTACTO</button>
-        </div>
-    </section>
-
-    <section class="stats">
-        <div class="card-stat">
-            <b id="years-experience" data-duration="2000" data-to-value="24" data-from-value="0"
-                data-delimiter=",">+24</b>
-            <label for="years-experience">Años de experiencia</label>
-        </div>
-        <div class="card-stat">
-            <b id="good-garant" data-duration="2000" data-to-value="100" data-from-value="0" data-delimiter=",">100%</b>
-            <label for="good-garant">Satisfacción garantizada</label>
-        </div>
-        <div class="card-stat">
-            <b id="maked-instalations" data-duration="2000" data-to-value="24" data-from-value="0"
-                data-delimiter=",">+50,000</b>
-            <label for="maked-instalations">Instalaciones realizadas</label>
-        </div>
-    </section>
-
-    <section class="festo-info">
-        <div>
-            <img src="assets/images/festo-distribuidor.png" alt="FESTO distribuidor autorizado">
-            <p>
-                Somos el proveedor líder mundial de técnica de automatización y el líder del mercado en formación
-                técnica.
-                Combinamos una competencia didáctica versátil con una profunda experiencia en la fabricación. Nuestras
-                soluciones
-                de formación y consultoría reúnen lo mejor de ambos mundos y nos convierten en un proveedor de cursos
-                con «ADN
-                industrial». Nuestros objetivos: Le permitimos maximizar su productividad y competitividad al ayudar a
-                sus empleados a aportar lo mejor en sus correspondientes trabajos. Nuestros cursos van desde cursos
-                básicos técnicos hasta el
-                desarrollo de habilidades para la transformación digital.
-            </p>
-        </div>
-        <aside class="carousel-container" id="gallery">
-            <button class="carousel-button prev" aria-label="Anterior">&#10094;</button>
-            <button class="carousel-button next" aria-label="Siguiente">&#10095;</button>
-            <article class="slide">
-                <img src="assets/images/Digital_Learning_fix696x391-quj6nwqdvrn6j6ijviposjpkv6793dococy8h8bteo.jpg"
-                    alt="">
-            </article>
-            <article class="slide">
-                <img src="assets/images/Training-Course_offer-d000740_01-de-Festo_fix696x391-quj6nxo82logush6q14bd1h1gk2mb2s30hlpyiaf8g.jpg"
-                    alt="">
-            </article>
-            <article class="slide">
-                <img src="assets/images/Training-Course_offer-Technology-d000740_02-Festo_fix1920x880-quj6nxo82logush6q14bd1h1gk2mb2s30hlpyiaf8g.webp"
-                    alt="">
-            </article>
-        </aside>
-    </section>
-
-    <section class="services2">
-        <h2 class="title">SERVICIOS</h2>
-        <div id="service-card-line1" class="service-card">
-            <article class="card">
-                <div>
-                    <img src="assets/images/services-section.svg" alt="" width="50em">
-                    <span>
-                        Venta y reparación de cilindros neumáticos e hidráulicos 
-                    </span>
-                </div>
-                <span>
-                    <a href=""> Más Información...</a>
-                </span>
-            </article>
-            <article class="card">
-                <div>
-                    <img src="assets/images/services-section.svg" alt="" width="50em">
-                    <span>
-                        Venta de sellos neumáticos e hidráulicos standart y especiales 
-                    </span>
-                </div>
-                <span>
-                    <a href=""> Más Información...</a>
-                </span>
-            </article>
-            <article class="card">
-                <div>
-                    <img src="assets/images/services-section.svg" alt="" width="50em">
-                    <span>
-                        Venta de retenes de dirección hidráulica nacionales e importados 
-                    </span>
-                </div>
-                <span>
-                    <a href=""> Más Información...</a>
-                </span>
-            </article>
-        </div> <br><br><br>
-        <div id="service-card-line2" class="service-card">
-            <article class="card">
-                <div>
-                    <img src="assets/images/services-section.svg" alt="" width="50em">
-                    <span>
-                        Asesoramiento en planta 
-                    </span>
-                </div>
-                <span>
-                    <a href=""> Más Información...</a>
-                </span>
-            </article>
-            <article class="card">
-                <div>
-                    <img src="assets/images/services-section.svg" alt="" width="50em">
-                    <span>
-                        Venta de retenes toda la línea SAV, DBH, SABO, e Importados en nitrilo, viton y silicona. 
-                    </span>
-                </div>
-                <span>
-                    <a href=""> Más Información...</a>
-                </span>
-            </article>
-            <article class="card" id="festo-card" style="background-color: rgba(0, 0, 0, 0.897);">
-                <div>
-                    <img src="assets/images/festo-distribuidor.png" alt="" width="400rem">
-                </div>
-                <span>
-                    <i >Ver toda la línea de productos</i> <br>
-                    <a href=""> Más Información...</a>
-                </span>
-            </article>
-        </div>
-    </section>
-    <section class="products">
-        <div class="products-header">
-            <h2 class="title">PRODUCTOS</h2>
-        </div>
-
-        <div class="cards-container">
-            <article class="card">
-                <img src="assets/images/sav-retenes.svg" alt="" id="SAV">
-                <label for="SAV">SAV</label>
-                <span>Más Información...</span>
-            </article>
-            <article class="card">
-                <img src="assets/images/logo_Sabo.svg" alt="" id="SABÓ">
-                <label for="SABÓ">SABÓ</label>
-                <span>Más Información...</span>
-            </article>
-            <article class="card">
-                <img src="assets/images/genebre-logo.svg" alt="" id="GENEBRE">
-                <label for="GENEBRE">GENEBRE</label>
-                <span>Más Información...</span>
-            </article>
-            <article id="all-products">
-                <div class="all-products-label">
-                    <svg id="search-products" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.8053 15.8013L21 21M10.5 7.5V13.5M7.5 10.5H13.5M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                    <label id="all-products-text" for="Todos los productos">Todos los Productos</label>
-                    <svg id="arrow-products" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" fill="#ffffff"></path></g></svg>
-                </div>
-                <span>Más Información...</span>
-            </article>
-        </div>
-    </section>
-
-    <section class="section-header" id="reviews">
-        <h2 class="title">RESEÑAS</h2>
-        <div class="clients-reviews">
-            <b>Que opinan nuestros clientes</b>
-            <aside>
-                <blockquote class="card">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM11.61 14.84C11.61 15.93 10.76 16.78 9.67 16.78H8.19C7.12 16.78 6.25 15.91 6.25 14.84V12.17C6.25 9.09 6.92 8.4 8.71 7.34C8.83 7.27 8.96 7.24 9.09 7.24C9.35 7.24 9.6 7.37 9.74 7.61C9.95 7.97 9.83 8.43 9.48 8.64C8.27 9.34 7.85 9.6 7.77 11.41H9.68C10.77 11.41 11.62 12.26 11.62 13.35V14.84H11.61ZM17.75 14.84C17.75 15.93 16.9 16.78 15.81 16.78H14.32C13.25 16.78 12.38 15.91 12.38 14.84V12.17C12.38 9.09 13.05 8.4 14.84 7.34C14.96 7.27 15.09 7.24 15.22 7.24C15.48 7.24 15.73 7.37 15.87 7.61C16.08 7.97 15.96 8.43 15.61 8.64C14.4 9.36 13.98 9.62 13.9 11.43H15.81C16.9 11.43 17.75 12.28 17.75 13.37V14.84Z" fill="#CE8704"></path> </g></svg>
-                    <strong>Atención 100% personalizada. Me asesoraron de manera super eficiente. </strong>
-                    <p>Ricardo Juarez</p>
-                </blockquote>
-                <blockquote class="card">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM11.61 14.84C11.61 15.93 10.76 16.78 9.67 16.78H8.19C7.12 16.78 6.25 15.91 6.25 14.84V12.17C6.25 9.09 6.92 8.4 8.71 7.34C8.83 7.27 8.96 7.24 9.09 7.24C9.35 7.24 9.6 7.37 9.74 7.61C9.95 7.97 9.83 8.43 9.48 8.64C8.27 9.34 7.85 9.6 7.77 11.41H9.68C10.77 11.41 11.62 12.26 11.62 13.35V14.84H11.61ZM17.75 14.84C17.75 15.93 16.9 16.78 15.81 16.78H14.32C13.25 16.78 12.38 15.91 12.38 14.84V12.17C12.38 9.09 13.05 8.4 14.84 7.34C14.96 7.27 15.09 7.24 15.22 7.24C15.48 7.24 15.73 7.37 15.87 7.61C16.08 7.97 15.96 8.43 15.61 8.64C14.4 9.36 13.98 9.62 13.9 11.43H15.81C16.9 11.43 17.75 12.28 17.75 13.37V14.84Z" fill="#CE8704"></path> </g></svg>
-                    <strong>Siempre que necesito un producto, primero les pregunto a ellos. Unos Genios! </strong>
-                    <p>Marcos Gonzalez</p>
-                </blockquote>
-                <blockquote class="card">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM11.61 14.84C11.61 15.93 10.76 16.78 9.67 16.78H8.19C7.12 16.78 6.25 15.91 6.25 14.84V12.17C6.25 9.09 6.92 8.4 8.71 7.34C8.83 7.27 8.96 7.24 9.09 7.24C9.35 7.24 9.6 7.37 9.74 7.61C9.95 7.97 9.83 8.43 9.48 8.64C8.27 9.34 7.85 9.6 7.77 11.41H9.68C10.77 11.41 11.62 12.26 11.62 13.35V14.84H11.61ZM17.75 14.84C17.75 15.93 16.9 16.78 15.81 16.78H14.32C13.25 16.78 12.38 15.91 12.38 14.84V12.17C12.38 9.09 13.05 8.4 14.84 7.34C14.96 7.27 15.09 7.24 15.22 7.24C15.48 7.24 15.73 7.37 15.87 7.61C16.08 7.97 15.96 8.43 15.61 8.64C14.4 9.36 13.98 9.62 13.9 11.43H15.81C16.9 11.43 17.75 12.28 17.75 13.37V14.84Z" fill="#CE8704"></path> </g></svg>
-                    <strong>Gran variedad de productos y una atención excelente. Super recomendables </strong>
-                    <p>Leonardo Ruggeri</p>
-                </blockquote>
-                <blockquote class="card">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM11.61 14.84C11.61 15.93 10.76 16.78 9.67 16.78H8.19C7.12 16.78 6.25 15.91 6.25 14.84V12.17C6.25 9.09 6.92 8.4 8.71 7.34C8.83 7.27 8.96 7.24 9.09 7.24C9.35 7.24 9.6 7.37 9.74 7.61C9.95 7.97 9.83 8.43 9.48 8.64C8.27 9.34 7.85 9.6 7.77 11.41H9.68C10.77 11.41 11.62 12.26 11.62 13.35V14.84H11.61ZM17.75 14.84C17.75 15.93 16.9 16.78 15.81 16.78H14.32C13.25 16.78 12.38 15.91 12.38 14.84V12.17C12.38 9.09 13.05 8.4 14.84 7.34C14.96 7.27 15.09 7.24 15.22 7.24C15.48 7.24 15.73 7.37 15.87 7.61C16.08 7.97 15.96 8.43 15.61 8.64C14.4 9.36 13.98 9.62 13.9 11.43H15.81C16.9 11.43 17.75 12.28 17.75 13.37V14.84Z" fill="#CE8704"></path> </g></svg>
-                    <strong>Si estás buscando un reten, no dudes en consultarles. Mi proveedor de confianza </strong>
-                    <p>Martin Gomez</p>
-                </blockquote>
+            <aside class="carousel-container" id="gallery">
+                <button class="carousel-button prev" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-button next" aria-label="Siguiente">&#10095;</button>
+                <article class="slide">
+                    <img src="assets/images/Digital_Learning_fix696x391-quj6nwqdvrn6j6ijviposjpkv6793dococy8h8bteo.jpg"
+                        alt="">
+                </article>
+                <article class="slide">
+                    <img src="assets/images/Training-Course_offer-d000740_01-de-Festo_fix696x391-quj6nxo82logush6q14bd1h1gk2mb2s30hlpyiaf8g.jpg"
+                        alt="">
+                </article>
+                <article class="slide">
+                    <img src="assets/images/Training-Course_offer-Technology-d000740_02-Festo_fix1920x880-quj6nxo82logush6q14bd1h1gk2mb2s30hlpyiaf8g.webp"
+                        alt="">
+                </article>
             </aside>
-        </div>
-    </section>
+        </section>
+
+        <section class="services2">
+            <h2 class="title">SERVICIOS</h2>
+            <div id="service-card-line1" class="service-card">
+                <article class="card">
+                    <div>
+                        <img src="assets/images/services-section.svg" alt="" width="50em">
+                        <span>
+                            Venta y reparación de cilindros neumáticos e hidráulicos
+                        </span>
+                    </div>
+                    <span>
+                        <a href=""> Más Información...</a>
+                    </span>
+                </article>
+                <article class="card">
+                    <div>
+                        <img src="assets/images/services-section.svg" alt="" width="50em">
+                        <span>
+                            Venta de sellos neumáticos e hidráulicos standart y especiales
+                        </span>
+                    </div>
+                    <span>
+                        <a href=""> Más Información...</a>
+                    </span>
+                </article>
+                <article class="card">
+                    <div>
+                        <img src="assets/images/services-section.svg" alt="" width="50em">
+                        <span>
+                            Venta de retenes de dirección hidráulica nacionales e importados
+                        </span>
+                    </div>
+                    <span>
+                        <a href=""> Más Información...</a>
+                    </span>
+                </article>
+            </div> <br><br><br>
+            <div id="service-card-line2" class="service-card">
+                <article class="card">
+                    <div>
+                        <img src="assets/images/services-section.svg" alt="" width="50em">
+                        <span>
+                            Asesoramiento en planta
+                        </span>
+                    </div>
+                    <span>
+                        <a href=""> Más Información...</a>
+                    </span>
+                </article>
+                <article class="card">
+                    <div>
+                        <img src="assets/images/services-section.svg" alt="" width="50em">
+                        <span>
+                            Venta de retenes toda la línea SAV, DBH, SABO, e Importados en nitrilo, viton y silicona.
+                        </span>
+                    </div>
+                    <span>
+                        <a href=""> Más Información...</a>
+                    </span>
+                </article>
+                <article class="card" id="festo-card" style="background-color: rgba(0, 0, 0, 0.897);">
+                    <div>
+                        <img src="assets/images/festo-distribuidor.png" alt="" width="400rem">
+                    </div>
+                    <span>
+                        <i>Ver toda la línea de productos</i> <br>
+                        <a href=""> Más Información...</a>
+                    </span>
+                </article>
+            </div>
+        </section>
+        <section class="products">
+            <div class="products-header">
+                <h2 class="title">PRODUCTOS</h2>
+            </div>
+
+            <div class="cards-container">
+                <article class="card">
+                    <img src="assets/images/sav-retenes.svg" alt="" id="SAV">
+                    <label for="SAV">SAV</label>
+                    <span>Más Información...</span>
+                </article>
+                <article class="card">
+                    <img src="assets/images/logo_Sabo.svg" alt="" id="SABÓ">
+                    <label for="SABÓ">SABÓ</label>
+                    <span>Más Información...</span>
+                </article>
+                <article class="card">
+                    <img src="assets/images/genebre-logo.svg" alt="" id="GENEBRE">
+                    <label for="GENEBRE">GENEBRE</label>
+                    <span>Más Información...</span>
+                </article>
+                <article id="all-products">
+                    <div class="all-products-label">
+                        <svg id="search-products" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M15.8053 15.8013L21 21M10.5 7.5V13.5M7.5 10.5H13.5M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </svg>
+                        <label id="all-products-text" for="Todos los productos">Todos los Productos</label>
+                        <svg id="arrow-products" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z"
+                                    fill="#ffffff"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <span>Más Información...</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-header" id="reviews">
+            <h2 class="title">RESEÑAS</h2>
+            <div class="clients-reviews">
+                <b>Que opinan nuestros clientes</b>
+                <aside>
+                    <blockquote class="card">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM11.61 14.84C11.61 15.93 10.76 16.78 9.67 16.78H8.19C7.12 16.78 6.25 15.91 6.25 14.84V12.17C6.25 9.09 6.92 8.4 8.71 7.34C8.83 7.27 8.96 7.24 9.09 7.24C9.35 7.24 9.6 7.37 9.74 7.61C9.95 7.97 9.83 8.43 9.48 8.64C8.27 9.34 7.85 9.6 7.77 11.41H9.68C10.77 11.41 11.62 12.26 11.62 13.35V14.84H11.61ZM17.75 14.84C17.75 15.93 16.9 16.78 15.81 16.78H14.32C13.25 16.78 12.38 15.91 12.38 14.84V12.17C12.38 9.09 13.05 8.4 14.84 7.34C14.96 7.27 15.09 7.24 15.22 7.24C15.48 7.24 15.73 7.37 15.87 7.61C16.08 7.97 15.96 8.43 15.61 8.64C14.4 9.36 13.98 9.62 13.9 11.43H15.81C16.9 11.43 17.75 12.28 17.75 13.37V14.84Z"
+                                    fill="#CE8704"></path>
+                            </g>
+                        </svg>
+                        <strong>Atención 100% personalizada. Me asesoraron de manera super eficiente. </strong>
+                        <p>Ricardo Juarez</p>
+                    </blockquote>
+                    <blockquote class="card">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM11.61 14.84C11.61 15.93 10.76 16.78 9.67 16.78H8.19C7.12 16.78 6.25 15.91 6.25 14.84V12.17C6.25 9.09 6.92 8.4 8.71 7.34C8.83 7.27 8.96 7.24 9.09 7.24C9.35 7.24 9.6 7.37 9.74 7.61C9.95 7.97 9.83 8.43 9.48 8.64C8.27 9.34 7.85 9.6 7.77 11.41H9.68C10.77 11.41 11.62 12.26 11.62 13.35V14.84H11.61ZM17.75 14.84C17.75 15.93 16.9 16.78 15.81 16.78H14.32C13.25 16.78 12.38 15.91 12.38 14.84V12.17C12.38 9.09 13.05 8.4 14.84 7.34C14.96 7.27 15.09 7.24 15.22 7.24C15.48 7.24 15.73 7.37 15.87 7.61C16.08 7.97 15.96 8.43 15.61 8.64C14.4 9.36 13.98 9.62 13.9 11.43H15.81C16.9 11.43 17.75 12.28 17.75 13.37V14.84Z"
+                                    fill="#CE8704"></path>
+                            </g>
+                        </svg>
+                        <strong>Siempre que necesito un producto, primero les pregunto a ellos. Unos Genios! </strong>
+                        <p>Marcos Gonzalez</p>
+                    </blockquote>
+                    <blockquote class="card">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM11.61 14.84C11.61 15.93 10.76 16.78 9.67 16.78H8.19C7.12 16.78 6.25 15.91 6.25 14.84V12.17C6.25 9.09 6.92 8.4 8.71 7.34C8.83 7.27 8.96 7.24 9.09 7.24C9.35 7.24 9.6 7.37 9.74 7.61C9.95 7.97 9.83 8.43 9.48 8.64C8.27 9.34 7.85 9.6 7.77 11.41H9.68C10.77 11.41 11.62 12.26 11.62 13.35V14.84H11.61ZM17.75 14.84C17.75 15.93 16.9 16.78 15.81 16.78H14.32C13.25 16.78 12.38 15.91 12.38 14.84V12.17C12.38 9.09 13.05 8.4 14.84 7.34C14.96 7.27 15.09 7.24 15.22 7.24C15.48 7.24 15.73 7.37 15.87 7.61C16.08 7.97 15.96 8.43 15.61 8.64C14.4 9.36 13.98 9.62 13.9 11.43H15.81C16.9 11.43 17.75 12.28 17.75 13.37V14.84Z"
+                                    fill="#CE8704"></path>
+                            </g>
+                        </svg>
+                        <strong>Gran variedad de productos y una atención excelente. Super recomendables </strong>
+                        <p>Leonardo Ruggeri</p>
+                    </blockquote>
+                    <blockquote class="card">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM11.61 14.84C11.61 15.93 10.76 16.78 9.67 16.78H8.19C7.12 16.78 6.25 15.91 6.25 14.84V12.17C6.25 9.09 6.92 8.4 8.71 7.34C8.83 7.27 8.96 7.24 9.09 7.24C9.35 7.24 9.6 7.37 9.74 7.61C9.95 7.97 9.83 8.43 9.48 8.64C8.27 9.34 7.85 9.6 7.77 11.41H9.68C10.77 11.41 11.62 12.26 11.62 13.35V14.84H11.61ZM17.75 14.84C17.75 15.93 16.9 16.78 15.81 16.78H14.32C13.25 16.78 12.38 15.91 12.38 14.84V12.17C12.38 9.09 13.05 8.4 14.84 7.34C14.96 7.27 15.09 7.24 15.22 7.24C15.48 7.24 15.73 7.37 15.87 7.61C16.08 7.97 15.96 8.43 15.61 8.64C14.4 9.36 13.98 9.62 13.9 11.43H15.81C16.9 11.43 17.75 12.28 17.75 13.37V14.84Z"
+                                    fill="#CE8704"></path>
+                            </g>
+                        </svg>
+                        <strong>Si estás buscando un reten, no dudes en consultarles. Mi proveedor de confianza
+                        </strong>
+                        <p>Martin Gomez</p>
+                    </blockquote>
+                </aside>
+            </div>
+        </section>
+    </main>
+
 
     <script src="js/script.js"></script>
 </body>
