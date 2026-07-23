@@ -1,9 +1,8 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after, button:focus {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 html {
@@ -18,20 +17,13 @@ body {
   line-height: 1.5;
 }
 
-img,
-picture,
-svg,
-video,
-canvas {
+img, picture, svg, video, canvas {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font: inherit;
 }
 
@@ -46,8 +38,7 @@ a {
   text-decoration: none;
 }
 
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
 
@@ -56,13 +47,7 @@ table {
   border-spacing: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   overflow-wrap: break-word;
 }
 
@@ -75,17 +60,13 @@ textarea {
   outline-offset: 2px;
 }
 
-main {
-  padding-top: var(--header-height);
-}
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: clamp(0.2rem, 2vw, 1rem) clamp(1rem, 3vw, 4rem);
   gap: clamp(1rem, 3vw, 4rem);
-  border-bottom: 0.2rem solid rgb(206, 135, 4);
+  border-bottom: 0.2rem solid rgb(207, 150, 44);
   transition: all 200ms;
 }
 header .logo {
@@ -121,14 +102,15 @@ header li {
 }
 
 main .hero {
-  min-height: 40vh;
+  height: 50vh;
   background-image: url("../assets/images/herobg-mobile.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   display: flex;
   align-items: flex-end;
   justify-content: left;
-  border-bottom: 0.2rem solid rgb(206, 135, 4);
+  border-bottom: 0.2rem solid rgb(207, 150, 44);
 }
 main .hero .hero-content {
   text-align: center;
@@ -159,19 +141,118 @@ main .services .service:active {
   opacity: 100%;
 }
 main .contact-actioncall {
-  min-height: 40vh;
-  background: url(../assets/images/backcontainer.jpg);
-  background-size: cover;
+  width: 100%;
+  aspect-ratio: 3/2;
+  padding-block: clamp(2rem, 6vw, 10rem);
   color: white;
+  border-block: 0.2rem solid rgb(207, 150, 44);
+  background: linear-gradient(300deg, rgba(18, 45, 65, 0.9), transparent), url(../assets/images/backcontainer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no repeat;
 }
 main .contact-actioncall div {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: clamp(1rem, 5vw, 5rem) clamp(2rem, 5vw, 4rem);
+  text-shadow: 0.3rem 0.3rem 0.3rem black;
+}
+main .contact-actioncall div h4 {
+  font-size: clamp(0.7em, 5vw, 4rem);
 }
 main .contact-actioncall div b {
   align-self: center;
+  border: clamp(0.2rem, 0.5vw, 0.5rem) solid rgba(207, 150, 44, 0.5);
+  backdrop-filter: blur(0.1rem);
+  margin-bottom: 0.5rem;
+  width: min(100% - 2rem, 1400px);
+  padding-block: clamp(1rem, 5vw, 6rem);
+  padding-inline: auto;
+  font-size: clamp(0.7em, 7vw, 5rem);
+  box-shadow: 0.2rem 0.2rem 0.5rem black;
+  transition: all 300ms ease-out;
+}
+main .contact-actioncall div b:hover, main .contact-actioncall div b:active {
+  backdrop-filter: blur(0.2rem);
+  transform: scale(1.04);
+  box-shadow: 0.5rem 0.5rem 0.7rem rgba(0, 0, 0, 0.7);
+  text-shadow: 0.2rem 0.2rem 0.2rem black, 0.1rem 0.1rem 0.4rem white;
+  border: clamp(0.2rem, 0.5vw, 0.5rem) solid rgb(207, 150, 44);
+}
+main .contact-actioncall div p {
+  font-weight: 400;
+  font-size: clamp(0.7em, 3.5vw, 3rem);
 }
 main .contact-actioncall div button {
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 0.3rem;
+  align-self: center;
+  font-size: clamp(0.7em, 3.9vw, 4rem);
+  letter-spacing: 0.2rem;
+  border: clamp(0.15rem, 0.45vw, 0.5rem) solid white;
+  box-shadow: 0.2rem 0.2rem 0.5rem black;
+  transition: all 100ms ease-in;
+  padding-block: clamp(0.01rem, 1.5vh, 10rem);
+  padding-inline: clamp(0.3rem, 10vw, 20rem);
+  margin-block: clamp(1rem, 10vw, 20rem);
+}
+main .contact-actioncall div button:hover {
+  background-color: transparent;
+  transform: scale(1.05);
   color: white;
+  backdrop-filter: blur(0.3rem);
+}
+main .contact-actioncall div button:active {
+  transform: scale(0.95);
+  color: white;
+  backdrop-filter: blur(0.1rem);
+}
+main .stats {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: clamp(1rem, 5vw, 5rem);
+  border-bottom: clamp(0.2rem, 0.5vw, 0.5rem) solid rgb(207, 150, 44);
+  background: linear-gradient(135deg, #077dc8, rgb(1.8, 4.5, 6.5));
+  padding-block: clamp(2rem, 2vw, 4rem);
+  padding-inline: clamp(4rem, 10vw, 6rem);
+}
+main .stats .card-stat {
+  display: flex;
+  flex-direction: column;
+  background-color: #122d41;
+  border-radius: 0.8rem;
+  padding-block: clamp(1rem, 2vh, 5rem);
+  padding-inline: clamp(3rem, 4vh, 5rem);
+}
+main .stats .card-stat b {
+  color: rgb(207, 150, 44);
+  font-size: clamp(2rem, 7vw, 8rem);
+}
+main .stats .card-stat label {
+  font-size: clamp(0.1rem, 4vw, 6rem);
+}
+main .festo-info {
+  padding-block: clamp(4rem, 8vw, 10rem);
+  padding-inline: clamp(1rem, 3vw, 4rem);
+}
+main .festo-info img {
+  width: clamp(15rem, 20vw, 20rem);
+}
+main .festo-info p {
+  padding-inline: 1.35rem;
+}
+main .festo-info #gallery {
+  position: relative;
+}
+main .festo-info #gallery .slide {
+  display: none;
+}
+main .festo-info #gallery .slide .active {
+  display: block;
 }/*# sourceMappingURL=mobile.css.map */
