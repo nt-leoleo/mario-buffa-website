@@ -117,12 +117,19 @@ main .hero .hero-content {
   color: white;
 }
 main .services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
   text-align: center;
-  padding: clamp(2rem, 5vw, 10rem) clamp(3rem, 6vw, 12rem);
-  gap: clamp(2rem, 4vw, 8rem);
+  grid-template-columns: 1fr;
+  padding: clamp(2rem, 5vw, 5rem) clamp(0.5rem, 6vw, 12rem);
+}
+@media (min-width: 960px) {
+  main .services {
+    grid-template-columns: repeat(3, 1fr);
+    padding: clamp(1rem, 2vw, 3rem) clamp(0.5rem, 6vw, 12rem);
+  }
+}
+main .services {
+  gap: clamp(2rem, 3vw, 8rem);
   background: linear-gradient(to top, transparent, white 60%), url("../assets/images/bg-pattern3.png");
 }
 main .services .service {
@@ -247,12 +254,37 @@ main .festo-info img {
 main .festo-info p {
   padding-inline: 1.35rem;
 }
+main .festo-info a {
+  color: #077dc8;
+  font-size: clamp(1.2rem, 2vw, 1.9rem);
+}
 main .festo-info #gallery {
   position: relative;
+  justify-content: center;
+}
+main .festo-info #gallery .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  align-self: center;
+  z-index: 2;
 }
 main .festo-info #gallery .slide {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  transition: translateX 0.5s ease;
 }
-main .festo-info #gallery .slide .active {
-  display: block;
+main .festo-info #gallery .slideOut {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+main .festo-info #gallery .active {
+  opacity: 1;
+  justify-content: center;
+  transition: all 300ms;
+  transform: translateX(0);
+  pointer-events: auto;
 }/*# sourceMappingURL=mobile.css.map */
