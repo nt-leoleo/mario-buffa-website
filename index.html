@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Buffa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mario Buffa | Sellos, retenes y cilindros hidráulicos en San Luis</title>
+
+    <meta name="description" content="
+            Venta, 
+            reparación y asesoramiento en sellos, 
+            retenes y cilindros hidráulicos en San Luis. 
+            Atención personalizada y productos de calidad.
+        ">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -16,17 +24,24 @@
 
 <body>
     <div class="header-wrapper">
-        <header>
-            <button onclick="openMenu()">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="burger-menu inactive">
+            <div class="menu-header">
+                <div class="logo" class="header-bottom-item">
+                    <a href="">
+                        <img src="assets/images/logo.png" alt="Mario Buffa" data-="logo" width="100em">
+                    </a>
+                    <i>Mario Buffa</i>
+                </div>
+                <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" onclick="closeMenu()">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#077dc8" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+                        <path fill="whitesmoke"
+                            d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z">
+                        </path>
                     </g>
                 </svg>
-            </button>
+            </div>
             <nav>
                 <ul>
                     <li class="button"><a href="#index"> INICIO </a></li>
@@ -36,12 +51,43 @@
                     <li class="button"><a href=""> PRODUCTOS </a></li>
                 </ul>
             </nav>
-            <div class="logo">
+        </div>
+        <header class="disabled">
+            <div class="pre-header header-top-item">
+                <a href="https://api.whatsapp.com/send/?phone=5492664190707&text&type=phone_number&app_absent=0">
+                    266 419-0707
+                </a>
+                <a
+                    href="https://www.google.com/maps/place/Pje.+Alfio+Vito+Batti+130,+D5700+San+Luis/@-33.3159003,-66.3405449,17z/data=!4m6!3m5!1s0x95d43bfa60a73ee5:0x6d887ff583f47d42!8m2!3d-33.3159003!4d-66.3405449!16s%2Fg%2F11h42pv0df?hl=es-AR&entry=ttu&g_ep=EgoyMDI2MDcyNi4wIKXMDSoASAFQAw%3D%3D">
+                    Pje. Alfio Vito Batti 130 D5700 San Luis
+                </a>
+            </div>
+            <button onclick="openMenu()" class="header-bottom-item">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#077dc8" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+            </button>
+            <nav class="header-bottom-item">
+                <ul>
+                    <li class="button"><a href="#index"> INICIO </a></li>
+                    <li class="button"><a href=""> NOSOTROS </a></li>
+                    <li class="button"><a href=""> CONTACTO </a></li>
+                    <li class="button"><a href=""> SERVICIOS </a></li>
+                    <li class="button"><a href=""> PRODUCTOS </a></li>
+                </ul>
+            </nav>
+            <div class="logo" class="header-bottom-item">
                 <a href="">
                     <img src="assets/images/logo.png" alt="Mario Buffa" data-="logo" width="100em">
                 </a>
             </div>
         </header>
+
     </div>
     <main>
         <section class="hero">
@@ -112,32 +158,46 @@
                     Somos el proveedor líder mundial de técnica de automatización y el líder del mercado en formación
                     técnica.
                     Combinamos una competencia didáctica versátil con una profunda experiencia en la fabricación.
-                    Nuestras soluciones de formación y consultoría reúnen lo mejor de ambos mundos y nos convierten 
-                    en un proveedor de cursos con «ADN industrial». Nuestros objetivos: Le permitimos maximizar su 
-                    productividad y competitividad al ayudar a sus empleados a aportar lo mejor en sus correspondientes 
-                    trabajos. Nuestros cursos van desde cursos básicos técnicos hasta el desarrollo de habilidades para 
+                    Nuestras soluciones de formación y consultoría reúnen lo mejor de ambos mundos y nos convierten
+                    en un proveedor de cursos con «ADN industrial». Nuestros objetivos: Le permitimos maximizar su
+                    productividad y competitividad al ayudar a sus empleados a aportar lo mejor en sus correspondientes
+                    trabajos. Nuestros cursos van desde cursos básicos técnicos hasta el desarrollo de habilidades para
                     la transformación digital.
                 </p>
                 <a href="">Más Información...</a>
             </div>
-            <aside class="carousel-container" id="gallery">
-                <div class="buttons">
-                    <button class="carousel-button prev" aria-label="Anterior">&#10094;</button>
-                    <button class="carousel-button next" aria-label="Siguiente">&#10095;</button>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100"
+                            src="assets/images/Digital_Learning_fix696x391-quj6nwqdvrn6j6ijviposjpkv6793dococy8h8bteo.jpg"
+                            alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"
+                            src="assets/images/Training-Course_offer-d000740_01-de-Festo_fix696x391-quj6nxo82logush6q14bd1h1gk2mb2s30hlpyiaf8g.jpg"
+                            alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"
+                            src="assets/images/Training-Course_offer-Technology-d000740_02-Festo_fix1920x880-quj6nxo82logush6q14bd1h1gk2mb2s30hlpyiaf8g.webp"
+                            alt="Third slide">
+                    </div>
                 </div>
-                <article class="slide active">
-                    <img src="assets/images/Digital_Learning_fix696x391-quj6nwqdvrn6j6ijviposjpkv6793dococy8h8bteo.jpg"
-                        alt="">
-                </article>
-                <article class="slide">
-                    <img src="assets/images/Training-Course_offer-d000740_01-de-Festo_fix696x391-quj6nxo82logush6q14bd1h1gk2mb2s30hlpyiaf8g.jpg"
-                        alt="">
-                </article>
-                <article class="slide">
-                    <img src="assets/images/Training-Course_offer-Technology-d000740_02-Festo_fix1920x880-quj6nxo82logush6q14bd1h1gk2mb2s30hlpyiaf8g.webp"
-                        alt="">
-                </article>
-            </aside>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </section>
 
         <section class="services2">
@@ -176,8 +236,6 @@
                         <a href=""> Más Información...</a>
                     </span>
                 </article>
-            </div> <br><br><br>
-            <div id="service-card-line2" class="service-card">
                 <article class="card">
                     <div>
                         <img src="assets/images/services-section.svg" alt="" width="50em">
@@ -200,7 +258,7 @@
                         <a href=""> Más Información...</a>
                     </span>
                 </article>
-                <article class="card" id="festo-card" style="background-color: rgba(0, 0, 0, 0.897);">
+                <article class="card festo-card" id="festo-card" style="background-color: rgba(0, 0, 0, 0.897);">
                     <div>
                         <img src="assets/images/festo-distribuidor.png" alt="" width="400rem">
                     </div>
@@ -213,26 +271,32 @@
         </section>
         <section class="products">
             <div class="products-header">
-                <h2 class="title">PRODUCTOS</h2>
+                <h2 class="title2">PRODUCTOS</h2>
             </div>
 
             <div class="cards-container">
                 <article class="card">
-                    <img src="assets/images/sav-retenes.svg" alt="" id="SAV">
+                    <div class="image-contaier">
+                        <img src="assets/images/sav-retenes.svg" alt="" id="SAV">
+                    </div>
                     <label for="SAV">SAV</label>
                     <span>Más Información...</span>
                 </article>
                 <article class="card">
-                    <img src="assets/images/logo_Sabo.svg" alt="" id="SABÓ">
+                    <div class="image-container">
+                        <img src="assets/images/logo_Sabo.svg" alt="" id="SABÓ">
+                    </div>
                     <label for="SABÓ">SABÓ</label>
                     <span>Más Información...</span>
                 </article>
                 <article class="card">
-                    <img src="assets/images/genebre-logo.svg" alt="" id="GENEBRE">
+                    <div class="image-container">
+                        <img src="assets/images/genebre-logo.svg" alt="" id="GENEBRE">
+                    </div>
                     <label for="GENEBRE">GENEBRE</label>
                     <span>Más Información...</span>
                 </article>
-                <article id="all-products">
+                <article id="all-products" class="card all-products">
                     <div class="all-products-label">
                         <svg id="search-products" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -240,18 +304,18 @@
                             <g id="SVGRepo_iconCarrier">
                                 <path
                                     d="M15.8053 15.8013L21 21M10.5 7.5V13.5M7.5 10.5H13.5M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
-                                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 </path>
                             </g>
                         </svg>
                         <label id="all-products-text" for="Todos los productos">Todos los Productos</label>
                         <svg id="arrow-products" viewBox="0 0 1024 1024" class="icon" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            xmlns="http://www.w3.org/2000/svg" fill="none">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
                                 <path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z"
-                                    fill="#ffffff"></path>
+                                    fill="white"></path>
                             </g>
                         </svg>
                     </div>
@@ -263,7 +327,7 @@
         <section class="section-header" id="reviews">
             <h2 class="title">RESEÑAS</h2>
             <div class="clients-reviews">
-                <b>Que opinan nuestros clientes</b>
+                <b>Qué opinan nuestros clientes</b>
                 <aside>
                     <blockquote class="card">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,10 +385,40 @@
                 </aside>
             </div>
         </section>
+
+        <section class="about-us">
+            <h2 class="title">NOSOTROS</h2>
+            <h1>Sellos, cilindros y retenes hidráulicos en San Luis</h1>
+            <div>
+                <strong>Desde 1994</strong>
+                <strong>CREANDO SOLUCIONES</strong>
+            </div>
+            <button class="contact">CONTACTO</button>
+        </section>
     </main>
+    <footer>
+        <div class="logo">
+            <a href="">
+                <img src="assets/images/logo.png" alt="Mario Buffa" data-="logo" width="100em">
+            </a>
+        </div>
+        <div class="links"></div>
+        <div class="menu"></div>
+        <div class="social-media"></div>
+    </footer>
 
     <!-- <script src="js/script.js"></script> -->
-    <script src="js/carruselGallery.js"></script>
+    <script src="./js/headerBehavior.js"></script>
+    <script src="./js/burgerMenu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

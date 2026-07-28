@@ -60,23 +60,122 @@ textarea {
   outline-offset: 2px;
 }
 
+.burger-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  color: rgba(245, 245, 245, 0.795);
+  font-weight: 600;
+  background: radial-gradient(rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.884));
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  transition: all 0.3s ease-in;
+}
+.burger-menu .menu-header {
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(0.5rem, 1vw, 2rem);
+}
+.burger-menu .menu-header svg {
+  max-width: clamp(2rem, 4vw, 5rem);
+  cursor: pointer;
+  opacity: 0.8;
+}
+.burger-menu .menu-header .logo {
+  display: flex;
+  font-size: clamp(0.8rem, 1vw, 0.5rem);
+  font-weight: 300;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.562);
+}
+.burger-menu .menu-header .logo img {
+  max-width: calc(clamp(2rem, 4vw, 5rem) + 0.4rem);
+}
+.burger-menu nav {
+  height: 100%;
+  padding: clamp(1rem, 1.8vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger-menu nav ul {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.burger-menu nav a {
+  width: -moz-min-content;
+  width: min-content;
+}
+.burger-menu nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+.burger-menu nav a:active {
+  transform: scale(1.1);
+}
+.burger-menu nav a {
+  padding-inline: clamp(1rem, 2vw, 4rem);
+  padding-block: clamp(3rem, 5vw, 8rem);
+}
+.burger-menu nav li {
+  width: -moz-min-content;
+  width: min-content;
+  border-radius: 2rem;
+  background: radial-gradient(rgba(0, 0, 0, 0), transparent);
+  transition: all 0.4s ease-out;
+}
+.burger-menu nav li:active {
+  transform: scale(1.02);
+}
+.burger-menu nav li:hover {
+  transform: translateX(10%);
+  background: radial-gradient(rgba(0, 0, 0, 0.24), transparent);
+}
+
+.inactive {
+  opacity: 0;
+  z-index: -1;
+  transform: scale(0.9);
+}
+
+.pre-header {
+  background-color: transparent;
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
+}
+
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 98;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: clamp(0.2rem, 2vw, 1rem) clamp(1rem, 3vw, 4rem);
   gap: clamp(1rem, 3vw, 4rem);
-  border-bottom: 0.2rem solid rgb(207, 150, 44);
+  border-bottom: 0.2rem solid transparent;
+  background-color: transparent;
   transition: all 200ms;
+}
+header.active {
+  border-bottom: 0.2rem solid rgb(207, 150, 44);
+  background-color: whitesmoke;
+}
+header.header-top-item {
+  flex-basis: 100%;
+}
+header.header-bottom-item {
+  flex: 0 1 auto;
 }
 header .logo {
   max-width: clamp(4rem, 5vw, 8rem);
-}
-header.scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 header button svg {
   width: clamp(2rem, 10vw, 3rem);
@@ -101,6 +200,9 @@ header li {
   padding: clamp(0.1rem, 1vw, 1rem) clamp(0.3rem, 3vw, 4rem);
 }
 
+main {
+  z-index: 1;
+}
 main .hero {
   height: 50vh;
   background-image: url("../assets/images/herobg-mobile.jpg");
@@ -191,7 +293,7 @@ main .contact-actioncall div p {
   font-weight: 400;
   font-size: clamp(0.7em, 3.5vw, 3rem);
 }
-main .contact-actioncall div button {
+main button {
   color: black;
   font-weight: 700;
   background-color: white;
@@ -206,13 +308,13 @@ main .contact-actioncall div button {
   padding-inline: clamp(0.3rem, 10vw, 20rem);
   margin-block: clamp(1rem, 10vw, 20rem);
 }
-main .contact-actioncall div button:hover {
+main button:hover {
   background-color: transparent;
   transform: scale(1.05);
   color: white;
   backdrop-filter: blur(0.3rem);
 }
-main .contact-actioncall div button:active {
+main button:active {
   transform: scale(0.95);
   color: white;
   backdrop-filter: blur(0.1rem);
@@ -247,6 +349,7 @@ main .stats .card-stat label {
 main .festo-info {
   padding-block: clamp(4rem, 8vw, 10rem);
   padding-inline: clamp(1rem, 3vw, 4rem);
+  padding-bottom: 0;
 }
 main .festo-info img {
   width: clamp(15rem, 20vw, 20rem);
@@ -260,31 +363,191 @@ main .festo-info a {
 }
 main .festo-info #gallery {
   position: relative;
-  justify-content: center;
-}
-main .festo-info #gallery .buttons {
-  width: 100%;
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
-  position: absolute;
-  align-self: center;
-  z-index: 2;
 }
 main .festo-info #gallery .slide {
-  position: absolute;
+  inset: 0;
   opacity: 0;
   transform: translateX(100%);
   pointer-events: none;
-  transition: translateX 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
-main .festo-info #gallery .slideOut {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-main .festo-info #gallery .active {
+main .festo-info #gallery .slide.active {
   opacity: 1;
-  justify-content: center;
-  transition: all 300ms;
   transform: translateX(0);
   pointer-events: auto;
+}
+main .festo-info #gallery .slide.prev {
+  transform: translateX(-100%);
+}
+main .festo-info #gallery .slide.next {
+  transform: translateX(100%);
+}
+main .festo-info #gallery .buttons {
+  inset-inline: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+main .title {
+  font-size: clamp(1rem, 8vw, 2.5rem);
+  color: #077dc8;
+  border-bottom: 0.2rem solid #077dc8;
+  padding-bottom: clamp(1rem, 4vw, 3rem);
+  padding-inline: clamp(1rem, 3vw, 2rem);
+  margin-inline: clamp(1rem, 1.8vw, 2rem);
+  margin-top: clamp(4rem, 20vw, 30rem);
+  margin-bottom: clamp(2.5rem, 10vw, 20rem);
+}
+main .title2 {
+  color: white;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: clamp(1rem, 8vw, 2.5rem);
+  border-block: 0.2rem solid rgb(207, 150, 44);
+  margin-block: clamp(4rem, 20vw, 30rem);
+  background: linear-gradient(135deg, #077dc8, #122d41);
+  padding-top: clamp(4rem, 20vw, 30rem);
+  padding-bottom: clamp(2.5rem, 10vw, 20rem);
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
+}
+main .services2 .service-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+main .services2 .service-card .card {
+  background-color: rgba(18, 45, 65, 0.9);
+  margin-inline: clamp(1rem, 1.8vw, 2rem);
+  border-radius: 0.5rem;
+  color: white;
+  padding-inline: clamp(2rem, 7vw, 4rem);
+  padding-block: clamp(1rem, 4vw, 2rem);
+}
+main .services2 .service-card .card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(7, 125, 200, 0.3);
+  border-radius: 0.5rem;
+  padding-inline: clamp(2rem, 7vw, 4rem);
+  padding-block: clamp(0.5rem, 2vw, 2rem);
+}
+main .services2 .service-card .festo-card {
+  background-color: black;
+}
+main .products .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
+}
+main .products .cards-container .card {
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid #122d41;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .products .cards-container .card .image-container img {
+  min-height: clamp(10rem, 15vh, 20rem);
+}
+main .products .cards-container .card .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+main .products .cards-container .card label {
+  background-color: #122d41;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding-block: 0.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+main .products .cards-container .all-products {
+  background-color: rgb(9, 22.5, 32.5);
+  transition: all 0.2s ease-in-out;
+}
+main .products .cards-container .all-products:hover {
+  background-color: #122d41;
+  transform: scale(1.02);
+}
+main .products .cards-container .all-products:active {
+  background-color: rgb(9, 22.5, 32.5);
+  transform: scale(0.95);
+}
+main .products .cards-container .all-products {
+  color: white;
+}
+main .products .cards-container .all-products label {
+  background-color: transparent;
+}
+main .products .cards-container .all-products {
+  padding-inline: 0.2rem;
+  padding-block: 0.8rem;
+}
+main .products .cards-container .all-products .all-products-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .products {
+  margin-bottom: clamp(7rem, 15vw, 25rem);
+}
+main #reviews {
+  background: linear-gradient(175deg, #077dc8, rgb(5.4, 13.5, 19.5));
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
+  padding-block: clamp(1rem, 2vw, 5rem);
+}
+main #reviews b {
+  color: white;
+  font-size: clamp(0.5rem, 10vw, 10rem);
+  margin-bottom: clamp(3rem, 4vw, 5rem);
+}
+main #reviews .title {
+  color: white;
+  border-bottom-color: white;
+  font-weight: 700;
+}
+main #reviews .card {
+  background-color: transparent;
+  color: white;
+  border: 0.2rem solid rgb(207, 150, 44);
+  border-radius: clamp(1.2rem, 2vw, 2.2rem);
+  padding: clamp(0.5rem, 2vw, 4rem);
+}
+main #reviews .card svg {
+  max-width: clamp(2rem, 3vw, 4rem);
+}
+main #reviews .card strong {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  padding-inline: clamp(2rem, 3vw, 4rem);
+}
+main #reviews .card p {
+  font-style: italic;
+}
+main #reviews aside {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 3rem;
+}
+main #reviews .clients-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 3rem;
+}
+main .about-us {
+  background-image: url(../assets/images/abt-usbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }/*# sourceMappingURL=mobile.css.map */

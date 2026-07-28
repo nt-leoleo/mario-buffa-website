@@ -1,22 +1,20 @@
 const header = document.querySelector("header");
+const preHeader = document.querySelector('.pre-header');
+let headerOffsetHeight = preHeader.offsetHeight;
+let active = false;
 
-let headerHeight;
-function updateHeaderHeight() {
-    headerHeight = header.offsetHeight;
+window.addEventListener('scroll', () => {
 
-    document.documentElement.style.setProperty(
-        "--header-height",
-        `${headerHeight}px`
-    );
-}
-
-updateHeaderHeight();
-
-window.addEventListener("resize", updateHeaderHeight);
-window.addEventListener("scroll", () => {
-    if (window.scrollY >= headerHeight) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
+    if (window.scrollY > headerOffsetHeight && !active) {
+        active = true;
+        header.classList.add("active");
+        // console.log("scrolled");
     }
+
+    if (window.scrollY <= headerOffsetHeight && active) {
+        active = false;
+        header.classList.remove("active");
+        // console.log("un-scrolled");
+    }
+
 });
