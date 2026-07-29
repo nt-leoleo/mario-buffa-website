@@ -2,6 +2,11 @@
 @use '_variables' as v;
 @use "sass:color";
 
+body {
+    background-image: url(../assets/images/bg-pattern3.png);
+    background-attachment: fixed;
+}
+
 .burger-menu {
     position: fixed;
     top: 0;
@@ -63,37 +68,40 @@
 
         & a {
             width: min-content;
+
             &:hover {
                 color: white;
                 text-decoration: none;
             }
+
             &:active {
                 transform: scale(1.1);
             }
+
             padding: {
                 inline: clamp(1rem, 2vw, 4rem);
                 block: clamp(3rem, 5vw, 8rem);
-            };
+            }
+
+            ;
         }
+
         & li {
             width: min-content;
             border-radius: 2rem;
-            background: radial-gradient(
-                    rgba(0, 0, 0, 0),
-                    transparent
-                );
+            background: radial-gradient(rgba(0, 0, 0, 0),
+                    transparent);
             transition: all .4s ease-out;
-            
-            &:active{
+
+            &:active {
                 transform: scale(1.02);
             }
+
             &:hover {
                 transform: translateX(10%);
-                background: radial-gradient(
-                    rgba(0, 0, 0, 0.24),
-                    transparent
-                );
-                
+                background: radial-gradient(rgba(0, 0, 0, 0.24),
+                        transparent);
+
             }
         }
 
@@ -106,14 +114,29 @@
     transform: scale(.9);
 }
 
-.pre-header {
-    background-color: transparent;
-    padding-inline: v.$globalMargin;
+.disabled {
+    display: none;
+    transform: translateY(100%);
 }
 
-header {
+.pre-header {
+    color: rgba(255, 255, 255, 0.637);
+    padding-inline: v.$globalMargin;
     position: fixed;
     top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 98;
+    background: linear-gradient(
+        to top,
+        transparent,
+        
+    );
+}
+header {
+    position: fixed;
+    color: white;
+    top: var(--preHeader-height);
     left: 0;
     width: 100vw;
     z-index: 98;
@@ -124,13 +147,15 @@ header {
     gap: clamp(1rem, 3vw, 4rem);
 
     border-bottom: .2rem solid transparent;
-    background-color: transparent;
 
     transition: all 200ms;
 
     &.active {
         border-bottom: .2rem solid v.$secondary;
         background-color: whitesmoke;
+        color: black;
+        background: whitesmoke;
+        top: 0;
     }
 
     &.header-top-item {
@@ -176,9 +201,11 @@ header {
         padding: clamp(.1rem, 1vw, 1rem) clamp(.3rem, 3vw, 4rem);
     }
 }
-
+.header-container{
+    border: .1rem solid red;
+}
 main {
-    z-index: 1;
+    // padding-top: calc(var(--header-height) + var(--preHeader-height));
 
     & .hero {
         height: clamp(37vh, 50vh, 60vh);
@@ -218,7 +245,7 @@ main {
         gap: clamp(2rem, 3vw, 8rem);
 
         background: linear-gradient(to top, transparent, white 60%),
-        url("../assets/images/bg-pattern3.png");
+        transparent;
         ;
 
         & .service {

@@ -60,6 +60,11 @@ textarea {
   outline-offset: 2px;
 }
 
+body {
+  background-image: url(../assets/images/bg-pattern3.png);
+  background-attachment: fixed;
+}
+
 .burger-menu {
   position: fixed;
   top: 0;
@@ -144,14 +149,26 @@ textarea {
   transform: scale(0.9);
 }
 
+.disabled {
+  display: none;
+  transform: translateY(100%);
+}
+
 .pre-header {
-  background-color: transparent;
+  color: rgba(255, 255, 255, 0.637);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 98;
+  background: linear-gradient(to top, transparent);
 }
 
 header {
   position: fixed;
-  top: 0;
+  color: white;
+  top: var(--preHeader-height);
   left: 0;
   width: 100vw;
   z-index: 98;
@@ -161,12 +178,14 @@ header {
   padding: clamp(0.2rem, 2vw, 1rem) clamp(1rem, 3vw, 4rem);
   gap: clamp(1rem, 3vw, 4rem);
   border-bottom: 0.2rem solid transparent;
-  background-color: transparent;
   transition: all 200ms;
 }
 header.active {
   border-bottom: 0.2rem solid rgb(207, 150, 44);
   background-color: whitesmoke;
+  color: black;
+  background: whitesmoke;
+  top: 0;
 }
 header.header-top-item {
   flex-basis: 100%;
@@ -200,9 +219,10 @@ header li {
   padding: clamp(0.1rem, 1vw, 1rem) clamp(0.3rem, 3vw, 4rem);
 }
 
-main {
-  z-index: 1;
+.header-container {
+  border: 0.1rem solid red;
 }
+
 main .hero {
   height: 50vh;
   background-image: url("../assets/images/herobg-mobile.jpg");
@@ -232,7 +252,7 @@ main .services {
 }
 main .services {
   gap: clamp(2rem, 3vw, 8rem);
-  background: linear-gradient(to top, transparent, white 60%), url("../assets/images/bg-pattern3.png");
+  background: linear-gradient(to top, transparent, white 60%), transparent;
 }
 main .services .service {
   display: flex;

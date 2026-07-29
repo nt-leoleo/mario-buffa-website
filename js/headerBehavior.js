@@ -1,20 +1,32 @@
 const header = document.querySelector("header");
 const preHeader = document.querySelector('.pre-header');
-let headerOffsetHeight = preHeader.offsetHeight;
 let active = false;
+window.addEventListener('load', () => {
+    let headerOffsetHeight = preHeader.offsetHeight;
+    document.documentElement.style.setProperty(
+        '--preHeader-height',
+        `${preHeader.offsetHeight}px`
+    );
+    document.documentElement.style.setProperty(
+        '--header-height',
+        `${header.offsetHeight}px`
+    );
 
-window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
 
-    if (window.scrollY > headerOffsetHeight && !active) {
-        active = true;
-        header.classList.add("active");
-        // console.log("scrolled");
-    }
+        if (window.scrollY > headerOffsetHeight && !active) {
+            active = true;
+            header.classList.add("active");
+            preHeader.classList.add('disabled');
+            // console.log("scrolled");
+        }
 
-    if (window.scrollY <= headerOffsetHeight && active) {
-        active = false;
-        header.classList.remove("active");
-        // console.log("un-scrolled");
-    }
+        if (window.scrollY <= headerOffsetHeight && active) {
+            active = false;
+            header.classList.remove("active");
+            preHeader.classList.remove('disabled');
+            // console.log("un-scrolled");
+        }
 
+    });
 });
