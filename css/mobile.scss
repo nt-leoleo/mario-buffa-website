@@ -771,13 +771,32 @@ main {
 footer {
     background-color: v.$tertiary;
     color: whitesmoke;
-
     display: grid;
-    gap: 1.5rem;
+    gap: 1.2rem;
     grid-template-columns: repeat(2, 1fr);
-
-    @media (min-width: 1000px) {
-        grid-template-columns: repeat(4, 1fr);
+    padding: {
+        inline: clamp(1rem, 2vw, 4rem);
+        block: clamp(1rem, 2vw, 4rem);
+    };
+    // @media (min-width: 1000px) {
+    //     grid-template-columns: repeat(4, 1fr);
+    // }
+    & .card {
+        overflow: hidden;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: v.$globalMargin;
+    }
+    & .logoCard {
+        background-color: whitesmoke;
+    }
+    & span {
+        align-self: flex-start;
+        width: 100%;
+        border-left: .2rem solid coral;
+        padding-inline: v.$globalMargin;
     }
 
 }
