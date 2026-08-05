@@ -151,18 +151,42 @@ body {
 
 .disabled {
   display: none;
-  transform: translateY(100%);
+  transform: translateY(-100%);
 }
 
 .pre-header {
   color: rgba(255, 255, 255, 0.637);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
   top: 0;
   left: 0;
   width: 100vw;
+  text-shadow: 0.1rem 0.1rem 0.3rem black;
+  font-size: clamp(0.2rem, 3vw, 1rem);
+  font-weight: 600;
   z-index: 98;
-  background: linear-gradient(to top, transparent);
+  padding-top: 0.2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  transition: all 200ms;
+}
+.pre-header a {
+  display: flex;
+  gap: clamp(0.15rem, 1.5vw, 2rem);
+  transition: all 200ms ease;
+}
+.pre-header a:hover {
+  color: white;
+  transform: scale(1.05);
+}
+.pre-header a:active {
+  color: white;
+  transform: scale(0.7);
+}
+.pre-header svg {
+  width: clamp(1.1rem, 2vw, 3rem);
 }
 
 header {
@@ -177,15 +201,19 @@ header {
   align-items: center;
   padding: clamp(0.2rem, 2vw, 1rem) clamp(1rem, 3vw, 4rem);
   gap: clamp(1rem, 3vw, 4rem);
-  border-bottom: 0.2rem solid transparent;
   transition: all 200ms;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  border-bottom: 0.2rem solid none;
 }
 header.active {
-  border-bottom: 0.2rem solid rgb(207, 150, 44);
+  border-bottom: 0.2rem solid #C79A3A;
   background-color: whitesmoke;
   color: black;
   background: whitesmoke;
   top: 0;
+}
+header.inactive {
+  transform: translateY(-100%);
 }
 header.header-top-item {
   flex-basis: 100%;
@@ -219,10 +247,6 @@ header li {
   padding: clamp(0.1rem, 1vw, 1rem) clamp(0.3rem, 3vw, 4rem);
 }
 
-.header-container {
-  border: 0.1rem solid red;
-}
-
 main .hero {
   height: 50vh;
   background-image: url("../assets/images/herobg-mobile.jpg");
@@ -232,7 +256,7 @@ main .hero {
   display: flex;
   align-items: flex-end;
   justify-content: left;
-  border-bottom: 0.2rem solid rgb(207, 150, 44);
+  border-bottom: 0.2rem solid #C79A3A;
 }
 main .hero .hero-content {
   text-align: center;
@@ -274,7 +298,7 @@ main .contact-actioncall {
   aspect-ratio: 3/2;
   padding-block: clamp(2rem, 6vw, 10rem);
   color: white;
-  border-block: 0.2rem solid rgb(207, 150, 44);
+  border-block: 0.2rem solid #C79A3A;
   background: linear-gradient(300deg, rgba(18, 45, 65, 0.9), transparent), url(../assets/images/backcontainer.jpg);
   background-size: cover;
   background-position: center;
@@ -292,7 +316,7 @@ main .contact-actioncall div h4 {
 }
 main .contact-actioncall div b {
   align-self: center;
-  border: clamp(0.2rem, 0.5vw, 0.5rem) solid rgba(207, 150, 44, 0.5);
+  border: clamp(0.2rem, 0.5vw, 0.5rem) solid rgba(199, 154, 58, 0.5);
   backdrop-filter: blur(0.1rem);
   margin-bottom: 0.5rem;
   width: min(100% - 2rem, 1400px);
@@ -307,7 +331,7 @@ main .contact-actioncall div b:hover, main .contact-actioncall div b:active {
   transform: scale(1.04);
   box-shadow: 0.5rem 0.5rem 0.7rem rgba(0, 0, 0, 0.7);
   text-shadow: 0.2rem 0.2rem 0.2rem black, 0.1rem 0.1rem 0.4rem white;
-  border: clamp(0.2rem, 0.5vw, 0.5rem) solid rgb(207, 150, 44);
+  border: clamp(0.2rem, 0.5vw, 0.5rem) solid #C79A3A;
 }
 main .contact-actioncall div p {
   font-weight: 400;
@@ -346,8 +370,8 @@ main .stats {
   flex-direction: column;
   justify-content: space-around;
   gap: clamp(1rem, 5vw, 5rem);
-  border-bottom: clamp(0.2rem, 0.5vw, 0.5rem) solid rgb(207, 150, 44);
-  background: linear-gradient(135deg, #077dc8, rgb(1.8, 4.5, 6.5));
+  border-bottom: clamp(0.2rem, 0.5vw, 0.5rem) solid #C79A3A;
+  background: linear-gradient(135deg, #0A7CC6, rgb(1.8, 4.5, 6.5));
   padding-block: clamp(2rem, 2vw, 4rem);
   padding-inline: clamp(4rem, 10vw, 6rem);
 }
@@ -360,7 +384,7 @@ main .stats .card-stat {
   padding-inline: clamp(3rem, 4vh, 5rem);
 }
 main .stats .card-stat b {
-  color: rgb(207, 150, 44);
+  color: #C79A3A;
   font-size: clamp(2rem, 7vw, 8rem);
 }
 main .stats .card-stat label {
@@ -378,7 +402,7 @@ main .festo-info p {
   padding-inline: 1.35rem;
 }
 main .festo-info a {
-  color: #077dc8;
+  color: #0A7CC6;
   font-size: clamp(1.2rem, 2vw, 1.9rem);
 }
 main .festo-info #gallery {
@@ -412,8 +436,8 @@ main .festo-info #gallery .buttons {
 }
 main .title {
   font-size: clamp(1rem, 8vw, 2.5rem);
-  color: #077dc8;
-  border-bottom: 0.2rem solid #077dc8;
+  color: #0A7CC6;
+  border-bottom: 0.2rem solid #0A7CC6;
   padding-bottom: clamp(1rem, 4vw, 3rem);
   padding-inline: clamp(1rem, 3vw, 2rem);
   margin-inline: clamp(1rem, 1.8vw, 2rem);
@@ -426,9 +450,9 @@ main .title2 {
   height: 100%;
   align-items: center;
   font-size: clamp(1rem, 8vw, 2.5rem);
-  border-block: 0.2rem solid rgb(207, 150, 44);
+  border-block: 0.2rem solid #C79A3A;
   margin-block: clamp(4rem, 20vw, 30rem);
-  background: linear-gradient(135deg, #077dc8, #122d41);
+  background: linear-gradient(135deg, #0A7CC6, #122d41);
   padding-top: clamp(4rem, 20vw, 30rem);
   padding-bottom: clamp(2.5rem, 10vw, 20rem);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
@@ -450,7 +474,7 @@ main .services2 .service-card .card div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(7, 125, 200, 0.3);
+  background-color: rgba(10, 124, 198, 0.3);
   border-radius: 0.5rem;
   padding-inline: clamp(2rem, 7vw, 4rem);
   padding-block: clamp(0.5rem, 2vw, 2rem);
@@ -495,6 +519,7 @@ main .products .cards-container .card label {
 main .products .cards-container .all-products {
   background-color: rgb(9, 22.5, 32.5);
   transition: all 0.2s ease-in-out;
+  color: white;
 }
 main .products .cards-container .all-products:hover {
   background-color: #122d41;
@@ -503,9 +528,6 @@ main .products .cards-container .all-products:hover {
 main .products .cards-container .all-products:active {
   background-color: rgb(9, 22.5, 32.5);
   transform: scale(0.95);
-}
-main .products .cards-container .all-products {
-  color: white;
 }
 main .products .cards-container .all-products label {
   background-color: transparent;
@@ -524,7 +546,7 @@ main .products {
   margin-bottom: clamp(7rem, 15vw, 25rem);
 }
 main #reviews {
-  background: linear-gradient(175deg, #077dc8, rgb(5.4, 13.5, 19.5));
+  background: linear-gradient(175deg, #0A7CC6, rgb(5.4, 13.5, 19.5));
   padding-inline: clamp(1rem, 1.8vw, 2rem);
   padding-block: clamp(1rem, 2vw, 5rem);
 }
@@ -541,7 +563,7 @@ main #reviews .title {
 main #reviews .card {
   background-color: transparent;
   color: white;
-  border: 0.2rem solid rgb(207, 150, 44);
+  border: 0.2rem solid #C79A3A;
   border-radius: clamp(1.2rem, 2vw, 2.2rem);
   padding: clamp(0.5rem, 2vw, 4rem);
 }
@@ -566,8 +588,24 @@ main #reviews .clients-reviews {
   gap: 3rem;
 }
 main .about-us {
-  background-image: url(../assets/images/abt-usbg.jpg);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 0.2rem 0.3rem 0.3rem black;
+  background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(../assets/images/abt-usbg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-block: clamp(1rem, 3vw, 4rem);
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
+  padding-bottom: 4rem;
+}
+main .about-us h2 {
+  margin-inline: 0;
+  filter: brightness(105%);
+}
+
+footer {
+  background-color: #122d41;
+  color: whitesmoke;
 }/*# sourceMappingURL=mobile.css.map */
