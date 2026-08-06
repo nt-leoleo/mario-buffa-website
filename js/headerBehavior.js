@@ -1,7 +1,10 @@
-const header = document.querySelector("header");
-const preHeader = document.querySelector('.pre-header');
-let active = false;
-window.addEventListener('load', () => {
+export function headerBehavior() {
+    const header = document.querySelector("header");
+    const preHeader = document.querySelector('.pre-header');
+
+    if (!header) return;
+
+    let active = false;
     let headerOffsetHeight = preHeader.offsetHeight;
     document.documentElement.style.setProperty(
         '--preHeader-height',
@@ -29,4 +32,4 @@ window.addEventListener('load', () => {
         }
 
     });
-});
+}
