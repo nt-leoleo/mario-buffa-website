@@ -1,6 +1,10 @@
+@use "sass:color";
+
 @use '_reset';
 @use '_variables' as v;
-@use "sass:color";
+
+@use 'tablet';
+@use 'desktop';
 
 body {
     background-image: url(../assets/images/bg-pattern3.png);

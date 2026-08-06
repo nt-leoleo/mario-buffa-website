@@ -1,0 +1,10 @@
+@use '_variables' as v;
+
+@media (min-width: v.$tablet) {
+    .header-wrapper {
+        display: none;
+        & .hCarousel {
+            display: none;
+        }
+    }
+}
