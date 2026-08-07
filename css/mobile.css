@@ -60,6 +60,116 @@ textarea {
   outline-offset: 2px;
 }
 
+@media (min-width: 1200px) {
+  html body {
+    background-image: url(../assets/images/backcontainer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header-container {
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+  .burger {
+    display: none;
+  }
+  .mainNav {
+    display: block;
+    z-index: 90;
+  }
+  .hCarousel {
+    display: none;
+  }
+  header nav ul a {
+    border: 0.15rem solid whitesmoke;
+    backdrop-filter: blur(0.2rem);
+    -webkit-backdrop-filter: blur(0.2rem);
+    text-shadow: 0.2rem 0.2rem 0.5rem black;
+    box-shadow: 0.2rem 0.2rem 0.5rem black;
+  }
+  header nav ul a:hover {
+    color: black;
+    background-color: whitesmoke;
+    text-decoration: none;
+    transform: scale(1);
+  }
+  header nav ul a {
+    transition: all 0.2s ease;
+  }
+  header.active {
+    border-bottom: 0.2rem solid #C79A3A;
+    background-color: whitesmoke;
+    color: black;
+    background: whitesmoke;
+    top: 0;
+  }
+  header.active nav a {
+    text-shadow: none;
+    box-shadow: none;
+    border: 0.15rem solid black;
+  }
+  header.active nav a:hover {
+    color: none;
+    text-decoration: none;
+  }
+  main .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, transparent 20%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  main .hero {
+    background-image: url("../assets/images/BannerMarioBuffa.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 16/5;
+    padding: 1rem;
+  }
+  main div.services {
+    grid-template-columns: repeat(3, 1fr);
+    padding: clamp(1rem, 2vw, 3rem) clamp(0.5rem, 6vw, 12rem);
+    gap: clamp(5rem, 8vw, 13rem);
+    background: linear-gradient(to top, transparent, white 60%), url(../assets/images/bg-pattern3.png);
+  }
+  main div.services .service {
+    flex-direction: row !important;
+    gap: clamp(0.5rem, 2vw, 4rem);
+  }
+  main .contact-actioncall {
+    background: linear-gradient(135deg, rgba(10, 124, 198, 0.5), rgba(23, 52, 74, 0.5));
+    padding-block: clamp(1rem, 5vw + 2rem, 4rem);
+    background: linear-gradient(300deg, rgba(23, 52, 74, 0.9), rgba(0, 0, 0, 0.349)) !important;
+    background-image: none;
+  }
+  main .stats {
+    flex-direction: row;
+    padding-block: clamp(2rem, 4vw + 0.5rem, 5rem);
+    padding-inline: 0;
+  }
+  main .festo-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: linear-gradient(to bottom, whitesmoke, transparent), url("../assets/images/bg-pattern3.png");
+  }
+  main .services2 {
+    background: url("../assets/images/bg-pattern3.png");
+  }
+  main .services2 .service-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main .services2 .service-card .card {
+    min-height: clamp(1rem, 8vw, 2rem);
+  }
+  main .services2 .service-card .card div {
+    display: flex;
+    flex-direction: row;
+    min-height: clamp(1rem, 4vw, 2rem);
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+}
 body {
   background-image: url(../assets/images/bg-pattern3.png);
   background-attachment: fixed;
@@ -165,7 +275,7 @@ body {
   padding-inline: clamp(1rem, 1.8vw, 2rem);
   top: 0;
   left: 0;
-  width: 100vw;
+  right: 0;
   text-shadow: 0.1rem 0.1rem 0.3rem black;
   font-size: clamp(0.2rem, 3vw, 1rem);
   font-weight: 600;
@@ -195,7 +305,7 @@ header {
   color: white;
   top: var(--preHeader-height);
   left: 0;
-  width: 100vw;
+  right: 0;
   z-index: 98;
   display: flex;
   justify-content: space-between;
@@ -233,18 +343,16 @@ header nav {
   flex: 0 10 auto;
   min-width: 0;
 }
+header nav a {
+  border: 0.15rem solid white;
+  padding: clamp(0.1rem, 1vw, 1rem) clamp(0.3rem, 3vw, 4rem);
+  font-size: clamp(0.6rem, 0.4rem + 0.8vw, 1.1rem);
+  font-weight: 600;
+}
 header ul {
   display: flex;
   justify-content: space-around;
   gap: clamp(0.1rem, 2vw, 5rem);
-}
-header a {
-  font-size: clamp(0.6rem, 0.4rem + 0.8vw, 1.1rem);
-  font-weight: 600;
-}
-header li {
-  border: 0.15rem solid black;
-  padding: clamp(0.1rem, 1vw, 1rem) clamp(0.3rem, 3vw, 4rem);
 }
 
 body .hCarousel {
@@ -263,8 +371,8 @@ body .hCarousel .carousel-item img {
   width: 100%;
 }
 
-main .hero {
-  height: 50vh;
+.hero {
+  aspect-ratio: 12/13;
   background-image: url("../assets/images/herobg-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -274,27 +382,20 @@ main .hero {
   justify-content: left;
   border-bottom: 0.2rem solid #C79A3A;
 }
-main .hero .hero-content {
+.hero .hero-content {
   text-align: center;
   color: white;
 }
-main .services {
+
+.services {
   display: grid;
   text-align: center;
   grid-template-columns: 1fr;
   padding: clamp(2rem, 5vw, 5rem) clamp(0.5rem, 6vw, 12rem);
-}
-@media (min-width: 960px) {
-  main .services {
-    grid-template-columns: repeat(3, 1fr);
-    padding: clamp(1rem, 2vw, 3rem) clamp(0.5rem, 6vw, 12rem);
-  }
-}
-main .services {
   gap: clamp(2rem, 3vw, 8rem);
   background: linear-gradient(to top, transparent, white 60%), transparent;
 }
-main .services .service {
+.services .service {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -302,165 +403,166 @@ main .services .service {
   gap: clamp(1rem, 4vw, 4rem);
   min-width: clamp(1rem, 10vw, 10rem);
   opacity: 60%;
+  transition: all 0.2s ease;
 }
-main .services .service:hover {
+.services .service:hover, .services .service:active {
   opacity: 100%;
 }
-main .services .service:active {
-  opacity: 100%;
-}
-main .contact-actioncall {
+
+.contact-actioncall {
   width: 100%;
-  aspect-ratio: 3/2;
-  padding-block: clamp(2rem, 6vw, 10rem);
   color: white;
   border-block: 0.2rem solid #C79A3A;
-  background: linear-gradient(300deg, rgba(23, 52, 74, 0.9), transparent), url(../assets/images/backcontainer.jpg);
+  background: linear-gradient(300deg, rgba(23, 52, 74, 0.9), rgba(0, 0, 0, 0.233)), url(../assets/images/backcontainer.jpg);
   background-size: cover;
-  background-position: center;
-  background-repeat: no repeat;
+  background-position: top;
+  background-repeat: no-repeat;
 }
-main .contact-actioncall div {
+.contact-actioncall div {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: clamp(1rem, 5vw, 5rem) clamp(2rem, 5vw, 4rem);
+  padding: clamp(2rem, 2vw + 1rem, 5rem) clamp(2rem, 7vw, 10rem);
   text-shadow: 0.3rem 0.3rem 0.3rem black;
 }
-main .contact-actioncall div h4 {
-  font-size: clamp(0.7em, 5vw, 4rem);
+.contact-actioncall div h4 {
+  font-size: clamp(1em, 1.4vw + 0.2rem, 3rem);
 }
-main .contact-actioncall div b {
+.contact-actioncall div b {
   align-self: center;
-  border: clamp(0.2rem, 0.5vw, 0.5rem) solid rgba(199, 154, 58, 0.5);
+  border: clamp(0.2rem, 0.3vw + 0.01rem, 0.5rem) solid rgba(199, 154, 58, 0.5);
   backdrop-filter: blur(0.1rem);
   margin-bottom: 0.5rem;
-  width: min(100% - 2rem, 1400px);
-  padding-block: clamp(1rem, 5vw, 6rem);
-  padding-inline: auto;
-  font-size: clamp(0.7em, 7vw, 5rem);
+  letter-spacing: clamp(0.1rem, 0.2vw, 0.4rem);
+  padding-block: clamp(1rem, 1.2vw + 0.1rem, 3rem);
+  padding-inline: clamp(0.7rem, 1vw + 0.2rem, 3rem);
+  font-size: clamp(2.1em, 4vw + 0.2rem, 6rem);
   box-shadow: 0.2rem 0.2rem 0.5rem black;
+  text-shadow: 0.2rem 0.2rem 0.1rem black, 0.1rem 0.1rem 0.7rem white;
   transition: all 300ms ease-out;
 }
-main .contact-actioncall div b:hover, main .contact-actioncall div b:active {
+.contact-actioncall div b:hover, .contact-actioncall div b:active {
   backdrop-filter: blur(0.2rem);
   transform: scale(1.04);
   box-shadow: 0.5rem 0.5rem 0.7rem rgba(0, 0, 0, 0.7);
-  text-shadow: 0.2rem 0.2rem 0.2rem black, 0.1rem 0.1rem 0.4rem white;
-  border: clamp(0.2rem, 0.5vw, 0.5rem) solid #C79A3A;
+  border: clamp(0.2rem, 0.3vw + 0.01rem, 0.5rem) solid #C79A3A;
 }
-main .contact-actioncall div p {
+.contact-actioncall div p {
   font-weight: 400;
-  font-size: clamp(0.7em, 3.5vw, 3rem);
+  font-size: clamp(0.8em, 1vw + 0.2rem, 3rem);
+  padding-inline: 1.5rem;
 }
-main button {
+
+.button {
   color: black;
   font-weight: 700;
   background-color: white;
   border-radius: 0.3rem;
   align-self: center;
-  font-size: clamp(0.7em, 3.9vw, 4rem);
-  letter-spacing: 0.2rem;
-  border: clamp(0.15rem, 0.45vw, 0.5rem) solid white;
+  font-size: clamp(1em, 1.1vw, 1.3rem);
+  letter-spacing: 0.02rem;
+  border: clamp(0.15rem, 0.2vw + 0.05rem, 0.3rem) solid white;
   box-shadow: 0.2rem 0.2rem 0.5rem black;
   transition: all 100ms ease-in;
-  padding-block: clamp(0.01rem, 1.5vh, 10rem);
-  padding-inline: clamp(0.3rem, 10vw, 20rem);
-  margin-block: clamp(1rem, 10vw, 20rem);
+  padding-block: clamp(0.7rem, 0.7vw + 0.01rem, 1rem);
+  padding-inline: clamp(2rem, 3vw + 0.5rem, 4rem);
+  margin-block: clamp(5rem, 1vw, 20rem);
 }
-main button:hover {
+.button:hover {
   background-color: transparent;
   transform: scale(1.05);
   color: white;
   backdrop-filter: blur(0.3rem);
 }
-main button:active {
+.button:active {
   transform: scale(0.95);
   color: white;
   backdrop-filter: blur(0.1rem);
 }
-main .stats {
+
+.stats {
   color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: clamp(1rem, 5vw, 5rem);
-  border-bottom: clamp(0.2rem, 0.5vw, 0.5rem) solid #C79A3A;
-  background: linear-gradient(135deg, #0A7CC6, rgb(2.3, 5.2, 7.4));
-  padding-block: clamp(2rem, 2vw, 4rem);
-  padding-inline: clamp(4rem, 10vw, 6rem);
+  border-bottom: 0.02rem solid #C79A3A;
+  background: linear-gradient(135deg, #0a7cc6, #17344a);
+  padding-block: clamp(2rem, 2vw, 3rem);
+  padding-inline: clamp(3rem, 4vw, 5rem);
 }
-main .stats .card-stat {
+.stats .card-stat {
   display: flex;
   flex-direction: column;
   background-color: #17344A;
   border-radius: 0.8rem;
-  padding-block: clamp(1rem, 2vh, 5rem);
-  padding-inline: clamp(3rem, 4vh, 5rem);
+  padding-block: clamp(1rem, 1.2vw, 1.5rem);
+  padding-inline: clamp(3rem, 5vw, 7rem);
 }
-main .stats .card-stat b {
+.stats .card-stat b {
   color: #C79A3A;
-  font-size: clamp(2rem, 7vw, 8rem);
+  font-size: clamp(2rem, 2.5vw, 4rem);
 }
-main .stats .card-stat label {
-  font-size: clamp(0.1rem, 4vw, 6rem);
+.stats .card-stat span {
+  font-size: clamp(1.1rem, 1.2vw + 0.4rem, 1.8rem);
 }
-main .festo-info {
+
+.festo-info {
   padding-block: clamp(4rem, 8vw, 10rem);
   padding-inline: clamp(1rem, 3vw, 4rem);
   padding-bottom: 0;
 }
-main .festo-info img {
+.festo-info img {
   width: clamp(15rem, 20vw, 20rem);
 }
-main .festo-info p {
+.festo-info p {
   padding-inline: 1.35rem;
 }
-main .festo-info a {
+.festo-info a {
   color: #0A7CC6;
   font-size: clamp(1.2rem, 2vw, 1.9rem);
 }
-main .festo-info #gallery {
+.festo-info #gallery {
   position: relative;
   overflow: hidden;
   display: flex;
 }
-main .festo-info #gallery .slide {
+.festo-info #gallery .slide {
   inset: 0;
   opacity: 0;
   transform: translateX(100%);
   pointer-events: none;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-main .festo-info #gallery .slide.active {
+.festo-info #gallery .slide.active {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
 }
-main .festo-info #gallery .slide.prev {
+.festo-info #gallery .slide.prev {
   transform: translateX(-100%);
 }
-main .festo-info #gallery .slide.next {
+.festo-info #gallery .slide.next {
   transform: translateX(100%);
 }
-main .festo-info #gallery .buttons {
+.festo-info #gallery .buttons {
   inset-inline: 0;
   z-index: 2;
   display: flex;
   justify-content: space-between;
 }
-main .title {
+
+.title {
   font-size: clamp(1rem, 8vw, 2.5rem);
   color: #0A7CC6;
   border-bottom: 0.2rem solid #0A7CC6;
   padding-bottom: clamp(1rem, 4vw, 3rem);
   padding-inline: clamp(1rem, 3vw, 2rem);
   margin-inline: clamp(1rem, 1.8vw, 2rem);
-  margin-top: clamp(4rem, 20vw, 30rem);
-  margin-bottom: clamp(2.5rem, 10vw, 20rem);
 }
-main .title2 {
+
+.title2 {
   color: white;
   display: flex;
   height: 100%;
@@ -473,38 +575,46 @@ main .title2 {
   padding-bottom: clamp(2.5rem, 10vw, 20rem);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
 }
-main .services2 .service-card {
+
+.services2 {
+  padding-block: 12rem;
+}
+.services2 #service-card-container {
+  padding-block: clamp(1rem, 4vw + 1rem, 7rem);
+}
+.services2 .service-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 1.5rem;
 }
-main .services2 .service-card .card {
+.services2 .service-card .card {
   background-color: rgba(23, 52, 74, 0.9);
   margin-inline: clamp(1rem, 1.8vw, 2rem);
   border-radius: 0.5rem;
   color: white;
-  padding-inline: clamp(2rem, 7vw, 4rem);
-  padding-block: clamp(1rem, 4vw, 2rem);
+  padding-inline: clamp(1.2rem, 2vw, 4rem);
+  padding-block: clamp(1rem, 2vw, 2rem);
 }
-main .services2 .service-card .card div {
+.services2 .service-card .card div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(10, 124, 198, 0.3);
+  border: 0.1rem solid rgba(245, 245, 245, 0.466);
   border-radius: 0.5rem;
-  padding-inline: clamp(2rem, 7vw, 4rem);
-  padding-block: clamp(0.5rem, 2vw, 2rem);
+  padding-inline: clamp(2rem, 1vw, 4rem);
+  padding-block: clamp(0.5rem, 1vw, 2rem);
 }
-main .services2 .service-card .festo-card {
+.services2 .service-card .festo-card {
   background-color: black;
 }
-main .products .cards-container {
+
+.products .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 2rem;
   padding-inline: clamp(1rem, 1.8vw, 2rem);
 }
-main .products .cards-container .card {
+.products .cards-container .card {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -514,16 +624,16 @@ main .products .cards-container .card {
   overflow: hidden;
   cursor: pointer;
 }
-main .products .cards-container .card .image-container img {
+.products .cards-container .card .image-container img {
   min-height: clamp(10rem, 15vh, 20rem);
 }
-main .products .cards-container .card .image-container {
+.products .cards-container .card .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-main .products .cards-container .card label {
+.products .cards-container .card label {
   background-color: #17344A;
   color: white;
   text-align: center;
@@ -532,78 +642,80 @@ main .products .cards-container .card label {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
 }
-main .products .cards-container .all-products {
+.products .cards-container .all-products {
   background-color: rgb(11.5, 26, 37);
   transition: all 0.2s ease-in-out;
   color: white;
 }
-main .products .cards-container .all-products:hover {
+.products .cards-container .all-products:hover {
   background-color: #17344A;
   transform: scale(1.02);
 }
-main .products .cards-container .all-products:active {
+.products .cards-container .all-products:active {
   background-color: rgb(11.5, 26, 37);
   transform: scale(0.95);
 }
-main .products .cards-container .all-products label {
+.products .cards-container .all-products label {
   background-color: transparent;
 }
-main .products .cards-container .all-products {
+.products .cards-container .all-products {
   padding-inline: 0.2rem;
   padding-block: 0.8rem;
 }
-main .products .cards-container .all-products .all-products-label {
+.products .cards-container .all-products .all-products-label {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-main .products {
+.products {
   margin-bottom: clamp(7rem, 15vw, 25rem);
 }
-main #reviews {
+
+#reviews {
   background: linear-gradient(175deg, #0A7CC6, rgb(6.9, 15.6, 22.2));
   padding-inline: clamp(1rem, 1.8vw, 2rem);
   padding-block: clamp(1rem, 2vw, 5rem);
 }
-main #reviews b {
+#reviews b {
   color: white;
   font-size: clamp(0.5rem, 10vw, 10rem);
   margin-bottom: clamp(3rem, 4vw, 5rem);
 }
-main #reviews .title {
+#reviews .title {
   color: white;
   border-bottom-color: white;
   font-weight: 700;
 }
-main #reviews .card {
+#reviews .card {
   background-color: transparent;
   color: white;
   border: 0.2rem solid #C79A3A;
   border-radius: clamp(1.2rem, 2vw, 2.2rem);
   padding: clamp(0.5rem, 2vw, 4rem);
 }
-main #reviews .card svg {
+#reviews .card svg {
   max-width: clamp(2rem, 3vw, 4rem);
 }
-main #reviews .card strong {
+#reviews .card strong {
   font-size: clamp(1.2rem, 2vw, 2rem);
   padding-inline: clamp(2rem, 3vw, 4rem);
 }
-main #reviews .card p {
+#reviews .card p {
   font-style: italic;
 }
-main #reviews aside {
+#reviews aside {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 3rem;
 }
-main #reviews .clients-reviews {
+#reviews .clients-reviews {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 3rem;
 }
-main .about-us {
+
+.about-us {
   color: white;
   display: flex;
   flex-direction: column;
@@ -616,7 +728,7 @@ main .about-us {
   padding-inline: clamp(1rem, 1.8vw, 2rem);
   padding-bottom: 4rem;
 }
-main .about-us h2 {
+.about-us h2 {
   margin-inline: 0;
   filter: brightness(105%);
 }

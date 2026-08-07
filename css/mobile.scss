@@ -41,6 +41,7 @@ body {
             cursor: pointer;
             opacity: .8;
         }
+
         // & svg {
         //     max-width: $width-ico;
         //     cursor: pointer;
@@ -139,7 +140,7 @@ body {
     padding-inline: v.$globalMargin;
     top: 0;
     left: 0;
-    width: 100vw;
+    right: 0;
     text-shadow: .1rem .1rem .3rem black;
     font-size: clamp(.2rem, 3vw, 1rem);
     font-weight: 600;
@@ -177,7 +178,7 @@ header {
     color: white;
     top: var(--preHeader-height);
     left: 0;
-    width: 100vw;
+    right: 0;
     z-index: 98;
     display: flex;
     justify-content: space-between;
@@ -227,24 +228,22 @@ header {
         display: none;
         flex: 0 10 auto;
         min-width: 0;
+
+        & a {
+            border: clamp(.1rem, .15rem, .2rem) solid white;
+            padding: clamp(.1rem, 1vw, 1rem) clamp(.3rem, 3vw, 4rem);
+
+            font: {
+                size: clamp(0.6rem, 0.4rem + 0.8vw, 1.1rem);
+                weight: 600;
+            }
+        }
     }
 
     & ul {
         display: flex;
         justify-content: space-around;
         gap: clamp(.1rem, 2vw, 5rem);
-    }
-
-    & a {
-        font: {
-            size: clamp(0.6rem, 0.4rem + 0.8vw, 1.1rem);
-            weight: 600;
-        }
-    }
-
-    & li {
-        border: clamp(.1rem, .15rem, .2rem) solid black;
-        padding: clamp(.1rem, 1vw, 1rem) clamp(.3rem, 3vw, 4rem);
     }
 }
 
@@ -270,533 +269,519 @@ body {
     }
 }
 
-main {
-    // padding-top: calc(var(--header-height) + var(--preHeader-height));
+.hero {
+    // height: clamp(37vh, 50vh, 60vh);
+    aspect-ratio: 12/13;
 
-    & .hero {
-        height: clamp(37vh, 50vh, 60vh);
+    background: {
+        image: url("../assets/images/herobg-mobile.jpg");
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
 
-        background: {
-            image: url("../assets/images/herobg-mobile.jpg");
-            repeat: no-repeat;
-            position: center;
-            size: cover;
-        }
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
 
+    border-bottom: 0.2rem solid v.$secondary;
+
+    & .hero-content {
+        text-align: center;
+        color: white;
+    }
+}
+
+.services {
+    display: grid;
+
+    text-align: center;
+
+    grid-template-columns: 1fr;
+    padding: clamp(2rem, 5vw, 5rem) clamp(.5rem, 6vw, 12rem);
+
+    gap: clamp(2rem, 3vw, 8rem);
+
+    background: linear-gradient(to top, transparent, white 60%),
+        transparent;
+    ;
+
+    & .service {
         display: flex;
-        align-items: flex-end;
-        justify-content: left;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        border-bottom: 0.2rem solid v.$secondary;
+        gap: clamp(1rem, 4vw, 4rem);
+        min-width: clamp(1rem, 10vw, 10rem);
+        opacity: 60%;
+        transition: all .2s ease;
 
-        & .hero-content {
-            text-align: center;
-            color: white;
+        &:hover,
+        &:active {
+            opacity: 100%;
         }
     }
 
-    & .services {
-        display: grid;
+}
 
+.contact-actioncall {
+    width: 100%;
+    // aspect-ratio: 3 / 2;
+
+    color: white;
+    border-block: 0.2rem solid v.$secondary;
+
+    background: linear-gradient(300deg,
+            rgba(v.$tertiary, .9),
+            rgba(0, 0, 0, 0.233)),
+        url(../assets/images/backcontainer.jpg);
+
+    background: {
+        size: cover;
+        position: top;
+        repeat: no-repeat;
+    }
+
+    & div {
+        display: flex;
+        flex-direction: column;
         text-align: center;
 
-        grid-template-columns: 1fr;
-        padding: clamp(2rem, 5vw, 5rem) clamp(.5rem, 6vw, 12rem);
+        padding: clamp(2rem, 2vw + 1rem, 5rem) clamp(2rem, 7vw, 10rem);
 
-        @media (min-width: 960px) {
-            grid-template-columns: repeat(3, 1fr);
-            padding: clamp(1rem, 2vw, 3rem) clamp(.5rem, 6vw, 12rem);
+        text-shadow: .3rem .3rem .3rem black;
+
+        & h4 {
+            font-size: clamp(1em, 1.4vw + .2rem, 3rem);
         }
 
-        gap: clamp(2rem, 3vw, 8rem);
+        & b {
+            align-self: center;
+            border: clamp(.2rem, .3vw + .01rem, .5rem) solid rgba(v.$secondary, $alpha: .5);
+            backdrop-filter: blur(.1rem);
+            margin-bottom: .5rem;
+            letter-spacing: clamp(.1rem, .2vw, .4rem);
 
-        background: linear-gradient(to top, transparent, white 60%),
-        transparent;
-        ;
+            padding: {
+                block: clamp(1rem, 1.2vw + .1rem, 3rem);
+                inline: clamp(.7rem, 1vw + .2rem, 3rem);
+            }
 
-        & .service {
+            font-size: clamp(2.1em, 4vw + .2rem, 6rem);
+            box-shadow: .2rem .2rem .5rem black;
+            text-shadow: .2rem .2rem .1rem black,
+            .1rem .1rem .7rem white;
+            transition: all 300ms ease-out;
+
+            &:hover,
+            &:active {
+                backdrop-filter: blur(.2rem);
+                transform: scale(1.04);
+                box-shadow: .5rem .5rem .7rem rgba($color: #000000, $alpha: .7);
+                border: clamp(.2rem, .3vw + .01rem, .5rem) solid v.$secondary;
+            }
+        }
+
+        & p {
+            font-weight: 400;
+            font-size: clamp(.8em, 1vw + .2rem, 3rem);
+            padding-inline: 1.5rem;
+        }
+    }
+}
+
+.button {
+    color: black;
+    font-weight: clamp(500, 700, 800);
+    background-color: white;
+    border-radius: .3rem;
+    align-self: center;
+    font-size: clamp(1em, 1.1vw, 1.3rem);
+    letter-spacing: clamp(.01rem, .02rem, .03rem);
+    border: clamp(.15rem, .2vw + .05rem, .3rem) solid white;
+    box-shadow: .2rem .2rem .5rem black;
+
+    transition: all 100ms ease-in;
+
+    padding: {
+        block: clamp(.7rem, .7vw + .01rem, 1rem);
+        inline: clamp(2rem, 3vw + .5rem, 4rem);
+    }
+
+    ;
+    margin-block: clamp(5rem, 1vw, 20rem);
+
+    &:hover {
+        background-color: transparent;
+        transform: scale(1.05);
+        color: white;
+        backdrop-filter: blur(.3rem);
+    }
+
+    &:active {
+        transform: scale(.95);
+        color: white;
+        backdrop-filter: blur(.1rem);
+    }
+}
+
+.stats {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: clamp(1rem, 5vw, 5rem);
+    border-bottom: .02rem solid v.$secondary;
+
+    background: linear-gradient(135deg,
+            color.change(v.$primary, $alpha: 1),
+            color.change(v.$tertiary, $alpha: 1));
+
+    padding: {
+        block: clamp(2rem, 2vw, 3rem);
+        inline: clamp(3rem, 4vw, 5rem);
+    }
+
+    & .card-stat {
+        display: flex;
+        flex-direction: column;
+        background-color: v.$tertiary;
+        border-radius: .8rem;
+
+        padding: {
+            block: clamp(1rem, 1.2vw, 1.5rem);
+            inline: clamp(3rem, 5vw, 7rem);
+        }
+
+        & b {
+            color: v.$secondary;
+            font-size: clamp(2rem, 2.5vw, 4rem);
+        }
+
+        & span {
+            font-size: clamp(1.1rem, 1.2vw + .4rem, 1.8rem);
+        }
+    }
+}
+
+.festo-info {
+    padding: {
+        block: clamp(4rem, 8vw, 10rem);
+        inline: clamp(1rem, 3vw, 4rem);
+        bottom: 0;
+    }
+
+    ;
+
+    & img {
+        width: clamp(15rem, 20vw, 20rem);
+    }
+
+    & p {
+        padding-inline: clamp(.1rem, 1.35rem, 2rem);
+        // text-align: justify;
+    }
+
+    & a {
+        color: v.$primary;
+        font-size: clamp(1.2rem, 2vw, 1.9rem);
+    }
+
+    & #gallery {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+
+        .slide {
+            inset: 0;
+
+            opacity: 0;
+            transform: translateX(100%);
+            pointer-events: none;
+
+            transition:
+                transform .5s ease,
+                opacity .5s ease;
+
+            &.active {
+                opacity: 1;
+                transform: translateX(0);
+                pointer-events: auto;
+            }
+
+            &.prev {
+                transform: translateX(-100%);
+            }
+
+            &.next {
+                transform: translateX(100%);
+            }
+        }
+
+        .buttons {
+            // position: absolute;
+            inset-inline: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.title {
+    font-size: clamp(1rem, 8vw, 2.5rem);
+    color: v.$primary;
+    border-bottom: .2rem solid v.$primary;
+    padding-bottom: clamp(1rem, 4vw, 3rem);
+    padding-inline: clamp(1rem, 3vw, 2rem);
+    margin-inline: v.$globalMargin;
+}
+
+.title2 {
+    color: white;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: clamp(1rem, 8vw, 2.5rem);
+    border-block: .2rem solid v.$secondary;
+    margin-block: clamp(4rem, 20vw, 30rem);
+    background: linear-gradient(135deg,
+            v.$primary,
+            rgba(v.$tertiary, 5));
+
+    padding: {
+        top: clamp(4rem, 20vw, 30rem);
+        bottom: clamp(2.5rem, 10vw, 20rem);
+        inline: v.$globalMargin;
+    }
+
+    ;
+}
+
+.services2 {
+    padding-block: clamp(10rem, 11rem + 1rem, 12rem);
+    #service-card-container {
+        padding-block: clamp(1rem, 4vw + 1rem, 7rem);
+    }
+    & .service-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 1.5rem;
+
+        & .card {
+            background-color: rgba(v.$tertiary, .9);
+            margin-inline: v.$globalMargin;
+            border-radius: .5rem;
+            color: white;
+
+            padding: {
+                inline: clamp(1.2rem, 2vw, 4rem);
+                block: clamp(1rem, 2vw, 2rem);
+            }
+
+            ;
+
+            & div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: .1rem solid rgba(245, 245, 245, 0.466);
+                border-radius: .5rem;
+
+                padding: {
+                    inline: clamp(2rem, 1vw, 4rem);
+                    block: clamp(.5rem, 1vw, 2rem);
+                }
+
+                ;
+            }
+        }
+
+        .festo-card {
+            background-color: black;
+        }
+    }
+
+
+}
+
+.products {
+    & .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 2rem;
+        padding-inline: v.$globalMargin;
+
+        // background-color: black;
+        & .card {
+            border-radius: .5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            border: .2rem solid v.$tertiary;
+            overflow: hidden;
+            cursor: pointer;
 
-            gap: clamp(1rem, 4vw, 4rem);
-            min-width: clamp(1rem, 10vw, 10rem);
-            opacity: 60%;
-
-            &:hover {
-                opacity: 100%;
-            }
-
-            &:active {
-                opacity: 100%;
-            }
-        }
-
-    }
-
-    & .contact-actioncall {
-        width: 100%;
-        aspect-ratio: 3 / 2;
-
-        padding: {
-            block: clamp(2rem, 6vw, 10rem);
-        }
-
-        ;
-
-        color: white;
-        border-block: 0.2rem solid v.$secondary;
-
-        background: linear-gradient(300deg,
-            rgba(v.$tertiary, .9),
-            transparent),
-        url(../assets/images/backcontainer.jpg);
-
-        background: {
-            size: cover;
-            position: center;
-            repeat: no repeat;
-        }
-
-        & div {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-
-            padding: clamp(1rem, 5vw, 5rem) clamp(2rem, 5vw, 4rem);
-
-            text-shadow: .3rem .3rem .3rem black;
-
-            & h4 {
-                font-size: clamp(.7em, 5vw, 4rem);
-            }
-
-            & b {
-                align-self: center;
-                border: clamp(.2rem, .5vw, .5rem) solid rgba(v.$secondary, $alpha: .5);
-                backdrop-filter: blur(.1rem);
-                margin-bottom: .5rem;
-                width: min(100% - 2rem, 1400px);
-
-                padding: {
-                    block: clamp(1rem, 5vw, 6rem);
-                    inline: auto;
+            .image-container {
+                & img {
+                    min-height: clamp(10rem, 15vh, 20rem);
                 }
 
-                font-size: clamp(.7em, 7vw, 5rem);
-                box-shadow: .2rem .2rem .5rem black;
-                transition: all 300ms ease-out;
 
-                &:hover,
-                &:active {
-                    backdrop-filter: blur(.2rem);
-                    transform: scale(1.04);
-                    box-shadow: .5rem .5rem .7rem rgba($color: #000000, $alpha: .7);
-                    text-shadow:
-                        .2rem .2rem .2rem black,
-                        .1rem .1rem .4rem white;
-                    border: clamp(.2rem, .5vw, .5rem) solid v.$secondary;
-                }
-            }
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            & p {
-                font-weight: 400;
-                font-size: clamp(.7em, 3.5vw, 3rem);
-            }
-        }
-    }
-
-    button {
-        color: black;
-        font-weight: clamp(500, 700, 800);
-        background-color: white;
-        border-radius: .3rem;
-        align-self: center;
-        font-size: clamp(.7em, 3.9vw, 4rem);
-        letter-spacing: clamp(.1rem, .2rem, 1rem);
-        border: clamp(.15rem, .45vw, .5rem) solid white;
-        box-shadow: .2rem .2rem .5rem black;
-
-        transition: all 100ms ease-in;
-
-        padding: {
-            block: clamp(.01rem, 1.5vh, 10rem);
-            inline: clamp(.3rem, 10vw, 20rem);
-        }
-
-        ;
-        margin-block: clamp(1rem, 10vw, 20rem);
-
-        &:hover {
-            background-color: transparent;
-            transform: scale(1.05);
-            color: white;
-            backdrop-filter: blur(.3rem);
-        }
-
-        &:active {
-            transform: scale(.95);
-            color: white;
-            backdrop-filter: blur(.1rem);
-        }
-    }
-
-    & .stats {
-        color: white;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: clamp(1rem, 5vw, 5rem);
-        border-bottom: clamp(.2rem, .5vw, .5rem) solid v.$secondary;
-
-        background: linear-gradient(135deg,
-                v.$primary,
-                color.scale(v.$tertiary, $lightness: -90%));
-
-        padding: {
-            block: clamp(2rem, 2vw, 4rem);
-            inline: clamp(4rem, 10vw, 6rem);
-        }
-
-        & .card-stat {
-            display: flex;
-            flex-direction: column;
-            background-color: v.$tertiary;
-            border-radius: .8rem;
-
-            padding: {
-                block: clamp(1rem, 2vh, 5rem);
-                inline: clamp(3rem, 4vh, 5rem);
-            }
-
-            & b {
-                color: v.$secondary;
-                font-size: clamp(2rem, 7vw, 8rem);
+                overflow: hidden;
             }
 
             & label {
-                font-size: clamp(.1rem, 4vw, 6rem);
-            }
-        }
-    }
-
-    & .festo-info {
-        padding: {
-            block: clamp(4rem, 8vw, 10rem);
-            inline: clamp(1rem, 3vw, 4rem);
-            bottom: 0;
-        }
-
-        ;
-
-        & img {
-            width: clamp(15rem, 20vw, 20rem);
-        }
-
-        & p {
-            padding-inline: clamp(.1rem, 1.35rem, 2rem);
-            // text-align: justify;
-        }
-
-        & a {
-            color: v.$primary;
-            font-size: clamp(1.2rem, 2vw, 1.9rem);
-        }
-
-        & #gallery {
-            position: relative;
-            overflow: hidden;
-            display: flex;
-
-            .slide {
-                inset: 0;
-
-                opacity: 0;
-                transform: translateX(100%);
-                pointer-events: none;
-
-                transition:
-                    transform .5s ease,
-                    opacity .5s ease;
-
-                &.active {
-                    opacity: 1;
-                    transform: translateX(0);
-                    pointer-events: auto;
-                }
-
-                &.prev {
-                    transform: translateX(-100%);
-                }
-
-                &.next {
-                    transform: translateX(100%);
-                }
-            }
-
-            .buttons {
-                // position: absolute;
-                inset-inline: 0;
-                z-index: 2;
-                display: flex;
-                justify-content: space-between;
-            }
-        }
-    }
-
-    .title {
-        font-size: clamp(1rem, 8vw, 2.5rem);
-        color: v.$primary;
-        border-bottom: .2rem solid v.$primary;
-        padding-bottom: clamp(1rem, 4vw, 3rem);
-        padding-inline: clamp(1rem, 3vw, 2rem);
-        margin-inline: v.$globalMargin;
-        margin-top: clamp(4rem, 20vw, 30rem);
-        margin-bottom: clamp(2.5rem, 10vw, 20rem);
-    }
-
-    .title2 {
-        color: white;
-        display: flex;
-        height: 100%;
-        align-items: center;
-        font-size: clamp(1rem, 8vw, 2.5rem);
-        border-block: .2rem solid v.$secondary;
-        margin-block: clamp(4rem, 20vw, 30rem);
-        background: linear-gradient(135deg,
-                v.$primary,
-                rgba(v.$tertiary, 5));
-
-        padding: {
-            top: clamp(4rem, 20vw, 30rem);
-            bottom: clamp(2.5rem, 10vw, 20rem);
-            inline: v.$globalMargin;
-        }
-
-        ;
-    }
-
-    & .services2 {
-        & .service-card {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-            gap: 1.5rem;
-
-            & .card {
-                background-color: rgba(v.$tertiary, .9);
-                margin-inline: v.$globalMargin;
-                border-radius: .5rem;
+                background-color: v.$tertiary;
                 color: white;
-
-                padding: {
-                    inline: clamp(2rem, 7vw, 4rem);
-                    block: clamp(1rem, 4vw, 2rem);
-                }
-
-                ;
-
-                & div {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background-color: rgba($color: v.$primary, $alpha: .3);
-                    border-radius: .5rem;
-
-                    padding: {
-                        inline: clamp(2rem, 7vw, 4rem);
-                        block: clamp(.5rem, 2vw, 2rem);
-                    }
-
-                    ;
-                }
-            }
-
-            .festo-card {
-                background-color: black;
+                text-align: center;
+                width: 100%;
+                padding-block: .5rem;
+                font-size: clamp(2rem, 4vw, 3rem);
+                font-weight: 700;
             }
         }
 
-
-    }
-
-    & .products {
-        & .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-            gap: 2rem;
-            padding-inline: v.$globalMargin;
-
-            // background-color: black;
-            & .card {
-                border-radius: .5rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                border: .2rem solid v.$tertiary;
-                overflow: hidden;
-                cursor: pointer;
-
-                .image-container {
-                    & img {
-                        min-height: clamp(10rem, 15vh, 20rem);
-                    }
-
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    overflow: hidden;
-                }
-
-                & label {
-                    background-color: v.$tertiary;
-                    color: white;
-                    text-align: center;
-                    width: 100%;
-                    padding-block: .5rem;
-                    font-size: clamp(2rem, 4vw, 3rem);
-                    font-weight: 700;
-                }
-            }
-
-            & .all-products {
-                background-color: color.scale(v.$tertiary, $lightness: -50%);
-                transition: all .2s ease-in-out;
-                color: white;
-
-                &:hover {
-                    background-color: v.$tertiary;
-                    transform: scale(1.02);
-                }
-
-                &:active {
-                    background-color: color.scale(v.$tertiary, $lightness: -50%);
-                    transform: scale(.95);
-                }
-
-                & label {
-                    background-color: transparent;
-                }
-
-                padding: {
-                    inline: .2rem;
-                    block: .8rem;
-                }
-
-                ;
-
-                & .all-products-label {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-            }
-        }
-
-        margin-bottom: clamp(7rem, 15vw, 25rem);
-
-    }
-
-    #reviews {
-        background: linear-gradient(175deg,
-                v.$primary,
-                color.scale(v.$tertiary, $lightness: -70%));
-
-        padding: {
-            inline: v.$globalMargin;
-            block: clamp(1rem, 2vw, 5rem);
-        }
-
-        ;
-
-        & b {
+        & .all-products {
+            background-color: color.scale(v.$tertiary, $lightness: -50%);
+            transition: all .2s ease-in-out;
             color: white;
-            font-size: clamp(.5rem, 10vw, 10rem);
 
-            margin: {
-                bottom: clamp(3rem, 4vw, 5rem);
+            &:hover {
+                background-color: v.$tertiary;
+                transform: scale(1.02);
+            }
+
+            &:active {
+                background-color: color.scale(v.$tertiary, $lightness: -50%);
+                transform: scale(.95);
+            }
+
+            & label {
+                background-color: transparent;
+            }
+
+            padding: {
+                inline: .2rem;
+                block: .8rem;
             }
 
             ;
-        }
 
-        & .title {
-            color: white;
-            border-bottom-color: white;
-            font-weight: 700;
-        }
-
-        & .card {
-            background-color: transparent;
-            color: white;
-            border: .2rem solid v.$secondary;
-            border-radius: clamp(1.2rem, 2vw, 2.2rem);
-            padding: clamp(.5rem, 2vw, 4rem);
-
-            & svg {
-                max-width: clamp(2rem, 3vw, 4rem);
+            & .all-products-label {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
 
-            & strong {
-                font-size: clamp(1.2rem, 2vw, 2rem);
-                padding-inline: clamp(2rem, 3vw, 4rem);
-            }
-
-            & p {
-                font-style: italic;
-
-            }
-
-        }
-
-        & aside {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-            gap: 3rem;
-        }
-
-        & .clients-reviews {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-            gap: 3rem
         }
     }
 
-    & .about-us {
+    margin-bottom: clamp(7rem, 15vw, 25rem);
+
+}
+
+#reviews {
+    background: linear-gradient(175deg,
+            v.$primary,
+            color.scale(v.$tertiary, $lightness: -70%));
+
+    padding: {
+        inline: v.$globalMargin;
+        block: clamp(1rem, 2vw, 5rem);
+    }
+
+    ;
+
+    & b {
         color: white;
-        display: flex;
-        flex-direction: column;
-        text-shadow: .2rem .3rem .3rem black;
-        background: radial-gradient(rgba(0, 0, 0, 0.4),
-                rgba(0, 0, 0, 0.6)),
-            url(../assets/images/abt-usbg.jpg);
+        font-size: clamp(.5rem, 10vw, 10rem);
 
-        background: {
-            repeat: no-repeat;
-            position: center;
-            size: cover;
+        margin: {
+            bottom: clamp(3rem, 4vw, 5rem);
         }
 
         ;
+    }
 
-        padding: {
-            block: clamp(1rem, 3vw, 4rem);
-            inline: v.$globalMargin;
-            bottom: 4rem;
+    & .title {
+        color: white;
+        border-bottom-color: white;
+        font-weight: 700;
+    }
+
+    & .card {
+        background-color: transparent;
+        color: white;
+        border: .2rem solid v.$secondary;
+        border-radius: clamp(1.2rem, 2vw, 2.2rem);
+        padding: clamp(.5rem, 2vw, 4rem);
+
+        & svg {
+            max-width: clamp(2rem, 3vw, 4rem);
         }
 
-        ;
-
-        & h2 {
-            margin-inline: 0;
-            filter: brightness(105%);
+        & strong {
+            font-size: clamp(1.2rem, 2vw, 2rem);
+            padding-inline: clamp(2rem, 3vw, 4rem);
         }
+
+        & p {
+            font-style: italic;
+
+        }
+
+    }
+
+    & aside {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 3rem;
+    }
+
+    & .clients-reviews {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 3rem
+    }
+}
+
+.about-us {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-shadow: .2rem .3rem .3rem black;
+    background: radial-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.6)),
+        url(../assets/images/abt-usbg.jpg);
+
+    background: {
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
+
+    ;
+
+    padding: {
+        block: clamp(1rem, 3vw, 4rem);
+        inline: v.$globalMargin;
+        bottom: 4rem;
+    }
+
+    ;
+
+    & h2 {
+        margin-inline: 0;
+        filter: brightness(105%);
     }
 }
 
@@ -836,5 +821,4 @@ footer {
         border-left: .2rem solid coral;
         padding-inline: v.$globalMargin;
     }
-
 }

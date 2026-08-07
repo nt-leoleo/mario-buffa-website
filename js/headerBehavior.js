@@ -5,7 +5,7 @@ export function headerBehavior() {
     if (!header) return;
 
     let active = false;
-    let headerOffsetHeight = preHeader.offsetHeight;
+    let headerOffsetHeight = preHeader.offsetHeight + header.offsetHeight;
     document.documentElement.style.setProperty(
         '--preHeader-height',
         `${preHeader.offsetHeight}px`
