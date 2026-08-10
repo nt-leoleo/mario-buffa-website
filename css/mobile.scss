@@ -10,7 +10,17 @@ body {
     background-image: url(../assets/images/bg-pattern3.png);
     background-attachment: fixed;
 }
-
+.whatsapp-ico {
+    // border: 1px solid red;
+    box-sizing: border-box;
+    // max-width: min-content;
+    display: inline-block;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 97;
+    cursor: pointer;
+}
 .burger-menu {
     position: fixed;
     inset: 0;
@@ -183,7 +193,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: clamp(.2rem, 2vw, 1rem) clamp(1rem, 3vw, 4rem);
+    padding: clamp(.2rem, .5vw, 1rem) clamp(1rem, 3vw, 4rem);
     gap: clamp(1rem, 3vw, 4rem);
     transition: all 200ms;
     // background: linear-gradient(to top,
@@ -243,6 +253,7 @@ header {
     & ul {
         display: flex;
         justify-content: space-around;
+        align-items: center;
         gap: clamp(.1rem, 2vw, 5rem);
     }
 }
@@ -480,7 +491,8 @@ body {
     }
 
     & p {
-        padding-inline: clamp(.1rem, 1.35rem, 2rem);
+        padding-inline: clamp(1.2rem, 1.8vw, 2rem);
+        font-size: clamp(1.1rem, 1.2vw, 1.4rem);
         // text-align: justify;
     }
 
@@ -531,7 +543,7 @@ body {
 }
 
 .title {
-    font-size: clamp(1rem, 8vw, 2.5rem);
+    font-size: clamp(2rem, 2.5vw, 3rem); 
     color: v.$primary;
     border-bottom: .2rem solid v.$primary;
     padding-bottom: clamp(1rem, 4vw, 3rem);
@@ -544,16 +556,15 @@ body {
     display: flex;
     height: 100%;
     align-items: center;
-    font-size: clamp(1rem, 8vw, 2.5rem);
+    font-size: clamp(2rem, 3vw, 3.5rem);
     border-block: .2rem solid v.$secondary;
-    margin-block: clamp(4rem, 20vw, 30rem);
+    // padding-block: clamp(4rem, 20vw, 30rem);
     background: linear-gradient(135deg,
             v.$primary,
             rgba(v.$tertiary, 5));
 
     padding: {
-        top: clamp(4rem, 20vw, 30rem);
-        bottom: clamp(2.5rem, 10vw, 20rem);
+        block: clamp(4rem, 6vw, 8rem);
         inline: v.$globalMargin;
     }
 
@@ -561,10 +572,12 @@ body {
 }
 
 .services2 {
-    padding-block: clamp(10rem, 11rem + 1rem, 12rem);
+    padding-block: clamp(10rem, 10.5rem, 11rem);
+
     #service-card-container {
         padding-block: clamp(1rem, 4vw + 1rem, 7rem);
     }
+
     & .service-card {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -596,6 +609,10 @@ body {
                 }
 
                 ;
+
+                & span {
+                    padding-block: clamp(1rem, 2vw, 2.5rem);
+                }
             }
         }
 
@@ -608,26 +625,43 @@ body {
 }
 
 .products {
+
     & .cards-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         gap: 2rem;
         padding-inline: v.$globalMargin;
+        padding-block: clamp(3rem, 6vw, 8rem);
 
-        // background-color: black;
         & .card {
+            color: white;
+            background-color: v.$tertiary;
             border-radius: .5rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            // justify-content: center;
             align-items: center;
-            border: .2rem solid v.$tertiary;
+            // border: clamp(.2rem, .25vw + .02rem, .4rem) solid v.$tertiary;
+            box-shadow: .2rem .2rem .8rem black;
             overflow: hidden;
             cursor: pointer;
 
             .image-container {
+                width: 100%;
+                height: clamp(13rem, 22vw, 23rem);
+                background-color: white;
+
                 & img {
-                    min-height: clamp(10rem, 15vh, 20rem);
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all .4s ease;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                    &:active {
+                        transform: scale(.9);
+                    }
                 }
 
 
@@ -638,7 +672,7 @@ body {
                 overflow: hidden;
             }
 
-            & label {
+            & a {
                 background-color: v.$tertiary;
                 color: white;
                 text-align: center;
@@ -647,10 +681,20 @@ body {
                 font-size: clamp(2rem, 4vw, 3rem);
                 font-weight: 700;
             }
+
+            & span {
+                background-color: v.$tertiary;
+                color: white;
+                text-align: center;
+                width: 100%;
+                padding-block: .5rem;
+                font-size: clamp(1rem, 1.5vw, 1.8rem);
+                font-weight: 700;
+            }
         }
 
         & .all-products {
-            background-color: color.scale(v.$tertiary, $lightness: -50%);
+            // background-color: color.scale(v.$tertiary, $lightness: -50%);
             transition: all .2s ease-in-out;
             color: white;
 
@@ -660,7 +704,7 @@ body {
             }
 
             &:active {
-                background-color: color.scale(v.$tertiary, $lightness: -50%);
+                background-color: color.scale(v.$tertiary, $lightness: 50%);
                 transform: scale(.95);
             }
 
@@ -685,7 +729,7 @@ body {
         }
     }
 
-    margin-bottom: clamp(7rem, 15vw, 25rem);
+    padding-block: clamp(7rem, 15vw, 25rem);
 
 }
 
@@ -696,18 +740,18 @@ body {
 
     padding: {
         inline: v.$globalMargin;
-        block: clamp(1rem, 2vw, 5rem);
+        block: clamp(4rem, 5vw, 10rem);
     }
 
     ;
 
     & b {
         color: white;
-        font-size: clamp(.5rem, 10vw, 10rem);
+        font-size: clamp(3rem, 8vw, 10rem);
 
-        margin: {
-            bottom: clamp(3rem, 4vw, 5rem);
-        }
+        // margin: {
+        //     bottom: clamp(3rem, 4vw, 5rem);
+        // }
 
         ;
     }
@@ -723,7 +767,7 @@ body {
         color: white;
         border: .2rem solid v.$secondary;
         border-radius: clamp(1.2rem, 2vw, 2.2rem);
-        padding: clamp(.5rem, 2vw, 4rem);
+        padding: clamp(.5rem, 1vw, 3rem);
 
         & svg {
             max-width: clamp(2rem, 3vw, 4rem);
@@ -744,13 +788,14 @@ body {
     & aside {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        gap: 3rem;
+        gap: clamp(1rem, 2vw, 4rem);
     }
 
     & .clients-reviews {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        gap: 3rem
+        gap: 3rem;
+        padding-block: clamp(4rem, 5vw, 8rem);
     }
 }
 
@@ -772,8 +817,8 @@ body {
     ;
 
     padding: {
-        block: clamp(1rem, 3vw, 4rem);
-        inline: v.$globalMargin;
+        block: clamp(4rem, 10vw, 15rem);
+        inline: clamp(1rem, 15vw + 1rem, 20rem);
         bottom: 4rem;
     }
 

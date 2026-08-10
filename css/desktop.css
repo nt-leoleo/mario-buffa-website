@@ -93,7 +93,7 @@
     background: linear-gradient(to bottom, whitesmoke, transparent), url("../assets/images/bg-pattern3.png");
   }
   main .services2 {
-    background: url("../assets/images/bg-pattern3.png");
+    background: linear-gradient(to top, whitesmoke 10%, transparent), url("../assets/images/bg-pattern3.png");
   }
   main .services2 .service-card {
     grid-template-columns: repeat(3, 1fr);
@@ -101,10 +101,30 @@
   main .services2 .service-card .card {
     min-height: clamp(1rem, 8vw, 2rem);
   }
+  main .services2 .service-card .card .moreInfo {
+    padding-block: clamp(1rem, 1.1vw, 1.5rem);
+  }
   main .services2 .service-card .card div {
     display: flex;
     flex-direction: row;
-    min-height: clamp(1rem, 4vw, 2rem);
+    min-height: clamp(5rem, 11vw, 12rem);
     gap: clamp(1rem, 2vw, 2rem);
+    padding-inline: clamp(1.5rem, 2vw, 3rem);
+    padding-block: clamp(0.5rem, 1vw, 2rem);
+  }
+  main .services2 .service-card .card div span {
+    padding-block: clamp(1rem, 1.5vw, 2rem);
+  }
+  main .products {
+    background-color: whitesmoke;
+  }
+  main .products .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  footer .card {
+    align-items: start !important;
   }
 }/*# sourceMappingURL=desktop.css.map */
