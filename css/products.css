@@ -1,0 +1,88 @@
+html body {
+  background-image: url("../assets/images/bg-pattern3.png");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+.p-title {
+  color: white;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  border-bottom: 0.2rem solid #C79A3A;
+  background: linear-gradient(to top, #0A7CC6, black);
+  padding-block: clamp(4rem, 6vw, 8rem);
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
+  padding-top: clamp(7rem, 12vw, 14rem);
+}
+
+.cards-container {
+  padding: clamp(1rem, 4vw, 5rem);
+}
+.cards-container section {
+  padding-bottom: clamp(3rem, 5vw, 7rem);
+  padding-top: clamp(2rem, 3vw, 4rem);
+}
+.cards-container section .card {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: clamp(0.5rem, 0.8vw, 1rem);
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.63);
+  transition: all 0.2s ease;
+}
+.cards-container section .card .card-label {
+  font-size: clamp(1.5rem, 2vw, 4rem);
+}
+.cards-container section .card:hover {
+  transform: scale(1.04);
+}
+.cards-container section .card:hover .card-label {
+  background-color: #0A7CC6;
+  padding-inline: 1rem;
+}
+.cards-container section .card:active {
+  transform: scale(0.98);
+  filter: brightness(1.2);
+}
+.cards-container .dist,
+.cards-container .main-products,
+.cards-container .other-products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 3rem);
+  margin-inline: auto;
+}
+@media (max-width: 400px) {
+  .cards-container .dist,
+  .cards-container .main-products,
+  .cards-container .other-products {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .cards-container .dist,
+  .cards-container .main-products,
+  .cards-container .other-products {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 80%;
+  }
+}
+.cards-container .img-container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards-container .card-label {
+  min-height: clamp(4rem, 7vw, 9rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  background-color: #17344A;
+  color: whitesmoke;
+  transition: all 0.2s ease;
+}/*# sourceMappingURL=products.css.map */

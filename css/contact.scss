@@ -1,0 +1,71 @@
+@use "sass:color";
+
+@use '_reset';
+@use '_variables' as v;
+
+html body {
+    background: {
+        image:
+            linear-gradient(rgba(v.$tertiary, .8),
+                rgba(v.$tertiary, .8)),
+            url("../assets/images/pexels-photo-1103970.jpeg");
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    ;
+
+    & .contact-header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        z-index: 1;
+    }
+
+    .title {
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    & p {
+        padding-inline: clamp(.1rem, 5vw, 10rem);
+        font-size: clamp(1.35rem, 1.8vw, 2rem);
+    }
+}
+
+main {
+    padding: v.$globalMargin;
+    color: white;
+}
+
+.main-text {
+    text-align: center;
+    border-block: .2rem solid coral;
+    padding-block: 5rem;
+
+    & .mario-buffa {
+        color: white;
+        font-size: clamp(7rem, 10vw, 15rem);
+        line-height: clamp(5.8rem, 10vw, 14rem);
+        font-weight: 600;
+        margin: 0;
+    }
+
+    & h3 {
+        color: coral;
+        font-weight: clamp(400, 600, 700);
+        padding-bottom: clamp(3rem, 4vw, 7rem);
+    }
+    & h4 {
+        color: white;
+        font-weight: clamp(200, 300, 500);
+        padding-bottom: clamp(3rem, 4vw, 7rem);
+    }
+    & .festo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

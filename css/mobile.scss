@@ -3,15 +3,14 @@
 @use '_reset';
 @use '_variables' as v;
 
-@use 'tablet';
 @use 'desktop';
 
 body {
     background-image: url(../assets/images/bg-pattern3.png);
     background-attachment: fixed;
 }
+
 .whatsapp-ico {
-    // border: 1px solid red;
     box-sizing: border-box;
     // max-width: min-content;
     display: inline-block;
@@ -21,10 +20,11 @@ body {
     z-index: 97;
     cursor: pointer;
 }
+
 .burger-menu {
     position: fixed;
     inset: 0;
-    z-index: 99;
+    z-index: 999;
     color: rgba(245, 245, 245, 0.795);
     font-weight: 600;
     background: radial-gradient(rgba(0, 0, 0, 0.192),
@@ -154,7 +154,7 @@ body {
     text-shadow: .1rem .1rem .3rem black;
     font-size: clamp(.2rem, 3vw, 1rem);
     font-weight: 600;
-    z-index: 98;
+    z-index: 99;
     padding-top: .2rem;
     // background: linear-gradient(to top,
     //         rgba(0, 0, 0, 0.3),
@@ -189,7 +189,7 @@ header {
     top: var(--preHeader-height);
     left: 0;
     right: 0;
-    z-index: 98;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,14 +201,21 @@ header {
     //         rgba(0, 0, 0, 0.3));
     border-bottom: .2rem solid none;
 
-
-
     &.active {
         border-bottom: .2rem solid v.$secondary;
         background-color: whitesmoke;
         color: black;
         background: whitesmoke;
         top: 0;
+
+        nav {
+            transform: translateY(.5rem);
+            a {
+                &:hover {
+                    filter: invert(100%);
+                }
+            }
+        }
     }
 
     &.inactive {
@@ -238,6 +245,9 @@ header {
         display: none;
         flex: 0 10 auto;
         min-width: 0;
+        width: 100%;
+        // border: 1px solid red;
+        padding-left: 13vw;
 
         & a {
             border: clamp(.1rem, .15rem, .2rem) solid white;
@@ -402,7 +412,7 @@ body {
     }
 }
 
-.button {
+.contact-button {
     color: black;
     font-weight: clamp(500, 700, 800);
     background-color: white;
@@ -543,7 +553,7 @@ body {
 }
 
 .title {
-    font-size: clamp(2rem, 2.5vw, 3rem); 
+    font-size: clamp(2rem, 2.5vw, 3rem);
     color: v.$primary;
     border-bottom: .2rem solid v.$primary;
     padding-bottom: clamp(1rem, 4vw, 3rem);
@@ -656,9 +666,11 @@ body {
                     height: 100%;
                     object-fit: cover;
                     transition: all .4s ease;
+
                     &:hover {
                         transform: scale(1.1);
                     }
+
                     &:active {
                         transform: scale(.9);
                     }

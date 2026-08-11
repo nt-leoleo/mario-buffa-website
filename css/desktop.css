@@ -6,7 +6,6 @@
   }
   .header-container {
     box-sizing: border-box;
-    border: 1px solid red;
   }
   .burger {
     display: none;
@@ -17,6 +16,9 @@
   }
   .hCarousel {
     display: none;
+  }
+  header nav {
+    transition: all 0.2s ease;
   }
   header nav ul a {
     border: 0.15rem solid whitesmoke;
@@ -40,6 +42,9 @@
     color: black;
     background: whitesmoke;
     top: 0;
+  }
+  header.active nav {
+    padding-left: 0vw;
   }
   header.active nav a {
     text-shadow: none;

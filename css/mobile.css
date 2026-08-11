@@ -68,7 +68,6 @@ textarea {
   }
   .header-container {
     box-sizing: border-box;
-    border: 1px solid red;
   }
   .burger {
     display: none;
@@ -79,6 +78,9 @@ textarea {
   }
   .hCarousel {
     display: none;
+  }
+  header nav {
+    transition: all 0.2s ease;
   }
   header nav ul a {
     border: 0.15rem solid whitesmoke;
@@ -102,6 +104,9 @@ textarea {
     color: black;
     background: whitesmoke;
     top: 0;
+  }
+  header.active nav {
+    padding-left: 0vw;
   }
   header.active nav a {
     text-shadow: none;
@@ -208,7 +213,7 @@ body {
 .burger-menu {
   position: fixed;
   inset: 0;
-  z-index: 99;
+  z-index: 999;
   color: rgba(245, 245, 245, 0.795);
   font-weight: 600;
   background: radial-gradient(rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.884));
@@ -309,7 +314,7 @@ body {
   text-shadow: 0.1rem 0.1rem 0.3rem black;
   font-size: clamp(0.2rem, 3vw, 1rem);
   font-weight: 600;
-  z-index: 98;
+  z-index: 99;
   padding-top: 0.2rem;
   transition: all 200ms;
 }
@@ -336,7 +341,7 @@ header {
   top: var(--preHeader-height);
   left: 0;
   right: 0;
-  z-index: 98;
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -351,6 +356,12 @@ header.active {
   color: black;
   background: whitesmoke;
   top: 0;
+}
+header.active nav {
+  transform: translateY(0.5rem);
+}
+header.active nav a:hover {
+  filter: invert(100%);
 }
 header.inactive {
   transform: translateY(-100%);
@@ -372,6 +383,8 @@ header nav {
   display: none;
   flex: 0 10 auto;
   min-width: 0;
+  width: 100%;
+  padding-left: 13vw;
 }
 header nav a {
   border: 0.15rem solid white;
@@ -484,7 +497,7 @@ body .hCarousel .carousel-item img {
   padding-inline: 1.5rem;
 }
 
-.button {
+.contact-button {
   color: black;
   font-weight: 700;
   background-color: white;
@@ -499,13 +512,13 @@ body .hCarousel .carousel-item img {
   padding-inline: clamp(2rem, 3vw + 0.5rem, 4rem);
   margin-block: clamp(5rem, 1vw, 20rem);
 }
-.button:hover {
+.contact-button:hover {
   background-color: transparent;
   transform: scale(1.05);
   color: white;
   backdrop-filter: blur(0.3rem);
 }
-.button:active {
+.contact-button:active {
   transform: scale(0.95);
   color: white;
   backdrop-filter: blur(0.1rem);

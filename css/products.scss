@@ -1,0 +1,119 @@
+@use "sass:color";
+
+@use '_variables' as v;
+
+html {
+    & body {
+        background-image: url("../assets/images/bg-pattern3.png");
+        background-repeat: repeat;
+        background-size: auto;
+    }
+}
+.p-title {
+    color: white;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    border-bottom: .2rem solid v.$secondary;
+    // padding-block: clamp(4rem, 20vw, 30rem);
+    background: linear-gradient(to top,
+            v.$primary,
+            black);
+
+    padding: {
+        block: clamp(4rem, 6vw, 8rem);
+        inline: v.$globalMargin;
+        top:clamp(7rem, 12vw, 14rem);
+    }
+
+    ;
+}
+.cards-container {
+    padding: clamp(1rem, 4vw, 5rem);
+
+    & section {
+        padding: {
+            bottom: clamp(3rem, 5vw, 7rem);
+            top: clamp(2rem, 3vw, 4rem);
+        }
+
+        ;
+
+        & .card {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: clamp(.5rem, .8vw, 1rem);
+            box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.63);
+
+            transition: all .2s ease;
+
+            .card-label {
+                font-size: clamp(1.5rem, 2vw, 4rem);
+            }
+
+            &:hover {
+                transform: scale(1.04);
+
+                .card-label {
+                    background-color: v.$primary;
+                    padding-inline: 1rem;
+                }
+            }
+
+            &:active {
+                transform: scale(.98);
+                filter: brightness(1.2);
+            }
+        }
+    }
+
+    .dist,
+    .main-products,
+    .other-products {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(1rem, 2vw, 3rem);
+        margin-inline: auto;
+    }
+
+    @media (max-width: 400px) {
+
+        .dist,
+        .main-products,
+        .other-products {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (min-width: 992px) {
+
+        .dist,
+        .main-products,
+        .other-products {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            max-width: 80%;
+        }
+    }
+
+    .img-container {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-label {
+        min-height: clamp(4rem, 7vw, 9rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        background-color: v.$tertiary;
+        color: whitesmoke;
+
+        transition: all .2s ease;
+    }
+}
