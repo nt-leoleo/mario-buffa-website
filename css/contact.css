@@ -69,7 +69,7 @@ html body .contact-header {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 6rem;
   z-index: 1;
 }
 html body .title {
@@ -89,28 +89,52 @@ main {
 .main-text {
   text-align: center;
   border-block: 0.2rem solid coral;
-  padding-block: 5rem;
+  padding-block: 1rem;
+  margin-bottom: clamp(4rem, 10vw, 15rem);
 }
 .main-text .mario-buffa {
   color: white;
-  font-size: clamp(7rem, 10vw, 15rem);
+  font-size: clamp(6rem, 10vw, 15rem);
   line-height: clamp(5.8rem, 10vw, 14rem);
   font-weight: 600;
   margin: 0;
 }
 .main-text h3 {
   color: coral;
-  font-weight: 600;
-  padding-bottom: clamp(3rem, 4vw, 7rem);
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-block: clamp(1.5rem, 4vw, 7rem);
 }
 .main-text h4 {
   color: white;
   font-weight: 300;
-  padding-bottom: clamp(3rem, 4vw, 7rem);
+  padding-bottom: clamp(1rem, 2vw, 4rem);
 }
 .main-text .festo {
-  width: 100%;
+  width: 80%;
   display: flex;
+  margin-inline: auto;
   align-items: center;
   justify-content: center;
+}
+
+main .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(20rem, 30vw, 25rem), 1fr));
+  gap: 2rem;
+  margin-bottom: clamp(4rem, 10vw, 15rem);
+}
+main .card-container .contact-card {
+  background-color: rgba(10, 124, 198, 0.8);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: clamp(2rem, 3vw, 2.5rem);
+}
+main .card-container .contact-card h4 {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
 }/*# sourceMappingURL=contact.css.map */
