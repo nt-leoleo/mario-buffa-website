@@ -453,6 +453,34 @@ body .hCarousel .carousel-item img {
   opacity: 100%;
 }
 
+.contact-button {
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 0.3rem;
+  align-self: center;
+  font-size: clamp(1em, 1.1vw, 1.3rem);
+  letter-spacing: 0.02rem;
+  border: clamp(0.15rem, 0.2vw + 0.05rem, 0.3rem) solid white;
+  box-shadow: 0.2rem 0.2rem 0.5rem black;
+  text-shadow: none;
+  transition: all 100ms ease-in;
+  padding-block: clamp(0.7rem, 0.7vw + 0.01rem, 1rem);
+  padding-inline: clamp(2rem, 3vw + 0.5rem, 4rem);
+  margin-block: clamp(5rem, 1vw, 20rem);
+}
+.contact-button:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  color: white;
+  backdrop-filter: blur(0.3rem);
+}
+.contact-button:active {
+  transform: scale(0.95);
+  color: white;
+  backdrop-filter: blur(0.1rem);
+}
+
 .contact-actioncall {
   width: 100%;
   color: white;
@@ -495,33 +523,6 @@ body .hCarousel .carousel-item img {
   font-weight: 400;
   font-size: clamp(0.8em, 1vw + 0.2rem, 3rem);
   padding-inline: 1.5rem;
-}
-
-.contact-button {
-  color: black;
-  font-weight: 700;
-  background-color: white;
-  border-radius: 0.3rem;
-  align-self: center;
-  font-size: clamp(1em, 1.1vw, 1.3rem);
-  letter-spacing: 0.02rem;
-  border: clamp(0.15rem, 0.2vw + 0.05rem, 0.3rem) solid white;
-  box-shadow: 0.2rem 0.2rem 0.5rem black;
-  transition: all 100ms ease-in;
-  padding-block: clamp(0.7rem, 0.7vw + 0.01rem, 1rem);
-  padding-inline: clamp(2rem, 3vw + 0.5rem, 4rem);
-  margin-block: clamp(5rem, 1vw, 20rem);
-}
-.contact-button:hover {
-  background-color: transparent;
-  transform: scale(1.05);
-  color: white;
-  backdrop-filter: blur(0.3rem);
-}
-.contact-button:active {
-  transform: scale(0.95);
-  color: white;
-  backdrop-filter: blur(0.1rem);
 }
 
 .stats {

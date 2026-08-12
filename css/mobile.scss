@@ -210,6 +210,7 @@ header {
 
         nav {
             transform: translateY(.5rem);
+
             a {
                 &:hover {
                     filter: invert(100%);
@@ -346,6 +347,42 @@ body {
 
 }
 
+.contact-button {
+    color: black;
+    font-weight: clamp(500, 700, 800);
+    background-color: white;
+    border-radius: .3rem;
+    align-self: center;
+    font-size: clamp(1em, 1.1vw, 1.3rem);
+    letter-spacing: clamp(.01rem, .02rem, .03rem);
+    border: clamp(.15rem, .2vw + .05rem, .3rem) solid white;
+    box-shadow: .2rem .2rem .5rem black;
+    text-shadow: none;
+
+    transition: all 100ms ease-in;
+
+    padding: {
+        block: clamp(.7rem, .7vw + .01rem, 1rem);
+        inline: clamp(2rem, 3vw + .5rem, 4rem);
+    }
+
+    ;
+    margin-block: clamp(5rem, 1vw, 20rem);
+
+    &:hover {
+        background-color: transparent;
+        transform: scale(1.05);
+        color: white;
+        backdrop-filter: blur(.3rem);
+    }
+
+    &:active {
+        transform: scale(.95);
+        color: white;
+        backdrop-filter: blur(.1rem);
+    }
+}
+
 .contact-actioncall {
     width: 100%;
     // aspect-ratio: 3 / 2;
@@ -409,41 +446,6 @@ body {
             font-size: clamp(.8em, 1vw + .2rem, 3rem);
             padding-inline: 1.5rem;
         }
-    }
-}
-
-.contact-button {
-    color: black;
-    font-weight: clamp(500, 700, 800);
-    background-color: white;
-    border-radius: .3rem;
-    align-self: center;
-    font-size: clamp(1em, 1.1vw, 1.3rem);
-    letter-spacing: clamp(.01rem, .02rem, .03rem);
-    border: clamp(.15rem, .2vw + .05rem, .3rem) solid white;
-    box-shadow: .2rem .2rem .5rem black;
-
-    transition: all 100ms ease-in;
-
-    padding: {
-        block: clamp(.7rem, .7vw + .01rem, 1rem);
-        inline: clamp(2rem, 3vw + .5rem, 4rem);
-    }
-
-    ;
-    margin-block: clamp(5rem, 1vw, 20rem);
-
-    &:hover {
-        background-color: transparent;
-        transform: scale(1.05);
-        color: white;
-        backdrop-filter: blur(.3rem);
-    }
-
-    &:active {
-        transform: scale(.95);
-        color: white;
-        backdrop-filter: blur(.1rem);
     }
 }
 
