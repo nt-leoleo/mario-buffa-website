@@ -144,9 +144,9 @@ textarea {
     gap: clamp(0.5rem, 2vw, 4rem);
   }
   main .contact-actioncall {
-    background: linear-gradient(135deg, rgba(10, 124, 198, 0.5), rgba(23, 52, 74, 0.5));
+    background: linear-gradient(135deg, rgba(10, 145, 198, 0.5), rgba(13, 31, 58, 0.5));
     padding-block: clamp(1rem, 5vw + 2rem, 4rem);
-    background: linear-gradient(300deg, rgba(23, 52, 74, 0.9), rgba(0, 0, 0, 0.349)) !important;
+    background: linear-gradient(300deg, rgba(13, 31, 58, 0.9), rgba(0, 0, 0, 0.349)) !important;
     background-image: none;
   }
   main .stats {
@@ -427,8 +427,9 @@ body .hCarousel .carousel-item img {
   border-bottom: 0.2rem solid #C79A3A;
 }
 .hero .hero-content {
-  text-align: center;
+  text-align: left;
   color: white;
+  text-shadow: 0 0 0.5rem black;
 }
 
 .services {
@@ -485,7 +486,7 @@ body .hCarousel .carousel-item img {
   width: 100%;
   color: white;
   border-block: 0.2rem solid #C79A3A;
-  background: linear-gradient(300deg, rgba(23, 52, 74, 0.9), rgba(0, 0, 0, 0.233)), url(../assets/images/backcontainer.jpg);
+  background: linear-gradient(300deg, rgba(13, 31, 58, 0.9), rgba(0, 0, 0, 0.233)), url(../assets/images/backcontainer.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -533,14 +534,14 @@ body .hCarousel .carousel-item img {
   justify-content: space-around;
   gap: clamp(1rem, 5vw, 5rem);
   border-bottom: 0.02rem solid #C79A3A;
-  background: linear-gradient(135deg, #0a7cc6, #17344a);
+  background: linear-gradient(135deg, #0a91c6, #0d1f3a);
   padding-block: clamp(2rem, 2vw, 3rem);
   padding-inline: clamp(3rem, 4vw, 5rem);
 }
 .stats .card-stat {
   display: flex;
   flex-direction: column;
-  background-color: #17344A;
+  background-color: #0d1f3a;
   border-radius: 0.8rem;
   padding-block: clamp(1rem, 1.2vw, 1.5rem);
   padding-inline: clamp(3rem, 5vw, 7rem);
@@ -555,54 +556,51 @@ body .hCarousel .carousel-item img {
 
 .festo-info {
   padding-block: clamp(4rem, 8vw, 10rem);
-  padding-inline: clamp(1rem, 3vw, 4rem);
+  padding-inline: clamp(1rem, 5vw, 7rem);
   padding-bottom: 0;
+}
+.festo-info .title {
+  padding: 1rem;
+  padding-bottom: clamp(1.5rem, 2vw, 3rem);
+  border: none;
 }
 .festo-info img {
   width: clamp(15rem, 20vw, 20rem);
 }
 .festo-info p {
   padding-inline: clamp(1.2rem, 1.8vw, 2rem);
-  font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  font-size: clamp(0.9rem, 1vw, 1.4rem);
 }
 .festo-info a {
-  color: #0A7CC6;
+  color: #0a91c6;
   font-size: clamp(1.2rem, 2vw, 1.9rem);
 }
-.festo-info #gallery {
-  position: relative;
-  overflow: hidden;
+.festo-info .carousel {
+  box-shadow: 0.2rem 0.2rem 1rem black;
+}
+.festo-info .distributors {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 2rem;
 }
-.festo-info #gallery .slide {
-  inset: 0;
-  opacity: 0;
-  transform: translateX(100%);
-  pointer-events: none;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+.festo-info .distributors img {
+  max-width: 5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: all 0.2s ease;
 }
-.festo-info #gallery .slide.active {
+.festo-info .distributors img:hover {
+  filter: grayscale(0);
   opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
-}
-.festo-info #gallery .slide.prev {
-  transform: translateX(-100%);
-}
-.festo-info #gallery .slide.next {
-  transform: translateX(100%);
-}
-.festo-info #gallery .buttons {
-  inset-inline: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
 }
 
 .title {
   font-size: clamp(2rem, 2.5vw, 3rem);
-  color: #0A7CC6;
-  border-bottom: 0.2rem solid #0A7CC6;
+  color: #0a91c6;
+  border-bottom: 0.2rem solid #0a91c6;
   padding-bottom: clamp(1rem, 4vw, 3rem);
   padding-inline: clamp(1rem, 3vw, 2rem);
   margin-inline: clamp(1rem, 1.8vw, 2rem);
@@ -615,7 +613,7 @@ body .hCarousel .carousel-item img {
   align-items: center;
   font-size: clamp(2rem, 3vw, 3.5rem);
   border-block: 0.2rem solid #C79A3A;
-  background: linear-gradient(135deg, #0A7CC6, #17344a);
+  background: linear-gradient(135deg, #0a91c6, #0d1f3a);
   padding-block: clamp(4rem, 6vw, 8rem);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
 }
@@ -632,7 +630,7 @@ body .hCarousel .carousel-item img {
   gap: 1.5rem;
 }
 .services2 .service-card .card {
-  background-color: rgba(23, 52, 74, 0.9);
+  background-color: rgba(13, 31, 58, 0.9);
   margin-inline: clamp(1rem, 1.8vw, 2rem);
   border-radius: 0.5rem;
   color: white;
@@ -664,7 +662,7 @@ body .hCarousel .carousel-item img {
 }
 .products .cards-container .card {
   color: white;
-  background-color: #17344A;
+  background-color: #0d1f3a;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -698,7 +696,7 @@ body .hCarousel .carousel-item img {
   overflow: hidden;
 }
 .products .cards-container .card a {
-  background-color: #17344A;
+  background-color: #0d1f3a;
   color: white;
   text-align: center;
   width: 100%;
@@ -707,7 +705,7 @@ body .hCarousel .carousel-item img {
   font-weight: 700;
 }
 .products .cards-container .card span {
-  background-color: #17344A;
+  background-color: #0d1f3a;
   color: white;
   text-align: center;
   width: 100%;
@@ -720,11 +718,11 @@ body .hCarousel .carousel-item img {
   color: white;
 }
 .products .cards-container .all-products:hover {
-  background-color: #17344A;
+  background-color: #0d1f3a;
   transform: scale(1.02);
 }
 .products .cards-container .all-products:active {
-  background-color: rgb(97.4639175258, 159.2010309278, 206.0360824742);
+  background-color: rgb(75.6901408451, 131.338028169, 214.8098591549);
   transform: scale(0.95);
 }
 .products .cards-container .all-products label {
@@ -745,7 +743,7 @@ body .hCarousel .carousel-item img {
 }
 
 #reviews {
-  background: linear-gradient(175deg, #0A7CC6, rgb(6.9, 15.6, 22.2));
+  background: linear-gradient(175deg, #0a91c6, rgb(3.9, 9.3, 17.4));
   padding-inline: clamp(1rem, 1.8vw, 2rem);
   padding-block: clamp(4rem, 5vw, 10rem);
 }
@@ -806,7 +804,7 @@ body .hCarousel .carousel-item img {
 }
 
 footer {
-  background-color: #17344A;
+  background-color: #0d1f3a;
   color: whitesmoke;
   display: grid;
   gap: 1.2rem;

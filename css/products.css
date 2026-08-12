@@ -11,7 +11,7 @@ html body {
   align-items: center;
   font-size: clamp(2rem, 3vw, 3.5rem);
   border-bottom: 0.2rem solid #C79A3A;
-  background: linear-gradient(to top, #0A7CC6, black);
+  background: linear-gradient(to top, #0a91c6, black);
   padding-block: clamp(4rem, 6vw, 8rem);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
   padding-top: clamp(7rem, 12vw, 14rem);
@@ -38,7 +38,7 @@ html body {
   transform: scale(1.04);
 }
 .cards-container section .card:hover .card-label {
-  background-color: #0A7CC6;
+  background-color: #0a91c6;
   padding-inline: 1rem;
 }
 .cards-container section .card:active {
@@ -82,7 +82,7 @@ html body {
   justify-content: center;
   text-align: center;
   margin: 0;
-  background-color: #17344A;
+  background-color: #0d1f3a;
   color: whitesmoke;
   transition: all 0.2s ease;
 }/*# sourceMappingURL=products.css.map */

@@ -309,8 +309,9 @@ body {
     border-bottom: 0.2rem solid v.$secondary;
 
     & .hero-content {
-        text-align: center;
+        text-align: left;
         color: white;
+        text-shadow: 0 0 .5rem black;
     }
 }
 
@@ -492,11 +493,17 @@ body {
 .festo-info {
     padding: {
         block: clamp(4rem, 8vw, 10rem);
-        inline: clamp(1rem, 3vw, 4rem);
+        inline: clamp(1rem, 5vw, 7rem);
         bottom: 0;
     }
 
     ;
+
+    & .title {
+        padding: 1rem;
+        padding-bottom: clamp(1.5rem, 2vw, 3rem);
+        border: none;
+    }
 
     & img {
         width: clamp(15rem, 20vw, 20rem);
@@ -504,7 +511,7 @@ body {
 
     & p {
         padding-inline: clamp(1.2rem, 1.8vw, 2rem);
-        font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+        font-size: clamp(.9rem, 1vw, 1.4rem);
         // text-align: justify;
     }
 
@@ -513,43 +520,27 @@ body {
         font-size: clamp(1.2rem, 2vw, 1.9rem);
     }
 
-    & #gallery {
-        position: relative;
-        overflow: hidden;
+    & .carousel {
+        box-shadow: .2rem .2rem 1rem black;
+    }
+
+    .distributors {
         display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 2rem;
 
-        .slide {
-            inset: 0;
+        & img {
+            max-width: 5rem;
+            object-fit: contain;
+            filter: grayscale(1);
+            opacity: .5;
+            transition: all .2s ease;
 
-            opacity: 0;
-            transform: translateX(100%);
-            pointer-events: none;
-
-            transition:
-                transform .5s ease,
-                opacity .5s ease;
-
-            &.active {
+            &:hover {
+                filter: grayscale(0);
                 opacity: 1;
-                transform: translateX(0);
-                pointer-events: auto;
             }
-
-            &.prev {
-                transform: translateX(-100%);
-            }
-
-            &.next {
-                transform: translateX(100%);
-            }
-        }
-
-        .buttons {
-            // position: absolute;
-            inset-inline: 0;
-            z-index: 2;
-            display: flex;
-            justify-content: space-between;
         }
     }
 }

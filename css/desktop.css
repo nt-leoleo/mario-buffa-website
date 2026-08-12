@@ -82,9 +82,9 @@
     gap: clamp(0.5rem, 2vw, 4rem);
   }
   main .contact-actioncall {
-    background: linear-gradient(135deg, rgba(10, 124, 198, 0.5), rgba(23, 52, 74, 0.5));
+    background: linear-gradient(135deg, rgba(10, 145, 198, 0.5), rgba(13, 31, 58, 0.5));
     padding-block: clamp(1rem, 5vw + 2rem, 4rem);
-    background: linear-gradient(300deg, rgba(23, 52, 74, 0.9), rgba(0, 0, 0, 0.349)) !important;
+    background: linear-gradient(300deg, rgba(13, 31, 58, 0.9), rgba(0, 0, 0, 0.349)) !important;
     background-image: none;
   }
   main .stats {

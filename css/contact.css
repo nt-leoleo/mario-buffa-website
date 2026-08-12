@@ -61,7 +61,7 @@ textarea {
 }
 
 html body {
-  background-image: linear-gradient(rgba(23, 52, 74, 0.8), rgba(23, 52, 74, 0.8)), url("../assets/images/pexels-photo-1103970.jpeg");
+  background-image: linear-gradient(rgba(13, 31, 58, 0.8), rgba(13, 31, 58, 0.8)), url("../assets/images/pexels-photo-1103970.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -229,7 +229,7 @@ html body main {
   resize: none;
 }
 .contact-and-location .contact-form form .submit-button {
-  background-color: #0A7CC6;
+  background-color: #0a91c6;
   width: 100%;
   color: white;
   font-size: 1.4rem;
