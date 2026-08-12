@@ -187,6 +187,21 @@ textarea {
   }
   main .products .cards-container {
     grid-template-columns: repeat(4, 1fr);
+    gap: clamp(2rem, 4vw + 0.2rem, 5rem);
+    padding-inline: clamp(5rem, 7vw, 9rem);
+  }
+  main .products .cards-container .card {
+    width: auto;
+    height: auto;
+  }
+  #reviews .clients-reviews b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: keep-all;
+    word-wrap: break-word;
+    font-size: clamp(4rem, 5vw + 0.1rem, 6rem);
+    padding-inline: clamp(10rem, 11vw, 12rem);
   }
   footer {
     grid-template-columns: repeat(4, 1fr) !important;
@@ -574,6 +589,7 @@ body .hCarousel .carousel-item img {
 .festo-info a {
   color: #0a91c6;
   font-size: clamp(1.2rem, 2vw, 1.9rem);
+  padding-bottom: 2rem;
 }
 .festo-info .carousel {
   box-shadow: 0.2rem 0.2rem 1rem black;
@@ -615,7 +631,7 @@ body .hCarousel .carousel-item img {
   border-block: 0.2rem solid #C79A3A;
   background: linear-gradient(135deg, #0a91c6, #0d1f3a);
   padding-block: clamp(4rem, 6vw, 8rem);
-  padding-inline: clamp(1rem, 1.8vw, 2rem);
+  padding-padding-inline: clamp(5rem, 7vw, 9rem);
 }
 
 .services2 {
@@ -655,9 +671,9 @@ body .hCarousel .carousel-item img {
 
 .products .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 2rem;
-  padding-inline: clamp(1rem, 1.8vw, 2rem);
+  padding-inline: clamp(2rem, 9vw, 12rem);
   padding-block: clamp(3rem, 6vw, 8rem);
 }
 .products .cards-container .card {
@@ -666,21 +682,26 @@ body .hCarousel .carousel-item img {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   box-shadow: 0.2rem 0.2rem 0.8rem black;
+  width: 20rem;
   overflow: hidden;
   cursor: pointer;
+  margin: auto;
 }
 .products .cards-container .card .image-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: clamp(13rem, 22vw, 23rem);
   background-color: white;
 }
 .products .cards-container .card .image-container img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  transform: scale(1.05);
+  -o-object-fit: contain;
+     object-fit: contain;
   transition: all 0.4s ease;
 }
 .products .cards-container .card .image-container img:hover {
@@ -689,19 +710,13 @@ body .hCarousel .carousel-item img {
 .products .cards-container .card .image-container img:active {
   transform: scale(0.9);
 }
-.products .cards-container .card .image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
 .products .cards-container .card a {
   background-color: #0d1f3a;
   color: white;
   text-align: center;
   width: 100%;
-  padding-block: 0.5rem;
-  font-size: clamp(2rem, 4vw, 3rem);
+  padding-block: clamp(0.5rem, 1vw, 1.5rem);
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
   font-weight: 700;
 }
 .products .cards-container .card span {
@@ -710,12 +725,18 @@ body .hCarousel .carousel-item img {
   text-align: center;
   width: 100%;
   padding-block: 0.5rem;
-  font-size: clamp(1rem, 1.5vw, 1.8rem);
+  font-size: clamp(1rem, 1.2vw, 1.8rem);
   font-weight: 700;
 }
 .products .cards-container .all-products {
   transition: all 0.2s ease-in-out;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20rem;
+  padding-inline: 1rem;
+  padding-block: 3rem;
 }
 .products .cards-container .all-products:hover {
   background-color: #0d1f3a;
@@ -728,18 +749,16 @@ body .hCarousel .carousel-item img {
 .products .cards-container .all-products label {
   background-color: transparent;
 }
-.products .cards-container .all-products {
-  padding-inline: 0.2rem;
-  padding-block: 0.8rem;
+.products .cards-container .all-products svg {
+  width: 7rem;
+  margin: auto;
 }
 .products .cards-container .all-products .all-products-label {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.products {
-  padding-block: clamp(7rem, 15vw, 25rem);
+  gap: 3rem;
 }
 
 #reviews {
@@ -748,8 +767,10 @@ body .hCarousel .carousel-item img {
   padding-block: clamp(4rem, 5vw, 10rem);
 }
 #reviews b {
-  color: white;
-  font-size: clamp(3rem, 8vw, 10rem);
+  color: #C79A3A;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.548);
+  font-size: clamp(3rem, 4vw, 6rem);
+  padding-inline: clamp(5rem, 6vw, 7rem);
 }
 #reviews .title {
   color: white;
@@ -760,15 +781,17 @@ body .hCarousel .carousel-item img {
   background-color: transparent;
   color: white;
   border: 0.2rem solid #C79A3A;
-  border-radius: clamp(1.2rem, 2vw, 2.2rem);
-  padding: clamp(0.5rem, 1vw, 3rem);
+  border-radius: clamp(1.2rem, 1.4vw, 1.8rem);
+  padding-inline: clamp(0.5rem, 1vw, 3rem);
+  padding-block: clamp(0.5rem, 0.5vw, 3rem);
 }
 #reviews .card svg {
-  max-width: clamp(2rem, 3vw, 4rem);
+  max-width: clamp(2rem, 2.2vw + 0.1rem, 3rem);
 }
 #reviews .card strong {
-  font-size: clamp(1.2rem, 2vw, 2rem);
-  padding-inline: clamp(2rem, 3vw, 4rem);
+  font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+  padding-inline: clamp(2rem, 2.2vw, 3rem);
+  padding-bottom: clamp(0.5rem, 1vw, 1.5rem);
 }
 #reviews .card p {
   font-style: italic;

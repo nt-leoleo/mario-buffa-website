@@ -518,6 +518,7 @@ body {
     & a {
         color: v.$primary;
         font-size: clamp(1.2rem, 2vw, 1.9rem);
+        padding-bottom: 2rem;
     }
 
     & .carousel {
@@ -568,7 +569,7 @@ body {
 
     padding: {
         block: clamp(4rem, 6vw, 8rem);
-        inline: v.$globalMargin;
+        padding-inline: clamp(5rem, 7vw, 9rem);
     }
 
     ;
@@ -631,9 +632,9 @@ body {
 
     & .cards-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         gap: 2rem;
-        padding-inline: v.$globalMargin;
+        padding-inline: clamp(2rem, 9vw, 12rem);
         padding-block: clamp(3rem, 6vw, 8rem);
 
         & .card {
@@ -642,22 +643,26 @@ body {
             border-radius: .5rem;
             display: flex;
             flex-direction: column;
-            // justify-content: center;
+            justify-content: center;
             align-items: center;
             // border: clamp(.2rem, .25vw + .02rem, .4rem) solid v.$tertiary;
             box-shadow: .2rem .2rem .8rem black;
+            width: 20rem;
             overflow: hidden;
             cursor: pointer;
+            margin: auto;
 
             .image-container {
+                overflow: hidden;
+                display: flex;
+                align-items: center;
                 width: 100%;
                 height: clamp(13rem, 22vw, 23rem);
                 background-color: white;
 
                 & img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    transform: scale(1.05);
+                    object-fit: contain;
                     transition: all .4s ease;
 
                     &:hover {
@@ -668,13 +673,6 @@ body {
                         transform: scale(.9);
                     }
                 }
-
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                overflow: hidden;
             }
 
             & a {
@@ -682,8 +680,8 @@ body {
                 color: white;
                 text-align: center;
                 width: 100%;
-                padding-block: .5rem;
-                font-size: clamp(2rem, 4vw, 3rem);
+                padding-block: clamp(.5rem, 1vw, 1.5rem);
+                font-size: clamp(1.8rem, 2vw, 2.2rem);
                 font-weight: 700;
             }
 
@@ -693,7 +691,7 @@ body {
                 text-align: center;
                 width: 100%;
                 padding-block: .5rem;
-                font-size: clamp(1rem, 1.5vw, 1.8rem);
+                font-size: clamp(1rem, 1.2vw, 1.8rem);
                 font-weight: 700;
             }
         }
@@ -702,6 +700,16 @@ body {
             // background-color: color.scale(v.$tertiary, $lightness: -50%);
             transition: all .2s ease-in-out;
             color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 20rem;
+
+            padding: {
+                inline: 1rem;
+                block: 3rem;
+            }
+
 
             &:hover {
                 background-color: v.$tertiary;
@@ -717,9 +725,10 @@ body {
                 background-color: transparent;
             }
 
-            padding: {
-                inline: .2rem;
-                block: .8rem;
+            & svg {
+                width: 7rem;
+                // border: 1px solid red;
+                margin: auto
             }
 
             ;
@@ -729,12 +738,13 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                gap: 3rem;
             }
 
         }
     }
 
-    padding-block: clamp(7rem, 15vw, 25rem);
+    // padding-block: clamp(7rem, 15vw, 25rem);
 
 }
 
@@ -751,14 +761,14 @@ body {
     ;
 
     & b {
-        color: white;
-        font-size: clamp(3rem, 8vw, 10rem);
+        color: v.$secondary;
+        text-shadow: 0 0 1rem rgba(0, 0, 0, 0.548);
+        font-size: clamp(3rem, 4vw, 6rem);
+        // max-width: 30rem;
 
-        // margin: {
-        //     bottom: clamp(3rem, 4vw, 5rem);
-        // }
-
-        ;
+        padding: {
+            inline: clamp(5rem, 6vw, 7rem);
+        }
     }
 
     & .title {
@@ -771,21 +781,27 @@ body {
         background-color: transparent;
         color: white;
         border: .2rem solid v.$secondary;
-        border-radius: clamp(1.2rem, 2vw, 2.2rem);
-        padding: clamp(.5rem, 1vw, 3rem);
+        border-radius: clamp(1.2rem, 1.4vw, 1.8rem);
+
+        padding: {
+            inline: clamp(.5rem, 1vw, 3rem);
+            block: clamp(.5rem, .5vw, 3rem);
+        }
+
+        ;
 
         & svg {
-            max-width: clamp(2rem, 3vw, 4rem);
+            max-width: clamp(2rem, 2.2vw + .1rem, 3rem);
         }
 
         & strong {
-            font-size: clamp(1.2rem, 2vw, 2rem);
-            padding-inline: clamp(2rem, 3vw, 4rem);
+            font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+            padding-inline: clamp(2rem, 2.2vw, 3rem);
+            padding-bottom: clamp(.5rem, 1vw, 1.5rem);
         }
 
         & p {
             font-style: italic;
-
         }
 
     }
