@@ -95,14 +95,14 @@ html body main {
 }
 .main-text .mario-buffa {
   color: white;
-  font-size: clamp(6rem, 10vw, 15rem);
+  font-size: clamp(6rem, 8vw, 10rem);
   line-height: clamp(5.8rem, 10vw, 14rem);
   font-weight: 600;
   margin: 0;
 }
 .main-text h3 {
   color: coral;
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 1.8vw, 1.9rem);
   font-weight: 400;
   padding-block: clamp(1.5rem, 4vw, 7rem);
 }
@@ -112,7 +112,7 @@ html body main {
   padding-block: clamp(1.5rem, 4vw, 7rem);
 }
 .main-text .festo {
-  width: 80%;
+  width: clamp(18rem, 22vw + 1rem, 28rem);
   display: flex;
   margin-inline: auto;
   align-items: center;
@@ -205,7 +205,7 @@ html body main {
   padding-block: clamp(1.5rem, 2vw, 4rem);
 }
 .contact-and-location .contact-form form {
-  padding-inline: 4rem;
+  padding-inline: clamp(1rem, 8vw, 15rem);
   padding-block: 2rem;
 }
 .contact-and-location .contact-form form input,
