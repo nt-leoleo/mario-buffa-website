@@ -444,7 +444,7 @@ body {
 
         & p {
             font-weight: 400;
-            font-size: clamp(.8em, 1vw + .2rem, 3rem);
+            font-size: clamp(.8em, 1vw + .02rem, 3rem);
             padding-inline: 1.5rem;
         }
     }
@@ -552,7 +552,7 @@ body {
     border-bottom: .2rem solid v.$primary;
     padding-bottom: clamp(1rem, 4vw, 3rem);
     padding-inline: clamp(1rem, 3vw, 2rem);
-    margin-inline: v.$globalMargin;
+    padding-inline: v.$globalMargin;
 }
 
 .title2 {
@@ -727,7 +727,6 @@ body {
 
             & svg {
                 width: 7rem;
-                // border: 1px solid red;
                 margin: auto
             }
 
@@ -855,7 +854,7 @@ footer {
     background-color: v.$tertiary;
     color: whitesmoke;
     display: grid;
-    gap: 1.2rem;
+    gap: clamp(.5rem, 2vw + .1rem, 2.5rem);
     grid-template-columns: repeat(2, 1fr);
 
     padding: {
@@ -870,11 +869,12 @@ footer {
     // }
     & .card {
         overflow: hidden;
-        background-color: transparent;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        // justify-content: center;
         padding: v.$globalMargin;
+        padding-block: clamp(2rem, 4vw + .1rem, 4.5rem);
+        background-color: color.scale(v.$tertiary, $lightness: 10%);
+        font-size: clamp(.8rem, 1vw + .01rem, 1.1rem);
     }
 
     & .logoCard {
@@ -886,5 +886,34 @@ footer {
         width: 100%;
         border-left: .2rem solid coral;
         padding-inline: v.$globalMargin;
+        font-weight: 800;
+        font-size: clamp(1.1rem, 1.2vw + .01rem, 1.4rem);
+    }
+
+    & .social-media-buttons {
+        display: flex;
+        flex-direction: column;
+        padding-block: clamp(1rem, 1.2vw, 1.5rem);
+        gap: clamp(.9rem, 1vw + .1rem, 1.2rem);
+        font-weight: 500;
+
+        & svg {
+            width: clamp(1rem, 2vw, 3rem);
+            filter: invert(1);
+        }
+
+        & .social-media-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            & span {
+                border: none;
+                margin: auto;
+                font-weight: 500;
+                font-size: clamp(.8rem, 1vw + .01rem, 1.1rem);
+            }
+        }
     }
 }

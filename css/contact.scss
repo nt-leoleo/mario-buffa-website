@@ -19,13 +19,13 @@ html body {
         position: relative;
         display: flex;
         flex-direction: column;
-        padding-top: 6rem;
+        padding-top: clamp(6rem, 6.5vw, 7rem);
         z-index: 1;
     }
 
     .title {
         width: 100%;
-        padding-top: 1rem;
+        // padding-top: clamp(1rem, 1.2vw, 1.4rem);
     }
 
     & p {
@@ -48,7 +48,7 @@ html body {
 .main-text {
     text-align: center;
     border-block: .2rem solid coral;
-    padding-block: 1rem;
+    padding-block: clamp(1rem, 4vw + .02rem, 7rem);
     margin-bottom: clamp(4rem, 10vw, 15rem);
 
     & .mario-buffa {
@@ -85,7 +85,7 @@ html body {
 .cards-container {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vw + 0.5rem, 3rem);
+    gap: clamp(1rem, 2vw + 0.1rem, 3rem);
 
     @media (min-width: v.$desktop) {
         display: grid;
@@ -97,27 +97,23 @@ html body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: .1rem;
         background-color: rgba(0, 0, 0, 0.274);
         border-radius: clamp(1rem, 3vw, 5rem);
         border: .1rem solid white;
 
-        padding: {
-            inline: 4rem;
-            block: 4rem;
-        }
-
-        ;
+        padding: 2rem;
 
         & svg {
-            width: clamp(5rem, 10vw, 12rem);
+            width: clamp(4rem, 6vw, 8rem);
             // outline: 1px solid red;
             filter: invert(100%);
         }
+
         & h1 {
             padding-block: 0;
             margin-block: 0;
         }
+
         & h4 {
             font-size: 2rem;
         }
@@ -152,7 +148,7 @@ html body {
 
         padding: {
             inline: v.$globalMargin;
-            block: 2rem;
+            block: clamp(1rem, 2.5vw + .1rem, 4rem);
         }
 
         & h3 {
@@ -188,10 +184,6 @@ html body {
 
     .contact-form {
         form {
-            padding: {
-                inline: clamp(1rem, 8vw, 15rem);
-                block: 2rem;
-            }
 
             input,
             textarea,
@@ -228,6 +220,13 @@ html body {
                 padding-block: .5rem;
 
             }
+        }
+
+        .title {
+            font-size: 1.6rem;
+            border: none;
+            padding-inline: 0;
+            width: 100%;
         }
     }
 }

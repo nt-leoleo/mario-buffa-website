@@ -69,12 +69,11 @@ html body .contact-header {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 6rem;
+  padding-top: clamp(6rem, 6.5vw, 7rem);
   z-index: 1;
 }
 html body .title {
   width: 100%;
-  padding-top: 1rem;
 }
 html body p {
   padding-inline: clamp(0.1rem, 5vw, 10rem);
@@ -90,7 +89,7 @@ html body main {
 .main-text {
   text-align: center;
   border-block: 0.2rem solid coral;
-  padding-block: 1rem;
+  padding-block: clamp(1rem, 4vw + 0.02rem, 7rem);
   margin-bottom: clamp(4rem, 10vw, 15rem);
 }
 .main-text .mario-buffa {
@@ -122,7 +121,7 @@ html body main {
 .cards-container {
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 2vw + 0.5rem, 3rem);
+  gap: clamp(1rem, 2vw + 0.1rem, 3rem);
 }
 @media (min-width: 1200px) {
   .cards-container {
@@ -135,15 +134,13 @@ html body main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.1rem;
   background-color: rgba(0, 0, 0, 0.274);
   border-radius: clamp(1rem, 3vw, 5rem);
   border: 0.1rem solid white;
-  padding-inline: 4rem;
-  padding-block: 4rem;
+  padding: 2rem;
 }
 .cards-container .contact-card svg {
-  width: clamp(5rem, 10vw, 12rem);
+  width: clamp(4rem, 6vw, 8rem);
   filter: invert(100%);
 }
 .cards-container .contact-card h1 {
@@ -179,7 +176,7 @@ html body main {
   border-radius: 1rem;
   border: 0.1rem solid white;
   padding-inline: clamp(1rem, 1.8vw, 2rem);
-  padding-block: 2rem;
+  padding-block: clamp(1rem, 2.5vw + 0.1rem, 4rem);
 }
 .contact-and-location .contact-map-iframe h3 {
   font-size: 1.6rem;
@@ -203,10 +200,6 @@ html body main {
   flex-direction: row;
   justify-content: space-around;
   padding-block: clamp(1.5rem, 2vw, 4rem);
-}
-.contact-and-location .contact-form form {
-  padding-inline: clamp(1rem, 8vw, 15rem);
-  padding-block: 2rem;
 }
 .contact-and-location .contact-form form input,
 .contact-and-location .contact-form form textarea,
@@ -234,4 +227,10 @@ html body main {
   color: white;
   font-size: 1.4rem;
   padding-block: 0.5rem;
+}
+.contact-and-location .contact-form .title {
+  font-size: 1.6rem;
+  border: none;
+  padding-inline: 0;
+  width: 100%;
 }/*# sourceMappingURL=contact.css.map */
