@@ -1,80 +1,85 @@
-import { loadComponents } from './loader.js';
-import { headerBehavior } from './headerBehavior.js';
-import { burgerMenu } from './burgerMenu.js';
+const stats = document.querySelector(".stats");
 
-async function init() {
-    await loadComponents();
+if (stats) {
+    const counters = stats.querySelectorAll("[data-to-value]");
 
-    headerBehavior();
-    burgerMenu();
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            if (!entries[0].isIntersecting) return;
+
+            counters.forEach(counter => {
+                const target = Number(counter.dataset.toValue);
+                const duration = Number(counter.dataset.duration) || 2000;
+                const from = Number(counter.dataset.fromValue) || 0;
+
+                let startTime = null;
+
+                function updateCounter(timestamp) {
+                    if (!startTime) startTime = timestamp;
+
+                    const progress = Math.min(
+                        (timestamp - startTime) / duration,
+                        1
+                    );
+
+                    const currentValue = Math.floor(
+                        from + (target - from) * progress
+                    );
+
+                    counter.textContent = formatValue(
+                        currentValue,
+                        counter
+                    );
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    }
+                }
+
+                requestAnimationFrame(updateCounter);
+            });
+
+            observer.unobserve(stats);
+        },
+        {
+            threshold: 0.5
+        }
+    );
+
+    observer.observe(stats);
 }
 
-init();
 
-const stats = document.querySelector(".stats");
-const counters = stats.querySelectorAll("[data-to-value]");
+const contactForm = document.querySelector("#contact-form");
 
-const observer = new IntersectionObserver(
-    (entries, observer) => {
-        if (!entries[0].isIntersecting) return;
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-        counters.forEach(counter => {
-            const target = Number(counter.dataset.toValue);
-            const duration = Number(counter.dataset.duration) || 2000;
-            const from = Number(counter.dataset.fromValue) || 0;
+        const formData = new FormData(contactForm);
 
-            let startTime = null;
+        const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            message: formData.get("message")
+        };
 
-            function updateCounter(timestamp) {
-                if (!startTime) startTime = timestamp;
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
 
-                const progress = Math.min(
-                    (timestamp - startTime) / duration,
-                    1
-                );
+            const result = await response.json();
 
-                const currentValue = Math.floor(
-                    from + (target - from) * progress
-                );
+            console.log(result);
 
-                counter.textContent = formatValue(
-                    currentValue,
-                    counter
-                );
-
-                if (progress < 1) {
-                    requestAnimationFrame(updateCounter);
-                }
-            }
-
-            requestAnimationFrame(updateCounter);
-        });
-
-        // Ejecutar la animación solo una vez
-        observer.unobserve(stats);
-    },
-    {
-        threshold: 0.5
-    }
-);
-
-observer.observe(stats);
-
-
-function formatValue(value, counter) {
-    const id = counter.id;
-
-    if (id === "years-experience") {
-        return `+${value}`;
-    }
-
-    if (id === "good-garant") {
-        return `${value}%`;
-    }
-
-    if (id === "maked-instalations") {
-        return `+${value.toLocaleString("es-AR")}`;
-    }
-
-    return value;
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    });
 }
