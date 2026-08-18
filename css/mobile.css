@@ -773,8 +773,8 @@ body .hCarousel .carousel-item img {
 #reviews b {
   color: #C79A3A;
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.548);
-  font-size: clamp(3rem, 4vw, 6rem);
-  padding-inline: clamp(5rem, 6vw, 7rem);
+  font-size: clamp(2rem, 3vw, 4rem);
+  padding-inline: clamp(2rem, 3vw, 4rem);
 }
 #reviews .title {
   color: white;
@@ -850,6 +850,7 @@ footer .card {
 footer .logoCard {
   background-color: whitesmoke;
   color: black;
+  font-size: clamp(0.8rem, 1vw + 0.01rem, 1.1rem);
 }
 footer span {
   align-self: flex-start;
@@ -881,4 +882,10 @@ footer .social-media-buttons .social-media-icon span {
   margin: auto;
   font-weight: 500;
   font-size: clamp(0.8rem, 1vw + 0.01rem, 1.1rem);
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  gap: clamp(1rem, 1.2vw, 1.4rem);
 }/*# sourceMappingURL=mobile.css.map */

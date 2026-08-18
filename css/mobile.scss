@@ -591,6 +591,7 @@ body {
         & svg {
             width: clamp(4rem, 6vw, 8rem);
         }
+
         & .card {
             background-color: rgba(v.$tertiary, .9);
             margin-inline: v.$globalMargin;
@@ -655,7 +656,7 @@ body {
             overflow: hidden;
             cursor: pointer;
             margin: auto;
-            
+
 
             .image-container {
                 overflow: hidden;
@@ -767,11 +768,11 @@ body {
     & b {
         color: v.$secondary;
         text-shadow: 0 0 1rem rgba(0, 0, 0, 0.548);
-        font-size: clamp(3rem, 4vw, 6rem);
+        font-size: clamp(2rem, 3vw, 4rem);
         // max-width: 30rem;
 
         padding: {
-            inline: clamp(5rem, 6vw, 7rem);
+            inline: clamp(2rem, 3vw, 4rem);
         }
     }
 
@@ -885,6 +886,7 @@ footer {
     & .logoCard {
         background-color: whitesmoke;
         color: black;
+        font-size: clamp(.8rem, 1vw + .01rem, 1.1rem);
     }
 
     & span {
@@ -921,5 +923,12 @@ footer {
                 font-size: clamp(.8rem, 1vw + .01rem, 1.1rem);
             }
         }
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        gap: clamp(1rem, 1.2vw, 1.4rem);
     }
 }
