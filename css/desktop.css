@@ -103,8 +103,8 @@
   main .services2 .service-card {
     grid-template-columns: repeat(3, 1fr);
   }
-  main .services2 .service-card .card {
-    min-height: clamp(1rem, 8vw, 2rem);
+  main .services2 .service-card .card svg {
+    width: clamp(4rem, 6vw, 8rem);
   }
   main .services2 .service-card .card .moreInfo {
     padding-block: clamp(1rem, 1.1vw, 1.5rem);

@@ -522,6 +522,7 @@ body {
     }
 
     & .carousel {
+        margin-top: 4rem;
         box-shadow: .2rem .2rem 1rem black;
     }
 
@@ -587,6 +588,9 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         gap: 1.5rem;
 
+        & svg {
+            width: clamp(4rem, 6vw, 8rem);
+        }
         & .card {
             background-color: rgba(v.$tertiary, .9);
             margin-inline: v.$globalMargin;
@@ -880,6 +884,7 @@ footer {
 
     & .logoCard {
         background-color: whitesmoke;
+        color: black;
     }
 
     & span {

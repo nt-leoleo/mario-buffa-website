@@ -165,8 +165,8 @@ textarea {
   main .services2 .service-card {
     grid-template-columns: repeat(3, 1fr);
   }
-  main .services2 .service-card .card {
-    min-height: clamp(1rem, 8vw, 2rem);
+  main .services2 .service-card .card svg {
+    width: clamp(4rem, 6vw, 8rem);
   }
   main .services2 .service-card .card .moreInfo {
     padding-block: clamp(1rem, 1.1vw, 1.5rem);
@@ -592,6 +592,7 @@ body .hCarousel .carousel-item img {
   padding-bottom: 2rem;
 }
 .festo-info .carousel {
+  margin-top: 4rem;
   box-shadow: 0.2rem 0.2rem 1rem black;
 }
 .festo-info .distributors {
@@ -644,6 +645,9 @@ body .hCarousel .carousel-item img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 1.5rem;
+}
+.services2 .service-card svg {
+  width: clamp(4rem, 6vw, 8rem);
 }
 .services2 .service-card .card {
   background-color: rgba(13, 31, 58, 0.9);
@@ -845,6 +849,7 @@ footer .card {
 }
 footer .logoCard {
   background-color: whitesmoke;
+  color: black;
 }
 footer span {
   align-self: flex-start;

@@ -1,4 +1,8 @@
 {
+  "name": "mario-buffa-website",
+  "version": "1.0.0",
+  "description": "Sitio web oficial de Mario Buffa",
+  "private": true,
   "dependencies": {
     "resend": "^6.19.0"
   }
