@@ -35,7 +35,7 @@ export default async function handler(req, res) {
 
         // Enviar email
         const { error } = await resend.emails.send({
-            from: "Formulario web <onboarding@resend.dev>",
+            from: "Mario Buffa <contacto@mariobuffa.com.ar>",
             to: [
                 "pederneraleonardo.tec@gmail.com",
                 "mariofbuffa@gmail.com"
