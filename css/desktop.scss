@@ -77,148 +77,170 @@
         }
     }
 
-    main {
-        & .hero {
-            &::after {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(to bottom,
-                        rgb(0, 0, 0) 0%,
-                        transparent 20%);
-                pointer-events: none;
-                z-index: 0;
+    body {
+        main {
+            & .hero {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(to bottom,
+                            rgb(0, 0, 0) 0%,
+                            transparent 20%);
+                    pointer-events: none;
+                    z-index: 0;
+                }
+
+                background: {
+                    image: url("../assets/images/BannerMarioBuffa.jpg");
+                    repeat: no-repeat;
+                    position: center;
+                    size: cover;
+                }
+
+                aspect-ratio: 16/5;
+                padding: 1rem;
             }
 
-            background: {
-                image: url("../assets/images/BannerMarioBuffa.jpg");
-                repeat: no-repeat;
-                position: center;
-                size: cover;
-            }
-
-            aspect-ratio: 16/5;
-            padding: 1rem;
-        }
-
-        & div.services {
-            grid-template-columns: repeat(3, 1fr);
-            padding: clamp(1rem, 2vw, 3rem) clamp(.5rem, 6vw, 12rem);
-            gap: clamp(5rem, 8vw, 13rem);
-            background: linear-gradient(to top, transparent, white 60%),
-                url(../assets/images/bg-pattern3.png);
-            ;
-
-            & .service {
-                flex-direction: row !important;
-                gap: clamp(.5rem, 2vw, 4rem);
-            }
-        }
-
-        & .contact-actioncall {
-            background: linear-gradient(135deg,
-                    color.change(v.$primary, $alpha: .5),
-                    color.change(v.$tertiary, $alpha: .5));
-
-            padding: {
-                block: clamp(1rem, 5vw + 2rem, 4rem);
-            }
-
-            background: linear-gradient(300deg,
-                rgba(v.$tertiary, .9),
-                rgba(0, 0, 0, 0.349)) !important;
-            background-image: none;
-        }
-
-        & .stats {
-            flex-direction: row;
-
-            padding: {
-                block: clamp(2rem, 4vw + .5rem, 5rem);
-                inline: 0;
-            }
-        }
-
-        .festo-info {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            background:
-                linear-gradient(to bottom,
-                    whitesmoke,
-                    transparent),
-                url("../assets/images/bg-pattern3.png");
-        }
-
-        & .services2 {
-            background:
-                linear-gradient(to top,
-                    whitesmoke 10%,
-                    transparent),
-                url("../assets/images/bg-pattern3.png");
-
-            & .service-card {
+            & div.services {
                 grid-template-columns: repeat(3, 1fr);
+                padding: clamp(1rem, 2vw, 3rem) clamp(.5rem, 6vw, 12rem);
+                gap: clamp(5rem, 8vw, 13rem);
+                background: linear-gradient(to top, transparent, white 60%),
+                    url(../assets/images/bg-pattern3.png);
+                ;
 
-                & .card {
-                    & svg {
-                        width: clamp(4rem, 6vw, 8rem);
-                    }
-
-                    & .moreInfo {
-                        padding-block: clamp(1rem, 1.1vw, 1.5rem);
-                    }
-
-                    & div {
-                        display: flex;
-                        flex-direction: row;
-                        min-height: clamp(5rem, 11vw, 12rem);
-                        gap: clamp(1rem, 2vw, 2rem);
-
-                        padding: {
-                            inline: clamp(1.5rem, 2vw, 3rem);
-                            block: clamp(.5rem, 1vw, 2rem);
-                        }
-
-                        & span {
-                            padding-block: clamp(1rem, 1.5vw, 2rem);
-                        }
-                    }
+                & .service {
+                    flex-direction: row !important;
+                    gap: clamp(.5rem, 2vw, 4rem);
                 }
             }
-        }
 
-        .products {
-            background-color: whitesmoke;
-
-            & .cards-container {
-                grid-template-columns: repeat(4, 1fr);
-                gap: clamp(2rem, 4vw + .2rem, 5rem);
-                padding-inline: clamp(5rem, 7vw, 9rem);
-
-                .card {
-                    width: auto;
-                    height: auto;
-                }
-            }
-        }
-
-    }
-
-    #reviews {
-        & .clients-reviews {
-            & b {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                word-break: keep-all;
-                word-wrap: break-word;
-                font-size: clamp(4rem, 5vw + .1rem, 6rem);
+            & .contact-actioncall {
+                background: linear-gradient(135deg,
+                        color.change(v.$primary, $alpha: .5),
+                        color.change(v.$tertiary, $alpha: .5));
 
                 padding: {
-                    inline: clamp(10rem, 11vw, 12rem);
+                    block: clamp(1rem, 5vw + 2rem, 4rem);
+                }
+
+                background: linear-gradient(300deg,
+                    rgba(v.$tertiary, .9),
+                    rgba(0, 0, 0, 0.349)) !important;
+                background-image: none;
+            }
+
+            & .stats {
+                flex-direction: row;
+
+                padding: {
+                    block: clamp(2rem, 4vw + .5rem, 5rem);
+                    inline: 0;
                 }
             }
+
+            .festo-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                background:
+                    linear-gradient(to bottom,
+                        whitesmoke,
+                        transparent),
+                    url("../assets/images/bg-pattern3.png");
+
+                & .carousel {
+                    padding: {
+                        block: 2rem;
+                        inline: 8rem;
+                    }
+
+                    ;
+                }
+            }
+
+            & .services2 {
+                background:
+                    linear-gradient(to top,
+                        whitesmoke 10%,
+                        transparent),
+                    url("../assets/images/bg-pattern3.png");
+
+                & .service-card {
+                    grid-template-columns: repeat(3, 1fr);
+
+                    & .card {
+                        & svg {
+                            width: clamp(4rem, 6vw, 8rem);
+                        }
+
+                        & .moreInfo {
+                            padding-block: clamp(1rem, 1.1vw, 1.5rem);
+                        }
+
+                        & div {
+                            display: flex;
+                            flex-direction: row;
+                            min-height: clamp(5rem, 11vw, 12rem);
+                            gap: clamp(1rem, 2vw, 2rem);
+
+                            padding: {
+                                inline: clamp(1.5rem, 2vw, 3rem);
+                                block: clamp(.5rem, 1vw, 2rem);
+                            }
+
+                            & span {
+                                padding-block: clamp(1rem, 1.5vw, 2rem);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .products {
+                background-color: whitesmoke;
+
+                & .cards-container {
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: clamp(2rem, 4vw + .2rem, 5rem);
+                    padding-inline: clamp(5rem, 7vw, 9rem);
+
+                    .card {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+
         }
+
+        #reviews {
+            & .title {
+                margin-bottom: 4rem;
+            }
+
+            & .clients-reviews {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                & b {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    word-break: keep-all;
+                    word-wrap: break-word;
+                    padding-left: clamp(2rem, 4vw, 5rem);
+
+                    width: clamp(20rem, 25vw, 30rem);
+                }
+            }
+
+            & aside {
+                grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)) !important;
+                gap: clamp(1rem, 5vw, 8rem) !important;
+            }
+        }
+
     }
 
     footer {

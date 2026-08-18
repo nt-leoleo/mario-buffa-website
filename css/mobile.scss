@@ -311,7 +311,7 @@ body {
     & .hero-content {
         text-align: left;
         color: white;
-        text-shadow: 0 0 .5rem black;
+        text-shadow: .1rem .1rem 0rem black;
     }
 }
 
@@ -492,7 +492,7 @@ body {
 
 .festo-info {
     padding: {
-        block: clamp(4rem, 8vw, 10rem);
+        block: clamp(4rem, 7vw, 9rem);
         inline: clamp(1rem, 5vw, 7rem);
         bottom: 0;
     }
@@ -503,6 +503,7 @@ body {
         padding: 1rem;
         padding-bottom: clamp(1.5rem, 2vw, 3rem);
         border: none;
+        color: #02b1ff;
     }
 
     & img {
@@ -511,19 +512,24 @@ body {
 
     & p {
         padding-inline: clamp(1.2rem, 1.8vw, 2rem);
-        font-size: clamp(.9rem, 1vw, 1.4rem);
+        font-size: clamp(.9rem, 1vw, 1.2rem);
         // text-align: justify;
     }
 
     & a {
-        color: v.$primary;
+        color: #02b1ff;
         font-size: clamp(1.2rem, 2vw, 1.9rem);
         padding-bottom: 2rem;
     }
 
     & .carousel {
+        background-color: #02b1ff;
         margin-top: 4rem;
         box-shadow: .2rem .2rem 1rem black;
+        padding: {
+            block: 1rem;
+            inline: clamp(0rem, 8vw, 10rem);
+        };
     }
 
     .distributors {
@@ -563,14 +569,13 @@ body {
     align-items: center;
     font-size: clamp(2rem, 3vw, 3.5rem);
     border-block: .2rem solid v.$secondary;
-    // padding-block: clamp(4rem, 20vw, 30rem);
     background: linear-gradient(135deg,
             v.$primary,
             rgba(v.$tertiary, 5));
 
     padding: {
         block: clamp(4rem, 6vw, 8rem);
-        padding-inline: clamp(5rem, 7vw, 9rem);
+        inline: clamp(5rem, 7vw, 9rem);
     }
 
     ;
@@ -760,7 +765,7 @@ body {
 
     padding: {
         inline: v.$globalMargin;
-        block: clamp(4rem, 5vw, 10rem);
+        block: clamp(3rem, 4vw, 5rem);
     }
 
     ;
@@ -768,18 +773,18 @@ body {
     & b {
         color: v.$secondary;
         text-shadow: 0 0 1rem rgba(0, 0, 0, 0.548);
-        font-size: clamp(2rem, 3vw, 4rem);
+        font-size: clamp(1.9rem, 2.8vw + .1rem, 3.2rem);
         // max-width: 30rem;
 
         padding: {
-            inline: clamp(2rem, 3vw, 4rem);
+            block: clamp(2rem, 3vw, 4rem);
         }
     }
 
     & .title {
         color: white;
         border-bottom-color: white;
-        font-weight: 700;
+        // margin-bottom: 4rem;
     }
 
     & .card {
@@ -796,32 +801,32 @@ body {
         ;
 
         & svg {
-            max-width: clamp(2rem, 2.2vw + .1rem, 3rem);
+            max-width: clamp(1.8rem, 2.1vw, 2.23rem);
         }
 
         & strong {
-            font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+            font-size: clamp(1rem, 1.2vw, 1.4rem);
             padding-inline: clamp(2rem, 2.2vw, 3rem);
-            padding-bottom: clamp(.5rem, 1vw, 1.5rem);
         }
 
         & p {
             font-style: italic;
+            font-size: clamp(.9rem, 1.1vw, 1.2rem);
         }
 
     }
 
     & aside {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
         gap: clamp(1rem, 2vw, 4rem);
     }
 
     & .clients-reviews {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        gap: 3rem;
-        padding-block: clamp(4rem, 5vw, 8rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // gap: 3rem;
     }
 }
 
