@@ -62,19 +62,17 @@ if (stats) {
 }
 
 
-const contactForm = document.querySelector("#contact-form");
+const form = document.querySelector("#contact-form");
 
-if (contactForm) {
-    contactForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(contactForm);
+if (form) {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
         const data = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            phone: formData.get("phone"),
-            message: formData.get("message")
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            message: form.message.value
         };
 
         try {
@@ -88,10 +86,16 @@ if (contactForm) {
 
             const result = await response.json();
 
-            console.log(result);
+            if (!response.ok) {
+                throw new Error(result.message);
+            }
+
+            alert("Mensaje enviado correctamente.");
+            form.reset();
 
         } catch (error) {
-            console.error("Error:", error);
+            console.error(error);
+            alert("No se pudo enviar el mensaje. Intentá nuevamente.");
         }
     });
 }

@@ -24,10 +24,22 @@ export default async function handler(req, res) {
             });
         }
 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({
+                success: false,
+                message: "El email no es válido"
+            });
+        }
+
         // Enviar email
         const { error } = await resend.emails.send({
             from: "Formulario web <onboarding@resend.dev>",
-            to: "pederneraleonardo.tec@gmail.com",
+            to: [
+                "pederneraleonardo.tec@gmail.com",
+                "mariofbuffa@gmail.com"
+            ],
             subject: `Nuevo contacto de ${name || "Visitante"}`,
             replyTo: email,
 

@@ -1,6 +1,6 @@
 {
   "name": "mario-buffa-website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sitio web oficial de Mario Buffa",
   "private": true,
   "dependencies": {
