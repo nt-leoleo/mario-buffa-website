@@ -73,24 +73,22 @@
   }
   body main div.services {
     grid-template-columns: repeat(3, 1fr);
-    padding: clamp(1rem, 2vw, 3rem) clamp(0.5rem, 6vw, 12rem);
+    padding-block: clamp(1rem, 2vw, 3rem);
     gap: clamp(5rem, 8vw, 13rem);
     background: linear-gradient(to top, transparent, white 60%), url(../assets/images/bg-pattern3.png);
   }
   body main div.services .service {
-    flex-direction: row !important;
+    flex-direction: row;
     gap: clamp(0.5rem, 2vw, 4rem);
   }
   body main .contact-actioncall {
     background: linear-gradient(135deg, rgba(10, 145, 198, 0.5), rgba(13, 31, 58, 0.5));
     padding-block: clamp(1rem, 5vw + 2rem, 4rem);
-    background: linear-gradient(300deg, rgba(13, 31, 58, 0.9), rgba(0, 0, 0, 0.349)) !important;
-    background-image: none;
+    background: linear-gradient(300deg, rgba(13, 31, 58, 0.9), rgba(0, 0, 0, 0.349));
   }
   body main .stats {
     flex-direction: row;
     padding-block: clamp(2rem, 4vw + 0.5rem, 5rem);
-    padding-inline: 0;
   }
   body main .festo-info {
     display: grid;
@@ -99,19 +97,13 @@
   }
   body main .festo-info .carousel {
     padding-block: 2rem;
-    padding-inline: 8rem;
+    padding-inline: clamp(1rem, 3vw, 6rem);
   }
   body main .services2 {
     background: linear-gradient(to top, whitesmoke 10%, transparent), url("../assets/images/bg-pattern3.png");
   }
   body main .services2 .service-card {
     grid-template-columns: repeat(3, 1fr);
-  }
-  body main .services2 .service-card .card svg {
-    width: clamp(4rem, 6vw, 8rem);
-  }
-  body main .services2 .service-card .card .moreInfo {
-    padding-block: clamp(1rem, 1.1vw, 1.5rem);
   }
   body main .services2 .service-card .card div {
     display: flex;
@@ -129,21 +121,20 @@
   }
   body main .products .cards-container {
     grid-template-columns: repeat(4, 1fr);
-    gap: clamp(2rem, 4vw + 0.2rem, 5rem);
-    padding-inline: clamp(5rem, 7vw, 9rem);
+    gap: clamp(2rem, 2.2vw + 0.2rem, 4rem);
   }
   body main .products .cards-container .card {
     width: auto;
     height: auto;
   }
-  body #reviews .title {
+  body main #reviews .title {
     margin-bottom: 4rem;
   }
-  body #reviews .clients-reviews {
+  body main #reviews .clients-reviews {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  body #reviews .clients-reviews b {
+  body main #reviews .clients-reviews b {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,14 +143,14 @@
     padding-left: clamp(2rem, 4vw, 5rem);
     width: clamp(20rem, 25vw, 30rem);
   }
-  body #reviews aside {
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)) !important;
-    gap: clamp(1rem, 5vw, 8rem) !important;
+  body main #reviews aside {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }
-  footer {
-    grid-template-columns: repeat(4, 1fr) !important;
+  body .card strong {
+    font-size: 0.9rem;
   }
-  footer .card {
-    align-items: start !important;
+  body p {
+    font-style: italic;
+    font-size: 0.6rem;
   }
 }/*# sourceMappingURL=desktop.css.map */

@@ -135,24 +135,22 @@ textarea {
   }
   body main div.services {
     grid-template-columns: repeat(3, 1fr);
-    padding: clamp(1rem, 2vw, 3rem) clamp(0.5rem, 6vw, 12rem);
+    padding-block: clamp(1rem, 2vw, 3rem);
     gap: clamp(5rem, 8vw, 13rem);
     background: linear-gradient(to top, transparent, white 60%), url(../assets/images/bg-pattern3.png);
   }
   body main div.services .service {
-    flex-direction: row !important;
+    flex-direction: row;
     gap: clamp(0.5rem, 2vw, 4rem);
   }
   body main .contact-actioncall {
     background: linear-gradient(135deg, rgba(10, 145, 198, 0.5), rgba(13, 31, 58, 0.5));
     padding-block: clamp(1rem, 5vw + 2rem, 4rem);
-    background: linear-gradient(300deg, rgba(13, 31, 58, 0.9), rgba(0, 0, 0, 0.349)) !important;
-    background-image: none;
+    background: linear-gradient(300deg, rgba(13, 31, 58, 0.9), rgba(0, 0, 0, 0.349));
   }
   body main .stats {
     flex-direction: row;
     padding-block: clamp(2rem, 4vw + 0.5rem, 5rem);
-    padding-inline: 0;
   }
   body main .festo-info {
     display: grid;
@@ -161,19 +159,13 @@ textarea {
   }
   body main .festo-info .carousel {
     padding-block: 2rem;
-    padding-inline: 8rem;
+    padding-inline: clamp(1rem, 3vw, 6rem);
   }
   body main .services2 {
     background: linear-gradient(to top, whitesmoke 10%, transparent), url("../assets/images/bg-pattern3.png");
   }
   body main .services2 .service-card {
     grid-template-columns: repeat(3, 1fr);
-  }
-  body main .services2 .service-card .card svg {
-    width: clamp(4rem, 6vw, 8rem);
-  }
-  body main .services2 .service-card .card .moreInfo {
-    padding-block: clamp(1rem, 1.1vw, 1.5rem);
   }
   body main .services2 .service-card .card div {
     display: flex;
@@ -191,21 +183,20 @@ textarea {
   }
   body main .products .cards-container {
     grid-template-columns: repeat(4, 1fr);
-    gap: clamp(2rem, 4vw + 0.2rem, 5rem);
-    padding-inline: clamp(5rem, 7vw, 9rem);
+    gap: clamp(2rem, 2.2vw + 0.2rem, 4rem);
   }
   body main .products .cards-container .card {
     width: auto;
     height: auto;
   }
-  body #reviews .title {
+  body main #reviews .title {
     margin-bottom: 4rem;
   }
-  body #reviews .clients-reviews {
+  body main #reviews .clients-reviews {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  body #reviews .clients-reviews b {
+  body main #reviews .clients-reviews b {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,20 +205,24 @@ textarea {
     padding-left: clamp(2rem, 4vw, 5rem);
     width: clamp(20rem, 25vw, 30rem);
   }
-  body #reviews aside {
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)) !important;
-    gap: clamp(1rem, 5vw, 8rem) !important;
+  body main #reviews aside {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }
-  footer {
-    grid-template-columns: repeat(4, 1fr) !important;
+  body .card strong {
+    font-size: 0.9rem;
   }
-  footer .card {
-    align-items: start !important;
+  body p {
+    font-style: italic;
+    font-size: 0.6rem;
   }
 }
 body {
   background-image: url(../assets/images/bg-pattern3.png);
   background-attachment: fixed;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .whatsapp-ico {
@@ -332,15 +327,15 @@ body {
 }
 
 .pre-header {
+  top: 0.2rem;
+  left: 0;
+  right: 0;
   color: rgba(255, 255, 255, 0.637);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
+  padding-block: clamp(0.2rem, 0.4vw, 0.6rem);
   position: fixed;
   display: flex;
   justify-content: space-between;
-  padding-inline: clamp(1rem, 1.8vw, 2rem);
-  top: 0;
-  left: 0;
-  right: 0;
   text-shadow: 0.1rem 0.1rem 0.3rem black;
   font-size: clamp(0.2rem, 3vw, 1rem);
   font-weight: 600;
@@ -362,7 +357,12 @@ body {
   transform: scale(0.7);
 }
 .pre-header svg {
-  width: clamp(1.1rem, 2vw, 3rem);
+  width: clamp(1rem, 1.8vw, 2.5rem);
+}
+@media (min-width: 1300px) {
+  .pre-header {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
 }
 
 header {
@@ -376,7 +376,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: clamp(0.2rem, 0.5vw, 1rem) clamp(1rem, 3vw, 4rem);
-  gap: clamp(1rem, 3vw, 4rem);
   transition: all 200ms;
   border-bottom: 0.2rem solid none;
 }
@@ -403,10 +402,10 @@ header.header-bottom-item {
   flex: 0 1 auto;
 }
 header .logo {
-  max-width: clamp(4rem, 5vw, 8rem);
+  max-width: clamp(2rem, 4vw, 6rem);
 }
 header button svg {
-  width: clamp(2rem, 10vw, 3rem);
+  width: clamp(2rem, 4vw, 6rem);
   height: auto;
 }
 header nav {
@@ -414,12 +413,11 @@ header nav {
   flex: 0 10 auto;
   min-width: 0;
   width: 100%;
-  padding-left: 13vw;
 }
 header nav a {
   border: 0.15rem solid white;
-  padding: clamp(0.1rem, 1vw, 1rem) clamp(0.3rem, 3vw, 4rem);
-  font-size: clamp(0.6rem, 0.4rem + 0.8vw, 1.1rem);
+  padding: clamp(0.2rem, 0.7vw, 1rem) clamp(1rem, 2vw, 3rem);
+  font-size: clamp(0.4rem, 0.5rem + 0.5vw, 1rem);
   font-weight: 600;
 }
 header ul {
@@ -428,9 +426,15 @@ header ul {
   align-items: center;
   gap: clamp(0.1rem, 2vw, 5rem);
 }
+@media (min-width: 1300px) {
+  header {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
+}
 
 body .hCarousel {
   position: relative;
+  border-bottom: 0.2rem solid #C79A3A;
 }
 body .hCarousel::after {
   content: "";
@@ -461,11 +465,23 @@ body .hCarousel .carousel-item img {
   color: white;
   text-shadow: 0.1rem 0.1rem 0rem black;
 }
+@media (min-width: 1300px) {
+  .hero {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
+}
 
 .services {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .services {
+    flex-direction: row;
+  }
+}
+.services {
   text-align: center;
-  grid-template-columns: 1fr;
   padding: clamp(2rem, 5vw, 5rem) clamp(0.5rem, 6vw, 12rem);
   gap: clamp(2rem, 3vw, 8rem);
   background: linear-gradient(to top, transparent, white 60%), transparent;
@@ -480,8 +496,17 @@ body .hCarousel .carousel-item img {
   opacity: 60%;
   transition: all 0.2s ease;
 }
+.services .service img {
+  min-width: clamp(1.5rem, 3vw, 4rem);
+}
 .services .service:hover, .services .service:active {
   opacity: 100%;
+}
+
+@media (min-width: 1300px) {
+  div.services {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
 }
 
 .contact-button {
@@ -539,7 +564,7 @@ body .hCarousel .carousel-item img {
   letter-spacing: clamp(0.1rem, 0.2vw, 0.4rem);
   padding-block: clamp(1rem, 1.2vw + 0.1rem, 3rem);
   padding-inline: clamp(0.7rem, 1vw + 0.2rem, 3rem);
-  font-size: clamp(2.1em, 4vw + 0.2rem, 6rem);
+  font-size: clamp(2em, 3vw, 6rem);
   box-shadow: 0.2rem 0.2rem 0.5rem black;
   text-shadow: 0.2rem 0.2rem 0.1rem black, 0.1rem 0.1rem 0.7rem white;
   transition: all 300ms ease-out;
@@ -552,8 +577,13 @@ body .hCarousel .carousel-item img {
 }
 .contact-actioncall div p {
   font-weight: 400;
-  font-size: clamp(0.8em, 1vw + 0.02rem, 3rem);
+  font-size: clamp(0.8em, 1vw + 0.01rem, 2rem);
   padding-inline: 1.5rem;
+}
+@media (min-width: 1300px) {
+  .contact-actioncall {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
 }
 
 .stats {
@@ -578,10 +608,15 @@ body .hCarousel .carousel-item img {
 }
 .stats .card-stat b {
   color: #C79A3A;
-  font-size: clamp(2rem, 2.5vw, 4rem);
+  font-size: clamp(1.8rem, 2.3vw, 2.8rem);
 }
 .stats .card-stat span {
-  font-size: clamp(1.1rem, 1.2vw + 0.4rem, 1.8rem);
+  font-size: clamp(0.8rem, 1vw, 1.4rem);
+}
+@media (min-width: 1300px) {
+  .stats {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
 }
 
 .festo-info {
@@ -590,7 +625,9 @@ body .hCarousel .carousel-item img {
   padding-bottom: 0;
 }
 .festo-info .title {
-  padding: 1rem;
+  padding-block: 1rem;
+  padding-inline: 0;
+  font-size: clamp(1.2rem, 1.4vw, 1.6rem);
   padding-bottom: clamp(1.5rem, 2vw, 3rem);
   border: none;
   color: #02b1ff;
@@ -600,19 +637,17 @@ body .hCarousel .carousel-item img {
 }
 .festo-info p {
   padding-inline: clamp(1.2rem, 1.8vw, 2rem);
-  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 .festo-info a {
   color: #02b1ff;
-  font-size: clamp(1.2rem, 2vw, 1.9rem);
+  font-size: clamp(1rem, 1.2vw, 1.4rem);
   padding-bottom: 2rem;
 }
 .festo-info .carousel {
   background-color: #02b1ff;
   margin-top: 4rem;
   box-shadow: 0.2rem 0.2rem 1rem black;
-  padding-block: 1rem;
-  padding-inline: clamp(0rem, 8vw, 10rem);
 }
 .festo-info .distributors {
   display: flex;
@@ -627,10 +662,16 @@ body .hCarousel .carousel-item img {
   filter: grayscale(1);
   opacity: 0.5;
   transition: all 0.2s ease;
+  max-width: clamp(3rem, 4vw, 6rem);
 }
 .festo-info .distributors img:hover {
   filter: grayscale(0);
   opacity: 1;
+}
+@media (min-width: 1300px) {
+  .festo-info {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
 }
 
 .title {
@@ -656,6 +697,7 @@ body .hCarousel .carousel-item img {
 
 .services2 {
   padding-block: 10.5rem;
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
 }
 .services2 #service-card-container {
   padding-block: clamp(1rem, 4vw + 1rem, 7rem);
@@ -663,40 +705,73 @@ body .hCarousel .carousel-item img {
 .services2 .service-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: 1.5rem;
+  gap: clamp(1.5rem, 2vw, 3rem);
 }
 .services2 .service-card svg {
-  width: clamp(4rem, 6vw, 8rem);
+  min-width: clamp(1rem, 3vw, 5rem);
+  max-width: clamp(1rem, 3vw, 5rem);
 }
 .services2 .service-card .card {
-  background-color: rgba(13, 31, 58, 0.9);
-  margin-inline: clamp(1rem, 1.8vw, 2rem);
-  border-radius: 0.5rem;
+  background-color: #0d1f3a;
+  border-radius: clamp(0.8rem, 1vw, 1.2rem);
   color: white;
-  padding-inline: clamp(1.2rem, 2vw, 4rem);
-  padding-block: clamp(1rem, 2vw, 2rem);
+  padding: clamp(0.6rem, 0.7vw, 1.2rem);
 }
-.services2 .service-card .card div {
+.services2 .service-card .card svg {
+  min-width: clamp(4rem, 5vw, 7rem);
+}
+.services2 .service-card .card > div {
+  flex: 1;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1300px) {
+  .services2 .service-card .card > div {
+    flex-direction: row;
+  }
+}
+.services2 .service-card .card > div {
   align-items: center;
   border: 0.1rem solid rgba(245, 245, 245, 0.466);
-  border-radius: 0.5rem;
-  padding-inline: clamp(2rem, 1vw, 4rem);
+  border-radius: clamp(0.8rem, 1vw, 1.2rem);
+  padding-inline: clamp(1.5rem, 2vw, 3rem);
   padding-block: clamp(0.5rem, 1vw, 2rem);
 }
-.services2 .service-card .card div span {
-  padding-block: clamp(1rem, 2vw, 2.5rem);
+.services2 .service-card .card > div span {
+  padding-block: clamp(1rem, 1.5vw, 2rem);
 }
 .services2 .service-card .festo-card {
   background-color: black;
 }
+.services2 .service-card .moreInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.services2 .service-card .moreInfo a {
+  background-color: rgba(10, 145, 198, 0.9);
+  margin-block: clamp(1rem, 2vw, 4rem);
+  padding: clamp(0.5rem, 1vw, 2rem);
+  text-align: center;
+  border-radius: 4rem;
+  transition: all 0.2s ease;
+}
+.services2 .service-card .moreInfo a:hover {
+  color: black;
+  text-decoration: none;
+  background-color: rgb(223, 241, 255);
+}
+@media (min-width: 1300px) {
+  .services2 {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
+}
 
 .products .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2rem;
-  padding-inline: clamp(2rem, 9vw, 12rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: 1rem;
+  padding-inline: clamp(1rem, 1.8vw, 2rem);
   padding-block: clamp(3rem, 6vw, 8rem);
 }
 .products .cards-container .card {
@@ -707,22 +782,21 @@ body .hCarousel .carousel-item img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.2rem 0.2rem 0.8rem black;
-  width: 20rem;
+  box-shadow: 0.2rem 0.2rem 0.6rem black;
   overflow: hidden;
   cursor: pointer;
   margin: auto;
 }
 .products .cards-container .card .image-container {
   overflow: hidden;
+  width: 100%;
   display: flex;
   align-items: center;
-  width: 100%;
-  height: clamp(13rem, 22vw, 23rem);
+  justify-content: center;
   background-color: white;
+  aspect-ratio: 1/1;
 }
 .products .cards-container .card .image-container img {
-  transform: scale(1.05);
   -o-object-fit: contain;
      object-fit: contain;
   transition: all 0.4s ease;
@@ -739,17 +813,21 @@ body .hCarousel .carousel-item img {
   text-align: center;
   width: 100%;
   padding-block: clamp(0.5rem, 1vw, 1.5rem);
-  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  font-size: clamp(1.6rem, 1.8vw, 2rem);
   font-weight: 700;
 }
 .products .cards-container .card span {
-  background-color: #0d1f3a;
-  color: white;
+  background-color: rgba(10, 145, 198, 0.9);
+  margin-bottom: clamp(1rem, 2vw, 4rem);
+  padding: clamp(0.5rem, 1vw, 2rem);
   text-align: center;
-  width: 100%;
-  padding-block: 0.5rem;
-  font-size: clamp(1rem, 1.2vw, 1.8rem);
-  font-weight: 700;
+  border-radius: 4rem;
+  transition: all 0.2s ease;
+}
+.products .cards-container .card span:hover {
+  color: black;
+  text-decoration: none;
+  background-color: rgb(223, 241, 255);
 }
 .products .cards-container .all-products {
   transition: all 0.2s ease-in-out;
@@ -757,7 +835,7 @@ body .hCarousel .carousel-item img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20rem;
+  text-align: center;
   padding-inline: 1rem;
   padding-block: 3rem;
 }
@@ -773,7 +851,7 @@ body .hCarousel .carousel-item img {
   background-color: transparent;
 }
 .products .cards-container .all-products svg {
-  width: 7rem;
+  width: clamp(3rem, 5vw, 7rem);
   margin: auto;
 }
 .products .cards-container .all-products .all-products-label {
@@ -782,6 +860,11 @@ body .hCarousel .carousel-item img {
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
+}
+@media (min-width: 1300px) {
+  .products .cards-container {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
 }
 
 #reviews {
@@ -799,20 +882,19 @@ body .hCarousel .carousel-item img {
   color: white;
   border-bottom-color: white;
 }
+#reviews strong {
+  padding-inline: clamp(2rem, 2.2vw, 3rem);
+}
 #reviews .card {
   background-color: transparent;
   color: white;
-  border: 0.2rem solid #C79A3A;
-  border-radius: clamp(1.2rem, 1.4vw, 1.8rem);
+  border: 0.1rem solid #C79A3A;
+  border-radius: 0.8rem;
   padding-inline: clamp(0.5rem, 1vw, 3rem);
   padding-block: clamp(0.5rem, 0.5vw, 3rem);
 }
 #reviews .card svg {
   max-width: clamp(1.8rem, 2.1vw, 2.23rem);
-}
-#reviews .card strong {
-  font-size: clamp(1rem, 1.2vw, 1.4rem);
-  padding-inline: clamp(2rem, 2.2vw, 3rem);
 }
 #reviews .card p {
   font-style: italic;
@@ -820,13 +902,18 @@ body .hCarousel .carousel-item img {
 }
 #reviews aside {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: clamp(1rem, 2vw, 4rem);
 }
 #reviews .clients-reviews {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (min-width: 1300px) {
+  #reviews {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
 }
 
 .about-us {
@@ -846,30 +933,58 @@ body .hCarousel .carousel-item img {
   margin-inline: 0;
   filter: brightness(105%);
 }
+@media (min-width: 1300px) {
+  .about-us {
+    padding-inline: clamp(15rem, 24vw, 28rem);
+  }
+}
 
-footer {
+.footer {
   background-color: #0d1f3a;
   color: whitesmoke;
   display: grid;
-  gap: clamp(0.5rem, 2vw + 0.1rem, 2.5rem);
+  gap: clamp(0.5rem, 1vw, 2rem);
   grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+  .footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer .card {
+    align-items: start;
+  }
+  .footer .card .f-title {
+    font-size: 1.2rem;
+  }
+  .footer .card li a {
+    font-size: 1rem;
+  }
+  .footer .card .social-media-icon span {
+    font-size: 0.8rem;
+  }
+}
+.footer {
   padding-inline: clamp(1rem, 2vw, 4rem);
   padding-block: clamp(1rem, 2vw, 4rem);
 }
-footer .card {
+.footer .card {
   overflow: hidden;
   display: flex;
   padding: clamp(1rem, 1.8vw, 2rem);
-  padding-block: clamp(2rem, 4vw + 0.1rem, 4.5rem);
   background-color: rgb(21.038028169, 50.1676056338, 93.861971831);
   font-size: clamp(0.8rem, 1vw + 0.01rem, 1.1rem);
+  aspect-ratio: 1/1;
 }
-footer .logoCard {
-  background-color: whitesmoke;
-  color: black;
-  font-size: clamp(0.8rem, 1vw + 0.01rem, 1.1rem);
+.footer .logoCard {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
 }
-footer span {
+.footer .logoCard img {
+  margin: auto;
+  max-width: clamp(7rem, 13vw, 15rem);
+}
+.footer span {
   align-self: flex-start;
   width: 100%;
   border-left: 0.2rem solid coral;
@@ -877,32 +992,57 @@ footer span {
   font-weight: 800;
   font-size: clamp(1.1rem, 1.2vw + 0.01rem, 1.4rem);
 }
-footer .social-media-buttons {
+.footer .social-media-buttons {
   display: flex;
   flex-direction: column;
   padding-block: clamp(1rem, 1.2vw, 1.5rem);
   gap: clamp(0.9rem, 1vw + 0.1rem, 1.2rem);
   font-weight: 500;
 }
-footer .social-media-buttons svg {
-  width: clamp(1rem, 2vw, 3rem);
+.footer .social-media-buttons svg {
+  min-width: clamp(0.5rem, 1vw, 2rem);
+  max-width: clamp(0.5rem, 1vw, 2rem);
   filter: invert(1);
 }
-footer .social-media-buttons .social-media-icon {
+.footer .social-media-buttons .social-media-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-footer .social-media-buttons .social-media-icon span {
+.footer .social-media-buttons .social-media-icon span {
   border: none;
   margin: auto;
   font-weight: 500;
   font-size: clamp(0.8rem, 1vw + 0.01rem, 1.1rem);
 }
-footer ul {
+.footer ul {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
   gap: clamp(1rem, 1.2vw, 1.4rem);
+}
+@media (min-width: 1300px) {
+  .footer {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
+}
+
+.address {
+  background-color: #0d1f3a;
+  margin: 0;
+  color: white;
+}
+@media (min-width: 1300px) {
+  .address {
+    padding-inline: clamp(10rem, 18vw, 20rem);
+  }
+}
+.address {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+.address a {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=mobile.css.map */

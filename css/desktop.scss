@@ -104,14 +104,14 @@
 
             & div.services {
                 grid-template-columns: repeat(3, 1fr);
-                padding: clamp(1rem, 2vw, 3rem) clamp(.5rem, 6vw, 12rem);
+                padding-block: clamp(1rem, 2vw, 3rem);
                 gap: clamp(5rem, 8vw, 13rem);
                 background: linear-gradient(to top, transparent, white 60%),
                     url(../assets/images/bg-pattern3.png);
                 ;
 
                 & .service {
-                    flex-direction: row !important;
+                    flex-direction: row;
                     gap: clamp(.5rem, 2vw, 4rem);
                 }
             }
@@ -127,8 +127,8 @@
 
                 background: linear-gradient(300deg,
                     rgba(v.$tertiary, .9),
-                    rgba(0, 0, 0, 0.349)) !important;
-                background-image: none;
+                    rgba(0, 0, 0, 0.349));
+                // background-image: none;
             }
 
             & .stats {
@@ -136,7 +136,7 @@
 
                 padding: {
                     block: clamp(2rem, 4vw + .5rem, 5rem);
-                    inline: 0;
+                    // inline: 0;
                 }
             }
 
@@ -152,7 +152,7 @@
                 & .carousel {
                     padding: {
                         block: 2rem;
-                        inline: 8rem;
+                        inline: clamp(1rem, 3vw, 6rem);
                     }
 
                     ;
@@ -170,13 +170,7 @@
                     grid-template-columns: repeat(3, 1fr);
 
                     & .card {
-                        & svg {
-                            width: clamp(4rem, 6vw, 8rem);
-                        }
-
-                        & .moreInfo {
-                            padding-block: clamp(1rem, 1.1vw, 1.5rem);
-                        }
+                        & .moreInfo {}
 
                         & div {
                             display: flex;
@@ -202,8 +196,8 @@
 
                 & .cards-container {
                     grid-template-columns: repeat(4, 1fr);
-                    gap: clamp(2rem, 4vw + .2rem, 5rem);
-                    padding-inline: clamp(5rem, 7vw, 9rem);
+                    gap: clamp(2rem, 2.2vw + .2rem, 4rem);
+                    // padding-inline: clamp(5rem, 7vw, 9rem);
 
                     .card {
                         width: auto;
@@ -212,42 +206,42 @@
                 }
             }
 
-        }
+            #reviews {
+                & .title {
+                    margin-bottom: 4rem;
+                }
 
-        #reviews {
-            & .title {
-                margin-bottom: 4rem;
-            }
+                & .clients-reviews {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
 
-            & .clients-reviews {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+                    & b {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        word-break: keep-all;
+                        word-wrap: break-word;
+                        padding-left: clamp(2rem, 4vw, 5rem);
 
-                & b {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    word-break: keep-all;
-                    word-wrap: break-word;
-                    padding-left: clamp(2rem, 4vw, 5rem);
+                        width: clamp(20rem, 25vw, 30rem);
+                    }
+                }
 
-                    width: clamp(20rem, 25vw, 30rem);
+                & aside {
+                    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
                 }
             }
 
-            & aside {
-                grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)) !important;
-                gap: clamp(1rem, 5vw, 8rem) !important;
-            }
         }
 
-    }
+        & .card strong {
+            font-size: .9rem;
+        }
 
-    footer {
-        grid-template-columns: repeat(4, 1fr) !important;
 
-        & .card {
-            align-items: start !important;
+        & p {
+            font-style: italic;
+            font-size: .6rem;
         }
     }
 
