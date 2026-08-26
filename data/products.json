@@ -1,0 +1,56 @@
+{
+    "x-ring": {
+        "name": "X-RING",
+        "images": {
+            "image0": "assets/images/products/x-ring1-inside.jpg",
+            "image1": "assets/images/products/x-ring2.jpg",
+            "image2": "assets/images/products/x-ring3.webp"
+        },
+        "description": "Retenes tipo X-RING para aplicaciones hidráulicas y neumáticas."
+    },
+    "o-ring": {
+        "name": "O-RING",
+        "images": {
+            "image0": "",
+            "image1": "",
+            "image2": "",
+            "image3": ""
+        },
+        "description": "Anillos de sellado O-RING para aplicaciones hidráulicas y neumáticas."
+    },
+    "u-packing": {
+        "name": "U-PACKING",
+        "image": "assets/images/u-packing.jpg",
+        "description": "Sellos U-PACKING para aplicaciones hidráulicas."
+    },
+    "ret-direccion": {
+        "name": "DIRECCIÓN",
+        "image": "assets/images/retenes-direccion.jpg",
+        "description": "Retenes para sistemas de dirección y aplicaciones hidráulicas."
+    },
+    "fluropack": {
+        "name": "FLUROPACK",
+        "image": "assets/images/fluropack.jpg",
+        "description": "Retenes FLUROPACK para aplicaciones industriales."
+    },
+    "wipers": {
+        "name": "WIPERS",
+        "image": "assets/images/wipers.jpg",
+        "description": "Rascadores WIPERS para sistemas hidráulicos."
+    },
+    "polypack": {
+        "name": "POLYPACK",
+        "image": "assets/images/polypack.jpg",
+        "description": "Sellos POLYPACK para aplicaciones hidráulicas."
+    },
+    "ret-cuerda": {
+        "name": "CUERDA",
+        "image": "assets/images/reten-cuerda.jpg",
+        "description": "Retenes en cuerda para diferentes aplicaciones industriales."
+    },
+    "conectores": {
+        "name": "CONECTORES EN BRONCE",
+        "image": "assets/images/conecores-bronce.jpg",
+        "description": "Conectores en bronce para aplicaciones industriales."
+    }
+}

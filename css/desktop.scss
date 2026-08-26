@@ -135,7 +135,7 @@
                 flex-direction: row;
 
                 padding: {
-                    block: clamp(2rem, 4vw + .5rem, 5rem);
+                    // block: clamp(2rem, 4vw + .5rem, 5rem);
                     // inline: 0;
                 }
             }
@@ -190,22 +190,6 @@
                     }
                 }
             }
-
-            .products {
-                background-color: whitesmoke;
-
-                & .cards-container {
-                    grid-template-columns: repeat(4, 1fr);
-                    gap: clamp(2rem, 2.2vw + .2rem, 4rem);
-                    // padding-inline: clamp(5rem, 7vw, 9rem);
-
-                    .card {
-                        width: auto;
-                        height: auto;
-                    }
-                }
-            }
-
             #reviews {
                 & .title {
                     margin-bottom: 4rem;
@@ -235,13 +219,7 @@
         }
 
         & .card strong {
-            font-size: .9rem;
-        }
-
-
-        & p {
-            font-style: italic;
-            font-size: .6rem;
+            font-size: clamp(.8rem, .9vw, 1rem);
         }
     }
 

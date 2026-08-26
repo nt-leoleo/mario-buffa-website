@@ -99,10 +99,10 @@ if (form) {
         }
     });
 }
-$('#trainingImageModal').on('show.bs.modal', function (event) {
+// $('#trainingImageModal').on('show.bs.modal', function (event) {
 
-    const image = $(event.relatedTarget);
-    const imageUrl = image.data('image');
+//     const image = $(event.relatedTarget);
+//     const imageUrl = image.data('image');
 
-    $('#trainingModalImage').attr('src', imageUrl);
-});
+//     $('#trainingModalImage').attr('src', imageUrl);
+// });
