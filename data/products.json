@@ -1,20 +1,38 @@
 {
     "x-ring": {
         "name": "X-RING",
-        "images": {
-            "image0": "assets/images/products/x-ring1-inside.jpg",
-            "image1": "assets/images/products/x-ring2.jpg",
-            "image2": "assets/images/products/x-ring3.webp"
-        },
+        "images": [
+            "assets/images/products/x-ring1-inside.jpg",
+            "assets/images/products/x-ring2.jpg",
+            "assets/images/products/x-ring3.webp"
+        ],
+        "characteristics": [
+            {
+                "svg": "assets/images/products/characteristics/security-verified.svg",
+                "title": "Alta resistencia",
+                "description": "Fabricados con materiales de alta calidad que soportan presión, desgaste y condiciones exigentes."
+            },
+            {
+                "svg": "assets/images/products/characteristics/drop.svg",
+                "title": "Sellado eficiente",
+                "description": "Evitan fugas de aceite y mantienen rendimiento óptimo del sistema hidráulico."
+            },
+            {
+                "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                "title": "Larga vida útil",
+                "description": "Diseñados para ofrecer durabilidad y confiabilidad en aplicaciones industriales."
+            }
+        ],
         "description": "Retenes tipo X-RING para aplicaciones hidráulicas y neumáticas."
     },
+    
     "o-ring": {
         "name": "O-RING",
         "images": {
-            "image0": "",
-            "image1": "",
-            "image2": "",
-            "image3": ""
+            "image0": "assets/images/products/oring1.webp",
+            "image1": "assets/images/products/oring2-inside.jpg",
+            "image2": "assets/images/products/oring3.jpg",
+            "image3": "assets/images/products/oring4-viton.png"
         },
         "description": "Anillos de sellado O-RING para aplicaciones hidráulicas y neumáticas."
     },

@@ -43,7 +43,7 @@ html {
         transition: all 200ms ease;
     }
 
-    & .dot.active {
+    & .dot.activeDot {
         background: #077dc8;
         transform: scale(1.25);
     }
@@ -70,18 +70,39 @@ html {
 
 
     & .product-modal {
-        background-color: whitesmoke;
+        background-color: white;
         position: absolute;
         overflow: auto;
         border-radius: .7rem;
-        inset: 10% 5% 5% 5%;
+        inset: 10% 15% 5% 15%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
 
+    }
+    & .modal-image-container {
+        background-color: rgb(230, 232, 233);
+        border-radius: 1rem;
+    }
+    .modal-content {
+        border: none;
+        & #modalDescription {
+            color: rgba(0, 0, 0, 0.548);
+            font-weight: 600;
+        }
     }
 
     & svg {
         max-width: 5rem;
+    }
+    @media (min-width: v.$desktop) {
+        & .product-modal {
+            padding: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        & #modalName {
+            font-weight: 700;
+            font-size: 2.2rem;
+        }
     }
 }
 

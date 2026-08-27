@@ -30,7 +30,7 @@ html body.modal-open {
   background: #ccc;
   transition: all 200ms ease;
 }
-.product-overlay .dot.active {
+.product-overlay .dot.activeDot {
   background: #077dc8;
   transform: scale(1.25);
 }
@@ -49,16 +49,37 @@ html body.modal-open {
   max-width: 5rem;
 }
 .product-overlay .product-modal {
-  background-color: whitesmoke;
+  background-color: white;
   position: absolute;
   overflow: auto;
   border-radius: 0.7rem;
-  inset: 10% 5% 5% 5%;
+  inset: 10% 15% 5% 15%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+}
+.product-overlay .modal-image-container {
+  background-color: rgb(230, 232, 233);
+  border-radius: 1rem;
+}
+.product-overlay .modal-content {
+  border: none;
+}
+.product-overlay .modal-content #modalDescription {
+  color: rgba(0, 0, 0, 0.548);
+  font-weight: 600;
 }
 .product-overlay svg {
   max-width: 5rem;
+}
+@media (min-width: 1200px) {
+  .product-overlay .product-modal {
+    padding: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .product-overlay #modalName {
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
 }
 
 .p-title {
