@@ -29,6 +29,7 @@ html {
 
     .close-modal {
         position: relative;
+        filter: opacity(.8);
     }
 
     &.active {
@@ -76,32 +77,159 @@ html {
         border-radius: .7rem;
         inset: 10% 15% 5% 15%;
         display: grid;
+        overflow: hidden;
+    }
 
-    }
     & .modal-image-container {
-        background-color: rgb(230, 232, 233);
         border-radius: 1rem;
+        box-shadow: .1rem .1rem .8rem rgba(0, 0, 0, 0.055);
     }
+
     .modal-content {
         border: none;
+        position: relative;
+
+        & .close-modal {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 100%;
+
+            & svg {
+                max-width: 3.5rem;
+            }
+        }
+
+        & #modalCategory {
+            color: v.$primary;
+            font-weight: 700;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            width: min-content;
+            padding-block: .6rem;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 50%;
+                height: 3px;
+                margin-top: 8px;
+                background: linear-gradient(to right,
+                        coral 0%,
+                        v.$secondary 100%);
+            }
+        }
+
+        & #modalName {
+            font-weight: 700;
+            font-size: 2.4rem;
+
+            padding: {
+                top: 1.6rem;
+                bottom: .6rem;
+            }
+        }
+
         & #modalDescription {
             color: rgba(0, 0, 0, 0.548);
             font-weight: 600;
+
+            padding: {
+                bottom: .8rem;
+            }
+        }
+
+        & .feature-contact-container {
+            padding-right: 7rem;
+
+            & .fast-atention {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                padding-block: 1rem;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: v.$tertiary;
+
+                & img {
+                    max-width: 2rem;
+                    padding-right: .5rem;
+                }
+            }
+        }
+
+        & #modalCharacteristics {
+
+            & .modalFeature {
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                border-bottom: .1rem solid rgba(148, 147, 147, 0.363);
+                margin-bottom: 1rem;
+            }
+
+            & img {
+                max-width: 3rem;
+                aspect-ratio: 1/1;
+                padding: .7rem;
+                margin: 1rem;
+                margin-top: 0;
+                background-color: v.$tertiary;
+                border-radius: 100%;
+                // padding-top: .2rem;
+            }
+
+            & .modalFeatureTitle {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            & .modalFeatureDescription {
+                font-size: 1rem;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.548);
+            }
+        }
+
+        & #modalWhatsapp {
+            background-color: v.$tertiary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            gap: 1rem;
+            padding: .9rem;
+            border-radius: .6rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            transition: all .2s ease;
+
+            & svg {
+                max-width: 3rem;
+            }
+
+            &:hover {
+                background-color: color.adjust(v.$tertiary, $lightness: 10%);
+            }
         }
     }
 
     & svg {
         max-width: 5rem;
     }
+
     @media (min-width: v.$desktop) {
         & .product-modal {
-            padding: 3rem;
-            grid-template-columns: repeat(2, 1fr);
+            padding: 2rem;
             gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
         }
-        & #modalName {
-            font-weight: 700;
-            font-size: 2.2rem;
+
+        & #modalImage {
+            aspect-ratio: 1/1;
+            object-fit: contain;
         }
     }
 }

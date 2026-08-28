@@ -1,5 +1,6 @@
 {
     "x-ring": {
+        "category": "RETENES HIDRÁULICOS",
         "name": "X-RING",
         "images": [
             "assets/images/products/x-ring1-inside.jpg",
@@ -15,60 +16,240 @@
             {
                 "svg": "assets/images/products/characteristics/drop.svg",
                 "title": "Sellado eficiente",
-                "description": "Evitan fugas de aceite y mantienen rendimiento óptimo del sistema hidráulico."
+                "description": "Su diseño de cuatro labios mejora la estanqueidad y reduce el riesgo de fugas."
             },
             {
-                "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                "title": "Larga vida útil",
-                "description": "Diseñados para ofrecer durabilidad y confiabilidad en aplicaciones industriales."
+                "svg": "assets/images/products/characteristics/stability.svg",
+                "title": "Mayor estabilidad",
+                "description": "Su geometría ayuda a evitar la torsión durante el movimiento."
             }
         ],
-        "description": "Retenes tipo X-RING para aplicaciones hidráulicas y neumáticas."
+        "description": [
+            "El X-Ring es un sello de cuatro labios diseñado para aplicaciones estáticas y dinámicas. Su geometría proporciona un sellado eficiente y mayor estabilidad frente a la torsión y el desplazamiento.",
+            "Se utiliza principalmente en sistemas hidráulicos y neumáticos para evitar fugas de fluidos o aire en aplicaciones industriales."
+        ]
     },
-    
     "o-ring": {
+        "category": "RETENES HIDRÁULICOS",
         "name": "O-RING",
-        "images": {
-            "image0": "assets/images/products/oring1.webp",
-            "image1": "assets/images/products/oring2-inside.jpg",
-            "image2": "assets/images/products/oring3.jpg",
-            "image3": "assets/images/products/oring4-viton.png"
-        },
-        "description": "Anillos de sellado O-RING para aplicaciones hidráulicas y neumáticas."
+        "images": [
+            "assets/images/products/oring1.webp",
+            "assets/images/products/oring2-inside.jpg",
+            "assets/images/products/oring3.jpg",
+            "assets/images/products/oring4-viton.png"
+        ],
+        "characteristics": [
+            {
+                "svg": "assets/images/products/characteristics/security-verified.svg",
+                "title": "Sellado confiable",
+                "description": "Proporciona una estanqueidad efectiva mediante compresión radial o axial."
+            },
+            {
+                "svg": "assets/images/products/characteristics/ruler.svg",
+                "title": "Gran versatilidad",
+                "description": "Disponible en diferentes medidas y materiales para diversas aplicaciones."
+            },
+            {
+                "svg": "assets/images/products/characteristics/download.svg",
+                "title": "Fácil instalación",
+                "description": "Su diseño simple permite un montaje práctico y eficiente."
+            }
+        ],
+        "description": [
+            "El O-Ring es un sello de sección circular utilizado para evitar fugas de fluidos y gases.",
+            "Su diseño versátil permite aplicaciones tanto estáticas como dinámicas en sistemas hidráulicos y neumáticos."
+        ]
     },
     "u-packing": {
+        "category": "RETENES HIDRÁULICOS",
         "name": "U-PACKING",
-        "image": "assets/images/u-packing.jpg",
-        "description": "Sellos U-PACKING para aplicaciones hidráulicas."
+        "images": [
+            "assets/images/products/upacking1.png",
+            "assets/images/products/upacking2.png",
+            "assets/images/products/upacking3.jpg"
+        ],
+        "characteristics": [
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            }
+        ],
+        "description": [
+            ""
+        ]
     },
     "ret-direccion": {
-        "name": "DIRECCIÓN",
-        "image": "assets/images/retenes-direccion.jpg",
-        "description": "Retenes para sistemas de dirección y aplicaciones hidráulicas."
+        "category": "RETENES HIDRÁULICOS",
+        "name": "",
+        "images": [
+            "assets/images/products/retenesdireccion1.webp",
+            "assets/images/products/retenesdireccion2.webp",
+            "assets/images/products/retenesdireccion3.jpg",
+            "assets/images/products/retenesdireccion4.jpg"
+        ],
+        "characteristics": [
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            }
+        ],
+        "description": [
+            ""
+        ]
     },
     "fluropack": {
-        "name": "FLUROPACK",
-        "image": "assets/images/fluropack.jpg",
-        "description": "Retenes FLUROPACK para aplicaciones industriales."
+        "category": "RETENES HIDRÁULICOS",
+        "name": "",
+        "images": [
+            "assets/images/products/fluropack1.jpg",
+            "assets/images/products/fluropack2.jpg",
+            "assets/images/products/fluropack3.jpg"
+        ],
+        "characteristics": [
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            }
+        ],
+        "description": [
+            ""
+        ]
     },
     "wipers": {
-        "name": "WIPERS",
-        "image": "assets/images/wipers.jpg",
-        "description": "Rascadores WIPERS para sistemas hidráulicos."
+        "category": "RETENES HIDRÁULICOS",
+        "name": "",
+        "images": [
+            "assets/images/products/wiper1.jpg",
+            "assets/images/products/wiper2.jpg",
+            "assets/images/products/wiper3.jpg"
+        ],
+        "characteristics": [
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            }
+        ],
+        "description": [
+            ""
+        ]
     },
     "polypack": {
-        "name": "POLYPACK",
-        "image": "assets/images/polypack.jpg",
-        "description": "Sellos POLYPACK para aplicaciones hidráulicas."
+        "category": "RETENES HIDRÁULICOS",
+        "name": "",
+        "images": [],
+        "characteristics": [
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            }
+        ],
+        "description": [
+            ""
+        ]
     },
     "ret-cuerda": {
-        "name": "CUERDA",
-        "image": "assets/images/reten-cuerda.jpg",
-        "description": "Retenes en cuerda para diferentes aplicaciones industriales."
+        "category": "RETENES HIDRÁULICOS",
+        "name": "",
+        "images": [],
+        "characteristics": [
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            }
+        ],
+        "description": [
+            ""
+        ]
     },
     "conectores": {
-        "name": "CONECTORES EN BRONCE",
-        "image": "assets/images/conecores-bronce.jpg",
-        "description": "Conectores en bronce para aplicaciones industriales."
+        "category": "CONECTORES",
+        "name": "",
+        "images": [],
+        "characteristics": [
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            },
+            {
+                "svg": "",
+                "title": "",
+                "description": ""
+            }
+        ],
+        "description": [
+            ""
+        ]
     }
 }

@@ -19,6 +19,7 @@ html body.modal-open {
 }
 .product-overlay .close-modal {
   position: relative;
+  filter: opacity(0.8);
 }
 .product-overlay.active {
   display: flex;
@@ -55,30 +56,127 @@ html body.modal-open {
   border-radius: 0.7rem;
   inset: 10% 15% 5% 15%;
   display: grid;
+  overflow: hidden;
 }
 .product-overlay .modal-image-container {
-  background-color: rgb(230, 232, 233);
   border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.055);
 }
 .product-overlay .modal-content {
   border: none;
+  position: relative;
+}
+.product-overlay .modal-content .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 100%;
+}
+.product-overlay .modal-content .close-modal svg {
+  max-width: 3.5rem;
+}
+.product-overlay .modal-content #modalCategory {
+  color: #0a91c6;
+  font-weight: 700;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  width: -moz-min-content;
+  width: min-content;
+  padding-block: 0.6rem;
+}
+.product-overlay .modal-content #modalCategory::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  margin-top: 8px;
+  background: linear-gradient(to right, coral 0%, #C79A3A 100%);
+}
+.product-overlay .modal-content #modalName {
+  font-weight: 700;
+  font-size: 2.4rem;
+  padding-top: 1.6rem;
+  padding-bottom: 0.6rem;
 }
 .product-overlay .modal-content #modalDescription {
   color: rgba(0, 0, 0, 0.548);
   font-weight: 600;
+  padding-bottom: 0.8rem;
+}
+.product-overlay .modal-content .feature-contact-container {
+  padding-right: 7rem;
+}
+.product-overlay .modal-content .feature-contact-container .fast-atention {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d1f3a;
+}
+.product-overlay .modal-content .feature-contact-container .fast-atention img {
+  max-width: 2rem;
+  padding-right: 0.5rem;
+}
+.product-overlay .modal-content #modalCharacteristics .modalFeature {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  border-bottom: 0.1rem solid rgba(148, 147, 147, 0.363);
+  margin-bottom: 1rem;
+}
+.product-overlay .modal-content #modalCharacteristics img {
+  max-width: 3rem;
+  aspect-ratio: 1/1;
+  padding: 0.7rem;
+  margin: 1rem;
+  margin-top: 0;
+  background-color: #0d1f3a;
+  border-radius: 100%;
+}
+.product-overlay .modal-content #modalCharacteristics .modalFeatureTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.product-overlay .modal-content #modalCharacteristics .modalFeatureDescription {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.548);
+}
+.product-overlay .modal-content #modalWhatsapp {
+  background-color: #0d1f3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 1rem;
+  padding: 0.9rem;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.product-overlay .modal-content #modalWhatsapp svg {
+  max-width: 3rem;
+}
+.product-overlay .modal-content #modalWhatsapp:hover {
+  background-color: rgb(22.338028169, 53.2676056338, 99.661971831);
 }
 .product-overlay svg {
   max-width: 5rem;
 }
 @media (min-width: 1200px) {
   .product-overlay .product-modal {
-    padding: 3rem;
-    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
     gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .product-overlay #modalName {
-    font-weight: 700;
-    font-size: 2.2rem;
+  .product-overlay #modalImage {
+    aspect-ratio: 1/1;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 
