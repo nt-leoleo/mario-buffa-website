@@ -182,16 +182,58 @@ html body.modal-open {
 }
 
 .p-title {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+}
+
+.p-heading {
   color: white;
   display: flex;
-  height: 100%;
-  align-items: center;
-  font-size: clamp(2rem, 3vw, 3.5rem);
+  flex-direction: column;
   border-bottom: 0.2rem solid #C79A3A;
+  height: 100%;
   background: linear-gradient(to top, #0a91c6, black);
   padding-block: clamp(4rem, 6vw, 8rem);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
   padding-top: clamp(7rem, 12vw, 14rem);
+}
+
+.catalog {
+  background-color: whitesmoke;
+}
+.catalog .catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.catalog .catalog-grid .catalog-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.catalog .catalog-grid .catalog-card img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: white;
+  aspect-ratio: 1/1;
+  max-width: 5rem;
+}
+.catalog .catalog-grid .catalog-card:nth-child(n+9) {
+  display: none;
+}
+.catalog .catalog-grid.is-expanded .catalog-card {
+  display: flex;
+}
+.catalog .catalog-show-more {
+  display: block;
+  width: 100%;
+}
+.catalog .catalog-show-more.is-hidden {
+  display: none;
+}
+.catalog {
+  padding: clamp(1rem, 1.8vw, 2rem);
 }
 
 .cards-container {

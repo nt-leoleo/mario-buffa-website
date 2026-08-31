@@ -189,3 +189,18 @@ document.addEventListener("keydown", event => {
     }
 
 });
+
+const catalogGrid = document.querySelector(".catalog-grid");
+const showMoreButton = document.querySelector(".catalog-show-more");
+
+showMoreButton.addEventListener("click", () => {
+
+    const isExpanded = catalogGrid.classList.toggle("is-expanded");
+
+    if (isExpanded) {
+        showMoreButton.textContent = "Mostrar menos";
+    } else {
+        showMoreButton.textContent = "Mostrar más";
+    }
+
+});

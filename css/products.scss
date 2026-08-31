@@ -237,12 +237,16 @@ html {
 
 
 .p-title {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+}
+
+.p-heading {
     color: white;
     display: flex;
-    height: 100%;
-    align-items: center;
-    font-size: clamp(2rem, 3vw, 3.5rem);
+    flex-direction: column;
+    // align-items: center;
     border-bottom: .2rem solid v.$secondary;
+    height: 100%;
     // padding-block: clamp(4rem, 20vw, 30rem);
     background: linear-gradient(to top,
             v.$primary,
@@ -253,8 +257,51 @@ html {
         inline: v.$globalMargin;
         top: clamp(7rem, 12vw, 14rem);
     }
+}
 
-    ;
+.catalog {
+    background-color: whitesmoke;
+
+    & .catalog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        & .catalog-card {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 2rem;
+
+            & img {
+                object-fit: contain;
+                background-color: white;
+                aspect-ratio: 1/1;
+                max-width: 5rem;
+            }
+
+            &:nth-child(n + 9) {
+                display: none;
+            }
+        }
+
+    }
+
+    .catalog-grid.is-expanded .catalog-card {
+        display: flex;
+    }
+
+    .catalog-show-more {
+        display: block;
+        width: 100%;
+    }
+
+    .catalog-show-more.is-hidden {
+        display: none;
+    }
+
+    padding: v.$globalMargin;
 }
 
 .cards-container {
