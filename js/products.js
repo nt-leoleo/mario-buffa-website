@@ -86,7 +86,7 @@ fetch("./data/products.json")
     .then(products => {
 
         const productCards = document.querySelectorAll(
-            ".main-products .card, .other-products .card"
+            ".products .card:not(#all-products), .main-products .card, .other-products .card"
         );
 
         productCards.forEach(card => {

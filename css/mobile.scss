@@ -725,10 +725,103 @@ div.services {
 
 
 }
+
 .products {
     background-color: white;
 
+    .product-categories {
+        width: 100%;
+        height: 10rem;
+
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        background-color: white;
+
+        .categories-viewport {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .categories-track {
+            display: flex;
+            align-items: stretch;
+
+            transition: transform 0.4s ease;
+        }
+
+        .category-card {
+            flex: 0 0 10rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            gap: 0.7rem;
+
+            padding: 0.5rem 1rem;
+
+            color: #000;
+            text-decoration: none;
+
+            text-align: center;
+
+            .category-image {
+                width: 6rem;
+                height: 4.5rem;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    object-fit: contain;
+                }
+            }
+
+            span {
+                font-size: 0.95rem;
+                line-height: 1.25;
+            }
+        }
+
+        .slider-button {
+            flex-shrink: 0;
+
+            width: 3rem;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: none;
+            background: white;
+
+            cursor: pointer;
+
+            z-index: 2;
+
+            color: #555;
+
+            svg {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
 }
+
 .proveedores {
     background-color: whitesmoke;
     padding-inline: v.$globalMargin;
@@ -1076,5 +1169,225 @@ div.services {
 
     & a {
         font-size: .8rem;
+    }
+}
+
+.product-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    z-index: 1000;
+
+    .close-modal {
+        position: relative;
+        filter: opacity(.8);
+    }
+
+    &.active {
+        display: flex;
+    }
+
+    & .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ccc;
+        transition: all 200ms ease;
+    }
+
+    & .dot.activeDot {
+        background: #077dc8;
+        transform: scale(1.25);
+    }
+
+    .active-img-indicator-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        width: 100%;
+    }
+
+    .search-buttons-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        // transform: translateY(-100%);
+
+        & svg {
+            max-width: 5rem;
+        }
+
+    }
+
+
+    & .product-modal {
+        background-color: white;
+        position: absolute;
+        overflow: auto;
+        border-radius: .7rem;
+        inset: 10% 15% 5% 15%;
+        display: grid;
+        overflow: hidden;
+    }
+
+    & .modal-image-container {
+        border-radius: 1rem;
+        box-shadow: .1rem .1rem .8rem rgba(0, 0, 0, 0.055);
+    }
+
+    .modal-content {
+        border: none;
+        position: relative;
+
+        & .close-modal {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 100%;
+
+            & svg {
+                max-width: 3.5rem;
+            }
+        }
+
+        & #modalCategory {
+            color: v.$primary;
+            font-weight: 700;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            width: min-content;
+            padding-block: .6rem;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 50%;
+                height: 3px;
+                margin-top: 8px;
+                background: linear-gradient(to right,
+                        coral 0%,
+                        v.$secondary 100%);
+            }
+        }
+
+        & #modalName {
+            font-weight: 700;
+            font-size: 2.4rem;
+
+            padding: {
+                top: 1.6rem;
+                bottom: .6rem;
+            }
+        }
+
+        & #modalDescription {
+            color: rgba(0, 0, 0, 0.548);
+            font-weight: 600;
+
+            padding: {
+                bottom: .8rem;
+            }
+        }
+
+        & .feature-contact-container {
+            padding-right: 7rem;
+
+            & .fast-atention {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                padding-block: 1rem;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: v.$tertiary;
+
+                & img {
+                    max-width: 2rem;
+                    padding-right: .5rem;
+                }
+            }
+        }
+
+        & #modalCharacteristics {
+
+            & .modalFeature {
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                border-bottom: .1rem solid rgba(148, 147, 147, 0.363);
+                margin-bottom: 1rem;
+            }
+
+            & img {
+                max-width: 3rem;
+                aspect-ratio: 1/1;
+                padding: .7rem;
+                margin: 1rem;
+                margin-top: 0;
+                background-color: v.$tertiary;
+                border-radius: 100%;
+                // padding-top: .2rem;
+            }
+
+            & .modalFeatureTitle {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            & .modalFeatureDescription {
+                font-size: 1rem;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.548);
+            }
+        }
+
+        & #modalWhatsapp {
+            background-color: v.$tertiary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            gap: 1rem;
+            padding: .9rem;
+            border-radius: .6rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            transition: all .2s ease;
+
+            & svg {
+                max-width: 3rem;
+            }
+
+            &:hover {
+                background-color: color.adjust(v.$tertiary, $lightness: 10%);
+            }
+        }
+    }
+
+    & svg {
+        max-width: 5rem;
+    }
+
+    @media (min-width: v.$desktop) {
+        & .product-modal {
+            padding: 2rem;
+            gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        & #modalImage {
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            min-width: 100%;
+        }
     }
 }
