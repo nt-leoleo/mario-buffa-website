@@ -1,0 +1,20 @@
+{
+    "rewrites": [
+        {
+            "source": "/productos",
+            "destination": "/products.html"
+        },
+        {
+            "source": "/contacto",
+            "destination": "/contact.html"
+        },
+        {
+            "source": "/nosotros",
+            "destination": "/index.html#about-us"
+        },
+        {
+            "source": "/servicios",
+            "destination": "/index.html#services"
+        }
+    ]
+}
