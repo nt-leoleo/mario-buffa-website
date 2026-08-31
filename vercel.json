@@ -7,14 +7,18 @@
         {
             "source": "/contacto",
             "destination": "/contact.html"
-        },
+        }
+    ],
+    "redirects": [
         {
             "source": "/nosotros",
-            "destination": "/index.html#about-us"
+            "destination": "/#about-us",
+            "permanent": false
         },
         {
             "source": "/servicios",
-            "destination": "/index.html#services"
+            "destination": "/#services",
+            "permanent": false
         }
     ]
 }
