@@ -31,11 +31,10 @@ function openProductModal() {
 }
 
 function closeProductModal() {
-    modal.classList.remove("active");
-    document.body.classList.remove("modal-open");
-
     currentImages = [];
     imagePosition = 0;
+    modal.classList.remove("active");
+    document.body.classList.remove("modal-open");
 
     indicatorContainer.innerHTML = "";
 }
@@ -145,15 +144,14 @@ fetch("./data/products.json")
                     feature.appendChild(titleDescription);
                     modalCharacteristics.appendChild(feature);
                 });
+                updateSlider();
+                openProductModal();
 
                 const message =
                     `Hola, quisiera consultar por el producto ${product.name}.`;
 
                 modalWhatsapp.href =
                     `https://wa.me/5492664327955?text=${encodeURIComponent(message)}`;
-
-                updateSlider();
-                openProductModal();
             });
         });
     });

@@ -70,28 +70,28 @@
         ],
         "characteristics": [
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/low.svg",
+                "title": "Baja fricción",
+                "description": "Favorece un movimiento suave y reduce el esfuerzo inicial."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/drop.svg",
+                "title": "Sellado eficiente",
+                "description": "Sus labios flexibles se adaptan al vástago o cilindro."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/settings.svg",
+                "title": "Aplicación hidráulica y neumática",
+                "description": "Ideal para cilindros de baja velocidad y presión."
             }
         ],
         "description": [
-            ""
+            "El U-Packing es un sello de perfil en U diseñado para cilindros hidráulicos y neumáticos. Sus labios flexibles proporcionan un sellado eficiente con baja fricción y un movimiento suave."
         ]
     },
     "ret-direccion": {
         "category": "RETENES HIDRÁULICOS",
-        "name": "",
+        "name": "RETENES DE CAJA DE DIRECCIÓN",
         "images": [
             "assets/images/products/retenesdireccion1.webp",
             "assets/images/products/retenesdireccion2.webp",
@@ -100,28 +100,28 @@
         ],
         "characteristics": [
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/droplet.svg",
+                "title": "Prevención de fugas",
+                "description": "Mantienen el fluido hidráulico dentro del sistema."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/arrows.svg",
+                "title": "Resistencia al movimiento",
+                "description": "Diseñados para soportar movimientos rotativos y alternativos."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/security-verified.svg",
+                "title": "Confiabilidad",
+                "description": "Contribuyen al funcionamiento estable y eficiente de la dirección."
             }
         ],
         "description": [
-            ""
+            "Retenes diseñados para sistemas de dirección hidráulica, destinados a mantener el fluido dentro de la caja de dirección y evitar pérdidas durante el funcionamiento."
         ]
     },
     "fluropack": {
         "category": "RETENES HIDRÁULICOS",
-        "name": "",
+        "name": "FLUROPACK",
         "images": [
             "assets/images/products/fluropack1.jpg",
             "assets/images/products/fluropack2.jpg",
@@ -129,28 +129,28 @@
         ],
         "characteristics": [
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/pressure.svg",
+                "title": "Alta resistencia a la extrusión",
+                "description": "Diseñado para trabajar en aplicaciones hidráulicas exigentes."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/low.svg",
+                "title": "Baja fricción",
+                "description": "Permite un desplazamiento suave y eficiente del pistón."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/anvil.svg",
+                "title": "Servicio pesado",
+                "description": "Adecuado para cilindros hidráulicos sometidos a altas exigencias."
             }
         ],
         "description": [
-            ""
+            "El FluroPack es un sello de doble efecto para pistones de cilindros hidráulicos de servicio pesado. Su construcción ofrece baja fricción, alta resistencia a la extrusión y amplia compatibilidad química."
         ]
     },
     "wipers": {
         "category": "RETENES HIDRÁULICOS",
-        "name": "",
+        "name": "WIPER",
         "images": [
             "assets/images/products/wiper1.jpg",
             "assets/images/products/wiper2.jpg",
@@ -158,98 +158,114 @@
         ],
         "characteristics": [
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/dust.svg",
+                "title": "Protección contra contaminantes",
+                "description": "Evitan el ingreso de polvo, suciedad y humedad."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/brush.svg",
+                "title": "Limpieza del vástago",
+                "description": "Remueven contaminantes durante el movimiento del vástago."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/shield.svg",
+                "title": "Mayor protección del sistema",
+                "description": "Ayudan a prolongar la vida útil de los componentes internos."
             }
         ],
         "description": [
-            ""
+            "Los Wipers o sellos limpiadores están diseñados para impedir el ingreso de polvo, humedad y contaminantes al interior de los cilindros hidráulicos y neumáticos, manteniendo limpio el vástago durante su movimiento."
         ]
     },
     "polypack": {
         "category": "RETENES HIDRÁULICOS",
-        "name": "",
-        "images": [],
+        "name": "POLYPACK",
+        "images": [
+            "assets/images/products/polypack1.png",
+            "assets/images/products/polypack2.jpg",
+            "assets/images/products/polypack3.jpg"
+        ],
         "characteristics": [
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/arrows.svg",
+                "title": "Alta resistencia al desgaste",
+                "description": "Diseñado para soportar movimientos continuos y fricción."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/shield.svg",
+                "title": "Resistencia a la extrusión",
+                "description": "Adecuado para aplicaciones hidráulicas exigentes."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/drop.svg",
+                "title": "Sellado confiable",
+                "description": "Su diseño labial proporciona una eficiente retención de fluidos."
             }
         ],
         "description": [
-            ""
+            "El Polypack es un sello labial utilizado en cilindros hidráulicos y neumáticos. Su diseño combina un elemento de sellado con la acción de un arosello, ofreciendo buena resistencia al desgaste y a la extrusión."
         ]
     },
     "ret-cuerda": {
         "category": "RETENES HIDRÁULICOS",
-        "name": "",
-        "images": [],
+        "name": "CUERDA O-RING",
+        "images": [
+            "assets/images/products/cuerdaoring1.jpg",
+            "assets/images/products/cuerdaoring2.webp",
+            "assets/images/products/cuerdaoring3.jpg",
+            "assets/images/products/cuerdaoring4.jpg"
+        ],
         "characteristics": [
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/ruler.svg",
+                "title": "Fabricación a medida",
+                "description": "Permite obtener juntas adaptadas a diferentes diámetros."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/sliders.svg",
+                "title": "Versatilidad",
+                "description": "Disponible en diferentes materiales para distintas aplicaciones."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                "title": "Solución práctica",
+                "description": "Ideal cuando no existe una medida estándar adecuada."
             }
         ],
         "description": [
-            ""
+            "La cuerda de O-Ring es un perfil elastomérico utilizado para fabricar juntas de sellado a medida. Es una alternativa práctica cuando no se dispone de una medida estándar de O-Ring."
         ]
     },
     "conectores": {
         "category": "CONECTORES",
-        "name": "",
-        "images": [],
+        "name": "CONECTORES EN BRONCE",
+        "images": [
+            "assets/images/products/bronce1.png",
+            "assets/images/products/bronce2.jpg",
+            "assets/images/products/bronce3.jpg",
+            "assets/images/products/bronce4.jpg",
+            "assets/images/products/bronce5.jpg"
+        ],
         "characteristics": [
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/anvil.svg",
+                "title": "Construcción resistente",
+                "description": "Fabricados en bronce para ofrecer durabilidad y robustez."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/catalogue.svg",
+                "title": "Amplia variedad",
+                "description": "Disponibles en diferentes tipos de conexiones y medidas."
             },
             {
-                "svg": "",
-                "title": "",
-                "description": ""
+                "svg": "assets/images/products/characteristics/factory.svg",
+                "title": "Aplicaciones industriale",
+                "description": "Adecuados para instalaciones neumáticas e hidráulicas."
             }
         ],
         "description": [
-            ""
+            "Los conectores en bronce son accesorios destinados a realizar uniones y conexiones en sistemas neumáticos e hidráulicos.",
+            "Su construcción ofrece resistencia y confiabilidad para instalaciones industriales."
         ]
     }
 }

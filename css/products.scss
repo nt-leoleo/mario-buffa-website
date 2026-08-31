@@ -230,6 +230,7 @@ html {
         & #modalImage {
             aspect-ratio: 1/1;
             object-fit: contain;
+            min-width: 100%;
         }
     }
 }
