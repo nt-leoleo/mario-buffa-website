@@ -18,6 +18,32 @@
     }
 }
 
+/* Scrollbar global */
+::-webkit-scrollbar {
+    width: .7rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .08);
+}
+
+::-webkit-scrollbar-thumb {
+    background: v.$secondary;
+    border-radius: 1rem;
+
+    &:hover {
+        background: color.adjust(v.$primary, $lightness: -10%);
+    }
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: v.$secondary rgba(0, 0, 0, .08);
+}
+
+
+
 body {
     background-image: url(../assets/images/bg-pattern3.png);
     background-attachment: fixed;

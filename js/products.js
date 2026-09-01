@@ -192,15 +192,87 @@ document.addEventListener("keydown", event => {
 
 const catalogGrid = document.querySelector(".catalog-grid");
 const showMoreButton = document.querySelector(".catalog-show-more");
+const showMoreArrow = document.querySelector(".catalog-show-more-arrow");
+const showMoreText = showMoreButton.querySelector("span");
 
 showMoreButton.addEventListener("click", () => {
 
     const isExpanded = catalogGrid.classList.toggle("is-expanded");
 
     if (isExpanded) {
-        showMoreButton.textContent = "Mostrar menos";
+        showMoreText.textContent = "Mostrar menos";
+        showMoreArrow.src = "assets/images/arrow-up.svg";
     } else {
-        showMoreButton.textContent = "Mostrar más";
+        showMoreText.textContent = "Mostrar más";
+        showMoreArrow.src = "assets/images/arrow-down.svg";
     }
+
+});
+
+
+const carousels = document.querySelectorAll(".categories-viewport");
+
+carousels.forEach((viewport) => {
+
+    const track = viewport.querySelector(".categories-track");
+    const cards = track.querySelectorAll(".category-card");
+
+    const leftButton = viewport.querySelector(".carousel-button-left");
+    const rightButton = viewport.querySelector(".carousel-button-right");
+
+    let currentIndex = 0;
+
+    function getVisibleCards() {
+        return window.innerWidth <= 768 ? 4 : 6;
+    }
+
+    function updateCarousel() {
+
+        const visibleCards = getVisibleCards();
+
+        const maxIndex = Math.max(0, cards.length - visibleCards);
+
+        // Evitar salir de los límites
+        currentIndex = Math.max(
+            0,
+            Math.min(currentIndex, maxIndex)
+        );
+
+        if (cards.length === 0) return;
+
+        const cardWidth = cards[0].offsetWidth;
+
+        const gap = parseFloat(
+            getComputedStyle(track).gap
+        ) || 0;
+
+        const movement = (cardWidth + gap) * currentIndex;
+
+        track.style.transform = `translateX(-${movement}px)`;
+
+        // Mostrar/ocultar/deshabilitar flechas
+        leftButton.disabled = currentIndex === 0;
+        rightButton.disabled = currentIndex === maxIndex;
+    }
+
+    rightButton.addEventListener("click", () => {
+
+        currentIndex++;
+
+        updateCarousel();
+
+    });
+
+    leftButton.addEventListener("click", () => {
+
+        currentIndex--;
+
+        updateCarousel();
+
+    });
+
+    window.addEventListener("resize", updateCarousel);
+
+    updateCarousel();
 
 });

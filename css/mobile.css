@@ -200,6 +200,29 @@ textarea {
     font-size: clamp(0.8rem, 0.9vw, 1rem);
   }
 }
+/* Scrollbar global */
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C79A3A;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(7.5480769231, 109.4471153846, 149.4519230769);
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #C79A3A rgba(0, 0, 0, 0.08);
+}
+
 body {
   background-image: url(../assets/images/bg-pattern3.png);
   background-attachment: fixed;
