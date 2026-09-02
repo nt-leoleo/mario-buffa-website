@@ -1,0 +1,52 @@
+{
+    "productosFesto": {
+        "href": "https://www.festo.com/ar/es/c/productos-id_pim1",
+        "src": "/assets/images/Festo_logo.svg",
+        "name": "PRODUCTOS FESTO"
+    },
+    "conectoresRacores": {
+        "href": "https://www.festo.com/ar/es//c/productos/tecnologias-de-conexiones/tecnologia-de-conexiones-neumaticas/racores-id_pim315",
+        "src": "https://m.media-amazon.com/images/I/81XoaWnazrL._AC_UF1000,1000_QL80_.jpg",
+        "name": "CONECTORES RACORES"
+    },
+    "actuadores": {
+        "href": "https://www.festo.com/ar/es/c/productos/actuadores-id_pim5",
+        "src": "https://www.elrodamiento.com/v_portal/inc/imagen.asp?f=DSBC54.png&c=0",
+        "name": "ACTUADORES"
+    },
+    "valvulasTerminales": {
+        "href": "https://www.festo.com/ar/es/c/productos/valvulas-y-terminales-de-valvulas-id_pim23",
+        "src": "https://www.festo.com/media/catalog/60830_600x450-j.jpg",
+        "name": "VÁLVULAS Y TERMINALES DE VÁLVULAS"
+    },
+    "sensores": {
+        "href": "https://www.festo.com/ar/es/c/productos/sensores-id_pim26",
+        "src": "https://www.festo.com/media/catalog/93927_1056x1024-j.jpg",
+        "name": "SENSORES"
+    },
+    "bronce": {
+        "href": "#",
+        "src": "assets/images/products/bronce1.png",
+        "name": "BRONCE"
+    },
+    "retenes": {
+        "href": "#",
+        "src": "assets/images/products/x-ring1-inside.jpg",
+        "name": "RETENES"
+    },
+    "mangueras": {
+        "href": "#",
+        "src": "assets/images/products/cuerdaoring1.jpg",
+        "name": "MANGUERAS"
+    },
+    "fuelles": {
+        "href": "#",
+        "src": "https://acdn-us.mitiendanube.com/stores/006/161/290/products/mla1410802103_1-9450fd5272f3ce56d117496963318194-1024-1024.webp",
+        "name": "FUELLES"
+    },
+    "conectoresCombustible": {
+        "href": "#",
+        "src": "https://http2.mlstatic.com/D_NQ_NP_790500-MLA88977406439_072025-O.webp",
+        "name": "CONECTORES DE COMBUSTIBLE"
+    }
+}

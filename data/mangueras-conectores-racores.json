@@ -1,0 +1,63 @@
+{
+    "tuboPlastico": {
+        "href": "https://www.festo.com/ar/es/a/197384",
+        "src": "https://www.festo.com/media/catalog/76699_1056x1024-j.jpg",
+        "name": "Tubo de plástico",
+        "description": "PUN-H-6X1-BL"
+    },
+    "silenciador": {
+        "href": "https://www.festo.com/ar/es/a/2307",
+        "src": "https://www.festo.com/media/catalog/143676_1056x1024-j.jpg",
+        "name": "Silenciador",
+        "description": "U-1/8"
+    },
+    "silenciadorBronce": {
+        "href": "https://www.festo.com/ar/es/a/1205861",
+        "src": "https://www.festo.com/media/catalog/141826_1056x1024-j.jpg",
+        "name": "Silenciador en Bronce",
+        "description": "AMTE-M-LH-G14"
+    },
+    "conectorEnchufable": {
+        "href": "https://www.festo.com/ar/es/a/153038/",
+        "src": "https://www.festo.com/media/catalog/142992_1056x1024-j.jpg",
+        "name": "Conector enchufable",
+        "description": "QS-8-6"
+    },
+    "racorInstantaneoL": {
+        "href": "https://www.festo.com/ar/es/a/186123",
+        "src": "https://www.festo.com/media/catalog/143302_1056x1024-j.jpg",
+        "name": "Racor instantáneo en L",
+        "description": "QSL-G3/8-10"
+    },
+    "unionRapidaX": {
+        "href": "https://www.festo.com/ar/es/a/153287",
+        "src": "https://www.festo.com/media/catalog/80798_1056x1024-j.jpg",
+        "name": "Unión rápida en X",
+        "description": "QSX-12"
+    },
+    "racorInstantaneoT": {
+        "href": "https://www.festo.com/ar/es/a/130793",
+        "src": "https://www.festo.com/media/catalog/143457_1056x1024-j.jpg",
+        "name": "Racor instantáneo en T",
+        "description": "QST-1/8-4-100"
+    },
+    "racorInstantaneoY": {
+        "href": "https://www.festo.com/ar/es/a/186190",
+        "src": "https://www.festo.com/media/catalog/148356_1056x1024-j.jpg",
+        "name": "Racor instantáneo en Y",
+        "description": "QSYL-G1/8-6"
+    },
+    "racorInsantaneo": {
+        "href": "https://www.festo.com/ar/es/a/130716",
+        "src": "https://www.festo.com/media/catalog/143064_1056x1024-j.jpg",
+        "name": "Racor instantáneo",
+        "description": "QSF-3/8-10-B-50"
+    },
+    "distribuidorMultiple": {
+        "href": "https://www.festo.com/ar/es/p/distribuidor-multiple-id_QS_V/",
+        "src": "https://www.festo.com/media/catalog/6902_1056x1024-j.jpg",
+        "name": "Distribuidor múltiple",
+        "description": "QSLV, QST, QSQ"
+    }
+    
+}

@@ -276,3 +276,86 @@ carousels.forEach((viewport) => {
     updateCarousel();
 
 });
+
+// catalogGrid
+
+async function loadCatalog() {
+    try {
+
+        const response = await fetch("/data/categories.json");
+        const catalog = await response.json();
+
+        const categories = Object.values(catalog);
+
+        categories.forEach(category => {
+
+            const card = document.createElement('a');
+            const image = document.createElement('img');
+            const name = document.createElement('span');
+
+            card.classList.add('catalog-card');
+            card.href = category.href;
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+
+            image.src = category.src;
+            image.alt = category.name;
+
+            name.textContent = category.name;
+
+            card.appendChild(image);
+            card.appendChild(name);
+
+            catalogGrid.appendChild(card);
+        });
+
+    } catch (error) {
+        console.error('Error al cargar las categorías: ', error);
+    }
+}
+
+async function loadProductsPreview(fetchInfo, previewClass) {
+    try {
+        const response = await fetch(fetchInfo);
+        const catalog = await response.json();
+        const products = Object.values(catalog);
+        const categoriesTrack = document.querySelector(previewClass);
+
+        products.forEach(product => {
+            const card = document.createElement('a')
+
+            const image = document.createElement('img');
+            const name = document.createElement('span');
+            const br = document.createElement('br');
+            const description = document.createElement('b');
+            const detailedInfo = document.createElement('p');
+
+            card.href = product.href;
+            card.target = 'blank';
+            card.rel = "noopener noreferrer";
+            card.classList.add('category-card');
+
+            image.src = product.src;
+            image.alt = product.name;
+            image.classList.add('category-image')
+
+            name.textContent = product.name;
+            description.textContent = product.description;
+
+            detailedInfo.textContent = "Información Detallada &#10095;";
+            detailedInfo.classList.add("see-more");
+
+            card.append(image, name, br, description, detailedInfo);
+            categoriesTrack.appendChild(card);
+
+        })
+    } catch (error) {
+        console.error(`Error al cargar artículos: ${error}`);
+        const categoriesTrack = document.querySelector(previewClass);
+        categoriesTrack.textContent = `Error al cargar los artículos ${error}`;
+    }
+}
+
+loadCatalog();
+loadProductsPreview('/data/mangueras-conectores-racores.json', '#conectoresPreview');
+loadProductsPreview('/data/sensores-actuadores-valvulas.json', '#sensoresActuadoresValvulasPreview');

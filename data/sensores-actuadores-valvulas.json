@@ -1,0 +1,38 @@
+{
+    "cilindroNormalizado": {
+        "href": "https://www.festo.com/ar/es/a/1463252",
+        "src": "https://www.festo.com/media/catalog/171597_1056x1024-j.jpg",
+        "name": "Cilindro normalizado",
+        "description": "Cilindro normalizado"
+    },
+    "actuadorGiratorio": {
+        "href": "https://www.festo.com/ar/es/a/8074669",
+        "src": "https://www.festo.com/media/catalog/173342_1056x1024-j.jpg",
+        "name": "Actuador giratorio",
+        "description": "DFPD-20-RP-90-RD-F03"
+    },
+    "cajaFinalesCarrera": {
+        "href": "https://www.festo.com/ar/es/a/8137093",
+        "src": "https://www.festo.com/media/catalog/77461_1056x1024-j.jpg",
+        "name": "Caja de finales de carrera",
+        "description": "SRBC-CA3-YR90-MW-1-1WG-C2-EX6"
+    },
+    "electrovalvula": {
+        "href": "https://www.festo.com/ar/es/a/577297",
+        "src": "https://www.festo.com/media/catalog/46913_1056x1024-j.jpg",
+        "name": "Electroválvula",
+        "description": "VSNC-FTC-M52-MD-G14-FN-1A1"
+    },
+    "valvulaPalancaManual": {
+        "href": "https://www.festo.com/ar/es/a/8080948",
+        "src": "https://www.festo.com/media/catalog/147758_1056x1024-j.jpg",
+        "name": "Válvula de palanca manual",
+        "description": "VHEF-H-B53E-G18"
+    },
+    "valvulaBola": {
+        "href": "https://www.festo.com/ar/es/a/4836917",
+        "src": "https://www.festo.com/media/catalog/61941_1056x1024-j.jpg",
+        "name": "Válvula de bola",
+        "description": "VZBE-1/4-T-63-T-2-F0304-V15V15"
+    }
+}
