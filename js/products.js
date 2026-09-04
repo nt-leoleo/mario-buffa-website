@@ -1,364 +1,454 @@
-const modal = document.querySelector("#productModal");
-
-const modalImage = document.querySelector("#modalImage");
-const modalCategory = document.querySelector("#modalCategory");
-const modalName = document.querySelector("#modalName");
-const modalDescription = document.querySelector("#modalDescription");
-const modalCharacteristics = document.querySelector("#modalCharacteristics");
-const modalWhatsapp = document.querySelector("#modalWhatsapp");
-
-const leftImageButton = document.querySelector("#leftImage");
-const rightImageButton = document.querySelector("#rightImage");
-
-const closeModal = document.querySelector("#closeModal");
-const productModal = document.querySelector(".product-modal");
-
-const indicatorContainer = document.querySelector(
-    ".active-img-indicator-container"
-);
+const WHATSAPP_NUMBER = "5492664327955";
 
 const rightArrowBlue = `
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0a91c6" stroke-width="1.272"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#0a91c6"></path> </g></svg>
-    `
-const leftArrowBlue = `
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0a91c6" stroke-width="1.272" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#0a91c6"></path> </g></svg>
-    `
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0a91c6" stroke-width="1.272">
+        <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#0a91c6"></path>
+    </svg>
+`;
 
+const productCatalogs = [
+    { data: "/data/retenes.json", selector: ".retenes" },
+    { data: "/data/bronce.json", selector: ".bronce" }
+];
 
-// ─────────────────────────────────────────────
-// MODAL
-// ─────────────────────────────────────────────
-let currentImages = [];
-let imagePosition = 0;
-function openProductModal() {
-    modal.classList.add("active");
-    document.body.classList.add("modal-open");
+const previewCatalogs = [
+    { data: "/data/mangueras-conectores-racores.json", selector: "#conectoresPreview" },
+    { data: "/data/sensores-actuadores-valvulas.json", selector: "#sensoresActuadoresValvulasPreview" }
+];
+
+const modalElements = {
+    root: document.querySelector("#productModal"),
+    content: document.querySelector(".product-modal"),
+    image: document.querySelector("#modalImage"),
+    category: document.querySelector("#modalCategory"),
+    name: document.querySelector("#modalName"),
+    description: document.querySelector("#modalDescription"),
+    characteristics: document.querySelector("#modalCharacteristics"),
+    whatsapp: document.querySelector("#modalWhatsapp"),
+    indicators: document.querySelector(".active-img-indicator-container"),
+    previous: document.querySelector("#leftImage"),
+    next: document.querySelector("#rightImage"),
+    close: document.querySelector("#closeModal")
+};
+
+const productState = {
+    products: new Map(),
+    initialized: false
+};
+
+async function loadJson(url) {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        throw new Error(`No se pudo cargar ${url}: ${response.status}`);
+    }
+
+    return response.json();
 }
 
-function closeProductModal() {
-    currentImages = [];
-    imagePosition = 0;
-    modal.classList.remove("active");
-    document.body.classList.remove("modal-open");
+function normalizeProduct(id, product) {
+    if (!product || typeof product !== "object") return null;
 
-    indicatorContainer.innerHTML = "";
+    const sharedData = {
+        category: product.category || "",
+        description: Array.isArray(product.description)
+            ? product.description.filter(text => typeof text === "string")
+            : [],
+        characteristics: Array.isArray(product.characteristics)
+            ? product.characteristics.filter(characteristic => characteristic && typeof characteristic === "object")
+            : []
+    };
+
+    const variants = Array.isArray(product.variants)
+        ? product.variants.filter(variant => variant && typeof variant === "object")
+        : [];
+    const images = Array.isArray(product.images)
+        ? product.images.filter(image => typeof image === "string")
+        : [];
+    const productTitle = product.name || id;
+
+    const items = variants.length
+        ? variants.map(variant => ({
+            title: variant.name || productTitle,
+            image: variant.image,
+            description: Array.isArray(variant.description) ? variant.description : sharedData.description,
+            characteristics: Array.isArray(variant.characteristics) ? variant.characteristics : sharedData.characteristics
+        }))
+        : images.map(image => ({
+            title: productTitle,
+            image,
+            description: sharedData.description,
+            characteristics: sharedData.characteristics
+        }));
+
+    return {
+        id,
+        category: sharedData.category,
+        title: productTitle,
+        items: items.filter(item => item.image)
+    };
 }
 
+function normalizeCatalog(catalog) {
+    if (!catalog || typeof catalog !== "object" || Array.isArray(catalog)) return [];
+    return Object.entries(catalog)
+        .map(([id, product]) => normalizeProduct(id, product))
+        .filter(product => product?.items.length);
+}
 
-// ─────────────────────────────────────────────
-// SLIDER
-// ─────────────────────────────────────────────
+function createProductCard(product, productKey) {
+    const card = document.createElement("article");
+    const imageContainer = document.createElement("div");
+    const image = document.createElement("img");
+    const name = document.createElement("h3");
+    const label = document.createElement('label');
 
-function updateSlider() {
+    card.className = "card";
+    card.id = product.id;
+    card.dataset.productKey = productKey;
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
 
-    modalImage.src = currentImages[imagePosition];
+    imageContainer.className = "img-container";
+    image.src = product.items[0]?.image || "";
+    image.alt = product.title;
 
-    const dots = indicatorContainer.querySelectorAll(".dot");
+    name.className = "card-label";
+    name.textContent = product.title;
 
-    dots.forEach((dot, index) => {
-        dot.classList.toggle(
-            "activeDot",
-            index === imagePosition
+    label.textContent = "Consultar ";
+
+    const arrow = document.createElement("span");
+    arrow.innerHTML = rightArrowBlue;
+
+    label.appendChild(arrow);
+    name.appendChild(label);
+
+    imageContainer.appendChild(image);
+    card.append(imageContainer, name);
+
+    return card;
+}
+
+async function loadProductCatalog(config) {
+    const container = document.querySelector(config.selector);
+    if (!container) return;
+
+    try {
+        const products = normalizeCatalog(await loadJson(config.data));
+
+        const fragment = document.createDocumentFragment();
+
+        products.forEach(product => {
+            const productKey = `${config.data}::${product.id}`;
+            productState.products.set(productKey, product);
+            fragment.appendChild(createProductCard(product, productKey));
+        });
+
+        container.replaceChildren(fragment);
+    } catch (error) {
+        console.error(`Error al cargar productos desde ${config.data}:`, error);
+        container.textContent = "No se pudieron cargar los productos.";
+    }
+}
+
+function createDescription(description) {
+    const fragment = document.createDocumentFragment();
+
+    description.forEach(text => {
+        const paragraph = document.createElement("p");
+        paragraph.className = "paragraph";
+        paragraph.textContent = text;
+        fragment.appendChild(paragraph);
+    });
+
+    return fragment;
+}
+
+function createCharacteristics(characteristics) {
+    const fragment = document.createDocumentFragment();
+
+    characteristics.forEach(characteristic => {
+        const feature = document.createElement("div");
+        const icon = document.createElement("img");
+        const titleDescription = document.createElement("div");
+        const title = document.createElement("h3");
+        const description = document.createElement("p");
+
+        feature.className = "modalFeature";
+        icon.className = "modalFeatureSvgIco";
+        icon.src = characteristic.svg;
+        icon.alt = characteristic.title;
+        titleDescription.className = "modalFeatureTitleDescription";
+        title.className = "modalFeatureTitle";
+        title.textContent = characteristic.title;
+        description.className = "modalFeatureDescription";
+        description.textContent = characteristic.description;
+
+        titleDescription.append(title, description);
+        feature.append(icon, titleDescription);
+        fragment.appendChild(feature);
+    });
+
+    return fragment;
+}
+
+function createIndicators(count, activeIndex, onSelect) {
+    const fragment = document.createDocumentFragment();
+
+    for (let index = 0; index < count; index += 1) {
+        const indicator = document.createElement("button");
+        indicator.type = "button";
+        indicator.className = "dot";
+        indicator.classList.toggle("activeDot", index === activeIndex);
+        indicator.setAttribute("aria-label", `Ver elemento ${index + 1}`);
+        indicator.addEventListener("click", () => onSelect(index));
+        fragment.appendChild(indicator);
+    }
+
+    return fragment;
+}
+
+function createProductModal(elements) {
+    const state = {
+        currentProduct: null,
+        currentItems: [],
+        currentIndex: 0,
+        isOpen: false
+    };
+
+    function renderImage() {
+        const item = state.currentItems[state.currentIndex];
+        if (!item) return;
+
+        elements.image.src = item.image;
+        elements.image.alt = item.title;
+        elements.indicators.replaceChildren(
+            createIndicators(state.currentItems.length, state.currentIndex, selectItem)
         );
-    });
-}
-
-
-function changeImage(direction) {
-
-    if (!currentImages.length) return;
-
-    imagePosition += direction;
-
-    if (imagePosition < 0) {
-        imagePosition = currentImages.length - 1;
     }
 
-    if (imagePosition >= currentImages.length) {
-        imagePosition = 0;
+    function renderDetails() {
+        const product = state.currentProduct;
+        const item = state.currentItems[state.currentIndex];
+        if (!product || !item) return;
+
+        elements.category.textContent = product.category;
+        elements.name.textContent = item.title;
+        elements.description.replaceChildren(createDescription(item.description));
+        elements.characteristics.replaceChildren(createCharacteristics(item.characteristics));
+
+        const message = `Hola, quisiera consultar por el producto ${item.title}.`;
+        elements.whatsapp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     }
 
-    updateSlider();
-}
+    function render() {
+        renderImage();
+        renderDetails();
+    }
 
+    function selectItem(index) {
+        if (!state.currentItems[index]) return;
+        state.currentIndex = index;
+        render();
+    }
 
-// ─────────────────────────────────────────────
-// PRODUCTOS
-// ─────────────────────────────────────────────
+    function changeItem(direction) {
+        if (!state.currentItems.length) return;
+        const nextIndex = state.currentIndex + direction;
+        state.currentIndex = (nextIndex + state.currentItems.length) % state.currentItems.length;
+        render();
+    }
 
-fetch("./data/products.json")
-    .then(response => response.json())
-    .then(products => {
+    function open(product) {
+        if (!product?.items.length) return;
 
-        const productCards = document.querySelectorAll(
-            ".products .card:not(#all-products), .main-products .card, .other-products .card"
-        );
+        state.currentProduct = product;
+        state.currentItems = product.items;
+        state.currentIndex = 0;
+        state.isOpen = true;
+        render();
+        elements.root.classList.add("active");
+        document.body.classList.add("modal-open");
+    }
 
-        productCards.forEach(card => {
+    function close() {
+        state.currentProduct = null;
+        state.currentItems = [];
+        state.currentIndex = 0;
+        state.isOpen = false;
+        elements.root.classList.remove("active");
+        document.body.classList.remove("modal-open");
+        elements.indicators.replaceChildren();
+    }
 
-            card.addEventListener("click", () => {
-
-                const product = products[card.id];
-                const currentDescriptiveParagraphs = Object.values(product.description);
-                const currentCharacteristics = Object.values(product.characteristics);
-
-                currentImages = Object.values(product.images);
-                imagePosition = 0;
-
-                indicatorContainer.innerHTML = "";
-
-                currentImages.forEach(() => {
-                    const dot = document.createElement("div");
-                    dot.classList.add("dot");
-                    indicatorContainer.appendChild(dot);
-                });
-
-                modalCategory.textContent = product.category;
-                modalName.textContent = product.name;
-                modalImage.alt = product.name;
-
-                modalDescription.innerHTML = "";
-                currentDescriptiveParagraphs.forEach((text) => {
-                    const paragraph = document.createElement("p");
-                    paragraph.classList.add('paragraph');
-                    paragraph.textContent = text;
-                    modalDescription.appendChild(paragraph);
-                });
-
-                modalCharacteristics.innerHTML = "";
-                currentCharacteristics.forEach((characteristic) => {
-                    const feature = document.createElement('div');
-                    const svgIco = document.createElement('img');
-                    const title = document.createElement('h3');
-                    const description = document.createElement('p');
-                    const titleDescription = document.createElement('div');
-                    feature.classList.add('modalFeature');
-                    svgIco.classList.add('modalFeatureSvgIco')
-                    title.classList.add('modalFeatureTitle');
-                    description.classList.add('modalFeatureDescription')
-                    titleDescription.classList.add('modalFeatureTitleDescription');
-
-                    svgIco.src = characteristic.svg;
-                    svgIco.alt = characteristic.title;
-                    title.textContent = characteristic.title;
-                    description.textContent = characteristic.description;
-
-                    feature.appendChild(svgIco);
-                    titleDescription.appendChild(title);
-                    titleDescription.appendChild(description);
-                    feature.appendChild(titleDescription);
-                    modalCharacteristics.appendChild(feature);
-                });
-                updateSlider();
-                openProductModal();
-
-                const message =
-                    `Hola, quisiera consultar por el producto ${product.name}.`;
-
-                modalWhatsapp.href =
-                    `https://wa.me/5492664327955?text=${encodeURIComponent(message)}`;
-            });
-        });
+    elements.previous.addEventListener("click", () => changeItem(-1));
+    elements.next.addEventListener("click", () => changeItem(1));
+    elements.close.addEventListener("click", close);
+    elements.root.addEventListener("click", close);
+    elements.content.addEventListener("click", event => event.stopPropagation());
+    document.addEventListener("keydown", event => {
+        if (!state.isOpen) return;
+        if (event.key === "Escape") close();
+        if (event.key === "ArrowLeft") changeItem(-1);
+        if (event.key === "ArrowRight") changeItem(1);
     });
 
-
-// ─────────────────────────────────────────────
-// CONTROLES DEL SLIDER
-// ─────────────────────────────────────────────
-
-leftImageButton.addEventListener("click", () => {
-    changeImage(-1);
-});
-
-rightImageButton.addEventListener("click", () => {
-    changeImage(1);
-});
-
-
-// ─────────────────────────────────────────────
-// CIERRE DEL MODAL
-// ─────────────────────────────────────────────
-
-modal.addEventListener("click", closeProductModal);
-
-productModal.addEventListener("click", event => {
-    event.stopPropagation();
-});
-
-closeModal.addEventListener("click", closeProductModal);
-
-document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape") {
-        closeProductModal();
-    }
-
-});
-
-const catalogGrid = document.querySelector(".catalog-grid");
-const showMoreButton = document.querySelector(".catalog-show-more");
-const showMoreArrow = document.querySelector(".catalog-show-more-arrow");
-const showMoreText = showMoreButton.querySelector("span");
-
-showMoreButton.addEventListener("click", () => {
-
-    const isExpanded = catalogGrid.classList.toggle("is-expanded");
-
-    if (isExpanded) {
-        showMoreText.textContent = "Mostrar menos";
-        showMoreArrow.src = "assets/images/arrow-up.svg";
-    } else {
-        showMoreText.textContent = "Mostrar más";
-        showMoreArrow.src = "assets/images/arrow-down.svg";
-    }
-
-});
-
-
-const carousels = document.querySelectorAll(".categories-viewport");
-
-function loadCarousels() {
-    carousels.forEach((viewport) => {
-
-        const track = viewport.querySelector(".categories-track");
-        const cards = track.querySelectorAll(".category-card");
-
-        const leftButton = viewport.querySelector(".carousel-button-left");
-        const rightButton = viewport.querySelector(".carousel-button-right");
-
-        let currentIndex = 0;
-        function getVisibleCards() {
-            if (window.innerWidth <= 768) return 4;
-            if (window.innerWidth <= 1199) return 5;
-
-            return 6;
-        }
-
-        function updateCarousel() {
-            const visibleCards = getVisibleCards();
-            const maxIndex = Math.max(0, cards.length - visibleCards);
-            if (cards.length === 0) return;
-
-            currentIndex = Math.min(
-                Math.max(currentIndex, 0),
-                maxIndex
-            );
-
-            const cardWidth = cards[0].offsetWidth;
-
-            const gap = parseFloat(
-                getComputedStyle(track).gap
-            ) || 0;
-
-            const movement = (cardWidth + gap) * currentIndex;
-
-            track.style.transform = `translateX(-${movement}px)`;
-
-            leftButton.disabled = currentIndex === 0;
-            rightButton.disabled = currentIndex === maxIndex;
-        }
-
-
-        rightButton.addEventListener("click", () => {
-            currentIndex++;
-            updateCarousel();
-        });
-
-        leftButton.addEventListener("click", () => {
-            currentIndex--;
-            updateCarousel();
-        });
-
-        window.addEventListener("resize", updateCarousel);
-
-        updateCarousel();
-    });
+    return { open };
 }
 
-// catalogGrid
+function setupProductEvents(modalController) {
+    document.addEventListener("click", event => {
+        const card = event.target.closest("[data-product-key]");
+        if (card) modalController.open(productState.products.get(card.dataset.productKey));
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        const card = event.target.closest("[data-product-key]");
+        if (!card) return;
+        event.preventDefault();
+        modalController.open(productState.products.get(card.dataset.productKey));
+    });
+}
 
 async function loadCatalog() {
+    const grid = document.querySelector(".catalog-grid");
+    if (!grid) return;
+
     try {
+        const catalog = await loadJson("/data/categories.json");
+        Object.values(catalog).forEach(category => {
+            const card = document.createElement("a");
+            const image = document.createElement("img");
+            const name = document.createElement("span");
 
-        const response = await fetch("/data/categories.json");
-        const catalog = await response.json();
-
-        const categories = Object.values(catalog);
-
-        categories.forEach(category => {
-
-            const card = document.createElement('a');
-            const image = document.createElement('img');
-            const name = document.createElement('span');
-
-            card.classList.add('catalog-card');
+            card.className = "catalog-card";
             card.href = category.href;
             card.target = "_blank";
             card.rel = "noopener noreferrer";
-
             image.src = category.src;
             image.alt = category.name;
-
             name.textContent = category.name;
-
-            card.appendChild(image);
-            card.appendChild(name);
-
-            catalogGrid.appendChild(card);
+            card.append(image, name);
+            grid.appendChild(card);
         });
-
     } catch (error) {
-        console.error('Error al cargar las categorías: ', error);
+        console.error("Error al cargar las categorías:", error);
+        grid.textContent = "No se pudieron cargar las categorías.";
     }
 }
 
-async function loadProductsPreview(fetchInfo, previewClass) {
+async function loadPreview(config) {
+    const track = document.querySelector(config.selector);
+    if (!track) return;
+
     try {
-        const response = await fetch(fetchInfo);
-        const catalog = await response.json();
-        const products = Object.values(catalog);
-        const categoriesTrack = document.querySelector(previewClass);
-
+        const products = Object.values(await loadJson(config.data));
         products.forEach(product => {
-            const card = document.createElement('a')
-
-            const image = document.createElement('img');
-            const name = document.createElement('span');
-            const br = document.createElement('br');
-            const description = document.createElement('b');
-            const detailedInfo = document.createElement('p');
+            const card = document.createElement("a");
+            const imageContainer = document.createElement("div");
+            const image = document.createElement("img");
+            const name = document.createElement("span");
+            const description = document.createElement("b");
+            const detailedInfo = document.createElement("p");
 
             card.href = product.href;
-            card.target = 'blank';
+            card.target = "_blank";
             card.rel = "noopener noreferrer";
-            card.classList.add('category-card');
-
+            card.className = "category-card";
             image.src = product.src;
             image.alt = product.name;
-            image.classList.add('category-image')
-
+            imageContainer.className = "category-image";
             name.textContent = product.name;
             description.textContent = product.description;
+            detailedInfo.className = "see-more";
+            detailedInfo.innerHTML = `Información Detallada ${rightArrowBlue}`;
 
-            detailedInfo.innerHTML = `
-                    Información Detallada ${rightArrowBlue}
-                `;
-            detailedInfo.classList.add("see-more");
-
-            card.append(image, name, br, description, detailedInfo);
-            categoriesTrack.appendChild(card);
-
-            loadCarousels();
-        })
+            imageContainer.appendChild(image);
+            card.append(imageContainer, name, document.createElement("br"), description, detailedInfo);
+            track.appendChild(card);
+        });
     } catch (error) {
-        console.error(`Error al cargar artículos: ${error}`);
-        const categoriesTrack = document.querySelector(previewClass);
-        categoriesTrack.textContent = `
-                Error al cargar los artículos ${error}
-            `;
+        console.error(`Error al cargar artículos desde ${config.data}:`, error);
+        track.textContent = "No se pudieron cargar los artículos.";
     }
 }
 
-loadCatalog();
-loadProductsPreview('/data/mangueras-conectores-racores.json', '#conectoresPreview');
-loadProductsPreview('/data/sensores-actuadores-valvulas.json', '#sensoresActuadoresValvulasPreview');
+function getVisibleCards() {
+    if (window.innerWidth <= 768) return 4;
+    if (window.innerWidth <= 1199) return 5;
+    return 6;
+}
+
+function initializeCarousel(viewport) {
+    const track = viewport.querySelector(".categories-track");
+    const cards = [...track.querySelectorAll(".category-card")];
+    const previous = viewport.querySelector(".carousel-button-left");
+    const next = viewport.querySelector(".carousel-button-right");
+    let currentIndex = 0;
+
+    function update() {
+        if (!cards.length) {
+            previous.disabled = true;
+            next.disabled = true;
+            return;
+        }
+
+        const maxIndex = Math.max(0, cards.length - getVisibleCards());
+        currentIndex = Math.min(Math.max(currentIndex, 0), maxIndex);
+        const cardWidth = cards[0].offsetWidth;
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        track.style.transform = `translateX(-${(cardWidth + gap) * currentIndex}px)`;
+        previous.disabled = currentIndex === 0;
+        next.disabled = currentIndex === maxIndex;
+    }
+
+    previous.addEventListener("click", () => {
+        currentIndex -= 1;
+        update();
+    });
+    next.addEventListener("click", () => {
+        currentIndex += 1;
+        update();
+    });
+    window.addEventListener("resize", update);
+    update();
+}
+
+function initializeCarousels() {
+    document.querySelectorAll(".categories-viewport").forEach(initializeCarousel);
+}
+
+function initializeShowMore() {
+    const grid = document.querySelector(".catalog-grid");
+    const button = document.querySelector(".catalog-show-more");
+    const arrow = document.querySelector(".catalog-show-more-arrow");
+    const text = button?.querySelector("span");
+    if (!grid || !button || !arrow || !text) return;
+
+    button.addEventListener("click", () => {
+        const expanded = grid.classList.toggle("is-expanded");
+        text.textContent = expanded ? "Mostrar menos" : "Mostrar más";
+        arrow.src = expanded ? "assets/images/arrow-up.svg" : "assets/images/arrow-down.svg";
+    });
+}
+
+async function initializeProductsPage() {
+    if (!modalElements.root || productState.initialized) return;
+    productState.initialized = true;
+
+    const modalController = createProductModal(modalElements);
+    setupProductEvents(modalController);
+
+    await Promise.all([
+        ...productCatalogs.map(loadProductCatalog),
+        loadCatalog(),
+        ...previewCatalogs.map(loadPreview)
+    ]);
+
+    initializeCarousels();
+    initializeShowMore();
+}
+
+initializeProductsPage();

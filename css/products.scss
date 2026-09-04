@@ -280,9 +280,10 @@ html {
     box-shadow: .2rem -.6rem 3rem black;
 
     padding-block: clamp(4rem, 6vw, 8rem);
+
     @media (min-width: 1300px) {
-            padding-block: 4rem;
-        }
+        padding-block: 4rem;
+    }
 
     @include container1;
 
@@ -479,41 +480,33 @@ html {
         }
 
         @media (max-width: 768px) {
+            padding: 1rem;
 
-            .conectores-products {
+            .categories-track {
+                gap: 1rem;
 
-                .categories-viewport {
-                    padding: 1rem;
+                .category-card {
+                    flex: 0 0 calc((100% - 3rem) / 4);
 
-                    .categories-track {
-                        gap: 1rem;
-
-                        .category-card {
-                            // 4 tarjetas visibles
-                            flex: 0 0 calc((100% - 3rem) / 4);
-
-                            padding: {
-                                block: 1rem;
-                                inline: 0.5rem;
-                            }
-                        }
-                    }
-
-                    .carousel-button {
-                        width: 32px;
-                        height: 32px;
-
-                        font-size: 1rem;
-                    }
-
-                    .carousel-button-left {
-                        left: 0.25rem;
-                    }
-
-                    .carousel-button-right {
-                        right: 0.25rem;
+                    padding: {
+                        block: 1rem;
+                        inline: 0.5rem;
                     }
                 }
+            }
+
+            .carousel-button {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+
+            .carousel-button-left {
+                left: 0.25rem;
+            }
+
+            .carousel-button-right {
+                right: 0.25rem;
             }
         }
 
@@ -570,39 +563,34 @@ html {
 // MOBILE
 @media (max-width: 768px) {
 
-    .conectores-products {
+    .products-preview .categories-viewport {
+        padding: 1rem;
 
-        .categories-viewport {
-            padding: 1rem;
+        .categories-track {
+            gap: 1rem;
 
-            .categories-track {
-                gap: 1rem;
+            .category-card {
+                flex: 0 0 calc((100% - 3rem) / 4);
 
-                .category-card {
-                    // 4 tarjetas visibles en mobile
-                    flex: 0 0 calc((100% - 3rem) / 4);
-
-                    padding: {
-                        block: 1rem;
-                        inline: 0.5rem;
-                    }
+                padding: {
+                    block: 1rem;
+                    inline: 0.5rem;
                 }
             }
+        }
 
-            .carousel-button {
-                width: 32px;
-                height: 32px;
+        .carousel-button {
+            width: 32px;
+            height: 32px;
+            font-size: 1rem;
+        }
 
-                font-size: 1rem;
-            }
+        .carousel-button-left {
+            left: 0.25rem;
+        }
 
-            .carousel-button-left {
-                left: 0.25rem;
-            }
-
-            .carousel-button-right {
-                right: 0.25rem;
-            }
+        .carousel-button-right {
+            right: 0.25rem;
         }
     }
 }
@@ -634,8 +622,13 @@ html {
             transition: all .2s ease;
 
             .card-label {
-                font-size: clamp(1.3rem, 1.4vw, 1.5rem);
+                font-size: clamp(1.1rem, 1.2vw, 1.4rem);
                 font-weight: 700;
+                display: flex;
+                flex-direction: column;
+                & span {
+
+                }
             }
 
 
@@ -644,7 +637,6 @@ html {
 
                 .card-label {
                     background-color: v.$primary;
-                    padding-inline: 1rem;
                 }
             }
 
@@ -657,7 +649,9 @@ html {
 
     .dist,
     .main-products,
-    .other-products {
+    .other-products,
+    .retenes,
+    .bronce {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: clamp(2rem, 4vw, 6rem);
@@ -672,7 +666,9 @@ html {
 
         .dist,
         .main-products,
-        .other-products {
+        .other-products,
+        .retenes,
+        .bronce {
             grid-template-columns: 1fr;
         }
     }
@@ -681,7 +677,9 @@ html {
 
         .dist,
         .main-products,
-        .other-products {
+        .other-products,
+        .retenes,
+        .bronce {
             grid-template-columns: repeat(5, minmax(0, 1fr));
             gap: 2rem;
             max-width: 70%;

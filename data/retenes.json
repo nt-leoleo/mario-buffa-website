@@ -1,11 +1,11 @@
 {
     "x-ring": {
-        "category": "RETENES HIDRÁULICOS",
         "name": "X-RING",
+        "category": "RETENES HIDRÁULICOS",
         "images": [
-            "assets/images/products/x-ring1-inside.jpg",
-            "assets/images/products/x-ring2.jpg",
-            "assets/images/products/x-ring3.webp"
+            "assets/images/products/retenes/x-ring1-inside.jpg",
+            "assets/images/products/retenes/x-ring2.jpg",
+            "assets/images/products/retenes/x-ring3.webp"
         ],
         "characteristics": [
             {
@@ -33,10 +33,10 @@
         "category": "RETENES HIDRÁULICOS",
         "name": "O-RING",
         "images": [
-            "assets/images/products/oring1.webp",
-            "assets/images/products/oring2-inside.jpg",
-            "assets/images/products/oring3.jpg",
-            "assets/images/products/oring4-viton.png"
+            "assets/images/products/retenes/oring1.webp",
+            "assets/images/products/retenes/oring2-inside.jpg",
+            "assets/images/products/retenes/oring3.jpg",
+            "assets/images/products/retenes/oring4-viton.png"
         ],
         "characteristics": [
             {
@@ -64,9 +64,9 @@
         "category": "RETENES HIDRÁULICOS",
         "name": "U-PACKING",
         "images": [
-            "assets/images/products/upacking1.png",
-            "assets/images/products/upacking2.png",
-            "assets/images/products/upacking3.jpg"
+            "assets/images/products/retenes/upacking1.png",
+            "assets/images/products/retenes/upacking2.png",
+            "assets/images/products/retenes/upacking3.jpg"
         ],
         "characteristics": [
             {
@@ -93,10 +93,10 @@
         "category": "RETENES HIDRÁULICOS",
         "name": "RETENES DE CAJA DE DIRECCIÓN",
         "images": [
-            "assets/images/products/retenesdireccion1.webp",
-            "assets/images/products/retenesdireccion2.webp",
-            "assets/images/products/retenesdireccion3.jpg",
-            "assets/images/products/retenesdireccion4.jpg"
+            "assets/images/products/retenes/retenesdireccion1.webp",
+            "assets/images/products/retenes/retenesdireccion2.webp",
+            "assets/images/products/retenes/retenesdireccion3.jpg",
+            "assets/images/products/retenes/retenesdireccion4.jpg"
         ],
         "characteristics": [
             {
@@ -123,9 +123,9 @@
         "category": "RETENES HIDRÁULICOS",
         "name": "FLUROPACK",
         "images": [
-            "assets/images/products/fluropack1.jpg",
-            "assets/images/products/fluropack2.jpg",
-            "assets/images/products/fluropack3.jpg"
+            "assets/images/products/retenes/fluropack1.jpg",
+            "assets/images/products/retenes/fluropack2.jpg",
+            "assets/images/products/retenes/fluropack3.jpg"
         ],
         "characteristics": [
             {
@@ -152,9 +152,9 @@
         "category": "RETENES HIDRÁULICOS",
         "name": "WIPER",
         "images": [
-            "assets/images/products/wiper1.jpg",
-            "assets/images/products/wiper2.jpg",
-            "assets/images/products/wiper3.jpg"
+            "assets/images/products/retenes/wiper1.jpg",
+            "assets/images/products/retenes/wiper2.jpg",
+            "assets/images/products/retenes/wiper3.jpg"
         ],
         "characteristics": [
             {
@@ -181,9 +181,9 @@
         "category": "RETENES HIDRÁULICOS",
         "name": "POLYPACK",
         "images": [
-            "assets/images/products/polypack1.png",
-            "assets/images/products/polypack2.jpg",
-            "assets/images/products/polypack3.jpg"
+            "assets/images/products/retenes/polypack1.png",
+            "assets/images/products/retenes/polypack2.jpg",
+            "assets/images/products/retenes/polypack3.jpg"
         ],
         "characteristics": [
             {
@@ -210,10 +210,10 @@
         "category": "RETENES HIDRÁULICOS",
         "name": "CUERDA O-RING",
         "images": [
-            "assets/images/products/cuerdaoring1.jpg",
-            "assets/images/products/cuerdaoring2.webp",
-            "assets/images/products/cuerdaoring3.jpg",
-            "assets/images/products/cuerdaoring4.jpg"
+            "assets/images/products/retenes/cuerdaoring1.jpg",
+            "assets/images/products/retenes/cuerdaoring2.webp",
+            "assets/images/products/retenes/cuerdaoring3.jpg",
+            "assets/images/products/retenes/cuerdaoring4.jpg"
         ],
         "characteristics": [
             {
@@ -234,38 +234,6 @@
         ],
         "description": [
             "La cuerda de O-Ring es un perfil elastomérico utilizado para fabricar juntas de sellado a medida. Es una alternativa práctica cuando no se dispone de una medida estándar de O-Ring."
-        ]
-    },
-    "conectores": {
-        "category": "CONECTORES",
-        "name": "CONECTORES EN BRONCE",
-        "images": [
-            "assets/images/products/bronce1.png",
-            "assets/images/products/bronce2.jpg",
-            "assets/images/products/bronce3.jpg",
-            "assets/images/products/bronce4.jpg",
-            "assets/images/products/bronce5.jpg"
-        ],
-        "characteristics": [
-            {
-                "svg": "assets/images/products/characteristics/anvil.svg",
-                "title": "Construcción resistente",
-                "description": "Fabricados en bronce para ofrecer durabilidad y robustez."
-            },
-            {
-                "svg": "assets/images/products/characteristics/catalogue.svg",
-                "title": "Amplia variedad",
-                "description": "Disponibles en diferentes tipos de conexiones y medidas."
-            },
-            {
-                "svg": "assets/images/products/characteristics/factory.svg",
-                "title": "Aplicaciones industriale",
-                "description": "Adecuados para instalaciones neumáticas e hidráulicas."
-            }
-        ],
-        "description": [
-            "Los conectores en bronce son accesorios destinados a realizar uniones y conexiones en sistemas neumáticos e hidráulicos.",
-            "Su construcción ofrece resistencia y confiabilidad para instalaciones industriales."
         ]
     }
 }

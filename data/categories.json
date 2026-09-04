@@ -25,18 +25,18 @@
         "name": "SENSORES"
     },
     "bronce": {
-        "href": "#",
+        "href": "#bronce",
         "src": "assets/images/products/bronce1.png",
         "name": "BRONCE"
     },
     "retenes": {
-        "href": "#",
-        "src": "assets/images/products/x-ring1-inside.jpg",
+        "href": "#retenes",
+        "src": "assets/images/products/retenes/x-ring1-inside.jpg",
         "name": "RETENES"
     },
     "mangueras": {
         "href": "#",
-        "src": "assets/images/products/cuerdaoring1.jpg",
+        "src": "assets/images/products/retenes/cuerdaoring1.jpg",
         "name": "MANGUERAS"
     },
     "fuelles": {

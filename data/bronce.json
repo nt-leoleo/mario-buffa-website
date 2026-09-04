@@ -1,0 +1,657 @@
+{
+    "union-recta": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "UNIÓNES RECTAS",
+        "variants": [
+            {
+                "name": "UNIÓN RECTA CON VIROLA",
+                "image": "/assets/images/products/bronce/union doble.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "TUERCA UNIÓN DOBLE",
+                "image": "/assets/images/products/bronce/tuerca union doble.png",
+                "description": [
+                    "Conexión recta con rosca hembra para unir componentes de diferentes configuraciones."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Rosca hembra",
+                        "description": "Permite conectar componentes con rosca macho."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Construcción en bronce",
+                        "description": "Ofrece buena resistencia mecánica y a la corrosión."
+                    }
+                ]
+            },
+            {
+                "name": "UNIÓN DOBLE CON VIROLA INCORPORADA",
+                "image": "/assets/images/products/bronce/union doble virola incorporada para un lado.png",
+                "description": [
+                    "Conexión recta con virola incorporada de UN LADO."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Rosca macho",
+                        "description": "Facilita la conexión con componentes de rosca hembra."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Construcción en bronce",
+                        "description": "Aporta resistencia y durabilidad en aplicaciones industriales."
+                    }
+                ]
+            }
+        ]
+    },
+    "buje-reduccion": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "BUJES DE REDUCCIÓN",
+        "variants": [
+            {
+                "name": "BUJE DE REDUCCIÓN",
+                "image": "/assets/images/products/bronce/buje de reduccion.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "BUJE DE REDUCCIÓN",
+                "image": "/assets/images/products/bronce/buje de reduccion2.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    },
+    "codo-45": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "CODOS EN 45°",
+        "variants": [
+            {
+                "name": "CODO EN 45° HEMBRA A MACHO",
+                "image": "/assets/images/products/bronce/codo 45° hembra para un lado con pico.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO EN 45° HEMBRA A MACHO",
+                "image": "/assets/images/products/bronce/codo 45° hembra para un lado con pico2.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    },
+    "codo-90": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "CODOS EN 90°",
+        "variants": [
+            {
+                "name": "CODO EN 90°",
+                "image": "/assets/images/products/bronce/codo 90°.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO EN 90°",
+                "image": "/assets/images/products/bronce/codo 90°2.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO EN 90°",
+                "image": "/assets/images/products/bronce/codo 90°3.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO INVERTIDO EN 90° HEMBRA A MACHO",
+                "image": "/assets/images/products/bronce/Codo invertido 90° hembra para un lado.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO EN 90° CON VIROLA INCORPORADA PARA UN LADO",
+                "image": "/assets/images/products/bronce/codo 90° virola incorporada para un lado.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO EN 90° HEMBRA",
+                "image": "/assets/images/products/bronce/codo 90° hembra.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO EN 90° HEMBRA PARA UN LADO MACHO CÓNICO",
+                "image": "/assets/images/products/bronce/codo 90° hembra para un lado.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO EN 90° HEMBRA PARA UN LADO",
+                "image": "/assets/images/products/bronce/codo 90° hembra para un lado2.jpeg",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CODO EN 90° HEMBRA PARA UN LADO",
+                "image": "/assets/images/products/bronce/codo 90° hembra para un lado3.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    }, 
+    "hembra-macho": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "CONECTORES HEMBRA A MACHO",
+        "variants": [
+            {
+                "name": "CONECTOR HEMBRA A MACHO",
+                "image": "/assets/images/products/bronce/conector hembra macho.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CONECTOR HEMBRA A MACHO",
+                "image": "/assets/images/products/bronce/conector hembra macho2.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CONECTOR HEMBRA A MACHO",
+                "image": "/assets/images/products/bronce/conector hembra macho3.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    },
+    "cuplas": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "CUPLAS",
+        "variants": [
+            {
+                "name": "CUPLA CON ROSCA INTERIOR",
+                "image": "/assets/images/products/bronce/cupla con rosca interior.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "CUPLA DE REDUCCIÓN",
+                "image": "/assets/images/products/bronce/cupla de reduccion.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    },
+    "manguito-tubo": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "MANGUITOS PARA TUBOS",
+        "variants": [
+            {
+                "name": "MANGUITO PARA TUBO DE POLIAMIDA",
+                "image": "/assets/images/products/bronce/manguito para tubo de poliamida.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    },
+    "niple-extension": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "NIPLES DE EXTENSIÓN",
+        "variants": [
+            {
+                "name": "NIPLE DE EXTENSIÓN",
+                "image": "/assets/images/products/bronce/niple de extension.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    },
+    "racords": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "RACORDS",
+        "variants": [
+            {
+                "name": "RACORD PARA MANGUERA CON ROSCA HEMBRA",
+                "image": "/assets/images/products/bronce/racord para manguera con rosca hembra.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "RACORD PARA MANGUERA CON ROSCA MACHO",
+                "image": "/assets/images/products/bronce/racord para manguera con rosca macho.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    },
+    "TAPONES": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "RACORDS",
+        "variants": [
+            {
+                "name": "TAPÓN CON CABEZA HEXAGONAL",
+                "image": "/assets/images/products/bronce/tapon cabeza hexagonal.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "TAPÓN CON CABEZA HEXAGONAL",
+                "image": "/assets/images/products/bronce/tapon cabeza hexagonal2.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            }
+        ]
+    },
+    "TUERCAS": {
+        "category": "CONEXIONES EN BRONCE",
+        "name": "TUERCAS",
+        "variants": [
+            {
+                "name": "TUERCA",
+                "image": "/assets/images/products/bronce/tuerca.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "TUERCA",
+                "image": "/assets/images/products/bronce/tuerca2.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "TUERCA",
+                "image": "/assets/images/products/bronce/tuerca3.png",
+                "description": [
+                    "Unión recta para conectar tubos mediante sistema de compresión."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión segura",
+                        "description": "Proporciona una unión firme y confiable."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje práctico",
+                        "description": "Permite realizar conexiones de forma sencilla."
+                    }
+                ]
+            },
+            {
+                "name": "TUERCA UNIÓN DOBLE",
+                "image": "/assets/images/products/bronce/tuerca union doble.png",
+                "description": [
+                    "Conexión recta con rosca hembra para unir componentes de diferentes configuraciones."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Rosca hembra",
+                        "description": "Permite conectar componentes con rosca macho."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Construcción en bronce",
+                        "description": "Ofrece buena resistencia mecánica y a la corrosión."
+                    }
+                ]
+            }
+        ]
+    }
+}

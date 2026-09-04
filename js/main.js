@@ -10,6 +10,14 @@ async function init() {
 }
 
 init();
+
+function formatValue(value, counter) {
+    if (counter.id === "years-experience") return `+${value}`;
+    if (counter.id === "good-garant") return `${value}%`;
+    if (counter.id === "maked-instalations") return `+${value.toLocaleString("es-AR")}`;
+    return value;
+}
+
 const stats = document.querySelector(".stats");
 
 if (stats) {
@@ -99,43 +107,3 @@ if (form) {
         }
     });
 }
-const track = document.querySelector(".categories-track");
-const cards = document.querySelectorAll(".category-card");
-
-const prevButton = document.querySelector(".slider-prev");
-const nextButton = document.querySelector(".slider-next");
-
-let currentPosition = 0;
-function getVisibleCards() {
-    const viewport = document.querySelector(".categories-viewport");
-
-    return Math.floor(
-        viewport.offsetWidth / cards[0].offsetWidth
-    );
-}
-function updateSlider() {
-
-    const cardWidth = cards[0].offsetWidth;
-
-    track.style.transform =
-        `translateX(-${currentPosition * cardWidth}px)`;
-}
-nextButton.addEventListener("click", () => {
-
-    const visibleCards = getVisibleCards();
-    const maxPosition = cards.length - visibleCards;
-
-    if (currentPosition < maxPosition) {
-        currentPosition++;
-        updateSlider();
-    }
-
-});
-prevButton.addEventListener("click", () => {
-
-    if (currentPosition > 0) {
-        currentPosition--;
-        updateSlider();
-    }
-
-});
