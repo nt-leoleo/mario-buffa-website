@@ -10,18 +10,13 @@
         "characteristics": [
             {
                 "svg": "assets/images/products/characteristics/security-verified.svg",
-                "title": "Alta resistencia",
-                "description": "Fabricados con materiales de alta calidad que soportan presión, desgaste y condiciones exigentes."
-            },
-            {
-                "svg": "assets/images/products/characteristics/drop.svg",
                 "title": "Sellado eficiente",
-                "description": "Su diseño de cuatro labios mejora la estanqueidad y reduce el riesgo de fugas."
+                "description": "Su diseño de cuatro labios proporciona un sellado confiable en aplicaciones estáticas y dinámicas."
             },
             {
                 "svg": "assets/images/products/characteristics/stability.svg",
                 "title": "Mayor estabilidad",
-                "description": "Su geometría ayuda a evitar la torsión durante el movimiento."
+                "description": "Su geometría ayuda a reducir la torsión y el desplazamiento durante el movimiento."
             }
         ],
         "description": [
@@ -29,6 +24,7 @@
             "Se utiliza principalmente en sistemas hidráulicos y neumáticos para evitar fugas de fluidos o aire en aplicaciones industriales."
         ]
     },
+
     "o-ring": {
         "category": "RETENES HIDRÁULICOS",
         "name": "O-RING",
@@ -42,24 +38,20 @@
             {
                 "svg": "assets/images/products/characteristics/security-verified.svg",
                 "title": "Sellado confiable",
-                "description": "Proporciona una estanqueidad efectiva mediante compresión radial o axial."
+                "description": "Proporciona una estanqueidad efectiva mediante la compresión de su sección circular."
             },
             {
                 "svg": "assets/images/products/characteristics/ruler.svg",
                 "title": "Gran versatilidad",
-                "description": "Disponible en diferentes medidas y materiales para diversas aplicaciones."
-            },
-            {
-                "svg": "assets/images/products/characteristics/download.svg",
-                "title": "Fácil instalación",
-                "description": "Su diseño simple permite un montaje práctico y eficiente."
+                "description": "Disponible en diferentes medidas para adaptarse a diversas aplicaciones de sellado."
             }
         ],
         "description": [
             "El O-Ring es un sello de sección circular utilizado para evitar fugas de fluidos y gases.",
-            "Su diseño versátil permite aplicaciones tanto estáticas como dinámicas en sistemas hidráulicos y neumáticos."
+            "Su diseño permite utilizarlo en diferentes aplicaciones de sellado, tanto estáticas como dinámicas."
         ]
     },
+
     "u-packing": {
         "category": "RETENES HIDRÁULICOS",
         "name": "U-PACKING",
@@ -72,23 +64,19 @@
             {
                 "svg": "assets/images/products/characteristics/low.svg",
                 "title": "Baja fricción",
-                "description": "Favorece un movimiento suave y reduce el esfuerzo inicial."
+                "description": "Favorece un movimiento suave y reduce la resistencia durante el desplazamiento."
             },
             {
                 "svg": "assets/images/products/characteristics/drop.svg",
                 "title": "Sellado eficiente",
-                "description": "Sus labios flexibles se adaptan al vástago o cilindro."
-            },
-            {
-                "svg": "assets/images/products/characteristics/settings.svg",
-                "title": "Aplicación hidráulica y neumática",
-                "description": "Ideal para cilindros de baja velocidad y presión."
+                "description": "Sus labios flexibles se adaptan a la superficie de trabajo para mantener la estanqueidad."
             }
         ],
         "description": [
-            "El U-Packing es un sello de perfil en U diseñado para cilindros hidráulicos y neumáticos. Sus labios flexibles proporcionan un sellado eficiente con baja fricción y un movimiento suave."
+            "El U-Packing es un sello de perfil en U utilizado en aplicaciones de sellado de vástagos y pistones. Sus labios flexibles proporcionan un sellado eficiente durante el movimiento."
         ]
     },
+
     "ret-direccion": {
         "category": "RETENES HIDRÁULICOS",
         "name": "RETENES DE CAJA DE DIRECCIÓN",
@@ -102,23 +90,19 @@
             {
                 "svg": "assets/images/products/characteristics/droplet.svg",
                 "title": "Prevención de fugas",
-                "description": "Mantienen el fluido hidráulico dentro del sistema."
+                "description": "Ayudan a mantener el fluido hidráulico dentro de la caja de dirección."
             },
             {
                 "svg": "assets/images/products/characteristics/arrows.svg",
-                "title": "Resistencia al movimiento",
-                "description": "Diseñados para soportar movimientos rotativos y alternativos."
-            },
-            {
-                "svg": "assets/images/products/characteristics/security-verified.svg",
-                "title": "Confiabilidad",
-                "description": "Contribuyen al funcionamiento estable y eficiente de la dirección."
+                "title": "Trabajo dinámico",
+                "description": "Están diseñados para trabajar con los movimientos propios de los componentes del sistema de dirección."
             }
         ],
         "description": [
             "Retenes diseñados para sistemas de dirección hidráulica, destinados a mantener el fluido dentro de la caja de dirección y evitar pérdidas durante el funcionamiento."
         ]
     },
+
     "fluropack": {
         "category": "RETENES HIDRÁULICOS",
         "name": "FLUROPACK",
@@ -130,24 +114,25 @@
         "characteristics": [
             {
                 "svg": "assets/images/products/characteristics/pressure.svg",
-                "title": "Alta resistencia a la extrusión",
-                "description": "Diseñado para trabajar en aplicaciones hidráulicas exigentes."
+                "title": "Aplicaciones de alta exigencia",
+                "description": "Su diseño está orientado a aplicaciones hidráulicas donde el sello está sometido a condiciones de trabajo exigentes."
             },
             {
                 "svg": "assets/images/products/characteristics/low.svg",
                 "title": "Baja fricción",
-                "description": "Permite un desplazamiento suave y eficiente del pistón."
+                "description": "Favorece un desplazamiento suave durante el movimiento del pistón."
             },
             {
                 "svg": "assets/images/products/characteristics/anvil.svg",
                 "title": "Servicio pesado",
-                "description": "Adecuado para cilindros hidráulicos sometidos a altas exigencias."
+                "description": "Diseñado para aplicaciones hidráulicas que requieren un sello para condiciones de trabajo exigentes."
             }
         ],
         "description": [
-            "El FluroPack es un sello de doble efecto para pistones de cilindros hidráulicos de servicio pesado. Su construcción ofrece baja fricción, alta resistencia a la extrusión y amplia compatibilidad química."
+            "El FluroPack es un sello de doble efecto utilizado en pistones de cilindros hidráulicos. Su diseño está orientado a aplicaciones exigentes y favorece un funcionamiento con baja fricción."
         ]
     },
+
     "wipers": {
         "category": "RETENES HIDRÁULICOS",
         "name": "WIPER",
@@ -160,23 +145,24 @@
             {
                 "svg": "assets/images/products/characteristics/dust.svg",
                 "title": "Protección contra contaminantes",
-                "description": "Evitan el ingreso de polvo, suciedad y humedad."
+                "description": "Evita el ingreso de polvo, suciedad y otros contaminantes al interior del cilindro."
             },
             {
                 "svg": "assets/images/products/characteristics/brush.svg",
                 "title": "Limpieza del vástago",
-                "description": "Remueven contaminantes durante el movimiento del vástago."
+                "description": "Ayuda a remover contaminantes de la superficie del vástago durante su movimiento."
             },
             {
                 "svg": "assets/images/products/characteristics/shield.svg",
-                "title": "Mayor protección del sistema",
-                "description": "Ayudan a prolongar la vida útil de los componentes internos."
+                "title": "Protección del sistema",
+                "description": "Contribuye a mantener limpios los componentes internos del cilindro."
             }
         ],
         "description": [
             "Los Wipers o sellos limpiadores están diseñados para impedir el ingreso de polvo, humedad y contaminantes al interior de los cilindros hidráulicos y neumáticos, manteniendo limpio el vástago durante su movimiento."
         ]
     },
+
     "polypack": {
         "category": "RETENES HIDRÁULICOS",
         "name": "POLYPACK",
@@ -188,24 +174,25 @@
         "characteristics": [
             {
                 "svg": "assets/images/products/characteristics/arrows.svg",
-                "title": "Alta resistencia al desgaste",
-                "description": "Diseñado para soportar movimientos continuos y fricción."
+                "title": "Movimiento continuo",
+                "description": "Su diseño está destinado a aplicaciones donde existe movimiento entre las superficies de trabajo."
             },
             {
                 "svg": "assets/images/products/characteristics/shield.svg",
-                "title": "Resistencia a la extrusión",
-                "description": "Adecuado para aplicaciones hidráulicas exigentes."
+                "title": "Resistencia al desgaste",
+                "description": "Está diseñado para soportar el contacto y la fricción propios de aplicaciones dinámicas."
             },
             {
                 "svg": "assets/images/products/characteristics/drop.svg",
                 "title": "Sellado confiable",
-                "description": "Su diseño labial proporciona una eficiente retención de fluidos."
+                "description": "Su perfil labial favorece la retención del fluido durante el movimiento."
             }
         ],
         "description": [
-            "El Polypack es un sello labial utilizado en cilindros hidráulicos y neumáticos. Su diseño combina un elemento de sellado con la acción de un arosello, ofreciendo buena resistencia al desgaste y a la extrusión."
+            "El Polypack es un sello labial utilizado en aplicaciones hidráulicas y neumáticas. Su diseño está orientado al sellado dinámico, proporcionando una retención confiable del fluido durante el movimiento."
         ]
     },
+
     "ret-cuerda": {
         "category": "RETENES HIDRÁULICOS",
         "name": "CUERDA O-RING",
@@ -219,17 +206,12 @@
             {
                 "svg": "assets/images/products/characteristics/ruler.svg",
                 "title": "Fabricación a medida",
-                "description": "Permite obtener juntas adaptadas a diferentes diámetros."
+                "description": "Permite fabricar juntas adaptadas a diferentes diámetros según las necesidades de la aplicación."
             },
             {
                 "svg": "assets/images/products/characteristics/sliders.svg",
                 "title": "Versatilidad",
-                "description": "Disponible en diferentes materiales para distintas aplicaciones."
-            },
-            {
-                "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                "title": "Solución práctica",
-                "description": "Ideal cuando no existe una medida estándar adecuada."
+                "description": "Puede utilizarse para fabricar juntas de diferentes dimensiones según la aplicación de sellado."
             }
         ],
         "description": [
