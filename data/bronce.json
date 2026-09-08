@@ -11,14 +11,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/settings.svg",
                         "title": "Unión tubo a tubo",
                         "description": "Permite conectar dos tubos manteniendo una disposición recta."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Sistema de compresión",
-                        "description": "La conexión se realiza mediante el ajuste de la tuerca y la virola sobre el tubo."
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
                     }
                 ]
             },
@@ -30,14 +30,9 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Elemento de fijación",
-                        "description": "Permite asegurar los componentes de la conexión mediante el ajuste de la tuerca."
-                    },
-                    {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
                         "title": "Apriete mecánico",
-                        "description": "Su geometría permite realizar el ajuste mediante una herramienta adecuada."
+                        "description": "Permite ajustar la conexión mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -49,19 +44,20 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Virola incorporada",
-                        "description": "Integra la virola en uno de los lados de la conexión, facilitando el armado del conjunto."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión recta",
+                        "description": "Permite realizar una unión manteniendo los componentes alineados."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje por compresión",
-                        "description": "Permite fijar el tubo mediante el apriete de la conexión."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Virola incorporada",
+                        "description": "Integra la virola en uno de los lados de la conexión para facilitar el montaje."
                     }
                 ]
             }
         ]
     },
+
     "buje-reduccion": {
         "category": "CONEXIONES EN BRONCE",
         "name": "BUJES DE REDUCCIÓN",
@@ -74,14 +70,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Reducción de diámetro",
-                        "description": "Permite adaptar una conexión de mayor tamaño a otra de menor diámetro."
+                        "svg": "assets/images/products/characteristics/sliders.svg",
+                        "title": "Adaptación de medidas",
+                        "description": "Permite conectar componentes con diferentes tamaños de conexión."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Adaptación roscada",
-                        "description": "Facilita la conexión entre componentes roscados de diferentes medidas."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión roscada",
+                        "description": "Facilita la unión entre componentes mediante conexiones roscadas compatibles."
                     }
                 ]
             },
@@ -93,19 +89,20 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Reducción de diámetro",
-                        "description": "Permite adaptar una conexión de mayor tamaño a otra de menor diámetro."
+                        "svg": "assets/images/products/characteristics/sliders.svg",
+                        "title": "Adaptación de medidas",
+                        "description": "Permite conectar componentes con diferentes tamaños de conexión."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Adaptación roscada",
-                        "description": "Facilita la conexión entre componentes roscados de diferentes medidas."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión roscada",
+                        "description": "Facilita la unión entre componentes mediante conexiones roscadas compatibles."
                     }
                 ]
             }
         ]
     },
+
     "codo-45": {
         "category": "CONEXIONES EN BRONCE",
         "name": "CODOS EN 45°",
@@ -118,14 +115,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/arrows.svg",
                         "title": "Cambio de dirección",
                         "description": "Permite desviar la línea de conexión en un ángulo de 45°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión hembra a macho",
-                        "description": "Combina una conexión hembra con una conexión macho para adaptar componentes."
+                        "svg": "assets/images/products/characteristics/sliders.svg",
+                        "title": "Adaptación hembra a macho",
+                        "description": "Permite vincular componentes con conexiones de distinto género."
                     }
                 ]
             },
@@ -137,19 +134,20 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/arrows.svg",
                         "title": "Cambio de dirección",
                         "description": "Permite desviar la línea de conexión en un ángulo de 45°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión hembra a macho",
-                        "description": "Combina una conexión hembra con una conexión macho para adaptar componentes."
+                        "svg": "assets/images/products/characteristics/sliders.svg",
+                        "title": "Adaptación hembra a macho",
+                        "description": "Permite vincular componentes con conexiones de distinto género."
                     }
                 ]
             }
         ]
     },
+
     "codo-90": {
         "category": "CONEXIONES EN BRONCE",
         "name": "CODOS EN 90°",
@@ -162,14 +160,9 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/arrows.svg",
                         "title": "Cambio de dirección",
                         "description": "Permite desviar el recorrido de la conexión en un ángulo de 90°."
-                    },
-                    {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión en ángulo",
-                        "description": "Facilita el montaje de instalaciones donde se requiere un cambio de dirección."
                     }
                 ]
             },
@@ -181,14 +174,9 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/arrows.svg",
                         "title": "Cambio de dirección",
                         "description": "Permite desviar el recorrido de la conexión en un ángulo de 90°."
-                    },
-                    {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión en ángulo",
-                        "description": "Facilita el montaje de instalaciones donde se requiere un cambio de dirección."
                     }
                 ]
             },
@@ -200,14 +188,9 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/arrows.svg",
                         "title": "Cambio de dirección",
                         "description": "Permite desviar el recorrido de la conexión en un ángulo de 90°."
-                    },
-                    {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión en ángulo",
-                        "description": "Facilita el montaje de instalaciones donde se requiere un cambio de dirección."
                     }
                 ]
             },
@@ -219,14 +202,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Configuración invertida",
-                        "description": "Su geometría permite realizar el cambio de dirección manteniendo las conexiones en posiciones invertidas."
+                        "svg": "assets/images/products/characteristics/arrows.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite modificar el recorrido de la instalación mediante un giro de 90°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Hembra a macho",
-                        "description": "Permite conectar un componente con conexión hembra a otro de configuración macho."
+                        "svg": "assets/images/products/characteristics/sliders.svg",
+                        "title": "Adaptación hembra a macho",
+                        "description": "Permite vincular componentes con conexiones de diferente configuración."
                     }
                 ]
             },
@@ -238,7 +221,7 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/arrows.svg",
                         "title": "Cambio de dirección",
                         "description": "Permite modificar el recorrido de la instalación en un ángulo de 90°."
                     },
@@ -246,6 +229,11 @@
                         "svg": "assets/images/products/characteristics/security-verified.svg",
                         "title": "Virola incorporada",
                         "description": "Integra la virola en uno de los lados para facilitar la conexión por compresión."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "Permite fijar el tubo mediante el apriete de la conexión."
                     }
                 ]
             },
@@ -257,14 +245,14 @@
                 ],
                 "characteristics": [
                     {
+                        "svg": "assets/images/products/characteristics/arrows.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite realizar un giro de 90° en el recorrido de la conexión."
+                    },
+                    {
                         "svg": "assets/images/products/characteristics/settings.svg",
                         "title": "Conexión hembra",
                         "description": "Permite recibir un componente con conexión macho compatible."
-                    },
-                    {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Cambio de dirección",
-                        "description": "Permite realizar un giro de 90° en el recorrido de la conexión."
                     }
                 ]
             },
@@ -276,14 +264,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Conexión macho cónica",
-                        "description": "Permite realizar la conexión con un componente hembra compatible con la configuración cónica."
-                    },
-                    {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/arrows.svg",
                         "title": "Cambio de dirección",
                         "description": "Permite orientar la instalación en un ángulo de 90°."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/sliders.svg",
+                        "title": "Macho cónico",
+                        "description": "Permite realizar la conexión con un componente hembra compatible con la configuración cónica."
                     }
                 ]
             },
@@ -295,14 +283,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Conexión hembra",
-                        "description": "Permite conectar un componente macho compatible en el extremo roscado."
+                        "svg": "assets/images/products/characteristics/arrows.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite modificar el recorrido de la conexión en un ángulo de 90°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Ángulo de 90°",
-                        "description": "Permite modificar el recorrido de la conexión en un ángulo recto."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión hembra",
+                        "description": "Permite conectar un componente macho compatible en el extremo correspondiente."
                     }
                 ]
             },
@@ -314,19 +302,20 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Conexión hembra",
-                        "description": "Permite conectar un componente macho compatible en el extremo roscado."
+                        "svg": "assets/images/products/characteristics/arrows.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite modificar el recorrido de la conexión en un ángulo de 90°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Ángulo de 90°",
-                        "description": "Permite modificar el recorrido de la conexión en un ángulo recto."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión hembra",
+                        "description": "Permite conectar un componente macho compatible en el extremo correspondiente."
                     }
                 ]
             }
         ]
     },
+
     "hembra-macho": {
         "category": "CONEXIONES EN BRONCE",
         "name": "CONECTORES HEMBRA A MACHO",
@@ -339,14 +328,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/sliders.svg",
                         "title": "Adaptación hembra a macho",
                         "description": "Permite vincular componentes con conexiones de distinto género."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/settings.svg",
                         "title": "Conexión recta",
-                        "description": "Mantiene alineados los componentes conectados sin modificar la dirección de la instalación."
+                        "description": "Mantiene alineados los componentes conectados."
                     }
                 ]
             },
@@ -358,14 +347,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/sliders.svg",
                         "title": "Adaptación hembra a macho",
                         "description": "Permite vincular componentes con conexiones de distinto género."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/settings.svg",
                         "title": "Conexión recta",
-                        "description": "Mantiene alineados los componentes conectados sin modificar la dirección de la instalación."
+                        "description": "Mantiene alineados los componentes conectados."
                     }
                 ]
             },
@@ -377,19 +366,20 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/sliders.svg",
                         "title": "Adaptación hembra a macho",
                         "description": "Permite vincular componentes con conexiones de distinto género."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/settings.svg",
                         "title": "Conexión recta",
-                        "description": "Mantiene alineados los componentes conectados sin modificar la dirección de la instalación."
+                        "description": "Mantiene alineados los componentes conectados."
                     }
                 ]
             }
         ]
     },
+
     "cuplas": {
         "category": "CONEXIONES EN BRONCE",
         "name": "CUPLAS",
@@ -407,9 +397,9 @@
                         "description": "Permite recibir componentes con rosca macho compatible."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Unión recta",
-                        "description": "Permite conectar componentes manteniendo el recorrido de la instalación en línea."
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje roscado",
+                        "description": "Permite realizar el ajuste de la conexión mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -421,19 +411,20 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/sliders.svg",
                         "title": "Reducción de medida",
-                        "description": "Permite adaptar una conexión de un tamaño a otra de diferente diámetro."
+                        "description": "Permite adaptar conexiones de diferentes tamaños."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/settings.svg",
                         "title": "Unión en línea",
-                        "description": "Mantiene los componentes alineados durante la transición entre medidas."
+                        "description": "Permite conectar los componentes manteniendo su disposición alineada."
                     }
                 ]
             }
         ]
     },
+
     "manguito-tubo": {
         "category": "CONEXIONES EN BRONCE",
         "name": "MANGUITOS PARA TUBOS",
@@ -447,18 +438,14 @@
                 "characteristics": [
                     {
                         "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Compatible con tubo de poliamida",
+                        "title": "Para tubo de poliamida",
                         "description": "Está destinado a aplicaciones que utilizan tubos de poliamida."
-                    },
-                    {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje sencillo",
-                        "description": "Su diseño permite realizar el montaje del tubo de forma práctica."
                     }
                 ]
             }
         ]
     },
+
     "niple-extension": {
         "category": "CONEXIONES EN BRONCE",
         "name": "NIPLES DE EXTENSIÓN",
@@ -471,19 +458,20 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "svg": "assets/images/products/characteristics/arrows.svg",
                         "title": "Extensión de conexión",
                         "description": "Permite prolongar el punto de conexión para facilitar el montaje de otros componentes."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "svg": "assets/images/products/characteristics/settings.svg",
                         "title": "Montaje roscado",
-                        "description": "Su configuración permite realizar la instalación mediante conexiones roscadas compatibles."
+                        "description": "Permite realizar la instalación mediante conexiones roscadas compatibles."
                     }
                 ]
             }
         ]
     },
+
     "racords": {
         "category": "CONEXIONES EN BRONCE",
         "name": "RACORDS",
@@ -501,7 +489,7 @@
                         "description": "Permite realizar la transición entre una manguera y el sistema de conexiones."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/sliders.svg",
                         "title": "Rosca hembra",
                         "description": "Dispone de una conexión hembra para recibir un componente con rosca macho compatible."
                     }
@@ -520,7 +508,7 @@
                         "description": "Permite realizar la transición entre una manguera y el sistema de conexiones."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/sliders.svg",
                         "title": "Rosca macho",
                         "description": "Dispone de una conexión macho para instalarse en un componente con rosca hembra compatible."
                     }
@@ -528,6 +516,7 @@
             }
         ]
     },
+
     "TAPONES": {
         "category": "CONEXIONES EN BRONCE",
         "name": "TAPONES",
@@ -540,14 +529,14 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/shield.svg",
                         "title": "Cierre de conexión",
                         "description": "Permite cerrar una conexión roscada que no se encuentra en uso."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
                         "title": "Cabeza hexagonal",
-                        "description": "La cabeza hexagonal permite realizar el montaje y desmontaje mediante una herramienta adecuada."
+                        "description": "Permite realizar el montaje y desmontaje mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -559,19 +548,20 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "svg": "assets/images/products/characteristics/shield.svg",
                         "title": "Cierre de conexión",
                         "description": "Permite cerrar una conexión roscada que no se encuentra en uso."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
                         "title": "Cabeza hexagonal",
-                        "description": "La cabeza hexagonal permite realizar el montaje y desmontaje mediante una herramienta adecuada."
+                        "description": "Permite realizar el montaje y desmontaje mediante una herramienta adecuada."
                     }
                 ]
             }
         ]
     },
+
     "TUERCAS": {
         "category": "CONEXIONES EN BRONCE",
         "name": "TUERCAS",
@@ -584,14 +574,9 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Elemento de fijación",
-                        "description": "Permite sujetar y asegurar componentes de una conexión."
-                    },
-                    {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Apriete con herramienta",
-                        "description": "Su geometría permite realizar el ajuste mediante una herramienta adecuada."
+                        "title": "Apriete mecánico",
+                        "description": "Permite realizar el ajuste mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -603,14 +588,9 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Elemento de fijación",
-                        "description": "Permite sujetar y asegurar componentes de una conexión."
-                    },
-                    {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Apriete con herramienta",
-                        "description": "Su geometría permite realizar el ajuste mediante una herramienta adecuada."
+                        "title": "Apriete mecánico",
+                        "description": "Permite realizar el ajuste mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -622,14 +602,9 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Elemento de fijación",
-                        "description": "Permite sujetar y asegurar componentes de una conexión."
-                    },
-                    {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Apriete con herramienta",
-                        "description": "Su geometría permite realizar el ajuste mediante una herramienta adecuada."
+                        "title": "Apriete mecánico",
+                        "description": "Permite realizar el ajuste mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -641,14 +616,9 @@
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Elemento de unión",
-                        "description": "Forma parte del conjunto de conexión y permite asegurar sus componentes."
-                    },
-                    {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
                         "title": "Apriete mecánico",
-                        "description": "Su diseño permite realizar el ajuste de la conexión mediante una herramienta adecuada."
+                        "description": "Permite realizar el ajuste de la conexión mediante una herramienta adecuada."
                     }
                 ]
             }
