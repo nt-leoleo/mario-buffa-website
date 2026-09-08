@@ -1,24 +1,24 @@
 {
     "union-recta": {
         "category": "CONEXIONES EN BRONCE",
-        "name": "UNIÓNES RECTAS",
+        "name": "UNIONES RECTAS",
         "variants": [
             {
                 "name": "UNIÓN RECTA CON VIROLA",
                 "image": "/assets/images/products/bronce/union doble.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
                 ],
                 "characteristics": [
                     {
                         "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "title": "Sistema de compresión",
+                        "description": "La conexión se realiza mediante el ajuste de la tuerca y la virola sobre el tubo."
                     }
                 ]
             },
@@ -26,18 +26,18 @@
                 "name": "TUERCA UNIÓN DOBLE",
                 "image": "/assets/images/products/bronce/tuerca union doble.png",
                 "description": [
-                    "Conexión recta con rosca hembra para unir componentes de diferentes configuraciones."
+                    "Tuerca utilizada como parte de una conexión de unión, permitiendo asegurar el conjunto mediante apriete."
                 ],
                 "characteristics": [
                     {
                         "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Rosca hembra",
-                        "description": "Permite conectar componentes con rosca macho."
+                        "title": "Elemento de fijación",
+                        "description": "Permite asegurar los componentes de la conexión mediante el ajuste de la tuerca."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Construcción en bronce",
-                        "description": "Ofrece buena resistencia mecánica y a la corrosión."
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Apriete mecánico",
+                        "description": "Su geometría permite realizar el ajuste mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -45,18 +45,18 @@
                 "name": "UNIÓN DOBLE CON VIROLA INCORPORADA",
                 "image": "/assets/images/products/bronce/union doble virola incorporada para un lado.png",
                 "description": [
-                    "Conexión recta con virola incorporada de UN LADO."
+                    "Conexión recta para unir un tubo con otro componente mediante un sistema de compresión con virola incorporada en uno de sus lados."
                 ],
                 "characteristics": [
                     {
                         "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Rosca macho",
-                        "description": "Facilita la conexión con componentes de rosca hembra."
+                        "title": "Virola incorporada",
+                        "description": "Integra la virola en uno de los lados de la conexión, facilitando el armado del conjunto."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Construcción en bronce",
-                        "description": "Aporta resistencia y durabilidad en aplicaciones industriales."
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "Permite fijar el tubo mediante el apriete de la conexión."
                     }
                 ]
             }
@@ -70,18 +70,18 @@
                 "name": "BUJE DE REDUCCIÓN",
                 "image": "/assets/images/products/bronce/buje de reduccion.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Buje utilizado para conectar dos conexiones roscadas de diferentes tamaños, reduciendo el diámetro de la conexión."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Reducción de diámetro",
+                        "description": "Permite adaptar una conexión de mayor tamaño a otra de menor diámetro."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Adaptación roscada",
+                        "description": "Facilita la conexión entre componentes roscados de diferentes medidas."
                     }
                 ]
             },
@@ -89,18 +89,18 @@
                 "name": "BUJE DE REDUCCIÓN",
                 "image": "/assets/images/products/bronce/buje de reduccion2.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Buje utilizado para conectar dos conexiones roscadas de diferentes tamaños, reduciendo el diámetro de la conexión."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Reducción de diámetro",
+                        "description": "Permite adaptar una conexión de mayor tamaño a otra de menor diámetro."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Adaptación roscada",
+                        "description": "Facilita la conexión entre componentes roscados de diferentes medidas."
                     }
                 ]
             }
@@ -114,18 +114,18 @@
                 "name": "CODO EN 45° HEMBRA A MACHO",
                 "image": "/assets/images/products/bronce/codo 45° hembra para un lado con pico.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conexión acodada de 45° que permite cambiar la dirección de una instalación y conectar componentes con configuraciones hembra y macho."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite desviar la línea de conexión en un ángulo de 45°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión hembra a macho",
+                        "description": "Combina una conexión hembra con una conexión macho para adaptar componentes."
                     }
                 ]
             },
@@ -133,18 +133,18 @@
                 "name": "CODO EN 45° HEMBRA A MACHO",
                 "image": "/assets/images/products/bronce/codo 45° hembra para un lado con pico2.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conexión acodada de 45° que permite cambiar la dirección de una instalación y conectar componentes con configuraciones hembra y macho."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite desviar la línea de conexión en un ángulo de 45°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión hembra a macho",
+                        "description": "Combina una conexión hembra con una conexión macho para adaptar componentes."
                     }
                 ]
             }
@@ -158,18 +158,18 @@
                 "name": "CODO EN 90°",
                 "image": "/assets/images/products/bronce/codo 90°.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conexión acodada de 90° utilizada para cambiar la dirección de una instalación."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite desviar el recorrido de la conexión en un ángulo de 90°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión en ángulo",
+                        "description": "Facilita el montaje de instalaciones donde se requiere un cambio de dirección."
                     }
                 ]
             },
@@ -177,18 +177,18 @@
                 "name": "CODO EN 90°",
                 "image": "/assets/images/products/bronce/codo 90°2.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conexión acodada de 90° utilizada para cambiar la dirección de una instalación."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite desviar el recorrido de la conexión en un ángulo de 90°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión en ángulo",
+                        "description": "Facilita el montaje de instalaciones donde se requiere un cambio de dirección."
                     }
                 ]
             },
@@ -196,18 +196,18 @@
                 "name": "CODO EN 90°",
                 "image": "/assets/images/products/bronce/codo 90°3.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conexión acodada de 90° utilizada para cambiar la dirección de una instalación."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite desviar el recorrido de la conexión en un ángulo de 90°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión en ángulo",
+                        "description": "Facilita el montaje de instalaciones donde se requiere un cambio de dirección."
                     }
                 ]
             },
@@ -215,18 +215,18 @@
                 "name": "CODO INVERTIDO EN 90° HEMBRA A MACHO",
                 "image": "/assets/images/products/bronce/Codo invertido 90° hembra para un lado.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Codo invertido de 90° con configuración hembra a macho para modificar la dirección de la instalación y adaptar componentes."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Configuración invertida",
+                        "description": "Su geometría permite realizar el cambio de dirección manteniendo las conexiones en posiciones invertidas."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Hembra a macho",
+                        "description": "Permite conectar un componente con conexión hembra a otro de configuración macho."
                     }
                 ]
             },
@@ -234,18 +234,18 @@
                 "name": "CODO EN 90° CON VIROLA INCORPORADA PARA UN LADO",
                 "image": "/assets/images/products/bronce/codo 90° virola incorporada para un lado.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Codo de 90° con virola incorporada en uno de sus lados para realizar una conexión mediante compresión."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite modificar el recorrido de la instalación en un ángulo de 90°."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Virola incorporada",
+                        "description": "Integra la virola en uno de los lados para facilitar la conexión por compresión."
                     }
                 ]
             },
@@ -253,18 +253,18 @@
                 "name": "CODO EN 90° HEMBRA",
                 "image": "/assets/images/products/bronce/codo 90° hembra.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Codo de 90° con conexión hembra para modificar la dirección de una instalación y conectar un componente macho."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión hembra",
+                        "description": "Permite recibir un componente con conexión macho compatible."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite realizar un giro de 90° en el recorrido de la conexión."
                     }
                 ]
             },
@@ -272,18 +272,18 @@
                 "name": "CODO EN 90° HEMBRA PARA UN LADO MACHO CÓNICO",
                 "image": "/assets/images/products/bronce/codo 90° hembra para un lado.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Codo de 90° con una conexión hembra y una conexión macho cónica para modificar la dirección y adaptar componentes."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión macho cónica",
+                        "description": "Permite realizar la conexión con un componente hembra compatible con la configuración cónica."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Cambio de dirección",
+                        "description": "Permite orientar la instalación en un ángulo de 90°."
                     }
                 ]
             },
@@ -291,18 +291,18 @@
                 "name": "CODO EN 90° HEMBRA PARA UN LADO",
                 "image": "/assets/images/products/bronce/codo 90° hembra para un lado2.jpeg",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Codo de 90° con conexión hembra en uno de sus lados para realizar un cambio de dirección en la instalación."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión hembra",
+                        "description": "Permite conectar un componente macho compatible en el extremo roscado."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Ángulo de 90°",
+                        "description": "Permite modificar el recorrido de la conexión en un ángulo recto."
                     }
                 ]
             },
@@ -310,23 +310,23 @@
                 "name": "CODO EN 90° HEMBRA PARA UN LADO",
                 "image": "/assets/images/products/bronce/codo 90° hembra para un lado3.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Codo de 90° con conexión hembra en uno de sus lados para realizar un cambio de dirección en la instalación."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión hembra",
+                        "description": "Permite conectar un componente macho compatible en el extremo roscado."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Ángulo de 90°",
+                        "description": "Permite modificar el recorrido de la conexión en un ángulo recto."
                     }
                 ]
             }
         ]
-    }, 
+    },
     "hembra-macho": {
         "category": "CONEXIONES EN BRONCE",
         "name": "CONECTORES HEMBRA A MACHO",
@@ -335,18 +335,18 @@
                 "name": "CONECTOR HEMBRA A MACHO",
                 "image": "/assets/images/products/bronce/conector hembra macho.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conector recto que permite adaptar una conexión hembra a una conexión macho."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Adaptación hembra a macho",
+                        "description": "Permite vincular componentes con conexiones de distinto género."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión recta",
+                        "description": "Mantiene alineados los componentes conectados sin modificar la dirección de la instalación."
                     }
                 ]
             },
@@ -354,18 +354,18 @@
                 "name": "CONECTOR HEMBRA A MACHO",
                 "image": "/assets/images/products/bronce/conector hembra macho2.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conector recto que permite adaptar una conexión hembra a una conexión macho."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Adaptación hembra a macho",
+                        "description": "Permite vincular componentes con conexiones de distinto género."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión recta",
+                        "description": "Mantiene alineados los componentes conectados sin modificar la dirección de la instalación."
                     }
                 ]
             },
@@ -373,18 +373,18 @@
                 "name": "CONECTOR HEMBRA A MACHO",
                 "image": "/assets/images/products/bronce/conector hembra macho3.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Conector recto que permite adaptar una conexión hembra a una conexión macho."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Adaptación hembra a macho",
+                        "description": "Permite vincular componentes con conexiones de distinto género."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Conexión recta",
+                        "description": "Mantiene alineados los componentes conectados sin modificar la dirección de la instalación."
                     }
                 ]
             }
@@ -398,18 +398,18 @@
                 "name": "CUPLA CON ROSCA INTERIOR",
                 "image": "/assets/images/products/bronce/cupla con rosca interior.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Cupla recta con rosca interior destinada a unir dos componentes con conexiones macho compatibles."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Rosca interior",
+                        "description": "Permite recibir componentes con rosca macho compatible."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Unión recta",
+                        "description": "Permite conectar componentes manteniendo el recorrido de la instalación en línea."
                     }
                 ]
             },
@@ -417,18 +417,18 @@
                 "name": "CUPLA DE REDUCCIÓN",
                 "image": "/assets/images/products/bronce/cupla de reduccion.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Cupla destinada a unir dos conexiones y realizar una transición entre diferentes tamaños de conexión."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Reducción de medida",
+                        "description": "Permite adaptar una conexión de un tamaño a otra de diferente diámetro."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Unión en línea",
+                        "description": "Mantiene los componentes alineados durante la transición entre medidas."
                     }
                 ]
             }
@@ -442,18 +442,18 @@
                 "name": "MANGUITO PARA TUBO DE POLIAMIDA",
                 "image": "/assets/images/products/bronce/manguito para tubo de poliamida.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Manguito destinado a utilizarse con tubos de poliamida como elemento de conexión o adaptación del tubo."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Compatible con tubo de poliamida",
+                        "description": "Está destinado a aplicaciones que utilizan tubos de poliamida."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "title": "Montaje sencillo",
+                        "description": "Su diseño permite realizar el montaje del tubo de forma práctica."
                     }
                 ]
             }
@@ -467,18 +467,18 @@
                 "name": "NIPLE DE EXTENSIÓN",
                 "image": "/assets/images/products/bronce/niple de extension.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Niple utilizado para prolongar una conexión y aumentar la distancia entre componentes conectados."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Extensión de conexión",
+                        "description": "Permite prolongar el punto de conexión para facilitar el montaje de otros componentes."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "title": "Montaje roscado",
+                        "description": "Su configuración permite realizar la instalación mediante conexiones roscadas compatibles."
                     }
                 ]
             }
@@ -492,18 +492,18 @@
                 "name": "RACORD PARA MANGUERA CON ROSCA HEMBRA",
                 "image": "/assets/images/products/bronce/racord para manguera con rosca hembra.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Racord destinado a conectar una manguera con un componente que dispone de una conexión roscada hembra."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión a manguera",
+                        "description": "Permite realizar la transición entre una manguera y el sistema de conexiones."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Rosca hembra",
+                        "description": "Dispone de una conexión hembra para recibir un componente con rosca macho compatible."
                     }
                 ]
             },
@@ -511,18 +511,18 @@
                 "name": "RACORD PARA MANGUERA CON ROSCA MACHO",
                 "image": "/assets/images/products/bronce/racord para manguera con rosca macho.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Racord destinado a conectar una manguera con un componente que dispone de una conexión roscada macho."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Conexión a manguera",
+                        "description": "Permite realizar la transición entre una manguera y el sistema de conexiones."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "svg": "assets/images/products/characteristics/security-verified.svg",
+                        "title": "Rosca macho",
+                        "description": "Dispone de una conexión macho para instalarse en un componente con rosca hembra compatible."
                     }
                 ]
             }
@@ -530,24 +530,24 @@
     },
     "TAPONES": {
         "category": "CONEXIONES EN BRONCE",
-        "name": "RACORDS",
+        "name": "TAPONES",
         "variants": [
             {
                 "name": "TAPÓN CON CABEZA HEXAGONAL",
                 "image": "/assets/images/products/bronce/tapon cabeza hexagonal.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Tapón roscado utilizado para cerrar una conexión y evitar que quede una salida abierta."
                 ],
                 "characteristics": [
                     {
                         "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "title": "Cierre de conexión",
+                        "description": "Permite cerrar una conexión roscada que no se encuentra en uso."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "title": "Cabeza hexagonal",
+                        "description": "La cabeza hexagonal permite realizar el montaje y desmontaje mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -555,18 +555,18 @@
                 "name": "TAPÓN CON CABEZA HEXAGONAL",
                 "image": "/assets/images/products/bronce/tapon cabeza hexagonal2.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Tapón roscado utilizado para cerrar una conexión y evitar que quede una salida abierta."
                 ],
                 "characteristics": [
                     {
                         "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "title": "Cierre de conexión",
+                        "description": "Permite cerrar una conexión roscada que no se encuentra en uso."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "title": "Cabeza hexagonal",
+                        "description": "La cabeza hexagonal permite realizar el montaje y desmontaje mediante una herramienta adecuada."
                     }
                 ]
             }
@@ -580,18 +580,18 @@
                 "name": "TUERCA",
                 "image": "/assets/images/products/bronce/tuerca.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Tuerca utilizada como elemento de fijación en conjuntos de conexión, permitiendo asegurar componentes mediante apriete."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Elemento de fijación",
+                        "description": "Permite sujetar y asegurar componentes de una conexión."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "title": "Apriete con herramienta",
+                        "description": "Su geometría permite realizar el ajuste mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -599,18 +599,18 @@
                 "name": "TUERCA",
                 "image": "/assets/images/products/bronce/tuerca2.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Tuerca utilizada como elemento de fijación en conjuntos de conexión, permitiendo asegurar componentes mediante apriete."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Elemento de fijación",
+                        "description": "Permite sujetar y asegurar componentes de una conexión."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "title": "Apriete con herramienta",
+                        "description": "Su geometría permite realizar el ajuste mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -618,18 +618,18 @@
                 "name": "TUERCA",
                 "image": "/assets/images/products/bronce/tuerca3.png",
                 "description": [
-                    "Unión recta para conectar tubos mediante sistema de compresión."
+                    "Tuerca utilizada como elemento de fijación en conjuntos de conexión, permitiendo asegurar componentes mediante apriete."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Conexión segura",
-                        "description": "Proporciona una unión firme y confiable."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Elemento de fijación",
+                        "description": "Permite sujetar y asegurar componentes de una conexión."
                     },
                     {
                         "svg": "assets/images/products/characteristics/wrench-tool.svg",
-                        "title": "Montaje práctico",
-                        "description": "Permite realizar conexiones de forma sencilla."
+                        "title": "Apriete con herramienta",
+                        "description": "Su geometría permite realizar el ajuste mediante una herramienta adecuada."
                     }
                 ]
             },
@@ -637,18 +637,18 @@
                 "name": "TUERCA UNIÓN DOBLE",
                 "image": "/assets/images/products/bronce/tuerca union doble.png",
                 "description": [
-                    "Conexión recta con rosca hembra para unir componentes de diferentes configuraciones."
+                    "Tuerca utilizada en conjuntos de unión para asegurar los componentes mediante un sistema de apriete."
                 ],
                 "characteristics": [
                     {
-                        "svg": "assets/images/products/characteristics/security-verified.svg",
-                        "title": "Rosca hembra",
-                        "description": "Permite conectar componentes con rosca macho."
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Elemento de unión",
+                        "description": "Forma parte del conjunto de conexión y permite asegurar sus componentes."
                     },
                     {
-                        "svg": "assets/images/products/characteristics/settings.svg",
-                        "title": "Construcción en bronce",
-                        "description": "Ofrece buena resistencia mecánica y a la corrosión."
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Apriete mecánico",
+                        "description": "Su diseño permite realizar el ajuste de la conexión mediante una herramienta adecuada."
                     }
                 ]
             }
