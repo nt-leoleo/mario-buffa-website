@@ -117,6 +117,7 @@ function createProductCard(product, productKey) {
     name.textContent = product.title;
 
     label.textContent = "Consultar ";
+    label.className = 'cardLabel';
 
     const arrow = document.createElement("span");
     arrow.innerHTML = rightArrowBlue;

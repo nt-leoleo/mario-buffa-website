@@ -1417,3 +1417,30 @@ div.services {
         }
     }
 }
+
+#splash-screen {
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    z-index: 99999;
+
+    .splash-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .splash-gif {
+        object-fit: contain;
+    }
+
+    #loading-percentage {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: v.$primary;
+    }
+}

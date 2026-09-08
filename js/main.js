@@ -3,7 +3,91 @@ import { headerBehavior } from './headerBehavior.js';
 import { burgerMenu } from './burgerMenu.js';
 
 async function init() {
+    console.log("ANTES DE CARGAR COMPONENTES");
+
     await loadComponents();
+
+    console.log("DESPUÉS DE CARGAR COMPONENTES");
+
+    const percentage = document.querySelector('#loading-percentage');
+
+    function updateLoadingPercentage(value) {
+        percentage.textContent = `${value}%`;
+    }
+
+    updateLoadingPercentage(0);
+
+    const resources = [
+        ...document.images,
+        ...document.querySelectorAll("video")
+    ];
+
+    console.log("Recursos detectados:", resources.length);
+
+    let loadedResources = 0;
+    const totalResources = resources.length;
+
+    console.log("Total de recursos:", totalResources);
+
+    function resourceLoaded() {
+        loadedResources++;
+
+        const progress = Math.round(
+            (loadedResources / totalResources) * 100
+        );
+
+        updateLoadingPercentage(progress);
+
+        console.log(
+            "Recursos cargados:",
+            loadedResources,
+            "/",
+            totalResources,
+            `(${progress}%)`
+        );
+        if (loadedResources === totalResources) {
+            updateLoadingPercentage(100);
+
+            setTimeout(() => {
+                document.querySelector("#splash-screen").style.display = "none";
+            }, 300);
+        }
+    }
+
+    resources.forEach(resource => {
+
+        if (resource.tagName === "IMG") {
+
+            if (resource.complete) {
+                resourceLoaded();
+            } else {
+                resource.addEventListener("load", resourceLoaded, {
+                    once: true
+                });
+
+                resource.addEventListener("error", resourceLoaded, {
+                    once: true
+                });
+            }
+
+            return;
+        }
+
+        if (resource.tagName === "VIDEO") {
+
+            if (resource.readyState >= 3) {
+                resourceLoaded();
+            } else {
+                resource.addEventListener("canplaythrough", resourceLoaded, {
+                    once: true
+                });
+
+                resource.addEventListener("error", resourceLoaded, {
+                    once: true
+                });
+            }
+        }
+    });
 
     headerBehavior();
     burgerMenu();
