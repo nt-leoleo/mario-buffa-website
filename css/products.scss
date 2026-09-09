@@ -619,7 +619,8 @@ html {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-radius: clamp(.4rem, .4vw, .6rem);
+            border: none;
+            border-radius: .001rem;
             box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.63);
 
             transition: all .2s ease;
@@ -629,23 +630,30 @@ html {
                 flex-direction: column;
                 cursor: pointer;
                 justify-content: space-between;
+                align-items: center;
                 gap: 1rem;
                 padding-block: .5rem;
                 font-size: clamp(1.1rem, 1.2vw, 1.4rem);
                 font-weight: 700;
 
                 & .cardLabel {
+                    background-color: white;
+                    color: black;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    box-shadow: .2rem .2rem 1rem black;
                     font-size: 1.2rem;
-                    font-weight: 500;
+                    font-weight: 600;
                     gap: 5%;
+                    border-radius: 1rem;
+                    padding-inline: 1rem;
+                    padding-block: .2rem;
 
                     & span {
-                        $minWidth: 1.3rem;
+                        $minWidth: 1.5rem;
                         min-width: $minWidth;
 
                         & svg {
@@ -657,7 +665,6 @@ html {
                     }
                 }
             }
-
 
             &:hover {
                 transform: scale(1.04);
@@ -678,7 +685,8 @@ html {
     .main-products,
     .other-products,
     .retenes,
-    .bronce {
+    .bronce,
+    .dir-hidraulica {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: clamp(2rem, 4vw, 6rem);
@@ -695,7 +703,8 @@ html {
         .main-products,
         .other-products,
         .retenes,
-        .bronce {
+        .bronce,
+        .dir-hidraulica {
             grid-template-columns: 1fr;
         }
     }
@@ -706,7 +715,8 @@ html {
         .main-products,
         .other-products,
         .retenes,
-        .bronce {
+        .bronce,
+        .dir-hidraulica {
             grid-template-columns: repeat(5, minmax(0, 1fr));
             gap: 2rem;
             max-width: 70%;

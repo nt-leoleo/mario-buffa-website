@@ -3,11 +3,7 @@ import { headerBehavior } from './headerBehavior.js';
 import { burgerMenu } from './burgerMenu.js';
 
 async function init() {
-    console.log("ANTES DE CARGAR COMPONENTES");
-
     await loadComponents();
-
-    console.log("DESPUÉS DE CARGAR COMPONENTES");
 
     const percentage = document.querySelector('#loading-percentage');
 
@@ -22,12 +18,8 @@ async function init() {
         ...document.querySelectorAll("video")
     ];
 
-    console.log("Recursos detectados:", resources.length);
-
     let loadedResources = 0;
     const totalResources = resources.length;
-
-    console.log("Total de recursos:", totalResources);
 
     function resourceLoaded() {
         loadedResources++;
@@ -38,13 +30,6 @@ async function init() {
 
         updateLoadingPercentage(progress);
 
-        console.log(
-            "Recursos cargados:",
-            loadedResources,
-            "/",
-            totalResources,
-            `(${progress}%)`
-        );
         if (loadedResources === totalResources) {
             updateLoadingPercentage(100);
 

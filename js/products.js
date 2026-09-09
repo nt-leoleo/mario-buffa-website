@@ -8,7 +8,8 @@ const rightArrowBlue = `
 
 const productCatalogs = [
     { data: "/data/retenes.json", selector: ".retenes" },
-    { data: "/data/bronce.json", selector: ".bronce" }
+    { data: "/data/bronce.json", selector: ".bronce" },
+    { data: "/data/dir-hidraulica.json", selector: ".dir-hidraulica" }
 ];
 
 const previewCatalogs = [

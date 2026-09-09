@@ -77,32 +77,6 @@
         ]
     },
 
-    "ret-direccion": {
-        "category": "RETENES HIDRÁULICOS",
-        "name": "RETENES DE CAJA DE DIRECCIÓN",
-        "images": [
-            "assets/images/products/retenes/retenesdireccion1.webp",
-            "assets/images/products/retenes/retenesdireccion2.webp",
-            "assets/images/products/retenes/retenesdireccion3.jpg",
-            "assets/images/products/retenes/retenesdireccion4.jpg"
-        ],
-        "characteristics": [
-            {
-                "svg": "assets/images/products/characteristics/droplet.svg",
-                "title": "Prevención de fugas",
-                "description": "Ayudan a mantener el fluido hidráulico dentro de la caja de dirección."
-            },
-            {
-                "svg": "assets/images/products/characteristics/arrows.svg",
-                "title": "Trabajo dinámico",
-                "description": "Están diseñados para trabajar con los movimientos propios de los componentes del sistema de dirección."
-            }
-        ],
-        "description": [
-            "Retenes diseñados para sistemas de dirección hidráulica, destinados a mantener el fluido dentro de la caja de dirección y evitar pérdidas durante el funcionamiento."
-        ]
-    },
-
     "fluropack": {
         "category": "RETENES HIDRÁULICOS",
         "name": "FLUROPACK",
@@ -216,6 +190,212 @@
         ],
         "description": [
             "La cuerda de O-Ring es un perfil elastomérico utilizado para fabricar juntas de sellado a medida. Es una alternativa práctica cuando no se dispone de una medida estándar de O-Ring."
+        ]
+    },
+    "guia-antifriccion": {
+        "category": "RETENES HIDRÁULICOS",
+        "name": "GUIA ANTIFRICCIÓN",
+        "images": [
+            "assets/images/products/retenes/guiaantifriccion1.jpg",
+            "assets/images/products/retenes/guiaantifriccion.jpg",
+            "assets/images/products/retenes/guiaantifriccion2.jpg"
+        ],
+        "characteristics": [
+            {
+                "svg": "assets/images/products/characteristics/ruler.svg",
+                "title": "Fabricación a medida",
+                "description": "Permite fabricar juntas adaptadas a diferentes diámetros según las necesidades de la aplicación."
+            },
+            {
+                "svg": "assets/images/products/characteristics/sliders.svg",
+                "title": "Versatilidad",
+                "description": "Puede utilizarse para fabricar juntas de diferentes dimensiones según la aplicación de sellado."
+            }
+        ],
+        "description": [
+            "La cuerda de O-Ring es un perfil elastomérico utilizado para fabricar juntas de sellado a medida. Es una alternativa práctica cuando no se dispone de una medida estándar de O-Ring."
+        ]
+    },
+    "sop-simple-efecto": {
+        "category": "RETENES HIDRÁULICOS",
+        "name": "SOPAPAS SIMPLE EFECTO",
+        "variants": [
+            {
+                "name": "SOPAPA SIMPLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopapasimpleefecto2.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            },{
+                "name": "SOPAPA SIMPLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopapasimpleefecto.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            },
+            {
+                "name": "SOPAPA CIEGA SIMPLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopsmpleefectociega2.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            },
+            {
+                "name": "SOPAPA ESTRELLA CIEGA SIMPLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopsmpleefectociegaestrella1.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            },
+            {
+                "name": "SOPAPA CONICA SIMPLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopsmpleefectolarga2.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            },
+            {
+                "name": "SOPAPA CONICA SIMPLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopsmpleefectolarga.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            }
+        ]
+    },
+    "sop-doble-efecto": {
+        "category": "RETENES HIDRÁULICOS",
+        "name": "SOPAPAS DOBLE EFECTO",
+        "variants": [
+            {
+                "name": "SOPAPA DOBLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopdobleefecto2.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            },
+            {
+                "name": "SOPAPA DOBLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopdobleefecto.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            },
+            {
+                "name": "SOPAPA DOBLE EFECTO",
+                "image": "/assets/images/products/retenes/sopapas/sopdobleefecto1.png",
+                "description": [
+                    "Conexión recta para unir dos tubos en línea mediante un sistema de compresión con virola."
+                ],
+                "characteristics": [
+                    {
+                        "svg": "assets/images/products/characteristics/settings.svg",
+                        "title": "Unión tubo a tubo",
+                        "description": "Permite conectar dos tubos manteniendo una disposición recta."
+                    },
+                    {
+                        "svg": "assets/images/products/characteristics/wrench-tool.svg",
+                        "title": "Montaje por compresión",
+                        "description": "La conexión se fija mediante el ajuste de la tuerca y la virola sobre el tubo."
+                    }
+                ]
+            }
         ]
     }
 }

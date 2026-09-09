@@ -1,12 +1,15 @@
 <div class="header-wrapper">
     <div class="burger-menu inactive">
+
         <div class="menu-header">
+
             <div class="header-bottom-item logo">
                 <a href="#">
                     <img src="/assets/images/MARIO-BUFFA-LOGO.ico" alt="Mario Buffa" data-="logo" width="100em">
                 </a>
                 <i>Mario Buffa</i>
             </div>
+
             <button class="close-menu">
                 <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -18,7 +21,9 @@
                     </g>
                 </svg>
             </button>
+
         </div>
+
         <nav>
             <ul>
                 <li class="navButton"><a href="/"> INICIO </a></li>
@@ -28,9 +33,13 @@
                 <li class="navButton"><a href="/productos"> PRODUCTOS </a></li>
             </ul>
         </nav>
+
     </div>
+
     <div class="header-container">
+
         <div class="pre-header header-top-item">
+
             <a href="https://api.whatsapp.com/send/?phone=5492664327955&text&type=phone_number&app_absent=0"
                 target="_blank">
                 <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -55,6 +64,7 @@
                 </svg>
                 266 432-7955
             </a>
+
             <a href="https://www.google.com/maps/place/Pje.+Alfio+Vito+Batti+130,+D5700+San+Luis/@-33.3159003,-66.3405449,17z/data=!4m6!3m5!1s0x95d43bfa60a73ee5:0x6d887ff583f47d42!8m2!3d-33.3159003!4d-66.3405449!16s%2Fg%2F11h42pv0df?hl=es-AR&entry=ttu&g_ep=EgoyMDI2MDcyNi4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank">
                 Pje. Alfio Vito Batti 130 D5700 San Luis
@@ -79,7 +89,9 @@
                     </g>
                 </svg>
             </a>
+
         </div>
+
         <header>
             <nav class="header-bottom-item mainNav">
                 <ul>
@@ -101,11 +113,36 @@
                     </g>
                 </svg>
             </button>
-            <div class="logo" class="header-bottom-item">
+
+            <div class="logo header-bottom-item">
                 <a href="/">
                     <img src="/assets/images/MARIO-BUFFA-LOGO.ico" alt="Mario Buffa" data-="logo" width="100em">
                 </a>
             </div>
+
+            <div class="header-search">
+                <form class="header-search-form" role="search">
+                    <svg class="header-search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+
+                    <input id="headerProductSearch" type="search" placeholder="Buscar productos..." autocomplete="off"
+                        aria-label="Buscar productos">
+
+                    <button type="button" class="header-search-clear" id="headerSearchClear"
+                        aria-label="Limpiar búsqueda">
+                        ×
+                    </button>
+                </form>
+
+                <div class="header-search-results" id="headerSearchResults">
+                </div>
+            </div>
+
         </header>
+
     </div>
 </div>

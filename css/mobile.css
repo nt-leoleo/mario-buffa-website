@@ -1340,4 +1340,9 @@ body .hCarousel .carousel-item img {
   font-size: 1.6rem;
   font-weight: 600;
   color: #0a91c6;
+}
+
+.header-search form {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=mobile.css.map */

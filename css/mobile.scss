@@ -1444,3 +1444,10 @@ div.services {
         color: v.$primary;
     }
 }
+
+.header-search {
+    & form {
+        display: flex;
+        flex-direction: row;
+    }
+}

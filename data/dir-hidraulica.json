@@ -1,0 +1,57 @@
+{
+    "ret-direccion": {
+        "category": "DIRECCÓN HIDRÁULICA",
+        "name": "RETENES DE CAJA DE DIRECCIÓN",
+        "images": [
+            "assets/images/products/retenes/retenesdireccion1.webp",
+            "assets/images/products/retenes/retenesdireccion2.webp",
+            "assets/images/products/retenes/retenesdireccion3.jpg",
+            "assets/images/products/retenes/retenesdireccion4.jpg"
+        ],
+        "characteristics": [
+            {
+                "svg": "assets/images/products/characteristics/droplet.svg",
+                "title": "Prevención de fugas",
+                "description": "Ayudan a mantener el fluido hidráulico dentro de la caja de dirección."
+            },
+            {
+                "svg": "assets/images/products/characteristics/arrows.svg",
+                "title": "Trabajo dinámico",
+                "description": "Están diseñados para trabajar con los movimientos propios de los componentes del sistema de dirección."
+            }
+        ],
+        "description": [
+            "Retenes diseñados para sistemas de dirección hidráulica, destinados a mantener el fluido dentro de la caja de dirección y evitar pérdidas durante el funcionamiento."
+        ]
+    },
+    "fuelles": {
+        "category": "DIRECCIÓN HIDRÁULICA",
+        "name": "FUELLES",
+        "images": [
+            "assets/images/products/direccion/fuelles1.jpg",
+            "assets/images/products/direccion/fuelles2.webp",
+            "assets/images/products/direccion/fuelles3.webp"
+        ],
+        "characteristics": [
+            {
+                "svg": "assets/images/products/characteristics/dust.svg",
+                "title": "Protección contra contaminantes",
+                "description": "Ayudan a impedir el ingreso de polvo, suciedad y otros contaminantes hacia los componentes protegidos."
+            },
+            {
+                "svg": "assets/images/products/characteristics/shield.svg",
+                "title": "Protección de componentes",
+                "description": "Cubren y protegen componentes móviles frente a agentes externos y condiciones del entorno."
+            },
+            {
+                "svg": "assets/images/products/characteristics/arrows.svg",
+                "title": "Flexibilidad",
+                "description": "Su diseño flexible permite acompañar el movimiento de los componentes que protegen."
+            }
+        ],
+        "description": [
+            "Los fuelles son elementos flexibles utilizados para proteger componentes móviles de la dirección hidráulica frente al ingreso de polvo, suciedad y otros contaminantes.",
+            "Su diseño permite acompañar el movimiento de los componentes mientras mantiene protegidas las partes internas del sistema."
+        ]
+    }
+}
