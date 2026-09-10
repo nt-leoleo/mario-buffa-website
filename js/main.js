@@ -3,12 +3,35 @@ import { headerBehavior } from './headerBehavior.js';
 import { burgerMenu } from './burgerMenu.js';
 
 async function init() {
-    await loadComponents();
-
+    const splash = document.querySelector('#splash-screen');
     const percentage = document.querySelector('#loading-percentage');
+    const status = document.querySelector('#loading-status');
 
     function updateLoadingPercentage(value) {
-        percentage.textContent = `${value}%`;
+        if (percentage) percentage.textContent = `${value}%`;
+    }
+
+    let hasLoadingError = false;
+
+    function showLoadingStatus(message) {
+        if (!status) return;
+        hasLoadingError = true;
+        status.hidden = false;
+        status.textContent = message;
+    }
+
+    let dismissTimer;
+
+    function dismissSplash() {
+        if (!splash) return;
+        clearTimeout(dismissTimer);
+        splash.style.display = 'none';
+    }
+
+    try {
+        await loadComponents();
+    } catch (error) {
+        showLoadingStatus('Algunos elementos no pudieron cargarse.');
     }
 
     updateLoadingPercentage(0);
@@ -19,38 +42,51 @@ async function init() {
     ];
 
     let loadedResources = 0;
+    let failedResources = 0;
     const totalResources = resources.length;
+    const settledResources = new WeakSet();
 
-    function resourceLoaded() {
+    dismissTimer = setTimeout(() => {
+        showLoadingStatus('La carga está tardando más de lo esperado.');
+        setTimeout(dismissSplash, 300);
+    }, 5000);
+
+    function resourceLoaded(resource, failed = false) {
+        if (settledResources.has(resource)) return;
+        settledResources.add(resource);
         loadedResources++;
+        if (failed) failedResources++;
 
-        const progress = Math.round(
-            (loadedResources / totalResources) * 100
-        );
+        const progress = totalResources
+            ? Math.round((loadedResources / totalResources) * 100)
+            : 100;
 
         updateLoadingPercentage(progress);
 
-        if (loadedResources === totalResources) {
+        if (loadedResources >= totalResources) {
             updateLoadingPercentage(100);
+            if (failedResources) {
+                showLoadingStatus('Algunos recursos no pudieron cargarse.');
+            }
 
-            setTimeout(() => {
-                document.querySelector("#splash-screen").style.display = "none";
-            }, 300);
+            setTimeout(dismissSplash, hasLoadingError ? 1200 : 300);
         }
     }
+
+    if (!totalResources) dismissSplash();
 
     resources.forEach(resource => {
 
         if (resource.tagName === "IMG") {
 
             if (resource.complete) {
-                resourceLoaded();
+                resourceLoaded(resource, !resource.naturalWidth);
             } else {
-                resource.addEventListener("load", resourceLoaded, {
+                resource.addEventListener("load", () => resourceLoaded(resource), {
                     once: true
                 });
 
-                resource.addEventListener("error", resourceLoaded, {
+                resource.addEventListener("error", () => resourceLoaded(resource, true), {
                     once: true
                 });
             }
@@ -61,13 +97,13 @@ async function init() {
         if (resource.tagName === "VIDEO") {
 
             if (resource.readyState >= 3) {
-                resourceLoaded();
+                resourceLoaded(resource);
             } else {
-                resource.addEventListener("canplaythrough", resourceLoaded, {
+                resource.addEventListener("loadeddata", () => resourceLoaded(resource), {
                     once: true
                 });
 
-                resource.addEventListener("error", resourceLoaded, {
+                resource.addEventListener("error", () => resourceLoaded(resource, true), {
                     once: true
                 });
             }

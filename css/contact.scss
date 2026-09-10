@@ -1,6 +1,6 @@
 @use "sass:color";
 
-@use '_reset';
+@use '_base';
 @use '_variables' as v;
 
 html body {
@@ -19,7 +19,7 @@ html body {
         position: relative;
         display: flex;
         flex-direction: column;
-        padding-top: clamp(6rem, 6.5vw, 7rem);
+        padding-top: clamp(4.5rem, 5vw, 5.5rem);
         z-index: 1;
     }
 
@@ -30,8 +30,8 @@ html body {
 
     & p {
         padding: {
-            inline: clamp(.1rem, 5vw, 10rem);
-            bottom: clamp(.1rem, 2vw, 3rem);
+            inline: clamp(.1rem, 3vw, 5rem);
+            bottom: clamp(.1rem, 1.5vw, 2rem);
             top: clamp(.1rem, .3vw, 1rem);
         }
 
@@ -48,13 +48,13 @@ html body {
 .main-text {
     text-align: center;
     border-block: .2rem solid coral;
-    padding-block: clamp(1rem, 4vw + .02rem, 7rem);
-    margin-bottom: clamp(4rem, 10vw, 15rem);
+    padding-block: clamp(2.5rem, 3.5vw, 4rem);
+    margin-bottom: clamp(3rem, 4vw, 6rem);
 
     & .mario-buffa {
         color: white;
-        font-size: clamp(6rem, 8vw, 10rem);
-        line-height: clamp(5.8rem, 10vw, 14rem);
+        font-size: clamp(4.5rem, 7vw, 7rem);
+        line-height: clamp(4.8rem, 7.5vw, 8rem);
         font-weight: 600;
         margin: 0;
     }
@@ -63,14 +63,14 @@ html body {
         color: coral;
         font-size: clamp(1.4rem, 1.8vw, 1.9rem);
         font-weight: 400;
-        padding-block: clamp(1.5rem, 4vw, 7rem);
+        padding-block: clamp(1rem, 2vw, 3rem);
     }
 
     & h4 {
         // color: white;
         font-size: 1.4rem;
         font-weight: 400;
-        padding-block: clamp(1.5rem, 4vw, 7rem);
+        padding-block: clamp(1rem, 2vw, 3rem);
     }
 
     & .festo {
@@ -85,7 +85,7 @@ html body {
 .cards-container {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vw + 0.1rem, 3rem);
+    gap: clamp(1rem, 1.5vw, 2rem);
 
     @media (min-width: v.$desktop) {
         display: grid;
@@ -98,13 +98,13 @@ html body {
         justify-content: center;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.274);
-        border-radius: clamp(1rem, 3vw, 5rem);
+        border-radius: v.$radius-card;
         border: .1rem solid white;
 
-        padding: 2rem;
+        padding: v.$space-card;
 
         & svg {
-            width: clamp(4rem, 6vw, 8rem);
+            width: clamp(4rem, 5vw, 6rem);
             // outline: 1px solid red;
             filter: invert(100%);
         }
@@ -115,11 +115,11 @@ html body {
         }
 
         & h4 {
-            font-size: 2rem;
+            font-size: clamp(1.25rem, 1.8vw, 1.6rem);
         }
 
         & strong {
-            font-size: 1.7rem;
+            font-size: clamp(1.1rem, 1.5vw, 1.4rem);
         }
     }
 }
@@ -129,8 +129,8 @@ html body {
     flex-direction: column;
     justify-content: center;
     // align-items: center;
-    gap: clamp(1rem, 2vw + 0.5rem, 3rem);
-    padding-block: clamp(3rem, 5vw, 7rem);
+    gap: clamp(1.5rem, 2vw, 2rem);
+    padding-block: v.$space-section;
 
     @media (min-width: v.$desktop) {
         display: grid;
@@ -148,7 +148,7 @@ html body {
 
         padding: {
             inline: v.$globalMargin;
-            block: clamp(1rem, 2.5vw + .1rem, 4rem);
+            block: clamp(1.5rem, 2vw, 2.5rem);
         }
 
         & h3 {
@@ -157,10 +157,10 @@ html body {
         }
 
         & iframe {
-            min-height: clamp(25rem, 30vw, 40rem);
+            min-height: clamp(20rem, 24vw, 30rem);
             border-radius: 1.2rem;
             border: .1rem solid white;
-            transition: all .2s ease;
+            transition: transform .2s ease;
 
             &:hover,
             &:active {
@@ -178,7 +178,7 @@ html body {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            padding-block: clamp(1.5rem, 2vw, 4rem);
+            padding-block: v.$space-section-compact;
         }
     }
 

@@ -1,9 +1,8 @@
 // =================================================
-*, *::before, *::after, button:focus {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    outline: none;
 }
 html {
     font-size: 100%;
@@ -25,6 +24,10 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
 }
 a {
     color: inherit;

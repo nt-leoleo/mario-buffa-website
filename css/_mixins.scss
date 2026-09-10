@@ -1,0 +1,13 @@
+@use '_variables' as v;
+
+@mixin container1 {
+    @media (min-width: v.$large-content) {
+        padding-inline: v.$container-padding;
+    }
+}
+
+@mixin container2 {
+    @media (min-width: v.$large-content) {
+        padding-inline: v.$narrow-container-padding;
+    }
+}
