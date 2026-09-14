@@ -1,6 +1,7 @@
 import { loadComponents } from './loader.js';
 import { headerBehavior } from './headerBehavior.js';
 import { burgerMenu } from './burgerMenu.js';
+import { headerSearch } from './headerSearch.js';
 
 async function init() {
     const splash = document.querySelector('#splash-screen');
@@ -29,7 +30,8 @@ async function init() {
     }
 
     try {
-        await loadComponents();
+        await loadComponents(); 
+        await headerSearch();
     } catch (error) {
         showLoadingStatus('Algunos elementos no pudieron cargarse.');
     }

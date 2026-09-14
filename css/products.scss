@@ -695,7 +695,7 @@ html {
     }
 }
 
-@media (max-width: v.$tablet - 1px) {
+@media (max-width: v.$tablet) {
     .p-heading {
         padding-block: 2rem;
     }

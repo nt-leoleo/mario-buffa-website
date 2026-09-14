@@ -34,7 +34,8 @@ const modalElements = {
 
 const productState = {
     products: new Map(),
-    initialized: false
+    initialized: false,
+    modalController: null
 };
 
 async function loadJson(url) {
@@ -143,7 +144,16 @@ async function loadProductCatalog(config) {
 
         products.forEach(product => {
             const productKey = `${config.data}::${product.id}`;
-            productState.products.set(productKey, product);
+            const productEntry = { product, variantIndex: 0 };
+
+            productState.products.set(productKey, productEntry);
+            product.items.forEach((_, index) => {
+                productState.products.set(`${productKey}::${index}`, {
+                    product,
+                    variantIndex: index
+                });
+            });
+
             fragment.appendChild(createProductCard(product, productKey));
         });
 
@@ -262,12 +272,22 @@ function createProductModal(elements) {
         render();
     }
 
-    function open(product) {
+    function open(productEntry, requestedIndex = 0) {
+        const product = productEntry?.product ?? productEntry;
+        const initialIndex = Number.isInteger(productEntry?.variantIndex)
+            ? productEntry.variantIndex
+            : Number.isInteger(requestedIndex)
+                ? requestedIndex
+                : 0;
+
         if (!product?.items.length) return;
 
         state.currentProduct = product;
         state.currentItems = product.items;
-        state.currentIndex = 0;
+        state.currentIndex = Math.min(
+            Math.max(initialIndex, 0),
+            Math.max(product.items.length - 1, 0)
+        );
         state.isOpen = true;
         render();
         elements.root.classList.add("active");
@@ -302,7 +322,10 @@ function createProductModal(elements) {
 function setupProductEvents(modalController) {
     document.addEventListener("click", event => {
         const card = event.target.closest("[data-product-key]");
-        if (card) modalController.open(productState.products.get(card.dataset.productKey));
+        if (!card) return;
+
+        const productEntry = productState.products.get(card.dataset.productKey);
+        modalController.open(productEntry);
     });
 
     document.addEventListener("keydown", event => {
@@ -310,8 +333,35 @@ function setupProductEvents(modalController) {
         const card = event.target.closest("[data-product-key]");
         if (!card) return;
         event.preventDefault();
-        modalController.open(productState.products.get(card.dataset.productKey));
+
+        const productEntry = productState.products.get(card.dataset.productKey);
+        modalController.open(productEntry);
     });
+}
+
+function openProductFromURL() {
+    if (!productState.modalController) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const productKey = params.get("product");
+
+    if (!productKey) return;
+
+    const productEntry = productState.products.get(productKey)
+        || productState.products.get(productKey.replace(/::\d+$/, ""));
+
+    if (!productEntry) {
+        console.warn(`Producto no encontrado: ${productKey}`);
+        return;
+    }
+
+    productState.modalController.open(productEntry);
+
+    window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+    );
 }
 
 async function loadCatalog() {
@@ -440,8 +490,8 @@ async function initializeProductsPage() {
     if (!modalElements.root || productState.initialized) return;
     productState.initialized = true;
 
-    const modalController = createProductModal(modalElements);
-    setupProductEvents(modalController);
+    productState.modalController = createProductModal(modalElements);
+    setupProductEvents(productState.modalController);
 
     await Promise.all([
         ...productCatalogs.map(loadProductCatalog),
@@ -449,6 +499,7 @@ async function initializeProductsPage() {
         ...previewCatalogs.map(loadPreview)
     ]);
 
+    openProductFromURL();
     initializeCarousels();
     initializeShowMore();
 }

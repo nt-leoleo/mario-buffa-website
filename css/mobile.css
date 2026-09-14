@@ -463,6 +463,10 @@ header .header-search {
   flex: 0 0 100%;
   width: 100%;
   display: flex;
+  opacity: 0.7;
+}
+header .header-search.active {
+  opacity: 1;
 }
 header .header-search-form {
   display: flex;
@@ -471,12 +475,83 @@ header .header-search-form {
 }
 header .header-search-icon {
   flex: 0 0 auto;
-  width: clamp(1.5rem, 4vw, 2.5rem);
-  height: clamp(1.5rem, 4vw, 2.5rem);
+  width: clamp(1.5rem, 2vw, 2.5rem);
+  height: clamp(1.5rem, 2vw, 2.5rem);
+  padding-inline: 0.4rem;
 }
 header .header-search input {
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-bottom: 0.15rem solid rgba(255, 255, 255, 0.603);
   min-width: 0;
   flex: 1 1 auto;
+  background-color: transparent;
+  padding-bottom: 0.5rem;
+}
+header .header-search input:focus {
+  outline: none;
+  filter: invert(100%);
+}
+header .header-search input.active {
+  outline: none;
+  filter: invert(100%);
+}
+header .header-search input.active .header-search {
+  opacity: 1;
+}
+header .header-search {
+  padding-inline: 1rem;
+}
+header .header-search-results {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  padding: 1rem;
+  opacity: 0;
+  transition: all 0.1s ease;
+  gap: 1rem;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+@media (max-width: 1300px) {
+  header .header-search-results {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 1301px) {
+  header .header-search-results {
+    margin-top: clamp(2rem, 2.5vw, 3rem);
+  }
+}
+header .header-search-results.active {
+  opacity: 1;
+  border-bottom: 0.2rem solid #C79A3A;
+  border-left: 0.2rem solid #C79A3A;
+  border-right: 0.2rem solid #C79A3A;
+}
+header .header-search-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+header .header-search-result-name {
+  display: block;
+  font-weight: 600;
+}
+header .header-search-result-category {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.815);
+}
+header .search-match {
+  color: #0a91c6;
 }
 @media (min-width: 1300px) {
   header {
@@ -1392,7 +1467,7 @@ body .hCarousel .carousel-item img {
   text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .burger-menu {
     overflow-y: auto;
   }

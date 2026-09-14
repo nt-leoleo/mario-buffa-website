@@ -678,7 +678,7 @@ html body {
   transition: all 0.2s ease;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .p-heading {
     padding-block: 2rem;
   }
