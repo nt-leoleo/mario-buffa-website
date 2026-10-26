@@ -187,7 +187,6 @@ a:hover {
     background-position: center;
     background-size: cover;
     aspect-ratio: 16/5;
-    padding: 1rem;
   }
   body main div.services {
     grid-template-columns: repeat(3, 1fr);
@@ -590,16 +589,19 @@ body .hCarousel .carousel-item img {
 .hero .hero-content {
   text-align: left;
   color: white;
-  text-shadow: 0.1rem 0.1rem 0rem black;
+  text-shadow: 0.1rem 0.1rem 0.2rem black;
 }
 .hero .hero-content h1 {
   font-size: clamp(1.4rem, 1.8vw, 2.5rem);
-  max-width: 50%;
 }
-@media (min-width: 1300px) {
-  .hero {
-    padding-inline: clamp(10rem, 18vw, 20rem);
-  }
+.hero .hero-content div {
+  background-color: rgba(10, 145, 198, 0.8);
+  padding: 3rem 2rem 1rem 2rem;
+  border-top-right-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+.hero .hero-content div:hover {
+  background-color: #0a91c6;
 }
 
 .services {
@@ -754,7 +756,7 @@ body .hCarousel .carousel-item img {
 .festo-info {
   padding-block: clamp(3rem, 5vw, 6rem);
   padding-inline: clamp(1rem, 3vw, 5rem);
-  padding-bottom: 0;
+  padding-bottom: clamp(1rem, 3vw, 5rem);
 }
 .festo-info .title {
   padding-block: 1rem;
@@ -807,17 +809,157 @@ body .hCarousel .carousel-item img {
 }
 
 .festo-training {
-  padding-top: clamp(2rem, 3vw, 4rem);
+  padding-block: clamp(2rem, 3vw, 4rem);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
-  background-image: url(/assets/images/bg-pattern3.png);
+  background-color: rgb(23, 26, 29);
+  color: whitesmoke;
 }
-.festo-training h3 {
+.festo-training .ft-title2 {
   padding-block: clamp(0.5rem, 1vw, 2rem);
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+.festo-training .ft-title {
+  color: #C79A3A;
+  font-weight: 800;
+}
+.festo-training > div:first-child i {
+  display: block;
+  text-align: center;
+}
+.festo-training .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 1300px) {
   .festo-training {
     padding-inline: clamp(10rem, 18vw, 20rem);
   }
+}
+
+.festo-training-images-container {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+@media (max-width: 1200px) {
+  .festo-training-images-container {
+    padding-inline: clamp(1rem, 1.8vw, 2rem);
+  }
+}
+
+.ft-image-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #171a1d;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  cursor: zoom-in;
+}
+.ft-image-card__image {
+  display: block;
+  width: 100%;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 500ms ease;
+}
+.ft-image-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: clamp(1rem, 3vw, 2rem);
+  text-align: center;
+  background: linear-gradient(145deg, rgba(10, 13, 16, 0.78), rgba(10, 13, 16, 0.92));
+  opacity: 0;
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+.ft-image-card__icon {
+  width: clamp(2rem, 4vw, 3rem);
+  height: clamp(2rem, 4vw, 3rem);
+  flex-shrink: 0;
+  color: #C79A3A;
+  transform: translateY(10px) rotate(-45deg);
+  opacity: 0;
+  transition: transform 450ms ease, opacity 350ms ease;
+}
+.ft-image-card__title {
+  margin: 0;
+  color: whitesmoke;
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1.4;
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 450ms ease, opacity 350ms ease;
+  transition-delay: 70ms;
+}
+.ft-image-card__description {
+  max-width: 32ch;
+  margin: 0;
+  color: rgba(245, 245, 245, 0.82);
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  line-height: 1.65;
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 450ms ease, opacity 350ms ease;
+  transition-delay: 130ms;
+}
+@media (hover: hover) and (pointer: fine) {
+  .ft-image-card:hover .ft-image-card__image {
+    transform: scale(1.06);
+    filter: brightness(0.65);
+  }
+  .ft-image-card:hover .ft-image-card__overlay {
+    opacity: 1;
+  }
+  .ft-image-card:hover .ft-image-card__icon,
+  .ft-image-card:hover .ft-image-card__title,
+  .ft-image-card:hover .ft-image-card__description {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .ft-image-card:hover .ft-image-card__icon {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+.ft-image-card:focus-within {
+  outline: 2px solid #C79A3A;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ft-image-card,
+  .ft-image-card__image,
+  .ft-image-card__overlay,
+  .ft-image-card__icon,
+  .ft-image-card__title,
+  .ft-image-card__description {
+    transition: none !important;
+  }
+}
+#trainingImageModal .modal-header {
+  background-color: #171a1d;
+  color: rgba(245, 245, 245, 0.767);
+  font-weight: 600;
+}
+#trainingImageModal .modal-content {
+  background-color: #171a1d;
+  padding: 1rem;
+}
+#trainingImageModal .modal-body {
+  padding-top: 1rem;
 }
 
 .title {
@@ -826,6 +968,8 @@ body .hCarousel .carousel-item img {
   border-bottom: 0.2rem solid #0a91c6;
   padding-bottom: clamp(1rem, 4vw, 3rem);
   padding-inline: clamp(1rem, 1.8vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
 .title2 {
@@ -835,6 +979,8 @@ body .hCarousel .carousel-item img {
   background: linear-gradient(135deg, #0a91c6, #0d1f3a);
   padding-block: clamp(2rem, 3vw, 5rem);
   padding-inline: clamp(5rem, 7vw, 9rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
 .services2 {
@@ -927,6 +1073,7 @@ body .hCarousel .carousel-item img {
 .products .product-categories .categories-track {
   display: flex;
   align-items: stretch;
+  justify-content: center;
   transition: transform 0.4s ease;
 }
 .products .product-categories .category-card {

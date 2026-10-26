@@ -69,7 +69,6 @@
     background-position: center;
     background-size: cover;
     aspect-ratio: 16/5;
-    padding: 1rem;
   }
   body main div.services {
     grid-template-columns: repeat(3, 1fr);

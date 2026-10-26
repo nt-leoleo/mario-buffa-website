@@ -58,9 +58,10 @@ function normalizeProduct(id, product) {
             : [],
         characteristics: Array.isArray(product.characteristics)
             ? product.characteristics.filter(characteristic => characteristic && typeof characteristic === "object")
-            : []
+            : []    
     };
 
+    
     const variants = Array.isArray(product.variants)
         ? product.variants.filter(variant => variant && typeof variant === "object")
         : [];

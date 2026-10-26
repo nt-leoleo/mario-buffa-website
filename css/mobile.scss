@@ -328,9 +328,11 @@ header {
         gap: 1rem;
         border-bottom-left-radius: .2rem;
         border-bottom-right-radius: .2rem;
+
         @media (max-width: 1300px) {
             margin-top: 2rem;
         }
+
         @media (min-width: 1301px) {
             margin-top: clamp(2rem, 2.5vw, 3rem);
         }
@@ -422,15 +424,26 @@ body {
     & .hero-content {
         text-align: left;
         color: white;
-        text-shadow: .1rem .1rem 0rem black;
+        text-shadow: .1rem .1rem .2rem black;
 
         & h1 {
             font-size: clamp(1.4rem, 1.8vw, 2.5rem);
-            max-width: 50%;
+            // max-width: 50%;
+        }
+
+        & div {
+            background-color: rgba(v.$primary, .8);
+            padding: 3rem 2rem 1rem 2rem;
+            border-top-right-radius: .5rem;
+            transition: all .2s ease;
+
+            &:hover {
+                background-color: rgba(v.$primary, 1);
+            }
         }
     }
 
-    @include m.container1;
+    // @include m.container1;
 }
 
 .services {
@@ -626,10 +639,8 @@ div.services {
     padding: {
         block: clamp(3rem, 5vw, 6rem);
         inline: clamp(1rem, 3vw, 5rem);
-        bottom: 0;
+        bottom: clamp(1rem, 3vw, 5rem);
     }
-
-    ;
 
     & .title {
         padding-block: 1rem;
@@ -696,16 +707,212 @@ div.services {
     @include m.container1;
 }
 
-.festo-training {
-    padding-top: clamp(2rem, 3vw, 4rem);
-    padding-inline: v.$globalMargin;
-    background-image: url(/assets/images/bg-pattern3.png);
 
-    & h3 {
+.festo-training {
+    padding-block: clamp(2rem, 3vw, 4rem);
+    padding-inline: v.$globalMargin;
+    background-color: rgb(23, 26, 29);
+    color: whitesmoke;
+
+    .ft-title2 {
         padding-block: clamp(.5rem, 1vw, 2rem);
+        font-size: clamp(.85rem, 1.4vw, 1.1rem);
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .ft-title {
+        color: v.$secondary;
+        font-weight: 800;
+    }
+
+    >div:first-child {
+        i {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    & .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     @include m.container1;
+}
+
+.festo-training-images-container {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    @media (max-width: v.$desktop) {
+        padding-inline: v.$globalMargin;
+    }
+}
+
+.ft-image-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #171a1d;
+    box-shadow: 0 4px 14px rgb(0 0 0 / 18%);
+    cursor: zoom-in;
+
+    // Imagen
+    &__image {
+        display: block;
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+
+        transition:
+            transform 650ms cubic-bezier(.2, .7, .2, 1),
+            filter 500ms ease;
+    }
+
+    // Capa oscura
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .85rem;
+
+        padding: clamp(1rem, 3vw, 2rem);
+        text-align: center;
+
+        background: linear-gradient(145deg,
+                rgb(10 13 16 / 78%),
+                rgb(10 13 16 / 92%));
+
+        opacity: 0;
+        transition: opacity 400ms ease;
+
+        pointer-events: none;
+    }
+
+    // Ícono
+    &__icon {
+        width: clamp(2rem, 4vw, 3rem);
+        height: clamp(2rem, 4vw, 3rem);
+        flex-shrink: 0;
+
+        color: v.$secondary;
+
+        transform: translateY(10px) rotate(-45deg);
+        opacity: 0;
+
+        transition:
+            transform 450ms ease,
+            opacity 350ms ease;
+    }
+
+    // Texto principal
+    &__title {
+        margin: 0;
+        color: whitesmoke;
+
+        font-size: clamp(.85rem, 1.4vw, 1.1rem);
+        font-weight: 800;
+        letter-spacing: .09em;
+        line-height: 1.4;
+
+        transform: translateY(12px);
+        opacity: 0;
+
+        transition:
+            transform 450ms ease,
+            opacity 350ms ease;
+
+        transition-delay: 70ms;
+    }
+
+    // Descripción
+    &__description {
+        max-width: 32ch;
+        margin: 0;
+
+        color: rgb(245 245 245 / 82%);
+        font-size: clamp(.8rem, 1.1vw, .95rem);
+        line-height: 1.65;
+
+        transform: translateY(12px);
+        opacity: 0;
+
+        transition:
+            transform 450ms ease,
+            opacity 350ms ease;
+
+        transition-delay: 130ms;
+    }
+
+    // Interacción con mouse
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            .ft-image-card__image {
+                transform: scale(1.06);
+                filter: brightness(.65);
+            }
+
+            .ft-image-card__overlay {
+                opacity: 1;
+            }
+
+            .ft-image-card__icon,
+            .ft-image-card__title,
+            .ft-image-card__description {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .ft-image-card__icon {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+    }
+
+    // Teclado: cuando la tarjeta recibe foco
+    &:focus-within {
+        outline: 2px solid v.$secondary;
+        outline-offset: 4px;
+    }
+}
+
+// Respeta las preferencias de accesibilidad
+@media (prefers-reduced-motion: reduce) {
+
+    .ft-image-card,
+    .ft-image-card__image,
+    .ft-image-card__overlay,
+    .ft-image-card__icon,
+    .ft-image-card__title,
+    .ft-image-card__description {
+        transition: none !important;
+    }
+}
+
+#trainingImageModal {
+    & .modal-header {
+        background-color: #171a1d;
+        color: rgba(245, 245, 245, 0.767);
+        font-weight: 600;
+    }
+
+    & .modal-content {
+        background-color: #171a1d;
+        padding: 1rem;
+    }
+
+    & .modal-body {
+        padding-top: 1rem;
+    }
 }
 
 .title {
@@ -714,6 +921,8 @@ div.services {
     border-bottom: .2rem solid v.$primary;
     padding-bottom: clamp(1rem, 4vw, 3rem);
     padding-inline: v.$globalMargin;
+    font-weight: 800;
+    letter-spacing: .05em;
 }
 
 .title2 {
@@ -731,6 +940,8 @@ div.services {
         block: clamp(2rem, 3vw, 5rem);
         inline: clamp(5rem, 7vw, 9rem);
     }
+    font-weight: 800;
+    letter-spacing: .05em;
 }
 
 .services2 {
@@ -838,6 +1049,7 @@ div.services {
         .categories-track {
             display: flex;
             align-items: stretch;
+            justify-content: center;
 
             transition: transform 0.4s ease;
         }
