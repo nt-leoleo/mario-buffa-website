@@ -419,9 +419,6 @@ html body {
     gap: clamp(1rem, 2vw, 4rem);
     padding-block: clamp(1rem, 2vw, 4rem);
   }
-  .catalog .catalog-grid .catalog-card:nth-child(n+9) {
-    display: block;
-  }
 }
 @media (min-width: 1300px) {
   .container-products-preview .title {

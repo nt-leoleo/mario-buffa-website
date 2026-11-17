@@ -595,7 +595,7 @@ body .hCarousel .carousel-item img {
   font-size: clamp(1.4rem, 1.8vw, 2.5rem);
 }
 .hero .hero-content div {
-  background-color: rgba(10, 145, 198, 0.8);
+  background: linear-gradient(to right, #0a91c6, rgba(10, 145, 198, 0.8));
   padding: 3rem 2rem 1rem 2rem;
   border-top-right-radius: 0.5rem;
   transition: all 0.2s ease;
@@ -1623,9 +1623,9 @@ body .hCarousel .carousel-item img {
   }
   .burger-menu .menu-header .close-menu {
     display: grid;
-    width: 2.75rem;
-    min-width: 2.75rem;
-    height: 2.75rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    height: 1.5rem;
     place-items: center;
   }
   .burger-menu nav {

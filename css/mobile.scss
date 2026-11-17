@@ -432,7 +432,9 @@ body {
         }
 
         & div {
-            background-color: rgba(v.$primary, .8);
+            background: linear-gradient(to right,
+                    rgba(v.$primary, 1),
+                    rgba(v.$primary, .8));
             padding: 3rem 2rem 1rem 2rem;
             border-top-right-radius: .5rem;
             transition: all .2s ease;
@@ -747,6 +749,7 @@ div.services {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
     @media (max-width: v.$desktop) {
         padding-inline: v.$globalMargin;
     }
@@ -940,6 +943,7 @@ div.services {
         block: clamp(2rem, 3vw, 5rem);
         inline: clamp(5rem, 7vw, 9rem);
     }
+
     font-weight: 800;
     letter-spacing: .05em;
 }
@@ -1729,6 +1733,8 @@ div.services {
 }
 
 @media (max-width: v.$tablet) {
+    $widt-ico2: 1.5rem;
+
     .burger-menu {
         overflow-y: auto;
 
@@ -1737,9 +1743,9 @@ div.services {
 
             .close-menu {
                 display: grid;
-                width: 2.75rem;
-                min-width: 2.75rem;
-                height: 2.75rem;
+                width: $widt-ico2;
+                min-width: $widt-ico2;
+                height: $widt-ico2;
                 place-items: center;
             }
         }

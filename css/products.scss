@@ -372,13 +372,6 @@ html {
             gap: clamp(1rem, 2vw, 4rem);
             padding-block: clamp(1rem, 2vw, 4rem);
 
-            & .catalog-card {
-
-                &:nth-child(n + 9) {
-                    display: block;
-                }
-            }
-
         }
     }
 }
